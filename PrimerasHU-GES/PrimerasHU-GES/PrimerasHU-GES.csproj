@@ -1,0 +1,784 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B59941E7-0AFD-48F8-BE2C-F54BFF6F7570}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PrimerasHU_GES</RootNamespace>
+    <AssemblyName>PrimerasHU-GES</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\Downloads\Design Dashboard Modern\BUNIFU UI\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FileHelpers, Version=3.4.0.0, Culture=neutral, PublicKeyToken=3e0c08d59cc3d657, processorArchitecture=MSIL">
+      <HintPath>..\packages\FileHelpers.3.4.0\lib\net45\FileHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.NRefactory6.CSharp, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d4bfe873e7598c49, processorArchitecture=MSIL">
+      <HintPath>..\packages\ICSharpCode.NRefactory.6.0.0-beta1\lib\Net45\ICSharpCode.NRefactory6.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.Common.1.0.0-rc2\lib\net45\Microsoft.CodeAnalysis.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.CSharp.1.0.0-rc2\lib\net45\Microsoft.CodeAnalysis.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp.Desktop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.CSharp.1.0.0-rc2\lib\net45\Microsoft.CodeAnalysis.CSharp.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp.Workspaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.CSharp.Workspaces.1.0.0-rc2\lib\net45\Microsoft.CodeAnalysis.CSharp.Workspaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp.Workspaces.Desktop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.CSharp.Workspaces.1.0.0-rc2\lib\net45\Microsoft.CodeAnalysis.CSharp.Workspaces.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.Desktop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.Common.1.0.0-rc2\lib\net45\Microsoft.CodeAnalysis.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.Workspaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.Workspaces.Common.1.0.0-rc2\lib\net45\Microsoft.CodeAnalysis.Workspaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.Workspaces.Desktop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.Workspaces.Common.1.0.0-rc2\lib\net45\Microsoft.CodeAnalysis.Workspaces.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Collections.Immutable, Version=1.1.33.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.1.33-beta\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Composition.AttributedModel, Version=1.0.27.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Composition.1.0.27\lib\portable-net45+win8+wp8+wpa81\System.Composition.AttributedModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Composition.Convention, Version=1.0.27.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Composition.1.0.27\lib\portable-net45+win8+wp8+wpa81\System.Composition.Convention.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Composition.Hosting, Version=1.0.27.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Composition.1.0.27\lib\portable-net45+win8+wp8+wpa81\System.Composition.Hosting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Composition.Runtime, Version=1.0.27.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Composition.1.0.27\lib\portable-net45+win8+wp8+wpa81\System.Composition.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Composition.TypedParts, Version=1.0.27.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Composition.1.0.27\lib\portable-net45+win8+wp8+wpa81\System.Composition.TypedParts.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Reflection.Metadata, Version=1.0.18.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.Metadata.1.0.18-beta\lib\portable-net45+win8\System.Reflection.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AprobadoresCompiladores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AprobadoresCompiladores.Designer.cs">
+      <DependentUpon>AprobadoresCompiladores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCompletar.cs" />
+    <Compile Include="CalculoMarcos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalculoMarcos.Designer.cs">
+      <DependentUpon>CalculoMarcos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlPlan.Designer.cs">
+      <DependentUpon>ControlPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetalleControlPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetalleControlPlan.Designer.cs">
+      <DependentUpon>DetalleControlPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ges_v01DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ges_v01DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ges_v01DataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ges_v01DataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ges_v01DataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ges_v01DataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ges_v01DataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ges_v01DataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ges_v01DataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ges_v01DataSet17.Designer.cs" />
+    <Compile Include="ges_v01DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ges_v01DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ges_v01DataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ges_v01DataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ges_v01DataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ges_v01DataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ges_v01DataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ges_v01DataSetCodigosDmo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DataSetCodigosDmo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ges_v01DataSetMuestrasGrafico.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DataSetMuestrasGrafico.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ges_v01DocumentosDmo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DocumentosDmo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ges_v01DocumentosDmo2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DocumentosDmo2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ges_v01DS_tiposVehiculo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DS_tiposVehiculo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ges_v01Imagenes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01Imagenes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ges_v01Imagenes2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01Imagenes2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ges_v01Imagenes4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01Imagenes4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ges_v01modelosVehiculo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01modelosVehiculo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ges_v01modelosVehiculo2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01modelosVehiculo2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ges_v01VersionesModelo.cs">
+      <DependentUpon>ges_v01VersionesModelo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ges_v01VersionesModelo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01VersionesModelo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GraficoMarcos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraficoMarcos.Designer.cs">
+      <DependentUpon>GraficoMarcos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Imagenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Imagenes.Designer.cs">
+      <DependentUpon>Imagenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Leer.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MarcosDmo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MarcosDmo.designer.cs">
+      <DependentUpon>MarcosDmo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modelos.Designer.cs">
+      <DependentUpon>Modelos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MuestraMarcos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MuestraMarcos.Designer.cs">
+      <DependentUpon>MuestraMarcos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Muestras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Muestras.Designer.cs">
+      <DependentUpon>Muestras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OperariosMaquinaMedicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OperariosMaquinaMedicion.Designer.cs">
+      <DependentUpon>OperariosMaquinaMedicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrimeraPantalla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrimeraPantalla.Designer.cs">
+      <DependentUpon>PrimeraPantalla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrimerasHU_GES\ges_v01DataSet7.cs" />
+    <Compile Include="PrimerasHU_GES\ges_v01DataSet7TableAdapters.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegControlPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegControlPlan.Designer.cs">
+      <DependentUpon>RegControlPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SeccionesVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeccionesVehiculo.Designer.cs">
+      <DependentUpon>SeccionesVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tipoPuntoClasificacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tipoPuntoClasificacion.Designer.cs">
+      <DependentUpon>tipoPuntoClasificacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios.Designer.cs">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisorDmo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisorDmo.Designer.cs">
+      <DependentUpon>VisorDmo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ValidarAutoincrementable.cs" />
+    <Compile Include="ValidarLetraNumero.cs" />
+    <EmbeddedResource Include="AprobadoresCompiladores.resx">
+      <DependentUpon>AprobadoresCompiladores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalculoMarcos.resx">
+      <DependentUpon>CalculoMarcos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlPlan.resx">
+      <DependentUpon>ControlPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetalleControlPlan.resx">
+      <DependentUpon>DetalleControlPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraficoMarcos.resx">
+      <DependentUpon>GraficoMarcos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imagenes.resx">
+      <DependentUpon>Imagenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarcosDmo.resx">
+      <DependentUpon>MarcosDmo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos.resx">
+      <DependentUpon>Modelos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MuestraMarcos.resx">
+      <DependentUpon>MuestraMarcos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Muestras.resx">
+      <DependentUpon>Muestras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OperariosMaquinaMedicion.resx">
+      <DependentUpon>OperariosMaquinaMedicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrimeraPantalla.resx">
+      <DependentUpon>PrimeraPantalla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RegControlPlan.resx">
+      <DependentUpon>RegControlPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeccionesVehiculo.resx">
+      <DependentUpon>SeccionesVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tipoPuntoClasificacion.resx">
+      <DependentUpon>tipoPuntoClasificacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios.resx">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisorDmo.resx">
+      <DependentUpon>VisorDmo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ges_v01DataSet.xsc">
+      <DependentUpon>ges_v01DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DataSet.xss">
+      <DependentUpon>ges_v01DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet1.xsc">
+      <DependentUpon>ges_v01DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DataSet1.xss">
+      <DependentUpon>ges_v01DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet10.xsc">
+      <DependentUpon>ges_v01DataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DataSet10.xss">
+      <DependentUpon>ges_v01DataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet11.xsc">
+      <DependentUpon>ges_v01DataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DataSet11.xss">
+      <DependentUpon>ges_v01DataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet12.xsc">
+      <DependentUpon>ges_v01DataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DataSet12.xss">
+      <DependentUpon>ges_v01DataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet13.xsc">
+      <DependentUpon>ges_v01DataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DataSet13.xss">
+      <DependentUpon>ges_v01DataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet14.xsc">
+      <DependentUpon>ges_v01DataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DataSet14.xss">
+      <DependentUpon>ges_v01DataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet15.xsc">
+      <DependentUpon>ges_v01DataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DataSet15.xss">
+      <DependentUpon>ges_v01DataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet16.xsc">
+      <DependentUpon>ges_v01DataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DataSet16.xss">
+      <DependentUpon>ges_v01DataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet17.xsc">
+      <DependentUpon>ges_v01DataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet17.xsd" />
+    <None Include="ges_v01DataSet17.xss">
+      <DependentUpon>ges_v01DataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet2.xsc">
+      <DependentUpon>ges_v01DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DataSet2.xss">
+      <DependentUpon>ges_v01DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet3.xsc">
+      <DependentUpon>ges_v01DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DataSet3.xss">
+      <DependentUpon>ges_v01DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet4.xsc">
+      <DependentUpon>ges_v01DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DataSet4.xss">
+      <DependentUpon>ges_v01DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet5.xsc">
+      <DependentUpon>ges_v01DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DataSet5.xss">
+      <DependentUpon>ges_v01DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet6.xsc">
+      <DependentUpon>ges_v01DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DataSet6.xss">
+      <DependentUpon>ges_v01DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet8.xsc">
+      <DependentUpon>ges_v01DataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DataSet8.xss">
+      <DependentUpon>ges_v01DataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet9.xsc">
+      <DependentUpon>ges_v01DataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DataSet9.xss">
+      <DependentUpon>ges_v01DataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSetCodigosDmo.xsc">
+      <DependentUpon>ges_v01DataSetCodigosDmo.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSetCodigosDmo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DataSetCodigosDmo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DataSetCodigosDmo.xss">
+      <DependentUpon>ges_v01DataSetCodigosDmo.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSetMuestrasGrafico.xsc">
+      <DependentUpon>ges_v01DataSetMuestrasGrafico.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSetMuestrasGrafico.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DataSetMuestrasGrafico.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DataSetMuestrasGrafico.xss">
+      <DependentUpon>ges_v01DataSetMuestrasGrafico.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DocumentosDmo.xsc">
+      <DependentUpon>ges_v01DocumentosDmo.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DocumentosDmo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DocumentosDmo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DocumentosDmo.xss">
+      <DependentUpon>ges_v01DocumentosDmo.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DocumentosDmo2.xsc">
+      <DependentUpon>ges_v01DocumentosDmo2.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DocumentosDmo2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DocumentosDmo2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DocumentosDmo2.xss">
+      <DependentUpon>ges_v01DocumentosDmo2.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DS_tiposVehiculo.xsc">
+      <DependentUpon>ges_v01DS_tiposVehiculo.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DS_tiposVehiculo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DS_tiposVehiculo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DS_tiposVehiculo.xss">
+      <DependentUpon>ges_v01DS_tiposVehiculo.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01Imagenes.xsc">
+      <DependentUpon>ges_v01Imagenes.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01Imagenes.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01Imagenes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01Imagenes.xss">
+      <DependentUpon>ges_v01Imagenes.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01Imagenes2.xsc">
+      <DependentUpon>ges_v01Imagenes2.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01Imagenes2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01Imagenes2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01Imagenes2.xss">
+      <DependentUpon>ges_v01Imagenes2.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01Imagenes4.xsc">
+      <DependentUpon>ges_v01Imagenes4.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01Imagenes4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01Imagenes4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01Imagenes4.xss">
+      <DependentUpon>ges_v01Imagenes4.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01modelosVehiculo.xsc">
+      <DependentUpon>ges_v01modelosVehiculo.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01modelosVehiculo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01modelosVehiculo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01modelosVehiculo.xss">
+      <DependentUpon>ges_v01modelosVehiculo.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01modelosVehiculo2.xsc">
+      <DependentUpon>ges_v01modelosVehiculo2.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01modelosVehiculo2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01modelosVehiculo2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01modelosVehiculo2.xss">
+      <DependentUpon>ges_v01modelosVehiculo2.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01VersionesModelo.xsc">
+      <DependentUpon>ges_v01VersionesModelo.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01VersionesModelo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01VersionesModelo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01VersionesModelo.xss">
+      <DependentUpon>ges_v01VersionesModelo.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO2_04-04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGOENCABEZADO_Mesa de trabajo 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoGES_Mesa de trabajo 1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoGES_Mesa de trabajo 11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO-ges-04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D10OmynWwAM1AgP.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\52971078_2518584701547885_4834896866903867635_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\large_338126_0ox9t0emxyg9vcquuamvcl7kt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0-rc2\tools\analyzers\C#\Microsoft.CodeAnalysis.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0-rc2\tools\analyzers\C#\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

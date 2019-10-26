@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ges_v01DataSet17" targetNamespace="http://tempuri.org/ges_v01DataSet17.xsd" xmlns:mstns="http://tempuri.org/ges_v01DataSet17.xsd" xmlns="http://tempuri.org/ges_v01DataSet17.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ges_v01ConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ges_v01ConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PrimerasHU_GES.Properties.Settings.GlobalReference.Default.ges_v01ConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="detallesControlPlanTableAdapter" GeneratorDataComponentClassName="detallesControlPlanTableAdapter" Name="detallesControlPlan" UserDataComponentName="detallesControlPlanTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ges_v01ConnectionString1 (Settings)" DbObjectName="ges_v01.dbo.detallesControlPlan" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT idPtoMed, clasiTipoPto, codUnidMed, codTipoControl, codEntidad, denominacion, coordXPtoMed, coordYPtoMed, coordZPtoMed, nominalPtoMed, tolinferior, tolSuperior FROM dbo.detallesControlPlan</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idPtoMed" DataSetColumn="idPtoMed" />
+              <Mapping SourceColumn="clasiTipoPto" DataSetColumn="clasiTipoPto" />
+              <Mapping SourceColumn="codUnidMed" DataSetColumn="codUnidMed" />
+              <Mapping SourceColumn="codTipoControl" DataSetColumn="codTipoControl" />
+              <Mapping SourceColumn="codEntidad" DataSetColumn="codEntidad" />
+              <Mapping SourceColumn="denominacion" DataSetColumn="denominacion" />
+              <Mapping SourceColumn="coordXPtoMed" DataSetColumn="coordXPtoMed" />
+              <Mapping SourceColumn="coordYPtoMed" DataSetColumn="coordYPtoMed" />
+              <Mapping SourceColumn="coordZPtoMed" DataSetColumn="coordZPtoMed" />
+              <Mapping SourceColumn="nominalPtoMed" DataSetColumn="nominalPtoMed" />
+              <Mapping SourceColumn="tolinferior" DataSetColumn="tolinferior" />
+              <Mapping SourceColumn="tolSuperior" DataSetColumn="tolSuperior" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ges_v01DataSet17" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ges_v01DataSet17" msprop:Generator_UserDSName="ges_v01DataSet17">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="detallesControlPlan" msprop:Generator_TableClassName="detallesControlPlanDataTable" msprop:Generator_TableVarName="tabledetallesControlPlan" msprop:Generator_TablePropName="detallesControlPlan" msprop:Generator_RowDeletingName="detallesControlPlanRowDeleting" msprop:Generator_RowChangingName="detallesControlPlanRowChanging" msprop:Generator_RowEvHandlerName="detallesControlPlanRowChangeEventHandler" msprop:Generator_RowDeletedName="detallesControlPlanRowDeleted" msprop:Generator_UserTableName="detallesControlPlan" msprop:Generator_RowChangedName="detallesControlPlanRowChanged" msprop:Generator_RowEvArgName="detallesControlPlanRowChangeEvent" msprop:Generator_RowClassName="detallesControlPlanRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idPtoMed" msprop:Generator_ColumnVarNameInTable="columnidPtoMed" msprop:Generator_ColumnPropNameInRow="idPtoMed" msprop:Generator_ColumnPropNameInTable="idPtoMedColumn" msprop:Generator_UserColumnName="idPtoMed">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="clasiTipoPto" msprop:Generator_ColumnVarNameInTable="columnclasiTipoPto" msprop:Generator_ColumnPropNameInRow="clasiTipoPto" msprop:Generator_ColumnPropNameInTable="clasiTipoPtoColumn" msprop:Generator_UserColumnName="clasiTipoPto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="codUnidMed" msprop:Generator_ColumnVarNameInTable="columncodUnidMed" msprop:Generator_ColumnPropNameInRow="codUnidMed" msprop:Generator_ColumnPropNameInTable="codUnidMedColumn" msprop:Generator_UserColumnName="codUnidMed">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="codTipoControl" msprop:Generator_ColumnVarNameInTable="columncodTipoControl" msprop:Generator_ColumnPropNameInRow="codTipoControl" msprop:Generator_ColumnPropNameInTable="codTipoControlColumn" msprop:Generator_UserColumnName="codTipoControl">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="codEntidad" msprop:Generator_ColumnVarNameInTable="columncodEntidad" msprop:Generator_ColumnPropNameInRow="codEntidad" msprop:Generator_ColumnPropNameInTable="codEntidadColumn" msprop:Generator_UserColumnName="codEntidad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="denominacion" msprop:Generator_ColumnVarNameInTable="columndenominacion" msprop:Generator_ColumnPropNameInRow="denominacion" msprop:Generator_ColumnPropNameInTable="denominacionColumn" msprop:Generator_UserColumnName="denominacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="coordXPtoMed" msprop:Generator_ColumnVarNameInTable="columncoordXPtoMed" msprop:Generator_ColumnPropNameInRow="coordXPtoMed" msprop:Generator_ColumnPropNameInTable="coordXPtoMedColumn" msprop:Generator_UserColumnName="coordXPtoMed" type="xs:decimal" />
+              <xs:element name="coordYPtoMed" msprop:Generator_ColumnVarNameInTable="columncoordYPtoMed" msprop:Generator_ColumnPropNameInRow="coordYPtoMed" msprop:Generator_ColumnPropNameInTable="coordYPtoMedColumn" msprop:Generator_UserColumnName="coordYPtoMed" type="xs:decimal" />
+              <xs:element name="coordZPtoMed" msprop:Generator_ColumnVarNameInTable="columncoordZPtoMed" msprop:Generator_ColumnPropNameInRow="coordZPtoMed" msprop:Generator_ColumnPropNameInTable="coordZPtoMedColumn" msprop:Generator_UserColumnName="coordZPtoMed" type="xs:decimal" />
+              <xs:element name="nominalPtoMed" msprop:Generator_ColumnVarNameInTable="columnnominalPtoMed" msprop:Generator_ColumnPropNameInRow="nominalPtoMed" msprop:Generator_ColumnPropNameInTable="nominalPtoMedColumn" msprop:Generator_UserColumnName="nominalPtoMed" type="xs:decimal" minOccurs="0" />
+              <xs:element name="tolinferior" msprop:Generator_ColumnVarNameInTable="columntolinferior" msprop:Generator_ColumnPropNameInRow="tolinferior" msprop:Generator_ColumnPropNameInTable="tolinferiorColumn" msprop:Generator_UserColumnName="tolinferior" type="xs:decimal" />
+              <xs:element name="tolSuperior" msprop:Generator_ColumnVarNameInTable="columntolSuperior" msprop:Generator_ColumnPropNameInRow="tolSuperior" msprop:Generator_ColumnPropNameInTable="tolSuperiorColumn" msprop:Generator_UserColumnName="tolSuperior" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
