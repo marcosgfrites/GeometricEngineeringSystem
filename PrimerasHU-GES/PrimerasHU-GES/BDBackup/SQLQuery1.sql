@@ -104,7 +104,7 @@ ORDER BY dd.fechaDmo DESC,dd.hora DESC
 
 /** MANEJO DE TABLA: TIPOSVEHICULO **/
 SELECT * FROM tiposVehiculo
-DELETE FROM tiposVehiculo WHERE codTipoV = 'P4'
+DELETE FROM tiposVehiculo WHERE descTipoV = 'Prueba 1'
 
 /** MANEJO DE TABLA: VERSIONESMODELO **/
 SELECT * FROM versionesModelo
@@ -243,8 +243,13 @@ SELECT TOP 3 codDmo FROM documentosDmo
 
 
 SELECT * FROM muestras
+DELETE FROM muestras
+DBCC CHECKIDENT ('muestras',RESEED,0)
 
 SELECT * FROM detalleMuestras
+DELETE FROM detalleMuestras
+DBCC CHECKIDENT ('detalleMuestras',RESEED,0)
+
 
 SELECT * FROM documentosDmo WHERE codDmo > 'L359016215PS300MM00560'
 
@@ -296,16 +301,62 @@ AND codDmo IN (SELECT codDmo FROM detalleMuestras WHERE codMuestra = '3')
 
 
 --PROBANDO INNER JOIN--
-SELECT pmd.codDmo AS 'DocumentoDmo',dd.fechaDmo AS 'Fecha',pmd.nominalD AS 'Nominal',pmd.upTolD AS 'Tolerancia Sup.',pmd.medidoD AS 'Medido',pmd.loTolD AS 'Tolerancia Inf.',pmd.desvD AS 'Desviaci�n'
+SELECT z.DocumentoDmo,z.Punto,z.Fecha,z.Nominal,z.[Tolerancia Sup.],z.Medido,z.[Tolerancia Inf.],z.[Desviaci�n]
+FROM
+(
+
+SELECT pmx.codDmo AS 'DocumentoDmo', pmx.codMediX AS 'Punto',dd.fechaDmo AS 'Fecha',pmx.nominalX AS 'Nominal',pmx.upTolX AS 'Tolerancia Sup.',pmx.medidoX AS 'Medido',pmx.loTolX AS 'Tolerancia Inf.',pmx.desvX AS 'Desviaci�n'
+FROM puntosMedidosX AS pmx
+INNER JOIN documentosDmo AS dd ON dd.codDmo = pmx.codDmo
+WHERE pmx.codMediX IN 
+(
+SELECT DISTINCT idPtoMed FROM detallesDocumentoDmo WHERE codDmo IN ('L359016215PS300MM00560','L359016215PS300MM00561','L359016215PS300MM00562')
+AND idPtoMed IN (SELECT idPtoMed FROM detallesDocumentoDmo WHERE idPtoMed IN (SELECT idPtoMed FROM detallesControlPlan))
+AND idPtoMed IN ('')
+)
+AND pmx.codDmo IN ('L359016215PS300MM00560','L359016215PS300MM00561','L359016215PS300MM00562')
+
+UNION
+
+SELECT pmy.codDmo AS 'DocumentoDmo', pmy.codMediY AS 'Punto',dd.fechaDmo AS 'Fecha',pmy.nominalY AS 'Nominal',pmy.upTolY AS 'Tolerancia Sup.',pmy.medidoY AS 'Medido',pmy.loTolY AS 'Tolerancia Inf.',pmy.desvY AS 'Desviaci�n'
+FROM puntosMedidosY AS pmy
+INNER JOIN documentosDmo AS dd ON dd.codDmo = pmy.codDmo
+WHERE pmy.codMediY IN 
+(
+SELECT DISTINCT idPtoMed FROM detallesDocumentoDmo WHERE codDmo IN ('L359016215PS300MM00560','L359016215PS300MM00561','L359016215PS300MM00562')
+AND idPtoMed IN (SELECT idPtoMed FROM detallesDocumentoDmo WHERE idPtoMed IN (SELECT idPtoMed FROM detallesControlPlan))
+AND idPtoMed IN ('10503Y')
+)
+AND pmy.codDmo IN ('L359016215PS300MM00560','L359016215PS300MM00561','L359016215PS300MM00562')
+
+UNION
+
+SELECT pmz.codDmo AS 'DocumentoDmo', pmz.codMediZ AS 'Punto',dd.fechaDmo AS 'Fecha',pmz.nominalZ AS 'Nominal',pmz.upTolZ AS 'Tolerancia Sup.',pmz.medidoZ AS 'Medido',pmz.loTolZ AS 'Tolerancia Inf.',pmz.desvZ AS 'Desviaci�n'
+FROM puntosMedidosZ AS pmz
+INNER JOIN documentosDmo AS dd ON dd.codDmo = pmz.codDmo
+WHERE pmz.codMediZ IN 
+(
+SELECT DISTINCT idPtoMed FROM detallesDocumentoDmo WHERE codDmo IN ('L359016215PS300MM00560','L359016215PS300MM00561','L359016215PS300MM00562')
+AND idPtoMed IN (SELECT idPtoMed FROM detallesDocumentoDmo WHERE idPtoMed IN (SELECT idPtoMed FROM detallesControlPlan))
+AND idPtoMed IN ('10745Z')
+)
+AND pmz.codDmo IN ('L359016215PS300MM00560','L359016215PS300MM00561','L359016215PS300MM00562')
+
+UNION
+
+SELECT pmd.codDmo AS 'DocumentoDmo',pmd.codMediD AS 'Punto',dd.fechaDmo AS 'Fecha',pmd.nominalD AS 'Nominal',pmd.upTolD AS 'Tolerancia Sup.',pmd.medidoD AS 'Medido',pmd.loTolD AS 'Tolerancia Inf.',pmd.desvD AS 'Desviaci�n'
 FROM puntosMedidosD AS pmd
 INNER JOIN documentosDmo AS dd ON dd.codDmo = pmd.codDmo
 WHERE pmd.codMediD IN 
 (
-SELECT DISTINCT idPtoMed FROM detallesDocumentoDmo WHERE codDmo IN (SELECT codDmo FROM detalleMuestras WHERE codMuestra = '3')
-AND idPtoMed IN (SELECT idPtoMed FROM detallesDocumentoDmo WHERE idPtoMed IN (SELECT idPtoMed FROM detallesControlPlan WHERE clasiTipoPto = 'F'))
-AND idPtoMed = '10739XD'
+SELECT DISTINCT idPtoMed FROM detallesDocumentoDmo WHERE codDmo IN ('L359016215PS300MM00560','L359016215PS300MM00561','L359016215PS300MM00562')
+AND idPtoMed IN (SELECT idPtoMed FROM detallesDocumentoDmo WHERE idPtoMed IN (SELECT idPtoMed FROM detallesControlPlan))
+AND idPtoMed IN ('10739XD')
 )
-AND pmd.codDmo IN (SELECT codDmo FROM detalleMuestras WHERE codMuestra = '3')
+AND pmd.codDmo IN ('L359016215PS300MM00560','L359016215PS300MM00561','L359016215PS300MM00562')
+
+) AS z
+ORDER BY z.Punto, z.DocumentoDmo
 
 SELECT * FROM muestras
 
@@ -329,3 +380,5 @@ AND idPtoMed IN (SELECT idPtoMed FROM detallesDocumentoDmo WHERE idPtoMed IN (SE
 AND idPtoMed = '10739XD'
 )
 AND pmd.codDmo IN (SELECT codDmo FROM detalleMuestras WHERE codMuestra = '3')
+
+SELECT DISTINCT idPtoMed FROM detallesDocumentoDmo WHERE codDmo = 'L359016215PS300MM00560' OR codDmo = 'L359016215PS300MM00561'
