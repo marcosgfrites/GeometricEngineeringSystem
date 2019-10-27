@@ -49,8 +49,6 @@ namespace PrimerasHU_GES
             this.cabeceraDtg = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.actualDTGV = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.detallesControlPlanBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ges_v01DataSet12 = new PrimerasHU_GES.ges_v01DataSet12();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -82,39 +80,41 @@ namespace PrimerasHU_GES
             this.seccionLabel = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.revisionLabel = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.fechaLabel = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.detallesControlPlanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ges_v01DataSet12 = new PrimerasHU_GES.ges_v01DataSet12();
             this.ges_v01DataSet = new PrimerasHU_GES.ges_v01DataSet();
             this.gesv01DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.detallesControlPlanTableAdapter = new PrimerasHU_GES.ges_v01DataSet12TableAdapters.detallesControlPlanTableAdapter();
-            this.ges_v01DataSet17 = new PrimerasHU_GES.ges_v01DataSet17();
-            this.detallesControlPlanBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.detallesControlPlanTableAdapter1 = new PrimerasHU_GES.ges_v01DataSet17TableAdapters.detallesControlPlanTableAdapter();
+            this.tolinferior = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tolSuperior = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idPtoMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.denominacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codEntidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clasiTipoPtoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.denominacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codTipoControlDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clasiTipoPtoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.coordXPtoMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.coordYPtoMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.coordZPtoMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nominalPtoMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codUnidMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tolinferior = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tolSuperior = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.detallesControlPlanBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.ges_v01DataSet17 = new PrimerasHU_GES.ges_v01DataSet17();
+            this.detallesControlPlanTableAdapter1 = new PrimerasHU_GES.ges_v01DataSet17TableAdapters.detallesControlPlanTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cabeceraDtg)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.actualDTGV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.detallesControlPlanBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet12)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuevoDtgv)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.detallesControlPlanBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gesv01DataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.detallesControlPlanBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet17)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -218,6 +218,7 @@ namespace PrimerasHU_GES
             this.actualizarBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.actualizarBtn.Textcolor = System.Drawing.Color.White;
             this.actualizarBtn.TextFont = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.actualizarBtn.Click += new System.EventHandler(this.actualizarBtn_Click);
             // 
             // bunifuFlatButton2
             // 
@@ -268,7 +269,6 @@ namespace PrimerasHU_GES
             this.bunifuFlatButton1.ButtonText = "2- Comparar Nuevo / Actual";
             this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Enabled = false;
             this.bunifuFlatButton1.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuFlatButton1.ForeColor = System.Drawing.Color.White;
             this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
@@ -296,6 +296,7 @@ namespace PrimerasHU_GES
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
             // limpiarTxt
             // 
@@ -401,10 +402,10 @@ namespace PrimerasHU_GES
             this.actualDTGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.actualDTGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idPtoMedDataGridViewTextBoxColumn,
-            this.denominacionDataGridViewTextBoxColumn,
             this.codEntidadDataGridViewTextBoxColumn,
-            this.clasiTipoPtoDataGridViewTextBoxColumn,
+            this.denominacionDataGridViewTextBoxColumn,
             this.codTipoControlDataGridViewTextBoxColumn,
+            this.clasiTipoPtoDataGridViewTextBoxColumn,
             this.coordXPtoMedDataGridViewTextBoxColumn,
             this.coordYPtoMedDataGridViewTextBoxColumn,
             this.coordZPtoMedDataGridViewTextBoxColumn,
@@ -423,16 +424,6 @@ namespace PrimerasHU_GES
             this.actualDTGV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.actualDTGV.Size = new System.Drawing.Size(603, 195);
             this.actualDTGV.TabIndex = 0;
-            // 
-            // detallesControlPlanBindingSource
-            // 
-            this.detallesControlPlanBindingSource.DataMember = "detallesControlPlan";
-            this.detallesControlPlanBindingSource.DataSource = this.ges_v01DataSet12;
-            // 
-            // ges_v01DataSet12
-            // 
-            this.ges_v01DataSet12.DataSetName = "ges_v01DataSet12";
-            this.ges_v01DataSet12.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupBox2
             // 
@@ -932,6 +923,16 @@ namespace PrimerasHU_GES
             this.fechaLabel.TabIndex = 3;
             this.fechaLabel.Text = "Fecha de actualización";
             // 
+            // detallesControlPlanBindingSource
+            // 
+            this.detallesControlPlanBindingSource.DataMember = "detallesControlPlan";
+            this.detallesControlPlanBindingSource.DataSource = this.ges_v01DataSet12;
+            // 
+            // ges_v01DataSet12
+            // 
+            this.ges_v01DataSet12.DataSetName = "ges_v01DataSet12";
+            this.ges_v01DataSet12.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // ges_v01DataSet
             // 
             this.ges_v01DataSet.DataSetName = "ges_v01DataSet";
@@ -946,19 +947,19 @@ namespace PrimerasHU_GES
             // 
             this.detallesControlPlanTableAdapter.ClearBeforeFill = true;
             // 
-            // ges_v01DataSet17
+            // tolinferior
             // 
-            this.ges_v01DataSet17.DataSetName = "ges_v01DataSet17";
-            this.ges_v01DataSet17.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.tolinferior.DataPropertyName = "tolinferior";
+            this.tolinferior.HeaderText = "tol.Inferior";
+            this.tolinferior.Name = "tolinferior";
+            this.tolinferior.ReadOnly = true;
             // 
-            // detallesControlPlanBindingSource1
+            // tolSuperior
             // 
-            this.detallesControlPlanBindingSource1.DataMember = "detallesControlPlan";
-            this.detallesControlPlanBindingSource1.DataSource = this.ges_v01DataSet17;
-            // 
-            // detallesControlPlanTableAdapter1
-            // 
-            this.detallesControlPlanTableAdapter1.ClearBeforeFill = true;
+            this.tolSuperior.DataPropertyName = "tolSuperior";
+            this.tolSuperior.HeaderText = "tol. Superior";
+            this.tolSuperior.Name = "tolSuperior";
+            this.tolSuperior.ReadOnly = true;
             // 
             // idPtoMedDataGridViewTextBoxColumn
             // 
@@ -967,13 +968,6 @@ namespace PrimerasHU_GES
             this.idPtoMedDataGridViewTextBoxColumn.Name = "idPtoMedDataGridViewTextBoxColumn";
             this.idPtoMedDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // denominacionDataGridViewTextBoxColumn
-            // 
-            this.denominacionDataGridViewTextBoxColumn.DataPropertyName = "denominacion";
-            this.denominacionDataGridViewTextBoxColumn.HeaderText = "Denominación";
-            this.denominacionDataGridViewTextBoxColumn.Name = "denominacionDataGridViewTextBoxColumn";
-            this.denominacionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // codEntidadDataGridViewTextBoxColumn
             // 
             this.codEntidadDataGridViewTextBoxColumn.DataPropertyName = "codEntidad";
@@ -981,12 +975,12 @@ namespace PrimerasHU_GES
             this.codEntidadDataGridViewTextBoxColumn.Name = "codEntidadDataGridViewTextBoxColumn";
             this.codEntidadDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // clasiTipoPtoDataGridViewTextBoxColumn
+            // denominacionDataGridViewTextBoxColumn
             // 
-            this.clasiTipoPtoDataGridViewTextBoxColumn.DataPropertyName = "clasiTipoPto";
-            this.clasiTipoPtoDataGridViewTextBoxColumn.HeaderText = "Tipo de Punto";
-            this.clasiTipoPtoDataGridViewTextBoxColumn.Name = "clasiTipoPtoDataGridViewTextBoxColumn";
-            this.clasiTipoPtoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.denominacionDataGridViewTextBoxColumn.DataPropertyName = "denominacion";
+            this.denominacionDataGridViewTextBoxColumn.HeaderText = "Denominación";
+            this.denominacionDataGridViewTextBoxColumn.Name = "denominacionDataGridViewTextBoxColumn";
+            this.denominacionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // codTipoControlDataGridViewTextBoxColumn
             // 
@@ -994,6 +988,13 @@ namespace PrimerasHU_GES
             this.codTipoControlDataGridViewTextBoxColumn.HeaderText = "Tipologia";
             this.codTipoControlDataGridViewTextBoxColumn.Name = "codTipoControlDataGridViewTextBoxColumn";
             this.codTipoControlDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // clasiTipoPtoDataGridViewTextBoxColumn
+            // 
+            this.clasiTipoPtoDataGridViewTextBoxColumn.DataPropertyName = "clasiTipoPto";
+            this.clasiTipoPtoDataGridViewTextBoxColumn.HeaderText = "Tipo de Punto";
+            this.clasiTipoPtoDataGridViewTextBoxColumn.Name = "clasiTipoPtoDataGridViewTextBoxColumn";
+            this.clasiTipoPtoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // coordXPtoMedDataGridViewTextBoxColumn
             // 
@@ -1030,19 +1031,19 @@ namespace PrimerasHU_GES
             this.codUnidMedDataGridViewTextBoxColumn.Name = "codUnidMedDataGridViewTextBoxColumn";
             this.codUnidMedDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // tolinferior
+            // detallesControlPlanBindingSource1
             // 
-            this.tolinferior.DataPropertyName = "tolinferior";
-            this.tolinferior.HeaderText = "tol.Inferior";
-            this.tolinferior.Name = "tolinferior";
-            this.tolinferior.ReadOnly = true;
+            this.detallesControlPlanBindingSource1.DataMember = "detallesControlPlan";
+            this.detallesControlPlanBindingSource1.DataSource = this.ges_v01DataSet17;
             // 
-            // tolSuperior
+            // ges_v01DataSet17
             // 
-            this.tolSuperior.DataPropertyName = "tolSuperior";
-            this.tolSuperior.HeaderText = "tol. Superior";
-            this.tolSuperior.Name = "tolSuperior";
-            this.tolSuperior.ReadOnly = true;
+            this.ges_v01DataSet17.DataSetName = "ges_v01DataSet17";
+            this.ges_v01DataSet17.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // detallesControlPlanTableAdapter1
+            // 
+            this.detallesControlPlanTableAdapter1.ClearBeforeFill = true;
             // 
             // RegControlPlan
             // 
@@ -1064,8 +1065,6 @@ namespace PrimerasHU_GES
             ((System.ComponentModel.ISupportInitialize)(this.cabeceraDtg)).EndInit();
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.actualDTGV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.detallesControlPlanBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet12)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -1074,10 +1073,12 @@ namespace PrimerasHU_GES
             ((System.ComponentModel.ISupportInitialize)(this.nuevoDtgv)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.detallesControlPlanBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gesv01DataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.detallesControlPlanBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet17)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1135,10 +1136,10 @@ namespace PrimerasHU_GES
         private BindingSource detallesControlPlanBindingSource1;
         private ges_v01DataSet17TableAdapters.detallesControlPlanTableAdapter detallesControlPlanTableAdapter1;
         private DataGridViewTextBoxColumn idPtoMedDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn denominacionDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn codEntidadDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn clasiTipoPtoDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn denominacionDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn codTipoControlDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn clasiTipoPtoDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn coordXPtoMedDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn coordYPtoMedDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn coordZPtoMedDataGridViewTextBoxColumn;
