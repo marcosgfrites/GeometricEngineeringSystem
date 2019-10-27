@@ -11,6 +11,7 @@ using System.Data.SqlClient;
 using System.Collections;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Runtime.InteropServices;
+using System.IO;
 
 namespace PrimerasHU_GES
 {
@@ -921,6 +922,20 @@ namespace PrimerasHU_GES
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btn_formGrafico_Click(object sender, EventArgs e)
+        {
+            Bitmap bm;
+            using (MemoryStream ms = new MemoryStream())
+            {
+                chart_Puntos.SaveImage(ms, ChartImageFormat.Bmp);
+                bm = new Bitmap(ms);
+                Clipboard.SetImage(bm);
+            }
+
+            AmpliarGrafico ag = new AmpliarGrafico(bm);
+            ag.Show();
         }
 
         /**

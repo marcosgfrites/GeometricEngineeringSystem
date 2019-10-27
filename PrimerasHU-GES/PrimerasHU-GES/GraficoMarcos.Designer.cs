@@ -139,6 +139,7 @@
             this.btn_verDmo = new System.Windows.Forms.Button();
             this.dgv_docDmo = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btn_formGrafico = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_muestras)).BeginInit();
@@ -733,7 +734,7 @@
             // check_tolInf
             // 
             this.check_tolInf.AutoSize = true;
-            this.check_tolInf.Location = new System.Drawing.Point(231, 3);
+            this.check_tolInf.Location = new System.Drawing.Point(191, 3);
             this.check_tolInf.Name = "check_tolInf";
             this.check_tolInf.Size = new System.Drawing.Size(62, 17);
             this.check_tolInf.TabIndex = 20;
@@ -744,7 +745,7 @@
             // check_tolSup
             // 
             this.check_tolSup.AutoSize = true;
-            this.check_tolSup.Location = new System.Drawing.Point(299, 3);
+            this.check_tolSup.Location = new System.Drawing.Point(259, 3);
             this.check_tolSup.Name = "check_tolSup";
             this.check_tolSup.Size = new System.Drawing.Size(69, 17);
             this.check_tolSup.TabIndex = 21;
@@ -755,7 +756,7 @@
             // check_nominal
             // 
             this.check_nominal.AutoSize = true;
-            this.check_nominal.Location = new System.Drawing.Point(363, 3);
+            this.check_nominal.Location = new System.Drawing.Point(323, 3);
             this.check_nominal.Name = "check_nominal";
             this.check_nominal.Size = new System.Drawing.Size(64, 17);
             this.check_nominal.TabIndex = 22;
@@ -772,13 +773,13 @@
             this.panel2.Controls.Add(this.check_tolSup);
             this.panel2.Location = new System.Drawing.Point(479, 480);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 24);
+            this.panel2.Size = new System.Drawing.Size(393, 24);
             this.panel2.TabIndex = 23;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(47, 4);
+            this.label11.Location = new System.Drawing.Point(7, 4);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(182, 13);
             this.label11.TabIndex = 23;
@@ -862,6 +863,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.tabPage1.Controls.Add(this.btn_formGrafico);
             this.tabPage1.Controls.Add(this.txt_Valor);
             this.tabPage1.Controls.Add(this.label20);
             this.tabPage1.Controls.Add(this.label19);
@@ -1371,6 +1373,22 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Cálculos";
             // 
+            // btn_formGrafico
+            // 
+            this.btn_formGrafico.BackColor = System.Drawing.Color.Black;
+            this.btn_formGrafico.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btn_formGrafico.FlatAppearance.BorderSize = 0;
+            this.btn_formGrafico.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btn_formGrafico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_formGrafico.ForeColor = System.Drawing.Color.White;
+            this.btn_formGrafico.Location = new System.Drawing.Point(933, 480);
+            this.btn_formGrafico.Name = "btn_formGrafico";
+            this.btn_formGrafico.Size = new System.Drawing.Size(102, 23);
+            this.btn_formGrafico.TabIndex = 32;
+            this.btn_formGrafico.Text = "Ampliar Gráfico";
+            this.btn_formGrafico.UseVisualStyleBackColor = false;
+            this.btn_formGrafico.Click += new System.EventHandler(this.btn_formGrafico_Click);
+            // 
             // GraficoMarcos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1498,5 +1516,6 @@
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_formGrafico;
     }
 }
