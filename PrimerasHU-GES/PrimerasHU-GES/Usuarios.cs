@@ -17,7 +17,7 @@ namespace PrimerasHU_GES
 
     public partial class Usuarios : Form
     {
-
+        //Prueba
         #region DLLs para poder mover el form
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
