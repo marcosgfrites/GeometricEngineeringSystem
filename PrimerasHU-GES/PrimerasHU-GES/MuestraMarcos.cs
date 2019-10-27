@@ -185,68 +185,148 @@ namespace PrimerasHU_GES
                 string mensaje = "Se ha registrado correctamente: " + "\n";
                 if (txt_cantSolicitada.Text != txt_cantEncontrada.Text)
                 {
-                    MessageBox.Show("Ud. desea registrar una muestra de " + txt_cantSolicitada.Text + " DMO, pero en el sistema, sin utilizar sólo se encontraron " + txt_cantEncontrada.Text + ". El sistema corregirá los datos automáticamente para evitar errores.", "Atención!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txt_cantidadDmo.Text = txt_cantEncontrada.Text;
-                    txt_cantSolicitada.Text = txt_cantidadDmo.Text;
+                    DialogResult registrar = MessageBox.Show("Ud. desea registrar una muestra de " + txt_cantSolicitada.Text + " DMO, pero en el sistema, sin utilizar sólo se encontraron " + txt_cantEncontrada.Text + ". \n \n - Presione 'SI' si desea que el sistema corrija los datos automáticamente para evitar errores y registre de igual manera. \n \n - Presione 'NO' para abrir el gestor de 'Documentos DMO' y registrar los faltantes. \n \n - Presione 'CANCELAR' para revisar si los datos fueron ingresados correctamente o corregirlos.", "Atención!", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+                    if (registrar == DialogResult.Yes)
+                    {
+                        txt_cantidadDmo.Text = txt_cantEncontrada.Text;
+                        txt_cantSolicitada.Text = txt_cantidadDmo.Text;
+
+                        //INSERCION DE MUESTRAS
+                        SqlCommand altaMuestra = new SqlCommand("INSERT INTO muestras VALUES (@fechaMuestra,@obserMuestra,@cantidadDmo)", Conexion);
+                        adaptador.InsertCommand = altaMuestra;
+                        adaptador.InsertCommand.Parameters.Add(new SqlParameter("@fechaMuestra", SqlDbType.Date));
+                        adaptador.InsertCommand.Parameters.Add(new SqlParameter("@obserMuestra", SqlDbType.Text));
+                        adaptador.InsertCommand.Parameters.Add(new SqlParameter("@cantidadDmo", SqlDbType.Int));
+
+                        adaptador.InsertCommand.Parameters["@fechaMuestra"].Value = dtp_fechaMuestra.Value.ToString("yyyy-MM-dd");
+                        string aux_obser = null;
+                        if (txt_obserMuestra.Text != null)
+                        {
+                            aux_obser = txt_obserMuestra.Text;
+                        }
+                        adaptador.InsertCommand.Parameters["@obserMuestra"].Value = aux_obser;
+                        adaptador.InsertCommand.Parameters["@cantidadDmo"].Value = int.Parse(txt_cantidadDmo.Text);
+
+                        try
+                        {
+                            Conexion.Open();
+                            adaptador.InsertCommand.ExecuteNonQuery();
+                            mensaje += "- Muestras" + "\n";
+
+                            //INSERCION DE DETALLE DE MUESTRAS
+                            try
+                            {
+                                ad_detMuestra = new SqlDataAdapter();
+                                SqlCommand altaDetalleMuestra = new SqlCommand("INSERT INTO detalleMuestras (codMuestra,codDmo) VALUES (@codMuestra,@codDmo)", Conexion);
+                                ad_detMuestra.InsertCommand = altaDetalleMuestra;
+
+                                foreach (DataGridViewRow fila_docDmo in dgv_docDmo.Rows)
+                                {
+                                    ad_detMuestra.InsertCommand.Parameters.Clear();
+
+                                    ad_detMuestra.InsertCommand.Parameters.Add(new SqlParameter("@codMuestra", SqlDbType.Int));
+                                    ad_detMuestra.InsertCommand.Parameters.Add(new SqlParameter("@codDmo", SqlDbType.VarChar));
+
+                                    ad_detMuestra.InsertCommand.Parameters["@codMuestra"].Value = Convert.ToInt32(txt_codMuestra.Text);
+                                    ad_detMuestra.InsertCommand.Parameters["@codDmo"].Value = fila_docDmo.Cells[0].Value;
+
+                                    ad_detMuestra.InsertCommand.ExecuteNonQuery();
+
+                                }
+                                mensaje += "- Detalles de Muestra";
+                                MessageBox.Show(mensaje, "Felicitaciones!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                limpiar();
+                            }
+                            catch (Exception ex2)
+                            {
+                                MessageBox.Show(ex2.ToString());
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.ToString());
+                        }
+                        finally
+                        {
+                            Conexion.Close();
+                        }
+
+                    }
+                    else
+                    {
+                        if (registrar == DialogResult.No)
+                        {
+                            MarcosDmo md = new MarcosDmo();
+                            md.Show();
+                        }
+                        else
+                        {
+                            return;
+                        }
+                    }
                 }
-                //INSERCION DE MUESTRAS
-                SqlCommand altaMuestra = new SqlCommand("INSERT INTO muestras VALUES (@fechaMuestra,@obserMuestra,@cantidadDmo)", Conexion);
-                adaptador.InsertCommand = altaMuestra;
-                adaptador.InsertCommand.Parameters.Add(new SqlParameter("@fechaMuestra", SqlDbType.Date));
-                adaptador.InsertCommand.Parameters.Add(new SqlParameter("@obserMuestra", SqlDbType.Text));
-                adaptador.InsertCommand.Parameters.Add(new SqlParameter("@cantidadDmo", SqlDbType.Int));
-
-                adaptador.InsertCommand.Parameters["@fechaMuestra"].Value = dtp_fechaMuestra.Value.ToString("yyyy-MM-dd");
-                string aux_obser = null;
-                if (txt_obserMuestra.Text != null)
+                else
                 {
-                    aux_obser = txt_obserMuestra.Text;
-                }
-                adaptador.InsertCommand.Parameters["@obserMuestra"].Value = aux_obser;
-                adaptador.InsertCommand.Parameters["@cantidadDmo"].Value = int.Parse(txt_cantidadDmo.Text);
+                    //INSERCION DE MUESTRAS
+                    SqlCommand altaMuestra = new SqlCommand("INSERT INTO muestras VALUES (@fechaMuestra,@obserMuestra,@cantidadDmo)", Conexion);
+                    adaptador.InsertCommand = altaMuestra;
+                    adaptador.InsertCommand.Parameters.Add(new SqlParameter("@fechaMuestra", SqlDbType.Date));
+                    adaptador.InsertCommand.Parameters.Add(new SqlParameter("@obserMuestra", SqlDbType.Text));
+                    adaptador.InsertCommand.Parameters.Add(new SqlParameter("@cantidadDmo", SqlDbType.Int));
 
-                try
-                {
-                    Conexion.Open();
-                    adaptador.InsertCommand.ExecuteNonQuery();
-                    mensaje += "- Muestras" + "\n";
+                    adaptador.InsertCommand.Parameters["@fechaMuestra"].Value = dtp_fechaMuestra.Value.ToString("yyyy-MM-dd");
+                    string aux_obser = null;
+                    if (txt_obserMuestra.Text != null)
+                    {
+                        aux_obser = txt_obserMuestra.Text;
+                    }
+                    adaptador.InsertCommand.Parameters["@obserMuestra"].Value = aux_obser;
+                    adaptador.InsertCommand.Parameters["@cantidadDmo"].Value = int.Parse(txt_cantidadDmo.Text);
 
-                    //INSERCION DE DETALLE DE MUESTRAS
                     try
                     {
-                        ad_detMuestra = new SqlDataAdapter();
-                        SqlCommand altaDetalleMuestra = new SqlCommand("INSERT INTO detalleMuestras (codMuestra,codDmo) VALUES (@codMuestra,@codDmo)", Conexion);
-                        ad_detMuestra.InsertCommand = altaDetalleMuestra;
+                        Conexion.Open();
+                        adaptador.InsertCommand.ExecuteNonQuery();
+                        mensaje += "- Muestras" + "\n";
 
-                        foreach (DataGridViewRow fila_docDmo in dgv_docDmo.Rows)
+                        //INSERCION DE DETALLE DE MUESTRAS
+                        try
                         {
-                            ad_detMuestra.InsertCommand.Parameters.Clear();
+                            ad_detMuestra = new SqlDataAdapter();
+                            SqlCommand altaDetalleMuestra = new SqlCommand("INSERT INTO detalleMuestras (codMuestra,codDmo) VALUES (@codMuestra,@codDmo)", Conexion);
+                            ad_detMuestra.InsertCommand = altaDetalleMuestra;
 
-                            ad_detMuestra.InsertCommand.Parameters.Add(new SqlParameter("@codMuestra", SqlDbType.Int));
-                            ad_detMuestra.InsertCommand.Parameters.Add(new SqlParameter("@codDmo", SqlDbType.VarChar));
+                            foreach (DataGridViewRow fila_docDmo in dgv_docDmo.Rows)
+                            {
+                                ad_detMuestra.InsertCommand.Parameters.Clear();
 
-                            ad_detMuestra.InsertCommand.Parameters["@codMuestra"].Value = Convert.ToInt32(txt_codMuestra.Text);
-                            ad_detMuestra.InsertCommand.Parameters["@codDmo"].Value = fila_docDmo.Cells[0].Value;
+                                ad_detMuestra.InsertCommand.Parameters.Add(new SqlParameter("@codMuestra", SqlDbType.Int));
+                                ad_detMuestra.InsertCommand.Parameters.Add(new SqlParameter("@codDmo", SqlDbType.VarChar));
 
-                            ad_detMuestra.InsertCommand.ExecuteNonQuery();
+                                ad_detMuestra.InsertCommand.Parameters["@codMuestra"].Value = Convert.ToInt32(txt_codMuestra.Text);
+                                ad_detMuestra.InsertCommand.Parameters["@codDmo"].Value = fila_docDmo.Cells[0].Value;
 
+                                ad_detMuestra.InsertCommand.ExecuteNonQuery();
+
+                            }
+                            mensaje += "- Detalles de Muestra";
+                            MessageBox.Show(mensaje, "Felicitaciones!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            limpiar();
                         }
-                        mensaje += "- Detalles de Muestra";
-                        MessageBox.Show(mensaje, "Felicitaciones!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        limpiar();
+                        catch (Exception ex2)
+                        {
+                            MessageBox.Show(ex2.ToString());
+                        }
                     }
-                    catch (Exception ex2)
+                    catch (Exception ex)
                     {
-                        MessageBox.Show(ex2.ToString());
+                        MessageBox.Show(ex.ToString());
                     }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.ToString());
-                }
-                finally
-                {
+                    finally
+                    {
                     Conexion.Close();
+                    }
+
                 }
 
         }
