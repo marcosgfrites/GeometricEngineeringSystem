@@ -22,7 +22,9 @@ namespace PrimerasHU_GES
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// prueba
+        /// </summary>
         public int cantidad;
 
         private void BunifuFlatButton2_Click(object sender, EventArgs e)
