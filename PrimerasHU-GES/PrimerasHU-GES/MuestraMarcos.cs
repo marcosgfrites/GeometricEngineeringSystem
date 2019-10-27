@@ -134,9 +134,9 @@ namespace PrimerasHU_GES
             else
             {
                 int cantidad = Convert.ToInt32(txt_cantidadDmo.Text);
-                if (cantidad < 8 || cantidad > 100)
+                if (cantidad < 8 || cantidad > 30)
                 {
-                    MessageBox.Show("Revise la cantidad de DMO que quiere que contenga la muestra. " + "\n" + "Recuerde que el valor mínimo permitido es 8 y el máximo es 100.", "Atención!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Revise la cantidad de DMO que quiere que contenga la muestra. " + "\n" + "Recuerde que el valor mínimo permitido es 8 y el máximo es 30.", "Atención!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
                 {
