@@ -23,7 +23,7 @@ namespace PrimerasHU_GES
             InitializeComponent();
         }
         /// <summary>
-        /// prueba
+
         /// </summary>
         public int cantidad;
 
@@ -36,7 +36,7 @@ namespace PrimerasHU_GES
             //fDialog.Filter = "Excel Files|*.xls";
             fDialog.Filter = "Excel Files|*.*";
             fDialog.InitialDirectory = @"C:\Users\Roqué\Documents\GitHub\Tesis\PrimerasHU-GES\PrimerasHU-GES\Documento control plan";//Directorio inical donde se busca el archivo
-        
+
             if (fDialog.ShowDialog() == DialogResult.OK)
             {
                 ruta = fDialog.FileName.ToString();
@@ -47,7 +47,7 @@ namespace PrimerasHU_GES
                 DataTable DS = new DataTable();
                 OleDbConnection oledbConn = new OleDbConnection(strConnnectionOle);
 
-                string sqlExcel2 = "Select F1,F2,F3,F4,F5,F7,F9,F10,F11,F12,F16,F17,F18 From [" + textBox1.Text + "$A15:V554]";
+                string sqlExcel2 = "Select F1,F2,F3,F4,F7,F9,F10,F11,F12,F16,F17,F18 From [" + textBox1.Text + "$A15:V554]";
                 DataTable DS2 = new DataTable();
 
                 try
@@ -63,22 +63,22 @@ namespace PrimerasHU_GES
 
                     da1.Fill(DS2);
                     nuevoDtgv.DataSource = DS2;
-                    
+
                     nuevoDtgv.AutoGenerateColumns = false;
-                  
+
                     nuevoDtgv.Columns[0].HeaderText = "Cod.de punto";
                     nuevoDtgv.Columns[1].HeaderText = "Entidad";
                     nuevoDtgv.Columns[2].HeaderText = "Denominación";
                     nuevoDtgv.Columns[3].HeaderText = "Tipologia";
-                   // nuevoDtgv.Columns[4].HeaderText = "Cantidad por";
-                  //  nuevoDtgv.Columns[5].HeaderText = "Clase de cierre";
-                   // nuevoDtgv.Columns[4].HeaderText = "Clasif.por caracteristica";
+                    // nuevoDtgv.Columns[4].HeaderText = "Cantidad por";
+                    //  nuevoDtgv.Columns[5].HeaderText = "Clase de cierre";
+                    // nuevoDtgv.Columns[4].HeaderText = "Clasif.por caracteristica";
                     nuevoDtgv.Columns[4].HeaderText = "Tipo de punto";
                     nuevoDtgv.Columns[5].HeaderText = "X nominal";
                     nuevoDtgv.Columns[6].HeaderText = "Y nominal";
-                    nuevoDtgv.Columns[7].HeaderText ="Z nominal";
+                    nuevoDtgv.Columns[7].HeaderText = "Z nominal";
                     nuevoDtgv.Columns[8].HeaderText = "Nominal";
-                   // nuevoDtgv.Columns[12].HeaderText = "CD I";
+                    // nuevoDtgv.Columns[12].HeaderText = "CD I";
                     //nuevoDtgv.Columns[13].HeaderText = "CD J";
                     //nuevoDtgv.Columns[14].HeaderText = "CD K";
                     nuevoDtgv.Columns[9].HeaderText = "Unidad de medición";
@@ -87,10 +87,10 @@ namespace PrimerasHU_GES
                     //nuevoDtgv.Columns[18].HeaderText = "Medio de control";
                     //nuevoDtgv.Columns[19].HeaderText = "Frecuencia de control";
                     //nuevoDtgv.Columns[20].HeaderText = "Modo de registro";
-                   // nuevoDtgv.Columns[21].HeaderText = "Grupo";
+                    // nuevoDtgv.Columns[21].HeaderText = "Grupo";
 
                     string nombreArchivo = Path.GetFileNameWithoutExtension(ruta);
-                    
+
                     codigoProTxt.Text = cabeceraDtg.Rows[3].Cells["F16"].Value.ToString();
                     descSeccionTxt.Text = cabeceraDtg.Rows[3].Cells["F2"].Value.ToString();
                     numDisTxt.Text = cabeceraDtg.Rows[5].Cells["F2"].Value.ToString();
@@ -102,6 +102,35 @@ namespace PrimerasHU_GES
                     registrarBtn.Enabled = true;
 
                     limpiarTxt.Enabled = true;
+
+
+                  /*  foreach (DataGridViewRow fila in nuevoDtgv.Rows)
+                    {
+                        if (string.IsNullOrEmpty(fila.Cells[5].Value.ToString()))
+                        {
+                            fila.Cells[5].Value = Convert.ToDouble("0.0000");
+                        }
+                        if (string.IsNullOrEmpty(fila.Cells[6].Value.ToString()))
+                        {
+                            fila.Cells[6].Value = Convert.ToDouble("0.0000");
+                        }
+                        if (string.IsNullOrEmpty(fila.Cells[7].Value.ToString()))
+                        {
+                            fila.Cells[7].Value = Convert.ToDouble("0.0000");
+                        }
+                        if (string.IsNullOrEmpty(fila.Cells[8].Value.ToString()))
+                        {
+                            fila.Cells[8].Value = Convert.ToDouble("0.0000");
+                        }
+                        if (string.IsNullOrEmpty(fila.Cells[10].Value.ToString()))
+                        {
+                            fila.Cells[10].Value = Convert.ToDouble("0.0000");
+                        }
+                        if (string.IsNullOrEmpty(fila.Cells[11].Value.ToString()))
+                        {
+                            fila.Cells[11].Value = Convert.ToDouble("0.0000");
+                        }
+                    }*/
                 }
                 catch (Exception ex)
                 {
@@ -118,15 +147,15 @@ namespace PrimerasHU_GES
         }
 
         //Colocar Numeros a las filas del DatagridView
-         private void ActualDtgv_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
-          {
-            
-    }
+        private void ActualDtgv_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
 
-    //registro de control plan
-    private SqlConnection conexion;
+        }
+
+        //registro de control plan
+        private SqlConnection conexion;
         private SqlDataAdapter adaptador;
-       
+
         private void RegControlPlan_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'ges_v01DataSet17.detallesControlPlan' Puede moverla o quitarla según sea necesario.
@@ -135,12 +164,12 @@ namespace PrimerasHU_GES
             this.detallesControlPlanTableAdapter.Fill(this.ges_v01DataSet12.detallesControlPlan);
             conexion = new SqlConnection("Data source=.\\SQLEXPRESS;Initial Catalog=ges_v01;Integrated Security=True");
             adaptador = new SqlDataAdapter();
-            
+
             SqlCommand alta = new SqlCommand("INSERT INTO controlPlan values (@codPrograma,@codSeccion,@codCompilador,@codAprobador,@procesoCPlan,@numDisenioCPlan,@revCPlan,@normaRefCPlan,@fechModifCPlan)", conexion);
             adaptador.InsertCommand = alta;
-           
+
             adaptador.InsertCommand.Parameters.Add(new SqlParameter("@codPrograma", SqlDbType.VarChar));
-            adaptador.InsertCommand.Parameters.Add(new SqlParameter("@codSeccion",SqlDbType.Int));
+            adaptador.InsertCommand.Parameters.Add(new SqlParameter("@codSeccion", SqlDbType.Int));
             adaptador.InsertCommand.Parameters.Add(new SqlParameter("@codCompilador", SqlDbType.Int));
             adaptador.InsertCommand.Parameters.Add(new SqlParameter("@codAprobador", SqlDbType.Int));
             adaptador.InsertCommand.Parameters.Add(new SqlParameter("@procesoCPlan", SqlDbType.VarChar));
@@ -150,7 +179,7 @@ namespace PrimerasHU_GES
             adaptador.InsertCommand.Parameters.Add(new SqlParameter("@fechModifCPlan", SqlDbType.Date));
 
 
-            
+
 
 
 
@@ -159,7 +188,7 @@ namespace PrimerasHU_GES
 
 
         private void RegistrarBtn_Click(object sender, EventArgs e)
-            
+
         {
             //inicio de registrar control plan
 
@@ -172,7 +201,7 @@ namespace PrimerasHU_GES
             adaptador.InsertCommand.Parameters["@revCPlan"].Value = revisionText.Text;
             adaptador.InsertCommand.Parameters["@normaRefCPlan"].Value = (cabeceraDtg.Rows[6].Cells["F2"].Value.ToString());
             adaptador.InsertCommand.Parameters["@fechModifCPlan"].Value = DtFecha.Value;
-           
+
 
             try
             {
@@ -203,7 +232,7 @@ namespace PrimerasHU_GES
             finally
             {
                 conexion.Close();
-                
+
             }
 
 
@@ -222,7 +251,7 @@ namespace PrimerasHU_GES
             descSeccionTxt.Text = "";
             numDisTxt.Text = "";
             revisionText.Text = "";
-           
+
             DataTable dt = (DataTable)nuevoDtgv.DataSource;
             dt.Clear();
 
@@ -250,7 +279,7 @@ namespace PrimerasHU_GES
 
         private void RegDetCPbtn_Click(object sender, EventArgs e)
         {
-          
+
             SqlCommand detallar = new SqlCommand("INSERT INTO detallesControlPlan (codCPlan,idPtoMed,clasiTipoPto,codUnidMed,codTipoControl,codEntidad,denominacion,direcPtoMed,coordXPtoMed,coordYPtoMed,coordZPtoMed,nominalPtoMed,tolinferior,tolSuperior) values (@codCPlan,@idPtoMed,@clasiTipoPto,@codUnidMed,@codTipoControl,@codEntidad,@denominacion,@direcPtoMed,@coordXPtoMed,@coordYPtoMed,@coordZPtoMed,@nominalPtoMed,@tolinferior,@tolSuperior)", conexion);
             conexion.Open();
 
@@ -267,30 +296,30 @@ namespace PrimerasHU_GES
                     detallar.Parameters.AddWithValue("@codTipoControl", Convert.ToString(row.Cells["F4"].Value));
                     detallar.Parameters.AddWithValue("@codEntidad", Convert.ToString(row.Cells["F2"].Value));
                     //carga de texto de la descripcion llamada denominacion (se agrego en base de datos como varchar max)
-                    detallar.Parameters.AddWithValue("@denominacion",row.Cells["F3"].Value == DBNull.Value ? " " : Convert.ToString(row.Cells["F3"].Value));
+                    detallar.Parameters.AddWithValue("@denominacion", row.Cells["F3"].Value == DBNull.Value ? " " : Convert.ToString(row.Cells["F3"].Value));
 
                     string cadena = Convert.ToString(row.Cells["F1"].Value);
                     char[] aux = cadena.ToCharArray();
                     string letra = "";
 
-                    for(int i = 0; i <= aux.Length-1;i++)
+                    for (int i = 0; i <= aux.Length - 1; i++)
                     {
                         letra = aux[i].ToString();
-                    }                  
+                    }
                     if (letra == "X")
-                    {                      
+                    {
                         detallar.Parameters.AddWithValue("@direcPtoMed", letra);
                     }
                     else
                     {
-                        if (letra =="Y")
+                        if (letra == "Y")
                         {
-                           
+
                             detallar.Parameters.AddWithValue("@direcPtoMed", letra);
                         }
                         else
                         {
-                            if (letra=="Z")
+                            if (letra == "Z")
                             {
                                 detallar.Parameters.AddWithValue("@direcPtoMed", letra);
                             }
@@ -307,14 +336,23 @@ namespace PrimerasHU_GES
                                 }
                             }
                         }
-                        
+
                     }
 
                     detallar.Parameters.AddWithValue("@coordXPtoMed", row.Cells["F9"].Value == DBNull.Value ? 0 : Convert.ToDecimal(row.Cells["F9"].Value));
                     detallar.Parameters.AddWithValue("@coordYPtoMed", row.Cells["F10"].Value == DBNull.Value ? 0 : Convert.ToDecimal(row.Cells["F10"].Value));
                     detallar.Parameters.AddWithValue("@coordZPtoMed", row.Cells["F11"].Value == DBNull.Value ? 0 : Convert.ToDecimal(row.Cells["F11"].Value));
-                    detallar.Parameters.AddWithValue("@nominalPtoMed", row.Cells["F12"].Value == DBNull.Value ? 0 : Convert.ToDecimal(row.Cells["F12"].Value));
+                    detallar.Parameters.AddWithValue("@nominalPtoMed",row.Cells["F12"]);
 
+                    if (row.Cells["F12"].Value == null)
+                    {
+                        detallar.Parameters.AddWithValue("@nominalPtoMed", DBNull.Value);
+                    }
+                    else
+                    {
+                        //detallar.Parameters.AddWithValue("@nominalPtoMed", Convert.ToDecimal(row.Cells["F12"].Value));
+                        detallar.Parameters.AddWithValue("@nominalPtoMed", (row.Cells["F12"].Value));
+                    }
                     //detallar.Parameters.AddWithValue("@tolinferior", row.Cells["F17"].Value == DBNull.Value ? 0 : Convert.ToDecimal(row.Cells["F17"].Value));
                     //detallar.Parameters.AddWithValue("@tolinferior", row.Cells["F18"].Value == DBNull.Value ? 0 : Convert.ToDecimal(row.Cells["F17"].Value));
 
@@ -346,7 +384,73 @@ namespace PrimerasHU_GES
                 e.Graphics.DrawString((e.RowIndex).ToString(), e.InheritedRowStyle.Font, b, e.RowBounds.Location.X + 3, e.RowBounds.Location.Y + 2);
             }
         }
-    }
 
 
-}
+
+        private void actualizarBtn_Click(object sender, EventArgs e)
+        {
+           // DataTable src1 = actualDTGV.DataSource as DataTable;
+            DataTable dt = (DataTable)nuevoDtgv.DataSource;
+
+            DataTable src2 = (DataTable)actualDTGV.DataSource ;
+
+
+           
+         // int index1 = 0;
+            
+            for (int i = 0; i < dt.Rows.Count; i++)
+
+            {
+                var row1 = dt.Rows[i].ItemArray;
+                var row2 = src2.Rows[i].ItemArray;
+
+                for (int j = 0; j < row1.Length; j++)
+                {
+                    if (!row1[j].ToString().Equals(row2[j].ToString()))
+                    {
+                        nuevoDtgv.Rows[i].Cells[j].Style.BackColor = Color.Red;
+
+                        actualDTGV.Rows[i].Cells[j].Style.BackColor = Color.Red;
+
+                    }
+
+                }
+
+            }
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            int f = 0;
+            int c = 0;
+            for(f=0; f < actualDTGV.RowCount; f ++ )
+            {
+                for (c=0;c < actualDTGV.ColumnCount;c++ )
+                {
+
+                    string cell1 = Convert.ToString(actualDTGV.Rows[f].Cells[c].Value);
+                    string cell2 = Convert.ToString(nuevoDtgv.Rows[f].Cells[c].Value);
+
+                    if (cell1 != cell2)
+                    {
+                        //  MOSTRAR EN PANTALLA LA DIFERENCIA, SI HAY, DE LOS DOS ARCHIVOS
+                        nuevoDtgv.Rows[f].Cells[c].Style.BackColor = Color.Red;
+                    }
+                    else
+                    {
+                       
+                    }
+                   
+                }
+
+                
+                
+            }
+        }
+
+    }      
+}    
+   
+
+
+

@@ -115,6 +115,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AmpliarGrafico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AmpliarGrafico.Designer.cs">
+      <DependentUpon>AmpliarGrafico.cs</DependentUpon>
+    </Compile>
     <Compile Include="AprobadoresCompiladores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -375,6 +381,9 @@
     </Compile>
     <Compile Include="ValidarAutoincrementable.cs" />
     <Compile Include="ValidarLetraNumero.cs" />
+    <EmbeddedResource Include="AmpliarGrafico.resx">
+      <DependentUpon>AmpliarGrafico.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AprobadoresCompiladores.resx">
       <DependentUpon>AprobadoresCompiladores.cs</DependentUpon>
     </EmbeddedResource>
