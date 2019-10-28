@@ -36,6 +36,8 @@ namespace PrimerasHU_GES
 
         private void AprobadoresCompiladores_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'ges_v01DataSet18Operarios.operariosMaquina' Puede moverla o quitarla según sea necesario.
+            this.operariosMaquinaTableAdapter.Fill(this.ges_v01DataSet18Operarios.operariosMaquina);
             // TODO: esta línea de código carga datos en la tabla 'ges_v01DataSet10.aprobadores' Puede moverla o quitarla según sea necesario.
             this.aprobadoresTableAdapter.Fill(this.ges_v01DataSet10.aprobadores);
             // TODO: esta línea de código carga datos en la tabla 'ges_v01DataSet9.compiladores' Puede moverla o quitarla según sea necesario.
@@ -71,6 +73,23 @@ namespace PrimerasHU_GES
             txtNombreAprobador.Text = "";
             dgvAprobadores.DataSource = "";
         }
+        private void LimpiarOperario()
+        {
+            txtCodigoOperario.Text = "";
+            txtNombreOperario.Text = "";
+            //this.operariosMaquinaTableAdapter.Fill(this.ges_v01DataSet8.operariosMaquina);
+            this.operariosMaquinaTableAdapter.Fill(this.ges_v01DataSet18Operarios.operariosMaquina);
+            busqueda = 0;
+        }
+
+        private void LimpiarDGVOperarios()
+        {
+            txtCodigoOperario.Text = "";
+            txtNombreOperario.Text = "";
+            dgvOperarios.DataSource = "";
+        }
+
+        
         private void BtnRegCompilador_Click(object sender, EventArgs e)
         {
             SqlCommand alta = new SqlCommand("INSERT INTO compiladores (nomCompilador) VALUES (@nomCompilador)", Conexion);
@@ -547,6 +566,211 @@ namespace PrimerasHU_GES
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void cbEleccion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (cbEleccion.Text == "Aprobadores") 
+            {
+                panel5.Visible = true;
+                panel2.Hide();
+                panel6.Hide();
+            }
+            if (cbEleccion.Text == "Compiladores")
+            {
+                panel2.Visible = true;
+                panel5.Hide();
+                panel6.Hide();
+            }
+            if (cbEleccion.Text == "Operarios")
+            {
+                panel6.Visible = true;
+                panel2.Hide();
+                panel5.Hide();
+            }
+        }
+
+        private void panel6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvOperarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            posicion = dgvOperarios.CurrentRow.Index;
+
+            txtCodigoOperario.Text = dgvOperarios[0, posicion].Value.ToString();
+            txtNombreOperario.Text = dgvOperarios[1, posicion].Value.ToString();
+        }
+
+        private void btnRegOperario_Click_1(object sender, EventArgs e)
+        {
+            SqlCommand alta = new SqlCommand("INSERT INTO operariosMaquina (nomOper) VALUES (@nomOper)", Conexion);
+
+            Adaptador.InsertCommand = alta;
+            Adaptador.InsertCommand.Parameters.Add(new SqlParameter("@codOper", SqlDbType.VarChar));
+            Adaptador.InsertCommand.Parameters.Add(new SqlParameter("@nomOper", SqlDbType.VarChar));
+
+            Adaptador.InsertCommand.Parameters["@codOper"].Value = txtCodigoOperario.Text;
+            Adaptador.InsertCommand.Parameters["@nomOper"].Value = txtNombreOperario.Text;
+
+            if (string.IsNullOrEmpty(txtNombreOperario.Text))
+
+            {
+                MessageBox.Show("Es obligatorio completar el Nombre del operario.", "Atención!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                try
+                {
+                    Conexion.Open();
+                    SqlDataAdapter compCodOperario = new SqlDataAdapter("SELECT codOper FROM operariosMaquina WHERE codOper=@codOper", Conexion);
+                    DataTable codOperario = new DataTable();
+                    compCodOperario.SelectCommand.Parameters.Add(new SqlParameter("@codOper", SqlDbType.VarChar));
+                    compCodOperario.SelectCommand.Parameters["@codOper"].Value = txtCodigoOperario.Text;
+                    compCodOperario.Fill(codOperario);
+
+                    if (codOperario.Rows.Count > 0)
+                    {
+                        MessageBox.Show("El 'código' ingresado ya existe.", "Atención!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else
+                    if (MessageBox.Show("¿Está seguro que desea registrar este nuevo Operario?.", "Atención!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        Adaptador.InsertCommand.ExecuteNonQuery();
+                        MessageBox.Show("Se ha registrado correctamente el nuevo Operario de Maquina.", "Operación Exitosa!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LimpiarOperario();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("ERROR:" + ex.ToString());
+                }
+                finally
+                {
+                    Conexion.Close();
+                }
+            }
+        }
+
+        private void btnModOperario_Click_1(object sender, EventArgs e)
+        {
+            SqlCommand modificar = new SqlCommand("UPDATE operariosMaquina SET nomOper=@nomOper WHERE codOper=@codOper", Conexion);
+            Adaptador.UpdateCommand = modificar;
+
+            Adaptador.UpdateCommand.Parameters.Add(new SqlParameter("@codOper", SqlDbType.Int));
+            Adaptador.UpdateCommand.Parameters.Add(new SqlParameter("@nomOper", SqlDbType.VarChar));
+
+            Adaptador.UpdateCommand.Parameters["@codOper"].Value = txtCodigoOperario.Text;
+            Adaptador.UpdateCommand.Parameters["@nomOper"].Value = txtNombreOperario.Text;
+
+            if (string.IsNullOrEmpty(txtCodigoOperario.Text) || string.IsNullOrEmpty(txtNombreOperario.Text) && busqueda == 0)
+            {
+                MessageBox.Show("Por seguridad de los datos, primero debe seleccionar el Operario a modificar, recuerde que para ésto debe hacer 'Clic' sobre alguna celda del panel que represente al Operario. Por cualquier duda o consulta comuniquese con un Administrador", "Atención!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                try
+                {
+                    Conexion.Open();
+                    // adaptador.UpdateCommand.ExecuteNonQuery();
+                    // MessageBox.Show("Se ha modificado correctamente el nombre del Operario", "Operación Exitosa!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // LimpiarOperario();
+                    if (MessageBox.Show("¿Está seguro que desea modificar el Operario seleccionado: " + txtCodigoOperario.Text + "?", "Atención!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        MessageBox.Show("El Operario de Maquina: " + txtCodigoOperario.Text + " - " + txtNombreOperario.Text + ", fue modificado correctamente.", "Operación Exitosa!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LimpiarOperario();
+                        Adaptador.UpdateCommand.ExecuteNonQuery();
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("ERROR:" + ex.ToString());
+                }
+                finally
+                {
+                    Conexion.Close();
+                }
+                SqlDataAdapter da = new SqlDataAdapter("select * from operariosMaquina", Conexion);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dgvOperarios.DataSource = dt;
+            }
+        }
+
+        private void btnLimpiarOperario_Click_1(object sender, EventArgs e)
+        {
+            LimpiarOperario();
+            LimpiarDGVOperarios();
+        }
+
+        private void botonVerOperarios_Click_1(object sender, EventArgs e)
+        {
+
+            try
+            {
+                SqlDataAdapter da = new SqlDataAdapter("select * from operariosMaquina", Conexion);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dgvOperarios.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudieron cargar los datos en el Panel: " + ex.ToString());
+            }
+        }
+
+        private void btnEliminarOperario_Click_1(object sender, EventArgs e)
+        {
+            SqlCommand baja = new SqlCommand("DELETE FROM operariosMaquina WHERE codOper=@codOper", Conexion);
+            Adaptador.DeleteCommand = baja;
+            Adaptador.DeleteCommand.Parameters.Add(new SqlParameter("@codOper", SqlDbType.VarChar));
+
+            Adaptador.DeleteCommand.Parameters["@codOper"].Value = txtCodigoOperario.Text;
+
+            if (string.IsNullOrEmpty(txtCodigoOperario.Text) || string.IsNullOrEmpty(txtNombreOperario.Text) && busqueda == 0)
+            {
+                MessageBox.Show("Primero debe seleccionar el Operario a eliminar, recuerde que debe posicionarse y hacer 'Clic' sobre una celda del panel para seleccionar el Operario a eliminar", "Atención!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                try
+                {
+
+                    Conexion.Open();
+                    /*int cantidad = adaptador.DeleteCommand.ExecuteNonQuery();
+                    if (cantidad == 0)
+                    {
+                        MessageBox.Show("El 'Código' ingresado no existe en la base de datos.", "Atención!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else
+                    {
+                        MessageBox.Show("El Operario: " + txtCodigoOperario.Text + ", fue eliminado correctamente.", "Operación Exitosa!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LimpiarOperario();
+                    }*/
+
+                    if (MessageBox.Show("¿Está seguro que desea eliminar al Operario seleccionado: " + txtNombreOperario.Text + "?", "Atención!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        MessageBox.Show("El Operario: " + txtCodigoOperario.Text + ", fue eliminado correctamente.", "Operación Exitosa!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LimpiarOperario();
+                        int cantidad = Adaptador.DeleteCommand.ExecuteNonQuery();
+                    }
+                    SqlDataAdapter da = new SqlDataAdapter("select * from operariosMaquina", Conexion);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    dgvOperarios.DataSource = dt;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("ERROR:" + ex.ToString());
+                }
+                finally
+                {
+                    Conexion.Close();
+                }
+            }
         }
     }
 }

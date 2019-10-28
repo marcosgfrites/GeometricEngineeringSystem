@@ -31,11 +31,15 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuarios));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_Salir = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.cbCodTipoUsu = new System.Windows.Forms.ComboBox();
+            this.tiposUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ges_v01DataSet15 = new PrimerasHU_GES.ges_v01DataSet15();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
@@ -57,32 +61,28 @@
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ges_v01DataSet11 = new PrimerasHU_GES.ges_v01DataSet11();
             this.usuariosTableAdapter = new PrimerasHU_GES.ges_v01DataSet11TableAdapters.usuariosTableAdapter();
-            this.button1 = new System.Windows.Forms.Button();
-            this.cbCodTipoUsu = new System.Windows.Forms.ComboBox();
             this.ges_v01DataSet13 = new PrimerasHU_GES.ges_v01DataSet13();
             this.usuariosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.usuariosTableAdapter1 = new PrimerasHU_GES.ges_v01DataSet13TableAdapters.usuariosTableAdapter();
-            this.ges_v01DataSet15 = new PrimerasHU_GES.ges_v01DataSet15();
-            this.tiposUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tiposUsuarioTableAdapter = new PrimerasHU_GES.ges_v01DataSet15TableAdapters.tiposUsuarioTableAdapter();
-            this.codUsuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codTipoUsuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codEstadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomUsuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codUsuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.claveUsuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codEstadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codTipoUsuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechoraUltSesionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tiposUsuarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet15)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tiposUsuarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -100,6 +100,26 @@
             this.panel1.TabIndex = 110;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown_1);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.DarkBlue;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(866, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(64, 49);
+            this.button1.TabIndex = 7;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -178,6 +198,27 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(294, 568);
             this.panel4.TabIndex = 105;
+            // 
+            // cbCodTipoUsu
+            // 
+            this.cbCodTipoUsu.DataSource = this.tiposUsuarioBindingSource;
+            this.cbCodTipoUsu.DisplayMember = "descTipoUsu";
+            this.cbCodTipoUsu.FormattingEnabled = true;
+            this.cbCodTipoUsu.Location = new System.Drawing.Point(155, 53);
+            this.cbCodTipoUsu.Name = "cbCodTipoUsu";
+            this.cbCodTipoUsu.Size = new System.Drawing.Size(123, 21);
+            this.cbCodTipoUsu.TabIndex = 117;
+            this.cbCodTipoUsu.ValueMember = "descTipoUsu";
+            // 
+            // tiposUsuarioBindingSource
+            // 
+            this.tiposUsuarioBindingSource.DataMember = "tiposUsuario";
+            this.tiposUsuarioBindingSource.DataSource = this.ges_v01DataSet15;
+            // 
+            // ges_v01DataSet15
+            // 
+            this.ges_v01DataSet15.DataSetName = "ges_v01DataSet15";
+            this.ges_v01DataSet15.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel3
             // 
@@ -388,11 +429,11 @@
             this.dgvUsuarios.AutoGenerateColumns = false;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codUsuDataGridViewTextBoxColumn,
-            this.codTipoUsuDataGridViewTextBoxColumn,
-            this.codEstadoDataGridViewTextBoxColumn,
             this.nomUsuDataGridViewTextBoxColumn,
+            this.codUsuDataGridViewTextBoxColumn,
             this.claveUsuDataGridViewTextBoxColumn,
+            this.codEstadoDataGridViewTextBoxColumn,
+            this.codTipoUsuDataGridViewTextBoxColumn,
             this.fechoraUltSesionDataGridViewTextBoxColumn});
             this.dgvUsuarios.DataSource = this.usuariosBindingSource;
             this.dgvUsuarios.Location = new System.Drawing.Point(313, 14);
@@ -417,36 +458,6 @@
             // 
             this.usuariosTableAdapter.ClearBeforeFill = true;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.DarkBlue;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(866, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(64, 49);
-            this.button1.TabIndex = 7;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // cbCodTipoUsu
-            // 
-            this.cbCodTipoUsu.DataSource = this.tiposUsuarioBindingSource;
-            this.cbCodTipoUsu.DisplayMember = "descTipoUsu";
-            this.cbCodTipoUsu.FormattingEnabled = true;
-            this.cbCodTipoUsu.Location = new System.Drawing.Point(155, 53);
-            this.cbCodTipoUsu.Name = "cbCodTipoUsu";
-            this.cbCodTipoUsu.Size = new System.Drawing.Size(123, 21);
-            this.cbCodTipoUsu.TabIndex = 117;
-            // 
             // ges_v01DataSet13
             // 
             this.ges_v01DataSet13.DataSetName = "ges_v01DataSet13";
@@ -461,41 +472,9 @@
             // 
             this.usuariosTableAdapter1.ClearBeforeFill = true;
             // 
-            // ges_v01DataSet15
-            // 
-            this.ges_v01DataSet15.DataSetName = "ges_v01DataSet15";
-            this.ges_v01DataSet15.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tiposUsuarioBindingSource
-            // 
-            this.tiposUsuarioBindingSource.DataMember = "tiposUsuario";
-            this.tiposUsuarioBindingSource.DataSource = this.ges_v01DataSet15;
-            // 
             // tiposUsuarioTableAdapter
             // 
             this.tiposUsuarioTableAdapter.ClearBeforeFill = true;
-            // 
-            // codUsuDataGridViewTextBoxColumn
-            // 
-            this.codUsuDataGridViewTextBoxColumn.DataPropertyName = "codUsu";
-            this.codUsuDataGridViewTextBoxColumn.HeaderText = "Codigo de Usuario";
-            this.codUsuDataGridViewTextBoxColumn.Name = "codUsuDataGridViewTextBoxColumn";
-            this.codUsuDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codTipoUsuDataGridViewTextBoxColumn
-            // 
-            this.codTipoUsuDataGridViewTextBoxColumn.DataPropertyName = "codTipoUsu";
-            this.codTipoUsuDataGridViewTextBoxColumn.HeaderText = "Codigo de Tipo de Usuario";
-            this.codTipoUsuDataGridViewTextBoxColumn.Name = "codTipoUsuDataGridViewTextBoxColumn";
-            this.codTipoUsuDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codTipoUsuDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // codEstadoDataGridViewTextBoxColumn
-            // 
-            this.codEstadoDataGridViewTextBoxColumn.DataPropertyName = "codEstado";
-            this.codEstadoDataGridViewTextBoxColumn.HeaderText = "Codigo de  Estado";
-            this.codEstadoDataGridViewTextBoxColumn.Name = "codEstadoDataGridViewTextBoxColumn";
-            this.codEstadoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nomUsuDataGridViewTextBoxColumn
             // 
@@ -504,12 +483,34 @@
             this.nomUsuDataGridViewTextBoxColumn.Name = "nomUsuDataGridViewTextBoxColumn";
             this.nomUsuDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // codUsuDataGridViewTextBoxColumn
+            // 
+            this.codUsuDataGridViewTextBoxColumn.DataPropertyName = "codUsu";
+            this.codUsuDataGridViewTextBoxColumn.HeaderText = "Codigo de Usuario";
+            this.codUsuDataGridViewTextBoxColumn.Name = "codUsuDataGridViewTextBoxColumn";
+            this.codUsuDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // claveUsuDataGridViewTextBoxColumn
             // 
             this.claveUsuDataGridViewTextBoxColumn.DataPropertyName = "claveUsu";
             this.claveUsuDataGridViewTextBoxColumn.HeaderText = "Clave de Usuario";
             this.claveUsuDataGridViewTextBoxColumn.Name = "claveUsuDataGridViewTextBoxColumn";
             this.claveUsuDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // codEstadoDataGridViewTextBoxColumn
+            // 
+            this.codEstadoDataGridViewTextBoxColumn.DataPropertyName = "codEstado";
+            this.codEstadoDataGridViewTextBoxColumn.HeaderText = "Codigo de  Estado";
+            this.codEstadoDataGridViewTextBoxColumn.Name = "codEstadoDataGridViewTextBoxColumn";
+            this.codEstadoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // codTipoUsuDataGridViewTextBoxColumn
+            // 
+            this.codTipoUsuDataGridViewTextBoxColumn.DataPropertyName = "codTipoUsu";
+            this.codTipoUsuDataGridViewTextBoxColumn.HeaderText = "Codigo de Tipo de Usuario";
+            this.codTipoUsuDataGridViewTextBoxColumn.Name = "codTipoUsuDataGridViewTextBoxColumn";
+            this.codTipoUsuDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codTipoUsuDataGridViewTextBoxColumn.Width = 70;
             // 
             // fechoraUltSesionDataGridViewTextBoxColumn
             // 
@@ -537,6 +538,8 @@
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tiposUsuarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet15)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
@@ -544,8 +547,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tiposUsuarioBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -587,11 +588,11 @@
         private ges_v01DataSet15 ges_v01DataSet15;
         private System.Windows.Forms.BindingSource tiposUsuarioBindingSource;
         private ges_v01DataSet15TableAdapters.tiposUsuarioTableAdapter tiposUsuarioTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codUsuDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codTipoUsuDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codEstadoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomUsuDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codUsuDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn claveUsuDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codEstadoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codTipoUsuDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechoraUltSesionDataGridViewTextBoxColumn;
     }
 }

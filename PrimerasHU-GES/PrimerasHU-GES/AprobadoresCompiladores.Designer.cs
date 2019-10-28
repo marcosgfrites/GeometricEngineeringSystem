@@ -35,7 +35,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_Salir = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -71,6 +70,24 @@
             this.ges_v01DataSet9 = new PrimerasHU_GES.ges_v01DataSet9();
             this.compiladoresTableAdapter = new PrimerasHU_GES.ges_v01DataSet9TableAdapters.compiladoresTableAdapter();
             this.aprobadoresTableAdapter = new PrimerasHU_GES.ges_v01DataSet10TableAdapters.aprobadoresTableAdapter();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.botonVerOperarios = new System.Windows.Forms.Button();
+            this.btnEliminarOperario = new System.Windows.Forms.Button();
+            this.btnModOperario = new System.Windows.Forms.Button();
+            this.btnLimpiarOperario = new System.Windows.Forms.Button();
+            this.btnRegOperario = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtNombreOperario = new System.Windows.Forms.TextBox();
+            this.txtCodigoOperario = new System.Windows.Forms.TextBox();
+            this.dgvOperarios = new System.Windows.Forms.DataGridView();
+            this.ges_v01DataSet18Operarios = new PrimerasHU_GES.ges_v01DataSet18Operarios();
+            this.operariosMaquinaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.operariosMaquinaTableAdapter = new PrimerasHU_GES.ges_v01DataSet18OperariosTableAdapters.operariosMaquinaTableAdapter();
+            this.codOperDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomOperDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbEleccion = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
@@ -83,6 +100,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompiladores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.compiladoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet9)).BeginInit();
+            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOperarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18Operarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.operariosMaquinaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -96,7 +118,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1023, 49);
+            this.panel1.Size = new System.Drawing.Size(940, 49);
             this.panel1.TabIndex = 108;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -113,7 +135,7 @@
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimizar.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnMinimizar.ForeColor = System.Drawing.Color.White;
-            this.btnMinimizar.Location = new System.Drawing.Point(908, 0);
+            this.btnMinimizar.Location = new System.Drawing.Point(825, 0);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(64, 49);
             this.btnMinimizar.TabIndex = 8;
@@ -140,9 +162,9 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(91, 11);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(456, 22);
+            this.label3.Size = new System.Drawing.Size(582, 22);
             this.label3.TabIndex = 2;
-            this.label3.Text = "GESTOR DE APROBADORES Y COMPILADORES";
+            this.label3.Text = "GESTOR DE OPERARIOS, APROBADORES Y COMPILADORES";
             // 
             // btn_Salir
             // 
@@ -155,7 +177,7 @@
             this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Salir.ForeColor = System.Drawing.Color.White;
-            this.btn_Salir.Location = new System.Drawing.Point(972, 0);
+            this.btn_Salir.Location = new System.Drawing.Point(889, 0);
             this.btn_Salir.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Salir.Name = "btn_Salir";
             this.btn_Salir.Size = new System.Drawing.Size(51, 49);
@@ -164,32 +186,22 @@
             this.btn_Salir.UseVisualStyleBackColor = false;
             this.btn_Salir.Click += new System.EventHandler(this.Btn_Salir_Click);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(642, 82);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(244, 42);
-            this.label7.TabIndex = 117;
-            this.label7.Text = "Aprobadores";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(132, 82);
+            this.label6.Location = new System.Drawing.Point(133, 53);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(260, 42);
+            this.label6.Size = new System.Drawing.Size(681, 42);
             this.label6.TabIndex = 116;
-            this.label6.Text = "Compiladores";
+            this.label6.Text = "Compiladores Aprobadores Operarios";
             // 
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.panel3);
             this.panel5.Controls.Add(this.dgvAprobadores);
-            this.panel5.Location = new System.Drawing.Point(515, 139);
+            this.panel5.Location = new System.Drawing.Point(226, 204);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(498, 449);
             this.panel5.TabIndex = 115;
@@ -381,7 +393,7 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.dgvCompiladores);
-            this.panel2.Location = new System.Drawing.Point(18, 139);
+            this.panel2.Location = new System.Drawing.Point(229, 208);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(488, 449);
             this.panel2.TabIndex = 114;
@@ -576,14 +588,226 @@
             // 
             this.aprobadoresTableAdapter.ClearBeforeFill = true;
             // 
+            // panel6
+            // 
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.panel7);
+            this.panel6.Controls.Add(this.dgvOperarios);
+            this.panel6.Location = new System.Drawing.Point(186, 194);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(597, 463);
+            this.panel6.TabIndex = 117;
+            this.panel6.Click += new System.EventHandler(this.panel6_Click);
+            // 
+            // panel7
+            // 
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.botonVerOperarios);
+            this.panel7.Controls.Add(this.btnEliminarOperario);
+            this.panel7.Controls.Add(this.btnModOperario);
+            this.panel7.Controls.Add(this.btnLimpiarOperario);
+            this.panel7.Controls.Add(this.btnRegOperario);
+            this.panel7.Controls.Add(this.label7);
+            this.panel7.Controls.Add(this.label8);
+            this.panel7.Controls.Add(this.txtNombreOperario);
+            this.panel7.Controls.Add(this.txtCodigoOperario);
+            this.panel7.Location = new System.Drawing.Point(25, 14);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(267, 423);
+            this.panel7.TabIndex = 105;
+            // 
+            // botonVerOperarios
+            // 
+            this.botonVerOperarios.BackColor = System.Drawing.Color.Black;
+            this.botonVerOperarios.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botonVerOperarios.FlatAppearance.BorderColor = System.Drawing.Color.MediumTurquoise;
+            this.botonVerOperarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumTurquoise;
+            this.botonVerOperarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonVerOperarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.botonVerOperarios.ForeColor = System.Drawing.Color.White;
+            this.botonVerOperarios.Location = new System.Drawing.Point(25, 354);
+            this.botonVerOperarios.Name = "botonVerOperarios";
+            this.botonVerOperarios.Size = new System.Drawing.Size(215, 36);
+            this.botonVerOperarios.TabIndex = 85;
+            this.botonVerOperarios.Text = "Ver Operarios en Panel";
+            this.botonVerOperarios.UseVisualStyleBackColor = false;
+            this.botonVerOperarios.Click += new System.EventHandler(this.botonVerOperarios_Click_1);
+            // 
+            // btnEliminarOperario
+            // 
+            this.btnEliminarOperario.BackColor = System.Drawing.Color.Black;
+            this.btnEliminarOperario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminarOperario.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.btnEliminarOperario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
+            this.btnEliminarOperario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarOperario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnEliminarOperario.ForeColor = System.Drawing.Color.White;
+            this.btnEliminarOperario.Location = new System.Drawing.Point(25, 312);
+            this.btnEliminarOperario.Name = "btnEliminarOperario";
+            this.btnEliminarOperario.Size = new System.Drawing.Size(215, 36);
+            this.btnEliminarOperario.TabIndex = 83;
+            this.btnEliminarOperario.Text = "Eliminar Operario";
+            this.btnEliminarOperario.UseVisualStyleBackColor = false;
+            this.btnEliminarOperario.Click += new System.EventHandler(this.btnEliminarOperario_Click_1);
+            // 
+            // btnModOperario
+            // 
+            this.btnModOperario.BackColor = System.Drawing.Color.Black;
+            this.btnModOperario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModOperario.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.btnModOperario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnModOperario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModOperario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnModOperario.ForeColor = System.Drawing.Color.White;
+            this.btnModOperario.Location = new System.Drawing.Point(25, 228);
+            this.btnModOperario.Name = "btnModOperario";
+            this.btnModOperario.Size = new System.Drawing.Size(215, 36);
+            this.btnModOperario.TabIndex = 82;
+            this.btnModOperario.Text = "Modificar Operario";
+            this.btnModOperario.UseVisualStyleBackColor = false;
+            this.btnModOperario.Click += new System.EventHandler(this.btnModOperario_Click_1);
+            // 
+            // btnLimpiarOperario
+            // 
+            this.btnLimpiarOperario.BackColor = System.Drawing.Color.Black;
+            this.btnLimpiarOperario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimpiarOperario.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrange;
+            this.btnLimpiarOperario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
+            this.btnLimpiarOperario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiarOperario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnLimpiarOperario.ForeColor = System.Drawing.Color.White;
+            this.btnLimpiarOperario.Location = new System.Drawing.Point(25, 270);
+            this.btnLimpiarOperario.Name = "btnLimpiarOperario";
+            this.btnLimpiarOperario.Size = new System.Drawing.Size(215, 36);
+            this.btnLimpiarOperario.TabIndex = 81;
+            this.btnLimpiarOperario.Text = "Limpíar seleccion";
+            this.btnLimpiarOperario.UseVisualStyleBackColor = false;
+            this.btnLimpiarOperario.Click += new System.EventHandler(this.btnLimpiarOperario_Click_1);
+            // 
+            // btnRegOperario
+            // 
+            this.btnRegOperario.BackColor = System.Drawing.Color.Black;
+            this.btnRegOperario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegOperario.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.btnRegOperario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btnRegOperario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegOperario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnRegOperario.ForeColor = System.Drawing.Color.White;
+            this.btnRegOperario.Location = new System.Drawing.Point(25, 186);
+            this.btnRegOperario.Name = "btnRegOperario";
+            this.btnRegOperario.Size = new System.Drawing.Size(215, 36);
+            this.btnRegOperario.TabIndex = 80;
+            this.btnRegOperario.Text = "Registrar Operario";
+            this.btnRegOperario.UseVisualStyleBackColor = false;
+            this.btnRegOperario.Click += new System.EventHandler(this.btnRegOperario_Click_1);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(74, 101);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(105, 13);
+            this.label7.TabIndex = 79;
+            this.label7.Text = "Nombre de Operario:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(78, 36);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(101, 13);
+            this.label8.TabIndex = 78;
+            this.label8.Text = "Codigo de Operario:";
+            // 
+            // txtNombreOperario
+            // 
+            this.txtNombreOperario.Location = new System.Drawing.Point(25, 127);
+            this.txtNombreOperario.Name = "txtNombreOperario";
+            this.txtNombreOperario.Size = new System.Drawing.Size(215, 20);
+            this.txtNombreOperario.TabIndex = 77;
+            this.txtNombreOperario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtCodigoOperario
+            // 
+            this.txtCodigoOperario.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtCodigoOperario.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtCodigoOperario.Enabled = false;
+            this.txtCodigoOperario.Location = new System.Drawing.Point(27, 62);
+            this.txtCodigoOperario.Name = "txtCodigoOperario";
+            this.txtCodigoOperario.Size = new System.Drawing.Size(215, 20);
+            this.txtCodigoOperario.TabIndex = 76;
+            this.txtCodigoOperario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // dgvOperarios
+            // 
+            this.dgvOperarios.AllowUserToAddRows = false;
+            this.dgvOperarios.AllowUserToDeleteRows = false;
+            this.dgvOperarios.AutoGenerateColumns = false;
+            this.dgvOperarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOperarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codOperDataGridViewTextBoxColumn,
+            this.nomOperDataGridViewTextBoxColumn});
+            this.dgvOperarios.DataSource = this.operariosMaquinaBindingSource;
+            this.dgvOperarios.Location = new System.Drawing.Point(315, 14);
+            this.dgvOperarios.Name = "dgvOperarios";
+            this.dgvOperarios.ReadOnly = true;
+            this.dgvOperarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvOperarios.Size = new System.Drawing.Size(249, 423);
+            this.dgvOperarios.TabIndex = 108;
+            this.dgvOperarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOperarios_CellClick);
+            // 
+            // ges_v01DataSet18Operarios
+            // 
+            this.ges_v01DataSet18Operarios.DataSetName = "ges_v01DataSet18Operarios";
+            this.ges_v01DataSet18Operarios.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // operariosMaquinaBindingSource
+            // 
+            this.operariosMaquinaBindingSource.DataMember = "operariosMaquina";
+            this.operariosMaquinaBindingSource.DataSource = this.ges_v01DataSet18Operarios;
+            // 
+            // operariosMaquinaTableAdapter
+            // 
+            this.operariosMaquinaTableAdapter.ClearBeforeFill = true;
+            // 
+            // codOperDataGridViewTextBoxColumn
+            // 
+            this.codOperDataGridViewTextBoxColumn.DataPropertyName = "codOper";
+            this.codOperDataGridViewTextBoxColumn.HeaderText = "Codigo de Operario";
+            this.codOperDataGridViewTextBoxColumn.Name = "codOperDataGridViewTextBoxColumn";
+            this.codOperDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nomOperDataGridViewTextBoxColumn
+            // 
+            this.nomOperDataGridViewTextBoxColumn.DataPropertyName = "nomOper";
+            this.nomOperDataGridViewTextBoxColumn.HeaderText = "Nombre Operario";
+            this.nomOperDataGridViewTextBoxColumn.Name = "nomOperDataGridViewTextBoxColumn";
+            this.nomOperDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cbEleccion
+            // 
+            this.cbEleccion.FormattingEnabled = true;
+            this.cbEleccion.Items.AddRange(new object[] {
+            "Compiladores",
+            "Aprobadores",
+            "Operarios"});
+            this.cbEleccion.Location = new System.Drawing.Point(387, 167);
+            this.cbEleccion.Name = "cbEleccion";
+            this.cbEleccion.Size = new System.Drawing.Size(172, 21);
+            this.cbEleccion.TabIndex = 118;
+            this.cbEleccion.SelectedIndexChanged += new System.EventHandler(this.cbEleccion_SelectedIndexChanged);
+            // 
             // AprobadoresCompiladores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1023, 639);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
+            this.ClientSize = new System.Drawing.Size(940, 695);
+            this.Controls.Add(this.cbEleccion);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -606,6 +830,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompiladores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.compiladoresBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet9)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOperarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18Operarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.operariosMaquinaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -617,7 +847,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_Salir;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel3;
@@ -654,5 +883,23 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn codCompiladorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomCompiladorDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnMinimizar;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button botonVerOperarios;
+        private System.Windows.Forms.Button btnEliminarOperario;
+        private System.Windows.Forms.Button btnModOperario;
+        private System.Windows.Forms.Button btnLimpiarOperario;
+        private System.Windows.Forms.Button btnRegOperario;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtNombreOperario;
+        private System.Windows.Forms.TextBox txtCodigoOperario;
+        private System.Windows.Forms.DataGridView dgvOperarios;
+        private ges_v01DataSet18Operarios ges_v01DataSet18Operarios;
+        private System.Windows.Forms.BindingSource operariosMaquinaBindingSource;
+        private ges_v01DataSet18OperariosTableAdapters.operariosMaquinaTableAdapter operariosMaquinaTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codOperDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomOperDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ComboBox cbEleccion;
     }
 }

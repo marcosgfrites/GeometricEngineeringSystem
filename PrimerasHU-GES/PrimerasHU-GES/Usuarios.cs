@@ -136,14 +136,13 @@ namespace PrimerasHU_GES
         }
         private void BotonRegistrarUsuario_Click(object sender, EventArgs e)
         {
-            SqlCommand alta = new SqlCommand("INSERT INTO usuarios (nomUsu,claveUsu,codTipoUsu, codEstado, fechoraUltSesion) VALUES (@nomUsu,@claveUsu,@codTipoUsu,@codEstado,@fechoraUltSesion)", conexion);
+            SqlCommand alta = new SqlCommand("INSERT INTO usuarios (codTipoUsu,codEstado,nomUsu,claveUsu,fechoraUltSesion) VALUES (@codTipoUsu,@codEstado,@nomUsu,@claveUsu,@fechoraUltSesion)", conexion);
             adaptador.InsertCommand = alta;
             adaptador.InsertCommand.Parameters.Add(new SqlParameter("@codUsu", SqlDbType.VarChar));
             adaptador.InsertCommand.Parameters.Add(new SqlParameter("@codTipoUsu", SqlDbType.VarChar));
             adaptador.InsertCommand.Parameters.Add(new SqlParameter("@codEstado", SqlDbType.VarChar));
             adaptador.InsertCommand.Parameters.Add(new SqlParameter("@nomUsu", SqlDbType.VarChar));
             adaptador.InsertCommand.Parameters.Add(new SqlParameter("@claveUsu", SqlDbType.VarChar));
-            // adaptador.InsertCommand.Parameters.Add(new SqlParameter("@fechoraUltSesion", SqlDbType.VarChar));
             adaptador.InsertCommand.Parameters.Add(new SqlParameter("@fechoraUltSesion", SqlDbType.VarChar));
 
             adaptador.InsertCommand.Parameters["@codUsu"].Value = txtCodigoUsuario.Text;
@@ -153,8 +152,6 @@ namespace PrimerasHU_GES
             adaptador.InsertCommand.Parameters["@nomUsu"].Value = txtNombreUsuario.Text;
             adaptador.InsertCommand.Parameters["@claveUsu"].Value = txtClaveUsuario.Text;
             adaptador.InsertCommand.Parameters["@fechoraUltSesion"].Value = dateTimePicker1.Value.ToString();
-            // adaptador.InsertCommand.Parameters["@fechoraUltSesion"].Value = DateTime.Parse(dateTimePicker1);
-            // string fecha = dateTimePicker1.Value.ToString("dd/MM/yyyy");
 
             if (string.IsNullOrEmpty(cbCodTipoUsu.Text) || string.IsNullOrEmpty(txtNombreUsuario.Text) || string.IsNullOrEmpty(txtClaveUsuario.Text))
 
