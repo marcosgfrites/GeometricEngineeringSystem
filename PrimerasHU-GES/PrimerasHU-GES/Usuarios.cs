@@ -76,6 +76,10 @@ namespace PrimerasHU_GES
 
         private void Usuarios_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'ges_v01DataSet18Estados.estados' Puede moverla o quitarla según sea necesario.
+            this.estadosTableAdapter.Fill(this.ges_v01DataSet18Estados.estados);
+            // TODO: esta línea de código carga datos en la tabla 'ges_v01DataSet18TiposUsuario.tiposUsuario' Puede moverla o quitarla según sea necesario.
+            this.tiposUsuarioTableAdapter1.Fill(this.ges_v01DataSet18TiposUsuario.tiposUsuario);
             // TODO: esta línea de código carga datos en la tabla 'ges_v01DataSet15.tiposUsuario' Puede moverla o quitarla según sea necesario.
             this.tiposUsuarioTableAdapter.Fill(this.ges_v01DataSet15.tiposUsuario);
             // TODO: esta línea de código carga datos en la tabla 'ges_v01DataSet13.usuarios' Puede moverla o quitarla según sea necesario.
@@ -117,9 +121,9 @@ namespace PrimerasHU_GES
         private void LimpiarUsuario()
         {
             txtClaveUsuario.Text = "";
-            //txtCodigoTipoUsuario.Text = "";
+            this.tiposUsuarioTableAdapter1.Fill(this.ges_v01DataSet18TiposUsuario.tiposUsuario);
             txtCodigoUsuario.Text = "";
-            txtEstado.Text = "";
+            this.estadosTableAdapter.Fill(this.ges_v01DataSet18Estados.estados);
             txtNombreUsuario.Text = "";
             this.usuariosTableAdapter.Fill(this.ges_v01DataSet11.usuarios);
             busqueda = 0;
@@ -128,30 +132,29 @@ namespace PrimerasHU_GES
         private void LimpiarDGVUsuarios()
         {
             txtClaveUsuario.Text = "";
-            //txtCodigoTipoUsuario.Text = "";
+            this.tiposUsuarioTableAdapter1.Fill(this.ges_v01DataSet18TiposUsuario.tiposUsuario);
             txtCodigoUsuario.Text = "";
-            txtEstado.Text = "";
+            this.estadosTableAdapter.Fill(this.ges_v01DataSet18Estados.estados);
             txtNombreUsuario.Text = "";
             dgvUsuarios.DataSource = "";
         }
         private void BotonRegistrarUsuario_Click(object sender, EventArgs e)
         {
-            SqlCommand alta = new SqlCommand("INSERT INTO usuarios (codTipoUsu,codEstado,nomUsu,claveUsu,fechoraUltSesion) VALUES (@codTipoUsu,@codEstado,@nomUsu,@claveUsu,@fechoraUltSesion)", conexion);
+            SqlCommand alta = new SqlCommand("INSERT INTO usuarios VALUES (@codTipoUsu,@codEstado,@nomUsu,@claveUsu,@fechoraUltSesion)", conexion);
             adaptador.InsertCommand = alta;
-            adaptador.InsertCommand.Parameters.Add(new SqlParameter("@codUsu", SqlDbType.VarChar));
-            adaptador.InsertCommand.Parameters.Add(new SqlParameter("@codTipoUsu", SqlDbType.VarChar));
-            adaptador.InsertCommand.Parameters.Add(new SqlParameter("@codEstado", SqlDbType.VarChar));
+            //adaptador.InsertCommand.Parameters.Add(new SqlParameter("@codUsu", SqlDbType.Int));
+            adaptador.InsertCommand.Parameters.Add(new SqlParameter("@codTipoUsu", SqlDbType.Int));
+            adaptador.InsertCommand.Parameters.Add(new SqlParameter("@codEstado", SqlDbType.Int));
             adaptador.InsertCommand.Parameters.Add(new SqlParameter("@nomUsu", SqlDbType.VarChar));
             adaptador.InsertCommand.Parameters.Add(new SqlParameter("@claveUsu", SqlDbType.VarChar));
-            adaptador.InsertCommand.Parameters.Add(new SqlParameter("@fechoraUltSesion", SqlDbType.VarChar));
+            adaptador.InsertCommand.Parameters.Add(new SqlParameter("@fechoraUltSesion", SqlDbType.DateTime));
 
-            adaptador.InsertCommand.Parameters["@codUsu"].Value = txtCodigoUsuario.Text;
-            //adaptador.InsertCommand.Parameters["@codTipoUsu"].Value = txtCodigoTipoUsuario.Text;
-            adaptador.InsertCommand.Parameters["@codTipoUsu"].Value = cbCodTipoUsu.Text;
-            adaptador.InsertCommand.Parameters["@codEstado"].Value = txtEstado.Text;
+            //adaptador.InsertCommand.Parameters["@codUsu"].Value = Convert.ToInt32(txtCodigoUsuario.Text);
+            adaptador.InsertCommand.Parameters["@codTipoUsu"].Value = cbCodTipoUsu.SelectedValue;
+            adaptador.InsertCommand.Parameters["@codEstado"].Value = cbEstadoUsuario.SelectedValue;
             adaptador.InsertCommand.Parameters["@nomUsu"].Value = txtNombreUsuario.Text;
             adaptador.InsertCommand.Parameters["@claveUsu"].Value = txtClaveUsuario.Text;
-            adaptador.InsertCommand.Parameters["@fechoraUltSesion"].Value = dateTimePicker1.Value.ToString();
+            adaptador.InsertCommand.Parameters["@fechoraUltSesion"].Value = dateTimePicker1.Value;
 
             if (string.IsNullOrEmpty(cbCodTipoUsu.Text) || string.IsNullOrEmpty(txtNombreUsuario.Text) || string.IsNullOrEmpty(txtClaveUsuario.Text))
 
@@ -253,14 +256,18 @@ namespace PrimerasHU_GES
 
         private void BotonModificarUsuario_Click(object sender, EventArgs e)
         {
-            SqlCommand modificar = new SqlCommand("UPDATE usuarios SET nomUsu=@nomUsu, claveUsu=@claveUsu  WHERE codUsu=@codUsu", conexion);
+            SqlCommand modificar = new SqlCommand("UPDATE usuarios SET codTipoUsu=@codTipoUsu, codEstado=@codEstado, nomUsu=@nomUsu, claveUsu=@claveUsu  WHERE codUsu=@codUsu", conexion);
             adaptador.UpdateCommand = modificar;
 
             adaptador.UpdateCommand.Parameters.Add(new SqlParameter("@codUsu", SqlDbType.Int));
+            adaptador.UpdateCommand.Parameters.Add(new SqlParameter("@codTipoUsu", SqlDbType.Int));
+            adaptador.UpdateCommand.Parameters.Add(new SqlParameter("@codEstado", SqlDbType.Int));
             adaptador.UpdateCommand.Parameters.Add(new SqlParameter("@nomUsu", SqlDbType.VarChar));
             adaptador.UpdateCommand.Parameters.Add(new SqlParameter("@claveUsu", SqlDbType.VarChar));
 
             adaptador.UpdateCommand.Parameters["@codUsu"].Value = txtCodigoUsuario.Text;
+            adaptador.UpdateCommand.Parameters["@codTipoUsu"].Value = cbCodTipoUsu.SelectedValue;
+            adaptador.UpdateCommand.Parameters["@codEstado"].Value = cbEstadoUsuario.SelectedValue;
             adaptador.UpdateCommand.Parameters["@nomUsu"].Value = txtNombreUsuario.Text;
             adaptador.UpdateCommand.Parameters["@claveUsu"].Value = txtClaveUsuario.Text;
 
@@ -385,12 +392,13 @@ namespace PrimerasHU_GES
             {
                 posicion = dgvUsuarios.CurrentRow.Index;
 
-                txtCodigoUsuario.Text = dgvUsuarios[0, posicion].Value.ToString();
+                txtCodigoUsuario.Text = dgvUsuarios[1, posicion].Value.ToString();
                 //txtCodigoTipoUsuario.Text = dgvUsuarios[1, posicion].Value.ToString();
-                cbCodTipoUsu.Text = dgvUsuarios[1, posicion].Value.ToString();
-                txtEstado.Text = dgvUsuarios[2, posicion].Value.ToString();
-                txtNombreUsuario.Text = dgvUsuarios[3, posicion].Value.ToString();
-                txtClaveUsuario.Text = dgvUsuarios[4, posicion].Value.ToString();
+                cbCodTipoUsu.SelectedValue = dgvUsuarios[4, posicion].Value;
+                cbEstadoUsuario.SelectedValue = dgvUsuarios[3, posicion].Value;
+                txtNombreUsuario.Text = dgvUsuarios[0, posicion].Value.ToString();
+                txtClaveUsuario.Text = dgvUsuarios[2, posicion].Value.ToString();
+                /**
                 if (cbCodTipoUsu.Text == "1") 
                 {
                     cbCodTipoUsu.Text = "Administrador";
@@ -403,6 +411,7 @@ namespace PrimerasHU_GES
                 {
                     cbCodTipoUsu.Text = "Responsable Analista";
                 }
+                **/
             }
             catch (Exception ex)
             {

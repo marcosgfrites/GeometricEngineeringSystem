@@ -192,10 +192,20 @@
       <DependentUpon>ges_v01DataSet16.xsd</DependentUpon>
     </Compile>
     <Compile Include="ges_v01DataSet17.Designer.cs" />
+    <Compile Include="ges_v01DataSet18Estados.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DataSet18Estados.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ges_v01DataSet18Operarios.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ges_v01DataSet18Operarios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ges_v01DataSet18TiposUsuario.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DataSet18TiposUsuario.xsd</DependentUpon>
     </Compile>
     <Compile Include="ges_v01DataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -554,6 +564,17 @@
     <None Include="ges_v01DataSet17.xss">
       <DependentUpon>ges_v01DataSet17.xsd</DependentUpon>
     </None>
+    <None Include="ges_v01DataSet18Estados.xsc">
+      <DependentUpon>ges_v01DataSet18Estados.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet18Estados.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DataSet18Estados.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DataSet18Estados.xss">
+      <DependentUpon>ges_v01DataSet18Estados.xsd</DependentUpon>
+    </None>
     <None Include="ges_v01DataSet18Operarios.xsc">
       <DependentUpon>ges_v01DataSet18Operarios.xsd</DependentUpon>
     </None>
@@ -564,6 +585,17 @@
     </None>
     <None Include="ges_v01DataSet18Operarios.xss">
       <DependentUpon>ges_v01DataSet18Operarios.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet18TiposUsuario.xsc">
+      <DependentUpon>ges_v01DataSet18TiposUsuario.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet18TiposUsuario.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DataSet18TiposUsuario.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DataSet18TiposUsuario.xss">
+      <DependentUpon>ges_v01DataSet18TiposUsuario.xsd</DependentUpon>
     </None>
     <None Include="ges_v01DataSet2.xsc">
       <DependentUpon>ges_v01DataSet2.xsd</DependentUpon>

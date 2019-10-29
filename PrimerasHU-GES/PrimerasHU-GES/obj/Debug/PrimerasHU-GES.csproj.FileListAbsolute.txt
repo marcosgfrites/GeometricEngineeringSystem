@@ -954,4 +954,4 @@ C:\Users\mauro\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debu
 C:\Users\mauro\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU-GES.csproj.CopyComplete
 C:\Users\mauro\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU-GES.exe
 C:\Users\mauro\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU-GES.pdb
-
+D:\Marcos\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU_GES.AmpliarGrafico.resources
