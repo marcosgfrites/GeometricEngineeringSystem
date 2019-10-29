@@ -120,6 +120,7 @@
             this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Salir.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btn_Salir.FlatAppearance.BorderSize = 0;
             this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold);
@@ -193,6 +194,7 @@
             this.btn_BuscarArchivo.BackColor = System.Drawing.Color.Black;
             this.btn_BuscarArchivo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_BuscarArchivo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btn_BuscarArchivo.FlatAppearance.BorderSize = 0;
             this.btn_BuscarArchivo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_BuscarArchivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_BuscarArchivo.Location = new System.Drawing.Point(275, 214);
@@ -212,6 +214,7 @@
             this.btn_Guardar.BackColor = System.Drawing.Color.Black;
             this.btn_Guardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Guardar.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.btn_Guardar.FlatAppearance.BorderSize = 0;
             this.btn_Guardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.btn_Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Guardar.Location = new System.Drawing.Point(203, 351);
@@ -359,6 +362,7 @@
             this.btn_Limpiar.BackColor = System.Drawing.Color.Black;
             this.btn_Limpiar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Limpiar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btn_Limpiar.FlatAppearance.BorderSize = 0;
             this.btn_Limpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_Limpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Limpiar.Location = new System.Drawing.Point(26, 351);
@@ -374,6 +378,7 @@
             this.btn_Actualizar.BackColor = System.Drawing.Color.Black;
             this.btn_Actualizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Actualizar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn_Actualizar.FlatAppearance.BorderSize = 0;
             this.btn_Actualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btn_Actualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Actualizar.Location = new System.Drawing.Point(354, 586);
@@ -420,6 +425,7 @@
             this.btn_Eliminar.BackColor = System.Drawing.Color.Black;
             this.btn_Eliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Eliminar.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btn_Eliminar.FlatAppearance.BorderSize = 0;
             this.btn_Eliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btn_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Eliminar.Location = new System.Drawing.Point(463, 586);
@@ -435,6 +441,7 @@
             this.btn_Modificar.BackColor = System.Drawing.Color.Black;
             this.btn_Modificar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Modificar.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.btn_Modificar.FlatAppearance.BorderSize = 0;
             this.btn_Modificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
             this.btn_Modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Modificar.Location = new System.Drawing.Point(572, 586);

@@ -501,6 +501,7 @@
             this.btn_Graficos.TabIndex = 23;
             this.btn_Graficos.Text = "Gráficos";
             this.btn_Graficos.UseVisualStyleBackColor = false;
+            this.btn_Graficos.Click += new System.EventHandler(this.Btn_Graficos_Click);
             // 
             // btn_Calculos
             // 

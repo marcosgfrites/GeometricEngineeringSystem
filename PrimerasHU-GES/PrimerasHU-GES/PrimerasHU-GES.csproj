@@ -202,6 +202,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ges_v01DataSet18Operarios.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ges_v01DataSet18TiposGraficos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DataSet18TiposGraficos.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ges_v01DataSet18TiposUsuario.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -365,6 +370,12 @@
     <Compile Include="RegControlPlan.Designer.cs">
       <DependentUpon>RegControlPlan.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegistroGrafico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroGrafico.Designer.cs">
+      <DependentUpon>RegistroGrafico.cs</DependentUpon>
+    </Compile>
     <Compile Include="SeccionesVehiculo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -445,6 +456,9 @@
     </Compile>
     <EmbeddedResource Include="RegControlPlan.resx">
       <DependentUpon>RegControlPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroGrafico.resx">
+      <DependentUpon>RegistroGrafico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SeccionesVehiculo.resx">
       <DependentUpon>SeccionesVehiculo.cs</DependentUpon>
@@ -585,6 +599,17 @@
     </None>
     <None Include="ges_v01DataSet18Operarios.xss">
       <DependentUpon>ges_v01DataSet18Operarios.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet18TiposGraficos.xsc">
+      <DependentUpon>ges_v01DataSet18TiposGraficos.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet18TiposGraficos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DataSet18TiposGraficos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DataSet18TiposGraficos.xss">
+      <DependentUpon>ges_v01DataSet18TiposGraficos.xsd</DependentUpon>
     </None>
     <None Include="ges_v01DataSet18TiposUsuario.xsc">
       <DependentUpon>ges_v01DataSet18TiposUsuario.xsd</DependentUpon>

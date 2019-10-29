@@ -382,3 +382,7 @@ AND idPtoMed = '10739XD'
 AND pmd.codDmo IN (SELECT codDmo FROM detalleMuestras WHERE codMuestra = '3')
 
 SELECT DISTINCT idPtoMed FROM detallesDocumentoDmo WHERE codDmo = 'L359016215PS300MM00560' OR codDmo = 'L359016215PS300MM00561'
+
+INSERT INTO tiposGrafico VALUES ('Muestras'),('Cálculos'),('Personalizado')
+
+SELECT * FROM graficos

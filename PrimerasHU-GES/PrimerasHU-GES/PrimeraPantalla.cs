@@ -240,8 +240,15 @@ namespace PrimerasHU_GES
 
         private void Btn_Operarios_Click(object sender, EventArgs e)
         {
-            OperariosMaquinaMedicion omm = new OperariosMaquinaMedicion();
-            omm.Show();
+            AprobadoresCompiladores ac = new AprobadoresCompiladores();
+            ac.Show();
         }
+        
+        private void Btn_Graficos_Click (object sender, EventArgs e)
+        {
+            GraficoMarcos gm = new GraficoMarcos();
+            gm.Show();
+        }
+
     }
 }

@@ -52,7 +52,7 @@
             this.pb_grafica.Location = new System.Drawing.Point(12, 61);
             this.pb_grafica.Name = "pb_grafica";
             this.pb_grafica.Size = new System.Drawing.Size(1336, 627);
-            this.pb_grafica.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_grafica.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_grafica.TabIndex = 0;
             this.pb_grafica.TabStop = false;
             // 
@@ -133,6 +133,7 @@
             this.btn_Salir.TabIndex = 1;
             this.btn_Salir.Text = "Salir";
             this.btn_Salir.UseVisualStyleBackColor = false;
+            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
             // 
             // AmpliarGrafico
             // 

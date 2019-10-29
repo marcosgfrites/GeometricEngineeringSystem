@@ -938,6 +938,22 @@ namespace PrimerasHU_GES
             ag.Show();
         }
 
+        private void btn_registrarGrafico_Click(object sender, EventArgs e)
+        {
+            Bitmap bm;
+            using (MemoryStream ms = new MemoryStream())
+            {
+                chart_Puntos.SaveImage(ms, ChartImageFormat.Bmp);
+                bm = new Bitmap(ms);
+                Clipboard.SetImage(bm);
+            }
+
+            string auxMuestra = lbl_muestra.Text;
+
+            RegistroGrafico rg = new RegistroGrafico(bm,auxMuestra);
+            rg.Show();
+        }
+
         /**
          * 
         private void button1_Click(object sender, EventArgs e)
