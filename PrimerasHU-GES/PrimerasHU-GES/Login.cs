@@ -88,6 +88,25 @@ namespace PrimerasHU_GES
                             }
                         }
                         f.Show();
+
+                        //registro Fecha y Hora de la Última Sesión del Usuario
+                        SqlCommand cmd = new SqlCommand("UPDATE usuarios SET fechoraUltSesion=@fechoraUltSesion WHERE codUsu=@codUsu", Conexion);
+                        adaptador.UpdateCommand = cmd;
+                        adaptador.UpdateCommand.Parameters.Add(new SqlParameter("@codUsu", SqlDbType.Int));
+                        adaptador.UpdateCommand.Parameters.Add(new SqlParameter("@fechoraUltSesion", SqlDbType.DateTime));
+                        adaptador.UpdateCommand.Parameters["@codUsu"].Value = Convert.ToInt32(txt_Usuario.Text);
+                        adaptador.UpdateCommand.Parameters["@fechoraUltSesion"].Value = DateTime.Now;
+                        try
+                        {
+                            adaptador.UpdateCommand.ExecuteNonQuery();
+                            //MessageBox.Show("Login registrado!","Atención!",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        }
+                        catch (SqlException ex2)
+                        {
+                            MessageBox.Show(ex2.ToString());
+                        }
+
+
                         this.Hide();
                     }
                     else
