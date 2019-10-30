@@ -192,6 +192,11 @@
       <DependentUpon>ges_v01DataSet16.xsd</DependentUpon>
     </Compile>
     <Compile Include="ges_v01DataSet17.Designer.cs" />
+    <Compile Include="ges_v01DataSet18ClasifPto.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DataSet18ClasifPto.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ges_v01DataSet18Estados.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -577,6 +582,17 @@
     <None Include="ges_v01DataSet17.xsd" />
     <None Include="ges_v01DataSet17.xss">
       <DependentUpon>ges_v01DataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet18ClasifPto.xsc">
+      <DependentUpon>ges_v01DataSet18ClasifPto.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet18ClasifPto.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DataSet18ClasifPto.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DataSet18ClasifPto.xss">
+      <DependentUpon>ges_v01DataSet18ClasifPto.xsd</DependentUpon>
     </None>
     <None Include="ges_v01DataSet18Estados.xsc">
       <DependentUpon>ges_v01DataSet18Estados.xsd</DependentUpon>

@@ -51,6 +51,8 @@ namespace PrimerasHU_GES
 
         private void GraficoMarcos_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'ges_v01DataSet18ClasifPto.clasificacionesPunto' Puede moverla o quitarla según sea necesario.
+            this.clasificacionesPuntoTableAdapter.Fill(this.ges_v01DataSet18ClasifPto.clasificacionesPunto);
             // TODO: esta línea de código carga datos en la tabla 'ges_v01DataSetMuestrasGrafico.muestras' Puede moverla o quitarla según sea necesario.
             this.muestrasTableAdapter.Fill(this.ges_v01DataSetMuestrasGrafico.muestras);
 
@@ -73,6 +75,15 @@ namespace PrimerasHU_GES
             cb_dmoSeccion.Checked = false;
             txt_seccionDmo.Text = "";
             txt_seccionDmo.Enabled = false;
+
+            cb_muestraNombrePunto.Enabled = false;
+            txt_puntoNombre.Text = "";
+            cb_muestraNombrePunto.Checked = false;
+            txt_puntoNombre.Enabled = false;
+            cb_muestraTipoPunto.Enabled = false;
+            cb_muestraTipoPunto.Checked = false;
+            txt_tipoPunto.Enabled = false;
+            txt_tipoPunto.Text = "";
         }
 
 
@@ -103,12 +114,13 @@ namespace PrimerasHU_GES
             ad_listadoPuntos.SelectCommand.Parameters.Clear();
         }
 
-        private void buscarPuntos(string punto, string muestra)
+        private void buscarPuntos(string punto, string muestra,string tipo)
         {
+            string aux_tipo = tipo;
             string aux_punto = punto;
             int aux_muestra = int.Parse(muestra);
             //SqlCommand listadoPuntos = new SqlCommand("SELECT DISTINCT idPtoMed AS 'Puntos de Medición' FROM detallesDocumentoDmo WHERE codDmo IN (SELECT codDmo FROM detalleMuestras WHERE codMuestra ='" + aux_muestra + "') AND idPtoMed IN(SELECT idPtoMed FROM detallesDocumentoDmo WHERE idPtoMed IN(SELECT idPtoMed FROM detallesControlPlan WHERE clasiTipoPto = 'F'))", Conexion);
-            SqlCommand listadoPuntos = new SqlCommand("SELECT DISTINCT ddd.idPtoMed AS 'Puntos de Medición',dcp.clasiTipoPto AS 'Tipo de Punto' FROM detallesDocumentoDmo AS ddd INNER JOIN detallesControlPlan AS dcp ON dcp.idPtoMed = ddd.idPtoMed WHERE ddd.codDmo IN (SELECT codDmo FROM detalleMuestras WHERE codMuestra ='" + aux_muestra + "') AND ddd.idPtoMed IN(SELECT idPtoMed FROM detallesDocumentoDmo WHERE idPtoMed IN(SELECT idPtoMed FROM detallesControlPlan)) AND ddd.idPtoMed LIKE '%" + punto +"%'", Conexion);
+            SqlCommand listadoPuntos = new SqlCommand("SELECT DISTINCT ddd.idPtoMed AS 'Puntos de Medición',dcp.clasiTipoPto AS 'Tipo de Punto' FROM detallesDocumentoDmo AS ddd INNER JOIN detallesControlPlan AS dcp ON dcp.idPtoMed = ddd.idPtoMed WHERE ddd.codDmo IN (SELECT codDmo FROM detalleMuestras WHERE codMuestra ='" + aux_muestra + "') AND ddd.idPtoMed IN(SELECT idPtoMed FROM detallesDocumentoDmo WHERE idPtoMed IN(SELECT idPtoMed FROM detallesControlPlan WHERE clasiTipoPto LIKE '%"+aux_tipo+"%')) AND ddd.idPtoMed LIKE '%" + punto +"%'", Conexion);
             ad_listadoPuntos = new SqlDataAdapter(listadoPuntos);
 
             DataTable dt_listadoPuntos = new DataTable();
@@ -179,7 +191,8 @@ namespace PrimerasHU_GES
 
         private void conocerMuestrasNoGraficadas()
         {
-            SqlCommand muestrasNoGraf = new SqlCommand("SELECT codMuestra AS 'Código',fechaMuestra AS 'Fecha',obserMuestra AS 'Observaciones',cantidadDmo AS 'Cant. DMO' FROM muestras WHERE NOT EXISTS (SELECT codMuestra FROM graficos)", Conexion);
+            //SqlCommand muestrasNoGraf = new SqlCommand("SELECT codMuestra AS 'Código',fechaMuestra AS 'Fecha',obserMuestra AS 'Observaciones',cantidadDmo AS 'Cant. DMO' FROM muestras WHERE NOT EXISTS (SELECT codMuestra FROM graficos)", Conexion);
+            SqlCommand muestrasNoGraf = new SqlCommand("SELECT codMuestra AS 'Código',fechaMuestra AS 'Fecha',obserMuestra AS 'Observaciones',cantidadDmo AS 'Cant. DMO' FROM muestras", Conexion);
             ad_muestrasNoGraf = new SqlDataAdapter(muestrasNoGraf);
             DataTable dt_muestrasNoGraf = new DataTable();
             ad_muestrasNoGraf.Fill(dt_muestrasNoGraf);
@@ -190,6 +203,8 @@ namespace PrimerasHU_GES
 
         private void Dgv_muestras_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            cb_muestraNombrePunto.Enabled = true;
+            cb_muestraTipoPunto.Enabled = true;
             int posi_muestras = dgv_muestras.CurrentRow.Index;
             string aux_codMuestra = dgv_muestras[0, posi_muestras].Value.ToString();
             muestraSeleccionada = aux_codMuestra;
@@ -537,7 +552,8 @@ namespace PrimerasHU_GES
         {
             string param_muestra = lbl_muestra.Text;
             string param_punto = txt_puntoNombre.Text;
-            buscarPuntos(param_punto,param_muestra);
+            string param_tipo = txt_tipoPunto.Text;
+            buscarPuntos(param_punto,param_muestra,param_tipo);
         }
 
         private void btn_verDmo_Click(object sender, EventArgs e)
@@ -952,6 +968,40 @@ namespace PrimerasHU_GES
 
             RegistroGrafico rg = new RegistroGrafico(bm,auxMuestra);
             rg.Show();
+        }
+
+        private void txt_tipoPunto_TextChanged(object sender, EventArgs e)
+        {
+            string param_muestra = lbl_muestra.Text;
+            string param_punto = txt_puntoNombre.Text;
+            string param_tipo = txt_tipoPunto.Text;
+            buscarPuntos(param_punto, param_muestra, param_tipo);
+        }
+
+        private void cb_muestraNombrePunto_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cb_muestraNombrePunto.Checked == true)
+            {
+                txt_puntoNombre.Enabled = true;
+            }
+            else
+            {
+                txt_puntoNombre.Text = "";
+                txt_puntoNombre.Enabled = false;
+            }
+        }
+
+        private void cb_muestraTipoPunto_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cb_muestraTipoPunto.Checked == true)
+            {
+                txt_tipoPunto.Enabled = true;
+            }
+            else
+            {
+                txt_tipoPunto.Text = "";
+                txt_tipoPunto.Enabled = false;
+            }
         }
 
         /**
