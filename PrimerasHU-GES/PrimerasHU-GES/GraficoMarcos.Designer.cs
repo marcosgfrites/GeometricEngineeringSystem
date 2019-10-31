@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GraficoMarcos));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -106,6 +107,7 @@
             this.txt_puntoNombre = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label18 = new System.Windows.Forms.Label();
             this.txt_tipoPunto = new System.Windows.Forms.TextBox();
             this.cb_muestraNombrePunto = new System.Windows.Forms.CheckBox();
             this.cb_muestraTipoPunto = new System.Windows.Forms.CheckBox();
@@ -146,7 +148,6 @@
             this.clasificacionesPuntoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ges_v01DataSet18ClasifPto = new PrimerasHU_GES.ges_v01DataSet18ClasifPto();
             this.clasificacionesPuntoTableAdapter = new PrimerasHU_GES.ges_v01DataSet18ClasifPtoTableAdapters.clasificacionesPuntoTableAdapter();
-            this.label18 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_muestras)).BeginInit();
@@ -192,6 +193,8 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Dock = System.Windows.Forms.DockStyle.Right;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
@@ -900,6 +903,16 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Muestras";
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(403, 456);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(65, 16);
+            this.label18.TabIndex = 40;
+            this.label18.Text = "PASO 3:";
+            // 
             // txt_tipoPunto
             // 
             this.txt_tipoPunto.Location = new System.Drawing.Point(165, 243);
@@ -1454,16 +1467,6 @@
             // clasificacionesPuntoTableAdapter
             // 
             this.clasificacionesPuntoTableAdapter.ClearBeforeFill = true;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(403, 456);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(65, 16);
-            this.label18.TabIndex = 40;
-            this.label18.Text = "PASO 3:";
             // 
             // GraficoMarcos
             // 

@@ -246,6 +246,11 @@ SELECT * FROM muestras
 DELETE FROM muestras
 DBCC CHECKIDENT ('muestras',RESEED,0)
 
+SELECT * FROM graficos
+DELETE FROM graficos
+DBCC CHECKIDENT ('graficos',RESEED,0)
+
+
 SELECT * FROM detalleMuestras
 DELETE FROM detalleMuestras
 DBCC CHECKIDENT ('detalleMuestras',RESEED,0)
@@ -362,6 +367,7 @@ SELECT * FROM muestras
 
 SELECT * FROM detalleMuestras
 
+
 SELECT DISTINCT ddd.idPtoMed AS 'Puntos de Medici�n',dcp.clasiTipoPto AS 'Tipo de Punto'
 FROM detallesDocumentoDmo AS ddd
 INNER JOIN detallesControlPlan AS dcp ON dcp.idPtoMed = ddd.idPtoMed
@@ -386,3 +392,23 @@ SELECT DISTINCT idPtoMed FROM detallesDocumentoDmo WHERE codDmo = 'L359016215PS3
 INSERT INTO tiposGrafico VALUES ('Muestras'),('Cálculos'),('Personalizado')
 
 SELECT * FROM graficos
+
+SELECT * FROM tiposUsuario
+DELETE FROM tiposUsuario WHERE codTipoUsu >= 4
+DBCC CHECKIDENT ('tiposUsuario',RESEED,3)
+
+INSERT INTO tiposUsuario VALUES ('Usuario PPS')
+
+SELECT * FROM usuarios
+DELETE FROM usuarios WHERE codUsu >= 6
+DBCC CHECKIDENT ('usuarios',RESEED,5)
+
+SELECT * FROM aprobadores
+
+SELECT * FROM compiladores
+
+SELECT * FROM operariosMaquina
+
+SELECT * FROM estados
+DELETE FROM estados WHERE codEstado >= 3
+DBCC CHECKIDENT ('estados',RESEED,2)

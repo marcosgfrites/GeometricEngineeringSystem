@@ -37,9 +37,12 @@
             this.btn_Salir = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.cbEstadoUsuario = new System.Windows.Forms.ComboBox();
+            this.estadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ges_v01DataSet18Estados = new PrimerasHU_GES.ges_v01DataSet18Estados();
             this.cbCodTipoUsu = new System.Windows.Forms.ComboBox();
-            this.tiposUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ges_v01DataSet15 = new PrimerasHU_GES.ges_v01DataSet15();
+            this.tiposUsuarioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.ges_v01DataSet18TiposUsuario = new PrimerasHU_GES.ges_v01DataSet18TiposUsuario();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
@@ -57,42 +60,39 @@
             this.txtNombreUsuario = new System.Windows.Forms.TextBox();
             this.txtCodigoUsuario = new System.Windows.Forms.TextBox();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ges_v01DataSet11 = new PrimerasHU_GES.ges_v01DataSet11();
+            this.tiposUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ges_v01DataSet15 = new PrimerasHU_GES.ges_v01DataSet15();
+            this.usuariosTableAdapter = new PrimerasHU_GES.ges_v01DataSet11TableAdapters.usuariosTableAdapter();
+            this.ges_v01DataSet13 = new PrimerasHU_GES.ges_v01DataSet13();
+            this.usuariosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.usuariosTableAdapter1 = new PrimerasHU_GES.ges_v01DataSet13TableAdapters.usuariosTableAdapter();
+            this.tiposUsuarioTableAdapter = new PrimerasHU_GES.ges_v01DataSet15TableAdapters.tiposUsuarioTableAdapter();
+            this.tiposUsuarioTableAdapter1 = new PrimerasHU_GES.ges_v01DataSet18TiposUsuarioTableAdapters.tiposUsuarioTableAdapter();
+            this.estadosTableAdapter = new PrimerasHU_GES.ges_v01DataSet18EstadosTableAdapters.estadosTableAdapter();
             this.nomUsuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codUsuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.claveUsuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codEstadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codTipoUsuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechoraUltSesionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ges_v01DataSet11 = new PrimerasHU_GES.ges_v01DataSet11();
-            this.usuariosTableAdapter = new PrimerasHU_GES.ges_v01DataSet11TableAdapters.usuariosTableAdapter();
-            this.ges_v01DataSet13 = new PrimerasHU_GES.ges_v01DataSet13();
-            this.usuariosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.usuariosTableAdapter1 = new PrimerasHU_GES.ges_v01DataSet13TableAdapters.usuariosTableAdapter();
-            this.tiposUsuarioTableAdapter = new PrimerasHU_GES.ges_v01DataSet15TableAdapters.tiposUsuarioTableAdapter();
-            this.ges_v01DataSet18TiposUsuario = new PrimerasHU_GES.ges_v01DataSet18TiposUsuario();
-            this.tiposUsuarioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.tiposUsuarioTableAdapter1 = new PrimerasHU_GES.ges_v01DataSet18TiposUsuarioTableAdapters.tiposUsuarioTableAdapter();
-            this.cbEstadoUsuario = new System.Windows.Forms.ComboBox();
-            this.ges_v01DataSet18Estados = new PrimerasHU_GES.ges_v01DataSet18Estados();
-            this.estadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.estadosTableAdapter = new PrimerasHU_GES.ges_v01DataSet18EstadosTableAdapters.estadosTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tiposUsuarioBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18Estados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tiposUsuarioBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18TiposUsuario)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tiposUsuarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18TiposUsuario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tiposUsuarioBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18Estados)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -209,6 +209,27 @@
             this.panel4.Size = new System.Drawing.Size(294, 568);
             this.panel4.TabIndex = 105;
             // 
+            // cbEstadoUsuario
+            // 
+            this.cbEstadoUsuario.DataSource = this.estadosBindingSource;
+            this.cbEstadoUsuario.DisplayMember = "descEstado";
+            this.cbEstadoUsuario.FormattingEnabled = true;
+            this.cbEstadoUsuario.Location = new System.Drawing.Point(155, 79);
+            this.cbEstadoUsuario.Name = "cbEstadoUsuario";
+            this.cbEstadoUsuario.Size = new System.Drawing.Size(123, 21);
+            this.cbEstadoUsuario.TabIndex = 118;
+            this.cbEstadoUsuario.ValueMember = "codEstado";
+            // 
+            // estadosBindingSource
+            // 
+            this.estadosBindingSource.DataMember = "estados";
+            this.estadosBindingSource.DataSource = this.ges_v01DataSet18Estados;
+            // 
+            // ges_v01DataSet18Estados
+            // 
+            this.ges_v01DataSet18Estados.DataSetName = "ges_v01DataSet18Estados";
+            this.ges_v01DataSet18Estados.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // cbCodTipoUsu
             // 
             this.cbCodTipoUsu.DataSource = this.tiposUsuarioBindingSource1;
@@ -220,15 +241,15 @@
             this.cbCodTipoUsu.TabIndex = 117;
             this.cbCodTipoUsu.ValueMember = "codTipoUsu";
             // 
-            // tiposUsuarioBindingSource
+            // tiposUsuarioBindingSource1
             // 
-            this.tiposUsuarioBindingSource.DataMember = "tiposUsuario";
-            this.tiposUsuarioBindingSource.DataSource = this.ges_v01DataSet15;
+            this.tiposUsuarioBindingSource1.DataMember = "tiposUsuario";
+            this.tiposUsuarioBindingSource1.DataSource = this.ges_v01DataSet18TiposUsuario;
             // 
-            // ges_v01DataSet15
+            // ges_v01DataSet18TiposUsuario
             // 
-            this.ges_v01DataSet15.DataSetName = "ges_v01DataSet15";
-            this.ges_v01DataSet15.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.ges_v01DataSet18TiposUsuario.DataSetName = "ges_v01DataSet18TiposUsuario";
+            this.ges_v01DataSet18TiposUsuario.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel3
             // 
@@ -272,6 +293,7 @@
             this.txtClaveUsuario.Location = new System.Drawing.Point(155, 131);
             this.txtClaveUsuario.MaxLength = 16;
             this.txtClaveUsuario.Name = "txtClaveUsuario";
+            this.txtClaveUsuario.PasswordChar = '*';
             this.txtClaveUsuario.Size = new System.Drawing.Size(123, 20);
             this.txtClaveUsuario.TabIndex = 80;
             this.txtClaveUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -427,6 +449,7 @@
             this.dgvUsuarios.AllowUserToAddRows = false;
             this.dgvUsuarios.AllowUserToDeleteRows = false;
             this.dgvUsuarios.AutoGenerateColumns = false;
+            this.dgvUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nomUsuDataGridViewTextBoxColumn,
@@ -444,49 +467,6 @@
             this.dgvUsuarios.TabIndex = 108;
             this.dgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvUsuarios_CellClick);
             // 
-            // nomUsuDataGridViewTextBoxColumn
-            // 
-            this.nomUsuDataGridViewTextBoxColumn.DataPropertyName = "nomUsu";
-            this.nomUsuDataGridViewTextBoxColumn.HeaderText = "Nombre de Usuario";
-            this.nomUsuDataGridViewTextBoxColumn.Name = "nomUsuDataGridViewTextBoxColumn";
-            this.nomUsuDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codUsuDataGridViewTextBoxColumn
-            // 
-            this.codUsuDataGridViewTextBoxColumn.DataPropertyName = "codUsu";
-            this.codUsuDataGridViewTextBoxColumn.HeaderText = "Codigo de Usuario";
-            this.codUsuDataGridViewTextBoxColumn.Name = "codUsuDataGridViewTextBoxColumn";
-            this.codUsuDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // claveUsuDataGridViewTextBoxColumn
-            // 
-            this.claveUsuDataGridViewTextBoxColumn.DataPropertyName = "claveUsu";
-            this.claveUsuDataGridViewTextBoxColumn.HeaderText = "Clave de Usuario";
-            this.claveUsuDataGridViewTextBoxColumn.Name = "claveUsuDataGridViewTextBoxColumn";
-            this.claveUsuDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codEstadoDataGridViewTextBoxColumn
-            // 
-            this.codEstadoDataGridViewTextBoxColumn.DataPropertyName = "codEstado";
-            this.codEstadoDataGridViewTextBoxColumn.HeaderText = "Codigo de  Estado";
-            this.codEstadoDataGridViewTextBoxColumn.Name = "codEstadoDataGridViewTextBoxColumn";
-            this.codEstadoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codTipoUsuDataGridViewTextBoxColumn
-            // 
-            this.codTipoUsuDataGridViewTextBoxColumn.DataPropertyName = "codTipoUsu";
-            this.codTipoUsuDataGridViewTextBoxColumn.HeaderText = "Codigo de Tipo de Usuario";
-            this.codTipoUsuDataGridViewTextBoxColumn.Name = "codTipoUsuDataGridViewTextBoxColumn";
-            this.codTipoUsuDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codTipoUsuDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // fechoraUltSesionDataGridViewTextBoxColumn
-            // 
-            this.fechoraUltSesionDataGridViewTextBoxColumn.DataPropertyName = "fechoraUltSesion";
-            this.fechoraUltSesionDataGridViewTextBoxColumn.HeaderText = "fecha y hora de la Ultima Sesion";
-            this.fechoraUltSesionDataGridViewTextBoxColumn.Name = "fechoraUltSesionDataGridViewTextBoxColumn";
-            this.fechoraUltSesionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // usuariosBindingSource
             // 
             this.usuariosBindingSource.DataMember = "usuarios";
@@ -496,6 +476,16 @@
             // 
             this.ges_v01DataSet11.DataSetName = "ges_v01DataSet11";
             this.ges_v01DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tiposUsuarioBindingSource
+            // 
+            this.tiposUsuarioBindingSource.DataMember = "tiposUsuario";
+            this.tiposUsuarioBindingSource.DataSource = this.ges_v01DataSet15;
+            // 
+            // ges_v01DataSet15
+            // 
+            this.ges_v01DataSet15.DataSetName = "ges_v01DataSet15";
+            this.ges_v01DataSet15.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // usuariosTableAdapter
             // 
@@ -519,44 +509,56 @@
             // 
             this.tiposUsuarioTableAdapter.ClearBeforeFill = true;
             // 
-            // ges_v01DataSet18TiposUsuario
-            // 
-            this.ges_v01DataSet18TiposUsuario.DataSetName = "ges_v01DataSet18TiposUsuario";
-            this.ges_v01DataSet18TiposUsuario.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tiposUsuarioBindingSource1
-            // 
-            this.tiposUsuarioBindingSource1.DataMember = "tiposUsuario";
-            this.tiposUsuarioBindingSource1.DataSource = this.ges_v01DataSet18TiposUsuario;
-            // 
             // tiposUsuarioTableAdapter1
             // 
             this.tiposUsuarioTableAdapter1.ClearBeforeFill = true;
             // 
-            // cbEstadoUsuario
-            // 
-            this.cbEstadoUsuario.DataSource = this.estadosBindingSource;
-            this.cbEstadoUsuario.DisplayMember = "descEstado";
-            this.cbEstadoUsuario.FormattingEnabled = true;
-            this.cbEstadoUsuario.Location = new System.Drawing.Point(155, 79);
-            this.cbEstadoUsuario.Name = "cbEstadoUsuario";
-            this.cbEstadoUsuario.Size = new System.Drawing.Size(123, 21);
-            this.cbEstadoUsuario.TabIndex = 118;
-            this.cbEstadoUsuario.ValueMember = "codEstado";
-            // 
-            // ges_v01DataSet18Estados
-            // 
-            this.ges_v01DataSet18Estados.DataSetName = "ges_v01DataSet18Estados";
-            this.ges_v01DataSet18Estados.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // estadosBindingSource
-            // 
-            this.estadosBindingSource.DataMember = "estados";
-            this.estadosBindingSource.DataSource = this.ges_v01DataSet18Estados;
-            // 
             // estadosTableAdapter
             // 
             this.estadosTableAdapter.ClearBeforeFill = true;
+            // 
+            // nomUsuDataGridViewTextBoxColumn
+            // 
+            this.nomUsuDataGridViewTextBoxColumn.DataPropertyName = "nomUsu";
+            this.nomUsuDataGridViewTextBoxColumn.HeaderText = "Nombre de Usuario";
+            this.nomUsuDataGridViewTextBoxColumn.Name = "nomUsuDataGridViewTextBoxColumn";
+            this.nomUsuDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // codUsuDataGridViewTextBoxColumn
+            // 
+            this.codUsuDataGridViewTextBoxColumn.DataPropertyName = "codUsu";
+            this.codUsuDataGridViewTextBoxColumn.HeaderText = "Codigo de Usuario";
+            this.codUsuDataGridViewTextBoxColumn.Name = "codUsuDataGridViewTextBoxColumn";
+            this.codUsuDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // claveUsuDataGridViewTextBoxColumn
+            // 
+            this.claveUsuDataGridViewTextBoxColumn.DataPropertyName = "claveUsu";
+            this.claveUsuDataGridViewTextBoxColumn.HeaderText = "Clave de Usuario";
+            this.claveUsuDataGridViewTextBoxColumn.Name = "claveUsuDataGridViewTextBoxColumn";
+            this.claveUsuDataGridViewTextBoxColumn.ReadOnly = true;
+            this.claveUsuDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // codEstadoDataGridViewTextBoxColumn
+            // 
+            this.codEstadoDataGridViewTextBoxColumn.DataPropertyName = "codEstado";
+            this.codEstadoDataGridViewTextBoxColumn.HeaderText = "Codigo de  Estado";
+            this.codEstadoDataGridViewTextBoxColumn.Name = "codEstadoDataGridViewTextBoxColumn";
+            this.codEstadoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // codTipoUsuDataGridViewTextBoxColumn
+            // 
+            this.codTipoUsuDataGridViewTextBoxColumn.DataPropertyName = "codTipoUsu";
+            this.codTipoUsuDataGridViewTextBoxColumn.HeaderText = "Codigo de Tipo de Usuario";
+            this.codTipoUsuDataGridViewTextBoxColumn.Name = "codTipoUsuDataGridViewTextBoxColumn";
+            this.codTipoUsuDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fechoraUltSesionDataGridViewTextBoxColumn
+            // 
+            this.fechoraUltSesionDataGridViewTextBoxColumn.DataPropertyName = "fechoraUltSesion";
+            this.fechoraUltSesionDataGridViewTextBoxColumn.HeaderText = "fecha y hora de la Ultima Sesion";
+            this.fechoraUltSesionDataGridViewTextBoxColumn.Name = "fechoraUltSesionDataGridViewTextBoxColumn";
+            this.fechoraUltSesionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Usuarios
             // 
@@ -577,19 +579,19 @@
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tiposUsuarioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18Estados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tiposUsuarioBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18TiposUsuario)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tiposUsuarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18TiposUsuario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tiposUsuarioBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18Estados)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -630,12 +632,6 @@
         private ges_v01DataSet15 ges_v01DataSet15;
         private System.Windows.Forms.BindingSource tiposUsuarioBindingSource;
         private ges_v01DataSet15TableAdapters.tiposUsuarioTableAdapter tiposUsuarioTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomUsuDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codUsuDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn claveUsuDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codEstadoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codTipoUsuDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechoraUltSesionDataGridViewTextBoxColumn;
         private ges_v01DataSet18TiposUsuario ges_v01DataSet18TiposUsuario;
         private System.Windows.Forms.BindingSource tiposUsuarioBindingSource1;
         private ges_v01DataSet18TiposUsuarioTableAdapters.tiposUsuarioTableAdapter tiposUsuarioTableAdapter1;
@@ -643,5 +639,11 @@
         private ges_v01DataSet18Estados ges_v01DataSet18Estados;
         private System.Windows.Forms.BindingSource estadosBindingSource;
         private ges_v01DataSet18EstadosTableAdapters.estadosTableAdapter estadosTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomUsuDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codUsuDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn claveUsuDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codEstadoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codTipoUsuDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechoraUltSesionDataGridViewTextBoxColumn;
     }
 }
