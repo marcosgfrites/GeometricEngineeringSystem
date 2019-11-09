@@ -475,6 +475,8 @@ namespace PrimerasHU_GES
         {
             if (check_agregar.Checked == true)
             {
+                txt_valorDmo.Visible = false;
+                txt_valorFecha.Visible = false;
                 btn_graficar.Enabled = false;
                 btn_calcular.Enabled = false;
                 check_nominal.Enabled = false;
@@ -545,6 +547,8 @@ namespace PrimerasHU_GES
                 chart_Puntos.Series[1].Points.Clear();
                 chart_Puntos.Series[2].Points.Clear();
                 grafico = 0;
+                txt_valorDmo.Visible = true;
+                txt_valorFecha.Visible = true;
             }
         }
 
@@ -581,9 +585,31 @@ namespace PrimerasHU_GES
         private void chart_Puntos_GetToolTipText(object sender, ToolTipEventArgs e)
         {
             if (e.HitTestResult.ChartElementType == System.Windows.Forms.DataVisualization.Charting.ChartElementType.DataPoint)
+            {
                 txt_Valor.Text = e.Text;
+                string dmo = "DMO: ";
+                string fecha = "";
+                string fechaMostrar = "Fecha: ";
+                foreach (DataGridViewRow fila in dgv_datosGrafico.Rows)
+                {
+                    if (fila.Cells[6].Value.ToString().Equals(e.Text))
+                    {
+                        char[] aux = fila.Cells[0].Value.ToString().ToCharArray();
+                        dmo += aux[aux.Length-3].ToString() + aux[aux.Length - 2].ToString() + aux[aux.Length - 1].ToString();
+                        fecha = fila.Cells[1].Value.ToString();
+                        DateTime auxfecha = DateTime.Parse(fecha);
+                        fechaMostrar += auxfecha.ToString("d");
+                    }
+                }
+                txt_valorDmo.Text = dmo;
+                txt_valorFecha.Text = fechaMostrar;
+            }
             else if (txt_Valor.Text != string.Empty)
+            {
                 txt_Valor.Text = string.Empty;
+                txt_valorDmo.Text = string.Empty;
+                txt_valorFecha.Text = string.Empty;
+            }
         }
 
         private void txt_nombreDmo_TextChanged(object sender, EventArgs e)
