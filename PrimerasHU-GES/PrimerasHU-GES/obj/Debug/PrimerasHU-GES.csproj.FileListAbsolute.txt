@@ -956,3 +956,6 @@ C:\Users\mauro\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debu
 C:\Users\mauro\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU-GES.pdb
 D:\Marcos\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU_GES.AmpliarGrafico.resources
 D:\Marcos\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU_GES.RegistroGrafico.resources
+C:\Users\Roqué\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU_GES.AmpliarGrafico.resources
+C:\Users\Roqué\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU_GES.RegistroGrafico.resources
+C:\Users\Roqué\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU_GES.IndicadoresCalidad.resources

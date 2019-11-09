@@ -193,7 +193,7 @@ namespace PrimerasHU_GES
         private void playSimpleSound()
         {
             string mdoc = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            string sonido = Path.Combine(mdoc, @"GitHub\Tesis\PrimerasHU-GES\PrimerasHU-GES\Resources\sonidos\buzzer3_x.wav");
+            string sonido = Path.Combine(mdoc, @"GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\Resources\sonidos\buzzer3_x.wav");
             //SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\Roqué\Documents\GitHub\Tesis\PrimerasHU-GES\PrimerasHU-GES\Resources\sonidos\buzzer3_x.wav");
             SoundPlayer simpleSound = new SoundPlayer(@""+sonido);
             simpleSound.Play();

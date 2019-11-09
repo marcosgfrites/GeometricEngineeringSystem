@@ -192,6 +192,11 @@
       <DependentUpon>ges_v01DataSet16.xsd</DependentUpon>
     </Compile>
     <Compile Include="ges_v01DataSet17.Designer.cs" />
+    <Compile Include="ges_v01DataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DataSet18.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ges_v01DataSet18ClasifPto.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -322,6 +327,12 @@
     <Compile Include="Imagenes.Designer.cs">
       <DependentUpon>Imagenes.cs</DependentUpon>
     </Compile>
+    <Compile Include="IndicadoresCalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IndicadoresCalidad.Designer.cs">
+      <DependentUpon>IndicadoresCalidad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Leer.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -427,6 +438,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Imagenes.resx">
       <DependentUpon>Imagenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IndicadoresCalidad.resx">
+      <DependentUpon>IndicadoresCalidad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -582,6 +596,17 @@
     <None Include="ges_v01DataSet17.xsd" />
     <None Include="ges_v01DataSet17.xss">
       <DependentUpon>ges_v01DataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet18.xsc">
+      <DependentUpon>ges_v01DataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DataSet18.xss">
+      <DependentUpon>ges_v01DataSet18.xsd</DependentUpon>
     </None>
     <None Include="ges_v01DataSet18ClasifPto.xsc">
       <DependentUpon>ges_v01DataSet18ClasifPto.xsd</DependentUpon>
