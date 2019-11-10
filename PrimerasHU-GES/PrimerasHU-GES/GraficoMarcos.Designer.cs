@@ -107,6 +107,7 @@
             this.txt_puntoNombre = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txt_valorDmo = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.txt_tipoPunto = new System.Windows.Forms.TextBox();
             this.cb_muestraNombrePunto = new System.Windows.Forms.CheckBox();
@@ -148,6 +149,7 @@
             this.clasificacionesPuntoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ges_v01DataSet18ClasifPto = new PrimerasHU_GES.ges_v01DataSet18ClasifPto();
             this.clasificacionesPuntoTableAdapter = new PrimerasHU_GES.ges_v01DataSet18ClasifPtoTableAdapters.clasificacionesPuntoTableAdapter();
+            this.txt_valorFecha = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_muestras)).BeginInit();
@@ -865,6 +867,8 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.tabPage1.Controls.Add(this.txt_valorFecha);
+            this.tabPage1.Controls.Add(this.txt_valorDmo);
             this.tabPage1.Controls.Add(this.label18);
             this.tabPage1.Controls.Add(this.txt_tipoPunto);
             this.tabPage1.Controls.Add(this.cb_muestraNombrePunto);
@@ -902,6 +906,15 @@
             this.tabPage1.Size = new System.Drawing.Size(1322, 635);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Muestras";
+            // 
+            // txt_valorDmo
+            // 
+            this.txt_valorDmo.Enabled = false;
+            this.txt_valorDmo.Location = new System.Drawing.Point(1174, 403);
+            this.txt_valorDmo.Name = "txt_valorDmo";
+            this.txt_valorDmo.Size = new System.Drawing.Size(94, 20);
+            this.txt_valorDmo.TabIndex = 41;
+            this.txt_valorDmo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label18
             // 
@@ -981,7 +994,7 @@
             // txt_Valor
             // 
             this.txt_Valor.Enabled = false;
-            this.txt_Valor.Location = new System.Drawing.Point(1174, 426);
+            this.txt_Valor.Location = new System.Drawing.Point(1174, 378);
             this.txt_Valor.Name = "txt_Valor";
             this.txt_Valor.Size = new System.Drawing.Size(94, 20);
             this.txt_Valor.TabIndex = 31;
@@ -992,7 +1005,7 @@
             this.label20.AutoSize = true;
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(1171, 410);
+            this.label20.Location = new System.Drawing.Point(1171, 362);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(97, 13);
             this.label20.TabIndex = 30;
@@ -1468,6 +1481,15 @@
             // 
             this.clasificacionesPuntoTableAdapter.ClearBeforeFill = true;
             // 
+            // txt_valorFecha
+            // 
+            this.txt_valorFecha.Enabled = false;
+            this.txt_valorFecha.Location = new System.Drawing.Point(1174, 429);
+            this.txt_valorFecha.Name = "txt_valorFecha";
+            this.txt_valorFecha.Size = new System.Drawing.Size(94, 20);
+            this.txt_valorFecha.TabIndex = 42;
+            this.txt_valorFecha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // GraficoMarcos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1605,5 +1627,7 @@
         private System.Windows.Forms.CheckBox cb_muestraTipoPunto;
         private System.Windows.Forms.TextBox txt_tipoPunto;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox txt_valorDmo;
+        private System.Windows.Forms.TextBox txt_valorFecha;
     }
 }

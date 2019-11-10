@@ -287,9 +287,16 @@ SELECT * FROM muestras
 SELECT idPtoMed FROM detallesDocumentoDmo WHERE codDmo IN (SELECT codDmo FROM detalleMuestras WHERE codMuestra = '1')
 
 --listado de puntos relacionados a una muestra X (Gestor de gr�ficos)
-SELECT DISTINCT idPtoMed FROM detallesDocumentoDmo WHERE codDmo IN (SELECT codDmo FROM detalleMuestras WHERE codMuestra = '1')
+SELECT DISTINCT idPtoMed FROM detallesDocumentoDmo WHERE codDmo IN (SELECT codDmo FROM detalleMuestras WHERE codMuestra = '2')
 AND idPtoMed IN (SELECT idPtoMed FROM detallesDocumentoDmo WHERE idPtoMed IN (SELECT idPtoMed FROM detallesControlPlan WHERE clasiTipoPto = 'F'))
 
+SELECT DISTINCT idPtoMed FROM detallesDocumentoDmo WHERE codDmo IN (SELECT codDmo FROM detalleMuestras WHERE codMuestra = '2')
+AND idPtoMed IN (SELECT idPtoMed FROM detallesDocumentoDmo WHERE idPtoMed IN (SELECT idPtoMed FROM detallesControlPlan WHERE clasiTipoPto = 'F'))
+AND idPtoMed LIKE '%PS%'
+
+SELECT DISTINCT idPtoMed FROM detallesDocumentoDmo
+
+SELECT DISTINCT idPtoMed FROM detallesControlPlan WHERE idPtoMed LIKE '%PS%'
 
 SELECT DISTINCT idPtoMed FROM detallesDocumentoDmo WHERE idPtoMed IN (SELECT idPtoMed FROM detallesControlPlan WHERE clasiTipoPto = 'F')
 
@@ -298,11 +305,10 @@ SELECT codDmo AS 'DocumentoDmo',upTolD AS 'Tolerancia Sup.',medidoD AS 'Medido',
 FROM puntosMedidosD 
 WHERE codMediD IN 
 (
-SELECT DISTINCT idPtoMed FROM detallesDocumentoDmo WHERE codDmo IN (SELECT codDmo FROM detalleMuestras WHERE codMuestra = '3')
+SELECT DISTINCT idPtoMed FROM detallesDocumentoDmo WHERE codDmo IN (SELECT codDmo FROM detalleMuestras WHERE codMuestra = '2')
 AND idPtoMed IN (SELECT idPtoMed FROM detallesDocumentoDmo WHERE idPtoMed IN (SELECT idPtoMed FROM detallesControlPlan WHERE clasiTipoPto = 'F'))
-AND idPtoMed = '10739XD'
 )
-AND codDmo IN (SELECT codDmo FROM detalleMuestras WHERE codMuestra = '3')
+AND codDmo IN (SELECT codDmo FROM detalleMuestras WHERE codMuestra = '2')
 
 
 --PROBANDO INNER JOIN--
@@ -381,11 +387,11 @@ FROM puntosMedidosD AS pmd
 INNER JOIN documentosDmo AS dd ON dd.codDmo = pmd.codDmo
 WHERE pmd.codMediD IN 
 (
-SELECT DISTINCT idPtoMed FROM detallesDocumentoDmo WHERE codDmo IN (SELECT codDmo FROM detalleMuestras WHERE codMuestra = '3')
+SELECT DISTINCT idPtoMed FROM detallesDocumentoDmo WHERE codDmo IN (SELECT codDmo FROM detalleMuestras WHERE codMuestra = '2')
 AND idPtoMed IN (SELECT idPtoMed FROM detallesDocumentoDmo WHERE idPtoMed IN (SELECT idPtoMed FROM detallesControlPlan WHERE clasiTipoPto = 'F'))
-AND idPtoMed = '10739XD'
+AND idPtoMed = ''
 )
-AND pmd.codDmo IN (SELECT codDmo FROM detalleMuestras WHERE codMuestra = '3')
+AND pmd.codDmo IN (SELECT codDmo FROM detalleMuestras WHERE codMuestra = '2')
 
 SELECT DISTINCT idPtoMed FROM detallesDocumentoDmo WHERE codDmo = 'L359016215PS300MM00560' OR codDmo = 'L359016215PS300MM00561'
 
