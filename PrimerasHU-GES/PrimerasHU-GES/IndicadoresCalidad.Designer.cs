@@ -38,13 +38,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dtIndicadores = new System.Windows.Forms.DataGridView();
-            this.indicadoresCalidadBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ges_v01DataSet18 = new PrimerasHU_GES.ges_v01DataSet18();
-            this.indicadoresCalidadTableAdapter = new PrimerasHU_GES.ges_v01DataSet18TableAdapters.indicadoresCalidadTableAdapter();
             this.codIndicadorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechoraModIndicadorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomIndicadorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valorIndicadorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.indicadoresCalidadBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ges_v01DataSet18 = new PrimerasHU_GES.ges_v01DataSet18();
+            this.indicadoresCalidadTableAdapter = new PrimerasHU_GES.ges_v01DataSet18TableAdapters.indicadoresCalidadTableAdapter();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
@@ -56,7 +56,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 115);
+            this.label1.Location = new System.Drawing.Point(32, 88);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(106, 13);
             this.label1.TabIndex = 0;
@@ -74,14 +74,14 @@
             // 
             // txtValor
             // 
-            this.txtValor.Location = new System.Drawing.Point(35, 302);
+            this.txtValor.Location = new System.Drawing.Point(35, 311);
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(174, 20);
             this.txtValor.TabIndex = 2;
             // 
             // txtNomIndi
             // 
-            this.txtNomIndi.Location = new System.Drawing.Point(35, 142);
+            this.txtNomIndi.Location = new System.Drawing.Point(35, 121);
             this.txtNomIndi.Name = "txtNomIndi";
             this.txtNomIndi.Size = new System.Drawing.Size(200, 20);
             this.txtNomIndi.TabIndex = 4;
@@ -89,7 +89,7 @@
             // dtFecha
             // 
             this.dtFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFecha.Location = new System.Drawing.Point(35, 218);
+            this.dtFecha.Location = new System.Drawing.Point(35, 185);
             this.dtFecha.Name = "dtFecha";
             this.dtFecha.Size = new System.Drawing.Size(200, 20);
             this.dtFecha.TabIndex = 6;
@@ -98,7 +98,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 188);
+            this.label2.Location = new System.Drawing.Point(32, 156);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(117, 13);
             this.label2.TabIndex = 7;
@@ -107,7 +107,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 269);
+            this.label3.Location = new System.Drawing.Point(32, 278);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 13);
             this.label3.TabIndex = 8;
@@ -117,7 +117,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(31, 19);
+            this.label4.Location = new System.Drawing.Point(31, 39);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(301, 24);
             this.label4.TabIndex = 9;
@@ -135,26 +135,12 @@
             this.nomIndicadorDataGridViewTextBoxColumn,
             this.valorIndicadorDataGridViewTextBoxColumn});
             this.dtIndicadores.DataSource = this.indicadoresCalidadBindingSource;
-            this.dtIndicadores.Location = new System.Drawing.Point(356, 39);
+            this.dtIndicadores.Location = new System.Drawing.Point(351, 88);
             this.dtIndicadores.Name = "dtIndicadores";
             this.dtIndicadores.ReadOnly = true;
             this.dtIndicadores.Size = new System.Drawing.Size(422, 243);
             this.dtIndicadores.TabIndex = 10;
             this.dtIndicadores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtIndicadores_CellClick);
-            // 
-            // indicadoresCalidadBindingSource
-            // 
-            this.indicadoresCalidadBindingSource.DataMember = "indicadoresCalidad";
-            this.indicadoresCalidadBindingSource.DataSource = this.ges_v01DataSet18;
-            // 
-            // ges_v01DataSet18
-            // 
-            this.ges_v01DataSet18.DataSetName = "ges_v01DataSet18";
-            this.ges_v01DataSet18.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // indicadoresCalidadTableAdapter
-            // 
-            this.indicadoresCalidadTableAdapter.ClearBeforeFill = true;
             // 
             // codIndicadorDataGridViewTextBoxColumn
             // 
@@ -184,6 +170,20 @@
             this.valorIndicadorDataGridViewTextBoxColumn.Name = "valorIndicadorDataGridViewTextBoxColumn";
             this.valorIndicadorDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // indicadoresCalidadBindingSource
+            // 
+            this.indicadoresCalidadBindingSource.DataMember = "indicadoresCalidad";
+            this.indicadoresCalidadBindingSource.DataSource = this.ges_v01DataSet18;
+            // 
+            // ges_v01DataSet18
+            // 
+            this.ges_v01DataSet18.DataSetName = "ges_v01DataSet18";
+            this.ges_v01DataSet18.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // indicadoresCalidadTableAdapter
+            // 
+            this.indicadoresCalidadTableAdapter.ClearBeforeFill = true;
+            // 
             // btnModificar
             // 
             this.btnModificar.Location = new System.Drawing.Point(240, 370);
@@ -202,6 +202,7 @@
             this.btnBorrar.TabIndex = 12;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // btnSalir
             // 
@@ -211,6 +212,7 @@
             this.btnSalir.TabIndex = 13;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // IndicadoresCalidad
             // 
@@ -230,7 +232,7 @@
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.label1);
             this.Name = "IndicadoresCalidad";
-            this.Text = "IndicadoresCalidad";
+            this.Text = "¿";
             this.Load += new System.EventHandler(this.IndicadoresCalidad_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtIndicadores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.indicadoresCalidadBindingSource)).EndInit();

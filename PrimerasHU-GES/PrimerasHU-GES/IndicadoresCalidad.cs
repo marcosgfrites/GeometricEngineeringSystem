@@ -113,10 +113,11 @@ namespace PrimerasHU_GES
                 try
                 {
                     conexion.Open();
-                   
+
+
                     if (MessageBox.Show("¿Está seguro que desea modificar el Indicador seleccionado: " + txtNomIndi.Text + "?", "Atención!", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        MessageBox.Show("El Indicador: " + txtNomIndi.Text + " - " + txtValor.Text + ", fue modificado correctamente.", "Operación Exitosa!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("El Indicador: " + txtNomIndi.Text + " - " + ", Fue modificado correctamente.", "Operación Exitosa!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LimpiarIndicador();
                         adaptador.UpdateCommand.ExecuteNonQuery();
                     }
@@ -162,6 +163,53 @@ namespace PrimerasHU_GES
             this.indicadoresCalidadTableAdapter.Fill(this.ges_v01DataSet18.indicadoresCalidad);
            
            
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            SqlCommand Borrar = new SqlCommand("delete from indicadoresCalidad WHERE nomIndicador=@nomIndicador ", conexion);
+            adaptador.DeleteCommand = Borrar;
+            adaptador.DeleteCommand.Parameters.Add(new SqlParameter("@nomIndicador", SqlDbType.VarChar));
+           
+            int busqueda = 0;
+            if (string.IsNullOrEmpty(txtNomIndi.Text) || string.IsNullOrEmpty(txtValor.Text) && busqueda == 0)
+            {
+                MessageBox.Show("Por seguridad de los datos, primero debe seleccionar el Indicador a borrar, recuerde que para ésto debe hacer 'Clic' sobre alguna celda del panel que represente al Indicador. Por cualquier duda o consulta comuniquese con un Administrador", "Atención!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                try
+                {
+                    conexion.Open();
+                    adaptador.DeleteCommand.Parameters["@nomIndicador"].Value = txtNomIndi.Text;
+
+                    if (MessageBox.Show("¿Está seguro que desea borrar el Indicador seleccionado: " + txtNomIndi.Text + "?", "Atención!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        MessageBox.Show("El Indicador: " + txtNomIndi.Text + " - " + ", Fue eliminado correctamente.", "Operación Exitosa!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LimpiarIndicador();
+                        
+                        adaptador.DeleteCommand.ExecuteNonQuery();
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("ERROR:" + ex.ToString());
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+                SqlDataAdapter da = new SqlDataAdapter("select * from indicadoresCalidad", conexion);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dtIndicadores.DataSource = dt;
+            }  
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }
