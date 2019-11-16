@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_Salir = new System.Windows.Forms.Button();
@@ -75,7 +74,26 @@
             this.txt_cpAmarillo = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.txt_cprPorc = new System.Windows.Forms.TextBox();
+            this.txt_cpvPorc = new System.Windows.Forms.TextBox();
+            this.txt_cpaPorc = new System.Windows.Forms.TextBox();
+            this.txt_cpkrPorc = new System.Windows.Forms.TextBox();
+            this.txt_cpkvPorc = new System.Windows.Forms.TextBox();
+            this.txt_cpkaPorc = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.btn_verGrafo = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_muestras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_listaPuntos)).BeginInit();
@@ -86,24 +104,13 @@
             this.tabPage2.SuspendLayout();
             this.panel_calculos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_puntosF)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
             // 
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = global::PrimerasHU_GES.Properties.Resources.LOGOENCABEZADO_Mesa_de_trabajo_1;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(49, 49);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -336,9 +343,9 @@
             // 
             // pBar_calcular
             // 
-            this.pBar_calcular.Location = new System.Drawing.Point(86, 599);
+            this.pBar_calcular.Location = new System.Drawing.Point(6, 599);
             this.pBar_calcular.Name = "pBar_calcular";
-            this.pBar_calcular.Size = new System.Drawing.Size(225, 23);
+            this.pBar_calcular.Size = new System.Drawing.Size(305, 23);
             this.pBar_calcular.Step = 1;
             this.pBar_calcular.TabIndex = 23;
             this.pBar_calcular.Visible = false;
@@ -377,6 +384,25 @@
             // panel_calculos
             // 
             this.panel_calculos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel_calculos.Controls.Add(this.btn_verGrafo);
+            this.panel_calculos.Controls.Add(this.label22);
+            this.panel_calculos.Controls.Add(this.label23);
+            this.panel_calculos.Controls.Add(this.label24);
+            this.panel_calculos.Controls.Add(this.label19);
+            this.panel_calculos.Controls.Add(this.label20);
+            this.panel_calculos.Controls.Add(this.label21);
+            this.panel_calculos.Controls.Add(this.label16);
+            this.panel_calculos.Controls.Add(this.label17);
+            this.panel_calculos.Controls.Add(this.label18);
+            this.panel_calculos.Controls.Add(this.label13);
+            this.panel_calculos.Controls.Add(this.label14);
+            this.panel_calculos.Controls.Add(this.label15);
+            this.panel_calculos.Controls.Add(this.txt_cpkrPorc);
+            this.panel_calculos.Controls.Add(this.txt_cpkvPorc);
+            this.panel_calculos.Controls.Add(this.txt_cpkaPorc);
+            this.panel_calculos.Controls.Add(this.txt_cprPorc);
+            this.panel_calculos.Controls.Add(this.txt_cpvPorc);
+            this.panel_calculos.Controls.Add(this.txt_cpaPorc);
             this.panel_calculos.Controls.Add(this.label8);
             this.panel_calculos.Controls.Add(this.label10);
             this.panel_calculos.Controls.Add(this.label11);
@@ -403,7 +429,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(271, 135);
+            this.label8.Location = new System.Drawing.Point(255, 135);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(85, 13);
             this.label8.TabIndex = 28;
@@ -412,7 +438,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(271, 108);
+            this.label10.Location = new System.Drawing.Point(255, 108);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(100, 13);
             this.label10.TabIndex = 27;
@@ -421,7 +447,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(271, 81);
+            this.label11.Location = new System.Drawing.Point(287, 81);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(67, 13);
             this.label11.TabIndex = 26;
@@ -433,9 +459,9 @@
             this.txt_cpkRojo.Enabled = false;
             this.txt_cpkRojo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_cpkRojo.ForeColor = System.Drawing.Color.Black;
-            this.txt_cpkRojo.Location = new System.Drawing.Point(377, 130);
+            this.txt_cpkRojo.Location = new System.Drawing.Point(361, 130);
             this.txt_cpkRojo.Name = "txt_cpkRojo";
-            this.txt_cpkRojo.Size = new System.Drawing.Size(149, 21);
+            this.txt_cpkRojo.Size = new System.Drawing.Size(32, 21);
             this.txt_cpkRojo.TabIndex = 25;
             this.txt_cpkRojo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -445,9 +471,9 @@
             this.txt_cpkVerde.Enabled = false;
             this.txt_cpkVerde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_cpkVerde.ForeColor = System.Drawing.Color.Black;
-            this.txt_cpkVerde.Location = new System.Drawing.Point(377, 76);
+            this.txt_cpkVerde.Location = new System.Drawing.Point(361, 76);
             this.txt_cpkVerde.Name = "txt_cpkVerde";
-            this.txt_cpkVerde.Size = new System.Drawing.Size(149, 21);
+            this.txt_cpkVerde.Size = new System.Drawing.Size(32, 21);
             this.txt_cpkVerde.TabIndex = 24;
             this.txt_cpkVerde.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -457,9 +483,9 @@
             this.txt_cpkAmarillo.Enabled = false;
             this.txt_cpkAmarillo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_cpkAmarillo.ForeColor = System.Drawing.Color.Black;
-            this.txt_cpkAmarillo.Location = new System.Drawing.Point(377, 103);
+            this.txt_cpkAmarillo.Location = new System.Drawing.Point(361, 103);
             this.txt_cpkAmarillo.Name = "txt_cpkAmarillo";
-            this.txt_cpkAmarillo.Size = new System.Drawing.Size(149, 21);
+            this.txt_cpkAmarillo.Size = new System.Drawing.Size(32, 21);
             this.txt_cpkAmarillo.TabIndex = 22;
             this.txt_cpkAmarillo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -554,7 +580,7 @@
             this.txt_cpRojo.ForeColor = System.Drawing.Color.Black;
             this.txt_cpRojo.Location = new System.Drawing.Point(102, 130);
             this.txt_cpRojo.Name = "txt_cpRojo";
-            this.txt_cpRojo.Size = new System.Drawing.Size(149, 21);
+            this.txt_cpRojo.Size = new System.Drawing.Size(32, 21);
             this.txt_cpRojo.TabIndex = 6;
             this.txt_cpRojo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -566,14 +592,14 @@
             this.txt_cpVerde.ForeColor = System.Drawing.Color.Black;
             this.txt_cpVerde.Location = new System.Drawing.Point(102, 76);
             this.txt_cpVerde.Name = "txt_cpVerde";
-            this.txt_cpVerde.Size = new System.Drawing.Size(149, 21);
+            this.txt_cpVerde.Size = new System.Drawing.Size(32, 21);
             this.txt_cpVerde.TabIndex = 4;
             this.txt_cpVerde.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(3, 81);
+            this.label12.Location = new System.Drawing.Point(36, 81);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(60, 13);
             this.label12.TabIndex = 3;
@@ -587,7 +613,7 @@
             this.txt_cpAmarillo.ForeColor = System.Drawing.Color.Black;
             this.txt_cpAmarillo.Location = new System.Drawing.Point(102, 103);
             this.txt_cpAmarillo.Name = "txt_cpAmarillo";
-            this.txt_cpAmarillo.Size = new System.Drawing.Size(149, 21);
+            this.txt_cpAmarillo.Size = new System.Drawing.Size(32, 21);
             this.txt_cpAmarillo.TabIndex = 2;
             this.txt_cpAmarillo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -611,12 +637,220 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cálculos Personalizados";
             // 
+            // txt_cprPorc
+            // 
+            this.txt_cprPorc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.txt_cprPorc.Enabled = false;
+            this.txt_cprPorc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cprPorc.ForeColor = System.Drawing.Color.Black;
+            this.txt_cprPorc.Location = new System.Drawing.Point(164, 130);
+            this.txt_cprPorc.Name = "txt_cprPorc";
+            this.txt_cprPorc.Size = new System.Drawing.Size(44, 21);
+            this.txt_cprPorc.TabIndex = 31;
+            this.txt_cprPorc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt_cpvPorc
+            // 
+            this.txt_cpvPorc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txt_cpvPorc.Enabled = false;
+            this.txt_cpvPorc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cpvPorc.ForeColor = System.Drawing.Color.Black;
+            this.txt_cpvPorc.Location = new System.Drawing.Point(164, 76);
+            this.txt_cpvPorc.Name = "txt_cpvPorc";
+            this.txt_cpvPorc.Size = new System.Drawing.Size(44, 21);
+            this.txt_cpvPorc.TabIndex = 30;
+            this.txt_cpvPorc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt_cpaPorc
+            // 
+            this.txt_cpaPorc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txt_cpaPorc.Enabled = false;
+            this.txt_cpaPorc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cpaPorc.ForeColor = System.Drawing.Color.Black;
+            this.txt_cpaPorc.Location = new System.Drawing.Point(164, 103);
+            this.txt_cpaPorc.Name = "txt_cpaPorc";
+            this.txt_cpaPorc.Size = new System.Drawing.Size(44, 21);
+            this.txt_cpaPorc.TabIndex = 29;
+            this.txt_cpaPorc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt_cpkrPorc
+            // 
+            this.txt_cpkrPorc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.txt_cpkrPorc.Enabled = false;
+            this.txt_cpkrPorc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cpkrPorc.ForeColor = System.Drawing.Color.Black;
+            this.txt_cpkrPorc.Location = new System.Drawing.Point(423, 130);
+            this.txt_cpkrPorc.Name = "txt_cpkrPorc";
+            this.txt_cpkrPorc.Size = new System.Drawing.Size(44, 21);
+            this.txt_cpkrPorc.TabIndex = 34;
+            this.txt_cpkrPorc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt_cpkvPorc
+            // 
+            this.txt_cpkvPorc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txt_cpkvPorc.Enabled = false;
+            this.txt_cpkvPorc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cpkvPorc.ForeColor = System.Drawing.Color.Black;
+            this.txt_cpkvPorc.Location = new System.Drawing.Point(423, 76);
+            this.txt_cpkvPorc.Name = "txt_cpkvPorc";
+            this.txt_cpkvPorc.Size = new System.Drawing.Size(44, 21);
+            this.txt_cpkvPorc.TabIndex = 33;
+            this.txt_cpkvPorc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt_cpkaPorc
+            // 
+            this.txt_cpkaPorc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txt_cpkaPorc.Enabled = false;
+            this.txt_cpkaPorc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cpkaPorc.ForeColor = System.Drawing.Color.Black;
+            this.txt_cpkaPorc.Location = new System.Drawing.Point(423, 103);
+            this.txt_cpkaPorc.Name = "txt_cpkaPorc";
+            this.txt_cpkaPorc.Size = new System.Drawing.Size(44, 21);
+            this.txt_cpkaPorc.TabIndex = 32;
+            this.txt_cpkaPorc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(140, 135);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(18, 13);
+            this.label13.TabIndex = 37;
+            this.label13.Text = "/ (";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(140, 108);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(18, 13);
+            this.label14.TabIndex = 36;
+            this.label14.Text = "/ (";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(140, 81);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(18, 13);
+            this.label15.TabIndex = 35;
+            this.label15.Text = "/ (";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(214, 135);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(21, 13);
+            this.label16.TabIndex = 40;
+            this.label16.Text = "% )";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(214, 108);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(21, 13);
+            this.label17.TabIndex = 39;
+            this.label17.Text = "% )";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(214, 81);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(21, 13);
+            this.label18.TabIndex = 38;
+            this.label18.Text = "% )";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(399, 135);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(18, 13);
+            this.label19.TabIndex = 43;
+            this.label19.Text = "/ (";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(399, 108);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(18, 13);
+            this.label20.TabIndex = 42;
+            this.label20.Text = "/ (";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(399, 81);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(18, 13);
+            this.label21.TabIndex = 41;
+            this.label21.Text = "/ (";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(473, 135);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(21, 13);
+            this.label22.TabIndex = 46;
+            this.label22.Text = "% )";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(473, 108);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(21, 13);
+            this.label23.TabIndex = 45;
+            this.label23.Text = "% )";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(473, 81);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(21, 13);
+            this.label24.TabIndex = 44;
+            this.label24.Text = "% )";
+            // 
+            // btn_verGrafo
+            // 
+            this.btn_verGrafo.BackColor = System.Drawing.Color.Black;
+            this.btn_verGrafo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btn_verGrafo.FlatAppearance.BorderSize = 0;
+            this.btn_verGrafo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btn_verGrafo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_verGrafo.ForeColor = System.Drawing.Color.White;
+            this.btn_verGrafo.Location = new System.Drawing.Point(510, 103);
+            this.btn_verGrafo.Name = "btn_verGrafo";
+            this.btn_verGrafo.Size = new System.Drawing.Size(75, 23);
+            this.btn_verGrafo.TabIndex = 25;
+            this.btn_verGrafo.Text = "Ver gráfica";
+            this.btn_verGrafo.UseVisualStyleBackColor = false;
+            this.btn_verGrafo.Click += new System.EventHandler(this.btn_verGrafo_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = global::PrimerasHU_GES.Properties.Resources.LOGOENCABEZADO_Mesa_de_trabajo_1;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(49, 49);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
             // CalculoMarcos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(1310, 718);
+            this.ClientSize = new System.Drawing.Size(1310, 728);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -624,7 +858,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CalculoMarcos";
             this.Load += new System.EventHandler(this.CalculoMarcos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_muestras)).EndInit();
@@ -638,6 +871,7 @@
             this.panel_calculos.ResumeLayout(false);
             this.panel_calculos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_puntosF)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -690,5 +924,24 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txt_cpkrPorc;
+        private System.Windows.Forms.TextBox txt_cpkvPorc;
+        private System.Windows.Forms.TextBox txt_cpkaPorc;
+        private System.Windows.Forms.TextBox txt_cprPorc;
+        private System.Windows.Forms.TextBox txt_cpvPorc;
+        private System.Windows.Forms.TextBox txt_cpaPorc;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button btn_verGrafo;
     }
 }

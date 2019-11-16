@@ -27,6 +27,11 @@ namespace PrimerasHU_GES
         private SqlDataAdapter ad_listadoPuntos;
         private SqlDataAdapter ad_datosPunto;
 
+        ArrayList Puntos = new ArrayList();
+        ArrayList Cp = new ArrayList();
+        ArrayList Cpk = new ArrayList();
+
+
         string muestraSeleccionada = "";
 
         int cant_cpV = 0, cant_cpA = 0, cant_cpR = 0, cant_cpkV = 0, cant_cpkA = 0, cant_cpkR = 0; // cuenta la cantidad de CP o CPK en VERDE(V), AMARILLO(A), ROJO(R)
@@ -34,6 +39,7 @@ namespace PrimerasHU_GES
 
         private void CalculoMarcos_Load(object sender, EventArgs e)
         {
+            panel_calculos.Visible = false;
             dgv_datosPunto.Hide();
             dgv_nombrePuntos.Hide();
 
@@ -72,7 +78,22 @@ namespace PrimerasHU_GES
                 dgv_puntosF.Rows.Clear();
                 dgv_puntosF.Refresh();
             }
+            panel_calculos.Visible = false;
             dgv_puntosF.Visible = false;
+            txt_cpVerde.Visible = false;
+            txt_cpAmarillo.Visible = false;
+            txt_cpRojo.Visible = false;
+            txt_cpkVerde.Visible = false;
+            txt_cpkAmarillo.Visible = false;
+            txt_cpkRojo.Visible = false;
+
+            txt_cpvPorc.Visible = false;
+            txt_cpaPorc.Visible = false;
+            txt_cprPorc.Visible = false;
+            txt_cpkvPorc.Visible = false;
+            txt_cpkaPorc.Visible = false;
+            txt_cpkrPorc.Visible = false;
+
             txt_cantidadF.Text = "";
             txt_muestraF.Text = "";
             txt_cpAmarillo.Text = "";
@@ -81,6 +102,13 @@ namespace PrimerasHU_GES
             txt_cpkVerde.Text = "";
             txt_cpVerde.Text = "";
             txt_cpRojo.Text = "";
+
+            txt_cpvPorc.Text = "";
+            txt_cpaPorc.Text = "";
+            txt_cprPorc.Text = "";
+            txt_cpkvPorc.Text = "";
+            txt_cpkaPorc.Text = "";
+            txt_cpkrPorc.Text = "";
         }
 
         private void Dgv_muestras_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -122,6 +150,7 @@ namespace PrimerasHU_GES
                 {
                     if (fila.Cells[0].Value.ToString() == dgv_puntosF.Rows[i].Cells[0].Value.ToString())
                     {
+                        Puntos.Add(fila.Cells[0].Value.ToString());
                         i = dgv_puntosF.Rows.Count;
                         fila.DefaultCellStyle.BackColor = Color.LightGray;
                         //trabajo con CP y almaceno
@@ -131,6 +160,12 @@ namespace PrimerasHU_GES
                  System.Globalization.NumberStyles.AllowThousands |
                  System.Globalization.NumberStyles.AllowDecimalPoint |
                  System.Globalization.NumberStyles.AllowLeadingSign);
+                        Cp.Add(decimal.Parse(fila.Cells[4].Value.ToString(), System.Globalization.NumberStyles.AllowParentheses |
+                 System.Globalization.NumberStyles.AllowLeadingWhite |
+                 System.Globalization.NumberStyles.AllowTrailingWhite |
+                 System.Globalization.NumberStyles.AllowThousands |
+                 System.Globalization.NumberStyles.AllowDecimalPoint |
+                 System.Globalization.NumberStyles.AllowLeadingSign));
                         if (auxCp >= verde)
                         {
                             fila.Cells[4].Style.ForeColor = Color.Green;
@@ -160,6 +195,12 @@ namespace PrimerasHU_GES
                  System.Globalization.NumberStyles.AllowThousands |
                  System.Globalization.NumberStyles.AllowDecimalPoint |
                  System.Globalization.NumberStyles.AllowLeadingSign);
+                        Cpk.Add(decimal.Parse(fila.Cells[7].Value.ToString(), System.Globalization.NumberStyles.AllowParentheses |
+                 System.Globalization.NumberStyles.AllowLeadingWhite |
+                 System.Globalization.NumberStyles.AllowTrailingWhite |
+                 System.Globalization.NumberStyles.AllowThousands |
+                 System.Globalization.NumberStyles.AllowDecimalPoint |
+                 System.Globalization.NumberStyles.AllowLeadingSign));
                         if (auxCpk >= verde)
                         {
                             fila.Cells[7].Style.ForeColor = Color.Green;
@@ -180,6 +221,67 @@ namespace PrimerasHU_GES
                                 cant_cpkR++;
                                 suma_cpkR += auxCpk;
                             }
+                        }
+
+                        //PORCENTAJES
+                        if (cant_cpV != 0)
+                        {
+                            double cpvPorc = (double)(cant_cpV * 100) / double.Parse(txt_cantidadF.Text);
+                            txt_cpvPorc.Text = cpvPorc.ToString("0.00");
+                        }
+                        else
+                        {
+                            txt_cpvPorc.Text = "0,00";
+                        }
+
+                        if (cant_cpA != 0)
+                        {
+                            double cpaPorc = (double)(cant_cpA * 100) / double.Parse(txt_cantidadF.Text);
+                            txt_cpaPorc.Text = cpaPorc.ToString("0.00");
+                        }
+                        else
+                        {
+                            txt_cpaPorc.Text = "0,00";
+                        }
+
+                        if (cant_cpR != 0)
+                        {
+                            double cprPorc = (double)(cant_cpR * 100) / double.Parse(txt_cantidadF.Text);
+                            txt_cprPorc.Text = cprPorc.ToString("0.00");
+                        }
+                        else
+                        {
+                            txt_cprPorc.Text = "0,00";
+                        }
+
+                        if (cant_cpkV != 0)
+                        {
+                            double cpkvPorc = (double)(cant_cpkV * 100) / double.Parse(txt_cantidadF.Text);
+                            txt_cpkvPorc.Text = cpkvPorc.ToString("0.00");
+                        }
+                        else
+                        {
+                            txt_cpkvPorc.Text = "0,00";
+                        }
+
+                        if (cant_cpkA != 0)
+                        {
+                            double cpkaPorc = (double)(cant_cpkA * 100) / double.Parse(txt_cantidadF.Text);
+                            txt_cpkaPorc.Text = cpkaPorc.ToString("0.00");
+                        }
+                        else
+                        {
+                            txt_cpkaPorc.Text = "0,00";
+                        }
+
+                        if (cant_cpkR != 0)
+                        {
+                            double cpkrPorc = (double)(cant_cpkR * 100) / double.Parse(txt_cantidadF.Text);
+                            txt_cpkrPorc.Text = cpkrPorc.ToString("0.00");
+                        }
+                        else
+                        {
+                            txt_cpkrPorc.Text = "0,00";
                         }
                     }
                 }
@@ -204,6 +306,12 @@ namespace PrimerasHU_GES
                 }
             }
 
+        }
+
+        private void btn_verGrafo_Click(object sender, EventArgs e)
+        {
+            CalculoGrafo cg = new CalculoGrafo(Cp,Cpk,Puntos);
+            cg.Show();
         }
 
         private void rellenarListaPuntos(string muestra)
@@ -273,7 +381,23 @@ namespace PrimerasHU_GES
                     calculosEstadisticos(posi, punto);
                     posi++;
                 }
+                panel_calculos.Visible = true;
                 dgv_puntosF.Visible = true;
+
+                txt_cpVerde.Visible = true;
+                txt_cpAmarillo.Visible = true;
+                txt_cpRojo.Visible = true;
+                txt_cpkVerde.Visible = true;
+                txt_cpkAmarillo.Visible = true;
+                txt_cpkRojo.Visible = true;
+
+                txt_cpvPorc.Visible = true;
+                txt_cpaPorc.Visible = true;
+                txt_cprPorc.Visible = true;
+                txt_cpkvPorc.Visible = true;
+                txt_cpkaPorc.Visible = true;
+                txt_cpkrPorc.Visible = true;
+
 
                 txt_muestraF.Text = lbl_muestra.Text;
                 txt_cantidadF.Text = dgv_puntosF.Rows.Count.ToString();
