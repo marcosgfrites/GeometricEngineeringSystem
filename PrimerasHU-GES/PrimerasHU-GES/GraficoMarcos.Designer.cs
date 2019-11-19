@@ -55,6 +55,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -107,6 +110,7 @@
             this.txt_puntoNombre = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txt_valorFecha = new System.Windows.Forms.TextBox();
             this.txt_valorDmo = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.txt_tipoPunto = new System.Windows.Forms.TextBox();
@@ -146,10 +150,17 @@
             this.btn_verDmo = new System.Windows.Forms.Button();
             this.dgv_docDmo = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dgv_graficosVer = new System.Windows.Forms.DataGridView();
+            this.label36 = new System.Windows.Forms.Label();
+            this.cb_tipoGrafVisor = new System.Windows.Forms.ComboBox();
+            this.tiposGraficoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gesv01DataSet18TiposGraficosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ges_v01DataSet18TiposGraficos = new PrimerasHU_GES.ges_v01DataSet18TiposGraficos();
+            this.label35 = new System.Windows.Forms.Label();
             this.clasificacionesPuntoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ges_v01DataSet18ClasifPto = new PrimerasHU_GES.ges_v01DataSet18ClasifPto();
             this.clasificacionesPuntoTableAdapter = new PrimerasHU_GES.ges_v01DataSet18ClasifPtoTableAdapters.clasificacionesPuntoTableAdapter();
-            this.txt_valorFecha = new System.Windows.Forms.TextBox();
+            this.tiposGraficoTableAdapter = new PrimerasHU_GES.ges_v01DataSet18TiposGraficosTableAdapters.tiposGraficoTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_muestras)).BeginInit();
@@ -168,6 +179,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_verDatosPuntos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_verPuntos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_docDmo)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_graficosVer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tiposGraficoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gesv01DataSet18TiposGraficosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18TiposGraficos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clasificacionesPuntoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18ClasifPto)).BeginInit();
             this.SuspendLayout();
@@ -905,7 +921,16 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1322, 635);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Muestras";
+            this.tabPage1.Text = "Gráficos de Muestras";
+            // 
+            // txt_valorFecha
+            // 
+            this.txt_valorFecha.Enabled = false;
+            this.txt_valorFecha.Location = new System.Drawing.Point(1174, 429);
+            this.txt_valorFecha.Name = "txt_valorFecha";
+            this.txt_valorFecha.Size = new System.Drawing.Size(94, 20);
+            this.txt_valorFecha.TabIndex = 42;
+            this.txt_valorFecha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txt_valorDmo
             // 
@@ -1054,7 +1079,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1322, 635);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Doc. DMO";
+            this.tabPage2.Text = "Gráficos Personalizados";
             // 
             // btn_verGrafico
             // 
@@ -1460,12 +1485,101 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.tabPage3.Controls.Add(this.dgv_graficosVer);
+            this.tabPage3.Controls.Add(this.label36);
+            this.tabPage3.Controls.Add(this.cb_tipoGrafVisor);
+            this.tabPage3.Controls.Add(this.label35);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(1322, 635);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Cálculos";
+            this.tabPage3.Text = "Visor de Gráficos";
+            // 
+            // dgv_graficosVer
+            // 
+            this.dgv_graficosVer.AllowUserToAddRows = false;
+            this.dgv_graficosVer.AllowUserToDeleteRows = false;
+            this.dgv_graficosVer.AllowUserToResizeColumns = false;
+            this.dgv_graficosVer.AllowUserToResizeRows = false;
+            this.dgv_graficosVer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_graficosVer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            this.dgv_graficosVer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_graficosVer.DefaultCellStyle = dataGridViewCellStyle19;
+            this.dgv_graficosVer.Location = new System.Drawing.Point(12, 77);
+            this.dgv_graficosVer.Name = "dgv_graficosVer";
+            this.dgv_graficosVer.ReadOnly = true;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_graficosVer.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            this.dgv_graficosVer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_graficosVer.Size = new System.Drawing.Size(306, 150);
+            this.dgv_graficosVer.TabIndex = 3;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(9, 60);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(208, 13);
+            this.label36.TabIndex = 2;
+            this.label36.Text = "Listado de Gráficos del \'tipo\' seleccionado:";
+            // 
+            // cb_tipoGrafVisor
+            // 
+            this.cb_tipoGrafVisor.DataSource = this.tiposGraficoBindingSource;
+            this.cb_tipoGrafVisor.DisplayMember = "descTiposGraf";
+            this.cb_tipoGrafVisor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_tipoGrafVisor.FormattingEnabled = true;
+            this.cb_tipoGrafVisor.Location = new System.Drawing.Point(12, 24);
+            this.cb_tipoGrafVisor.Name = "cb_tipoGrafVisor";
+            this.cb_tipoGrafVisor.Size = new System.Drawing.Size(306, 21);
+            this.cb_tipoGrafVisor.TabIndex = 1;
+            this.cb_tipoGrafVisor.ValueMember = "codTiposGraf";
+            this.cb_tipoGrafVisor.SelectedIndexChanged += new System.EventHandler(this.cb_tipoGrafVisor_SelectedIndexChanged);
+            // 
+            // tiposGraficoBindingSource
+            // 
+            this.tiposGraficoBindingSource.DataMember = "tiposGrafico";
+            this.tiposGraficoBindingSource.DataSource = this.gesv01DataSet18TiposGraficosBindingSource;
+            // 
+            // gesv01DataSet18TiposGraficosBindingSource
+            // 
+            this.gesv01DataSet18TiposGraficosBindingSource.DataSource = this.ges_v01DataSet18TiposGraficos;
+            this.gesv01DataSet18TiposGraficosBindingSource.Position = 0;
+            // 
+            // ges_v01DataSet18TiposGraficos
+            // 
+            this.ges_v01DataSet18TiposGraficos.DataSetName = "ges_v01DataSet18TiposGraficos";
+            this.ges_v01DataSet18TiposGraficos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(9, 7);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(154, 13);
+            this.label35.TabIndex = 0;
+            this.label35.Text = "Seleccione un Tipo de Gráfico:";
             // 
             // clasificacionesPuntoBindingSource
             // 
@@ -1481,14 +1595,9 @@
             // 
             this.clasificacionesPuntoTableAdapter.ClearBeforeFill = true;
             // 
-            // txt_valorFecha
+            // tiposGraficoTableAdapter
             // 
-            this.txt_valorFecha.Enabled = false;
-            this.txt_valorFecha.Location = new System.Drawing.Point(1174, 429);
-            this.txt_valorFecha.Name = "txt_valorFecha";
-            this.txt_valorFecha.Size = new System.Drawing.Size(94, 20);
-            this.txt_valorFecha.TabIndex = 42;
-            this.txt_valorFecha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tiposGraficoTableAdapter.ClearBeforeFill = true;
             // 
             // GraficoMarcos
             // 
@@ -1526,6 +1635,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_verDatosPuntos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_verPuntos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_docDmo)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_graficosVer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tiposGraficoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gesv01DataSet18TiposGraficosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18TiposGraficos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clasificacionesPuntoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18ClasifPto)).EndInit();
             this.ResumeLayout(false);
@@ -1629,5 +1744,13 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txt_valorDmo;
         private System.Windows.Forms.TextBox txt_valorFecha;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.ComboBox cb_tipoGrafVisor;
+        private System.Windows.Forms.BindingSource gesv01DataSet18TiposGraficosBindingSource;
+        private ges_v01DataSet18TiposGraficos ges_v01DataSet18TiposGraficos;
+        private System.Windows.Forms.BindingSource tiposGraficoBindingSource;
+        private ges_v01DataSet18TiposGraficosTableAdapters.tiposGraficoTableAdapter tiposGraficoTableAdapter;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.DataGridView dgv_graficosVer;
     }
 }

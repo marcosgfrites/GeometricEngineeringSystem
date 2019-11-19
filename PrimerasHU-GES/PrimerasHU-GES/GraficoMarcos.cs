@@ -51,10 +51,12 @@ namespace PrimerasHU_GES
 
         private void GraficoMarcos_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'ges_v01DataSet18TiposGraficos.tiposGrafico' Puede moverla o quitarla según sea necesario.
+            this.tiposGraficoTableAdapter.Fill(this.ges_v01DataSet18TiposGraficos.tiposGrafico);
             // TODO: esta línea de código carga datos en la tabla 'ges_v01DataSet18ClasifPto.clasificacionesPunto' Puede moverla o quitarla según sea necesario.
             this.clasificacionesPuntoTableAdapter.Fill(this.ges_v01DataSet18ClasifPto.clasificacionesPunto);
             // TODO: esta línea de código carga datos en la tabla 'ges_v01DataSetMuestrasGrafico.muestras' Puede moverla o quitarla según sea necesario.
-            this.muestrasTableAdapter.Fill(this.ges_v01DataSetMuestrasGrafico.muestras);
+            //this.muestrasTableAdapter.Fill(this.ges_v01DataSetMuestrasGrafico.muestras);
 
             Conexion = new SqlConnection("Data source=.\\SQLEXPRESS; Initial Catalog = ges_v01; Integrated Security = True");
             adaptador = new SqlDataAdapter();
@@ -192,7 +194,7 @@ namespace PrimerasHU_GES
         private void conocerMuestrasNoGraficadas()
         {
             //SqlCommand muestrasNoGraf = new SqlCommand("SELECT codMuestra AS 'Código',fechaMuestra AS 'Fecha',obserMuestra AS 'Observaciones',cantidadDmo AS 'Cant. DMO' FROM muestras WHERE NOT EXISTS (SELECT codMuestra FROM graficos)", Conexion);
-            SqlCommand muestrasNoGraf = new SqlCommand("SELECT codMuestra AS 'Código',fechaMuestra AS 'Fecha',obserMuestra AS 'Observaciones',cantidadDmo AS 'Cant. DMO' FROM muestras", Conexion);
+            SqlCommand muestrasNoGraf = new SqlCommand("SELECT m.codMuestra AS 'Código',m.fechaMuestra AS 'Fecha',tm.descTiposMuestra AS 'Tipo de Muestra',m.cantidadDmo AS 'Cant. DMO' FROM muestras AS m JOIN tiposMuestra AS tm ON tm.codTiposMuestra=m.codTiposMuestra", Conexion);
             ad_muestrasNoGraf = new SqlDataAdapter(muestrasNoGraf);
             DataTable dt_muestrasNoGraf = new DataTable();
             ad_muestrasNoGraf.Fill(dt_muestrasNoGraf);
@@ -991,9 +993,16 @@ namespace PrimerasHU_GES
             }
 
             string auxMuestra = lbl_muestra.Text;
-
-            RegistroGrafico rg = new RegistroGrafico(bm,auxMuestra);
-            rg.Show();
+            int serie1 = 3;
+            int cantidad = chart_Puntos.Series.Count - serie1;
+            string[] puntos = new string[cantidad];
+            for (int i=0;i<cantidad;i++)
+            {
+                puntos[i] = chart_Puntos.Series[serie1].Name;
+                serie1++;
+            }
+            RegistroGrafico rg = new RegistroGrafico(bm,auxMuestra,puntos);
+            rg.ShowDialog();
         }
 
         private void txt_tipoPunto_TextChanged(object sender, EventArgs e)
@@ -1030,42 +1039,48 @@ namespace PrimerasHU_GES
             }
         }
 
-        /**
-         * 
-        private void button1_Click(object sender, EventArgs e)
+        private void cargarGraficosVisor(int codTipoGrafico)
         {
-            double maxY = (double) chart_Puntos.ChartAreas[0].AxisY.Maximum;
-            double minY = (double) chart_Puntos.ChartAreas[0].AxisY.Minimum;
-            maxY -= 0.2;
-            minY += 0.0;
-            chart_Puntos.ChartAreas[0].AxisY.Maximum = maxY;
-            chart_Puntos.ChartAreas[0].AxisY.Minimum = minY;
-
-            mostrarScrollBar(minY,maxY);
+            string aux = "";
+            string tipo = "";
+            if (codTipoGrafico == 0)
+            {
+                aux = "g.codMuestra AS 'Muestra',";
+                tipo = "Muestras";
+            }
+            else
+            {
+                if(codTipoGrafico == 1)
+                {
+                    aux = "g.codCalculo AS 'Cálculo',";
+                    tipo = "Cálculos";
+                }
+                else
+                {
+                    aux = "";
+                    tipo = "";
+                }
+            }
+            SqlCommand cargaGrafico = new SqlCommand("SELECT g.codGrafico AS 'Código',"+aux+"tg.descTiposGraf AS 'Tipo de Gráfico',g.nomGrafico AS 'Nombre',g.descGrafico AS 'Leyenda' FROM graficos AS g JOIN tiposGrafico AS tg ON tg.codTiposGraf=g.codTiposGraf WHERE tg.descTiposGraf='"+tipo+"'",Conexion);
+            adaptador.SelectCommand = cargaGrafico;
+            DataTable dt_cargaGrafico = new DataTable();
+            adaptador.Fill(dt_cargaGrafico);
+            if (dgv_graficosVer.Rows.Count != 0)
+            {
+                dgv_graficosVer.DataSource = null;
+                dgv_graficosVer.Rows.Clear();
+                dgv_graficosVer.Refresh();
+            }
+            if (dt_cargaGrafico.Rows.Count != 0)
+            {
+                dgv_graficosVer.DataSource = dt_cargaGrafico;
+            }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void cb_tipoGrafVisor_SelectedIndexChanged(object sender, EventArgs e)
         {
-            double maxY = (double)chart_Puntos.ChartAreas[0].AxisY.Maximum;
-            double minY = (double)chart_Puntos.ChartAreas[0].AxisY.Minimum;
-            maxY += 0.2;
-            minY -= 0.0;
-            chart_Puntos.ChartAreas[0].AxisY.Maximum = maxY;
-            chart_Puntos.ChartAreas[0].AxisY.Minimum = minY;
-
-            mostrarScrollBar(minY, maxY);
+            int x = cb_tipoGrafVisor.SelectedIndex;
+            cargarGraficosVisor(x);
         }
-
-        private void mostrarScrollBar (double min, double max)
-        {
-            chart_Puntos.ChartAreas["ChartArea1"].AxisY.ScrollBar.Size = 20;
-            chart_Puntos.ChartAreas["ChartArea1"].AxisY.ScrollBar.ButtonStyle = ScrollBarButtonStyles.SmallScroll;
-            chart_Puntos.ChartAreas["ChartArea1"].AxisY.ScrollBar.IsPositionedInside = true;
-            chart_Puntos.ChartAreas["ChartArea1"].AxisY.ScrollBar.Enabled = true;
-            chart_Puntos.ChartAreas["ChartArea1"].AxisY.ScaleView.Zoom(min, max);
-            chart_Puntos.Update();
-        }
-        *
-        **/
     }
 }

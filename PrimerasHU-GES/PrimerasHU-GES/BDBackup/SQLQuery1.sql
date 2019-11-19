@@ -418,3 +418,35 @@ SELECT * FROM operariosMaquina
 SELECT * FROM estados
 DELETE FROM estados WHERE codEstado >= 3
 DBCC CHECKIDENT ('estados',RESEED,2)
+
+SELECT * FROM tiposMuestra
+
+INSERT INTO tiposMuestra (descTiposMuestra) VALUES ('De Estadístico'),('De Test')
+
+SELECT * FROM muestras
+
+SELECT * FROM graficos
+
+SELECT * FROM tiposGrafico
+
+SELECT * FROM calculos
+DELETE FROM calculos
+DBCC CHECKIDENT ('calculos',RESEED,0)
+
+SELECT dc.codCalculo AS 'Cálculo',c.codMuestra AS 'Muestra',tm.descTiposMuestra AS 'Tipo de Muestra',dc.idPtoMed AS 'Punto', tc.descTipoCalculo AS 'Cálculo', dc.resultadoCalculo AS 'Resultado'
+FROM detallesCalculo AS dc
+JOIN calculos AS c ON c.codCalculo = dc.codCalculo
+JOIN tiposCalculo AS tc ON tc.codTipoCalculo = dc.codTipoCalculo
+JOIN muestras AS m ON m.codMuestra = c.codMuestra
+JOIN tiposMuestra AS tm ON tm.codTiposMuestra = m.codTiposMuestra
+ORDER BY dc.idPtoMed, tc.codTipoCalculo, c.codMuestra
+
+DELETE FROM detallesCalculo
+DBCC CHECKIDENT ('detallesCalculo',RESEED,0)
+
+SELECT * FROM indicadoresCalidad
+
+SELECT * FROM tiposCalculo
+
+INSERT INTO tiposCalculo (descTipoCalculo) VALUES ('Rango Flotante'),('Media'),('Sigma'),('Cp'),
+('Cpk (Inferior)'),('Cpk (Superior)'),('Cpk')

@@ -39,6 +39,7 @@ namespace PrimerasHU_GES
 
         private void CalculoMarcos_Load(object sender, EventArgs e)
         {
+            btn_registrar.Enabled = false;
             panel_calculos.Visible = false;
             dgv_datosPunto.Hide();
             dgv_nombrePuntos.Hide();
@@ -52,7 +53,13 @@ namespace PrimerasHU_GES
 
         private void conocerMuestras()
         {
-            SqlCommand muestrasNoGraf = new SqlCommand("SELECT codMuestra AS 'Código',fechaMuestra AS 'Fecha',obserMuestra AS 'Observaciones',cantidadDmo AS 'Cant. DMO' FROM muestras WHERE NOT EXISTS (SELECT codMuestra FROM graficos)", Conexion);
+            if (dgv_muestras.Rows.Count != 0)
+            {
+                dgv_muestras.DataSource = null;
+                dgv_muestras.Rows.Clear();
+                dgv_muestras.Refresh();
+            }
+            SqlCommand muestrasNoGraf = new SqlCommand("SELECT m.codMuestra AS 'Código',m.fechaMuestra AS 'Fecha',tm.descTiposMuestra AS 'Tipo de Muestra',m.cantidadDmo AS 'Cant. DMO' FROM muestras AS m JOIN tiposMuestra AS tm ON tm.codTiposMuestra=m.codTiposMuestra", Conexion);
             ad_muestras = new SqlDataAdapter(muestrasNoGraf);
             DataTable dt_muestrasNoGraf = new DataTable();
             ad_muestras.Fill(dt_muestrasNoGraf);
@@ -109,6 +116,8 @@ namespace PrimerasHU_GES
             txt_cpkvPorc.Text = "";
             txt_cpkaPorc.Text = "";
             txt_cpkrPorc.Text = "";
+
+            btn_registrar.Enabled = false;
         }
 
         private void Dgv_muestras_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -116,9 +125,11 @@ namespace PrimerasHU_GES
             limpiarCalculosF();
             int posi_muestras = dgv_muestras.CurrentRow.Index;
             string aux_codMuestra = dgv_muestras[0, posi_muestras].Value.ToString();
+            string aux_tipoMuestra = dgv_muestras[2, posi_muestras].Value.ToString();
             muestraSeleccionada = aux_codMuestra;
             rellenarListaPuntos(aux_codMuestra);
             lbl_muestra.Text = aux_codMuestra;
+            lbl_tipoMuestra.Text = aux_tipoMuestra;
             obtenerNombrePuntos();
             conocerPuntosF();
         }
@@ -294,6 +305,8 @@ namespace PrimerasHU_GES
             txt_cpkVerde.Text = cant_cpkV.ToString();
             txt_cpkAmarillo.Text = cant_cpkA.ToString();
             txt_cpkRojo.Text = cant_cpkR.ToString();
+            btn_registrar.Enabled = true;
+            btn_calcular.Enabled = true;
         }
 
         private void conocerPuntosF()
@@ -311,7 +324,171 @@ namespace PrimerasHU_GES
         private void btn_verGrafo_Click(object sender, EventArgs e)
         {
             CalculoGrafo cg = new CalculoGrafo(Cp,Cpk,Puntos);
-            cg.Show();
+            cg.ShowDialog();
+        }
+
+        private void btn_registrar_Click(object sender, EventArgs e)
+        {
+            if (lbl_tipoMuestra.Text == "De Test")
+            {
+                MessageBox.Show("Está intentando registrar una muestra de tipo 'De Test'. Sólo se permite el registro de muestras de tipo 'De Estadístico'.","Atención!",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+            else
+            {
+                string mensaje = "Se ha registrado correctamente: " + "\n";
+                if (dgv_calculos.Rows.Count != 0)
+                {
+                    SqlCommand registrarCalculo = new SqlCommand("INSERT INTO calculos (codMuestra,fechaCalculo) VALUES (@codMuestra,@fechaCalculo)", Conexion);
+                    adaptador.InsertCommand = registrarCalculo;
+                    adaptador.InsertCommand.Parameters.Add(new SqlParameter("@codMuestra", SqlDbType.Int));
+                    adaptador.InsertCommand.Parameters.Add(new SqlParameter("@fechaCalculo", SqlDbType.Date));
+
+                    adaptador.InsertCommand.Parameters["@codMuestra"].Value = Convert.ToInt32(lbl_muestra.Text);
+                    adaptador.InsertCommand.Parameters["@fechaCalculo"].Value = dtp_fechaCalculo.Value.ToString("yyyy-MM-dd");
+
+                    try
+                    {
+                        Conexion.Open();
+
+                        SqlDataAdapter consulta1 = new SqlDataAdapter();
+                        SqlCommand consultaRegistroCalculoMuestra = new SqlCommand("SELECT codMuestra FROM calculos WHERE codMuestra=@codMuestra", Conexion);
+                        consulta1.SelectCommand = consultaRegistroCalculoMuestra;
+                        consulta1.SelectCommand.Parameters.Add(new SqlParameter("@codMuestra", SqlDbType.Int));
+                        consulta1.SelectCommand.Parameters["@codMuestra"].Value = Convert.ToInt32(lbl_muestra.Text);
+                        consulta1.SelectCommand.ExecuteNonQuery();
+                        DataTable dt_consultaRegistro = new DataTable();
+                        consulta1.Fill(dt_consultaRegistro);
+                        if (dt_consultaRegistro.Rows.Count == 0)
+                        {
+                            adaptador.InsertCommand.ExecuteNonQuery();
+                            mensaje += "- Cálculos" + "\n";
+
+                            //INSERCIÓN DE DETALLESCALCULO
+                            try
+                            {
+                                SqlDataAdapter consulta2 = new SqlDataAdapter();
+                                SqlCommand altaDetalleCalculo = new SqlCommand("INSERT INTO detallesCalculo (codCalculo,codTipoCalculo,idPtoMed,resultadoCalculo) VALUES (@codCalculo,@codTipoCalculo,@idPtoMed,@resultadoCalculo)", Conexion);
+                                consulta2.InsertCommand = altaDetalleCalculo;
+
+                                foreach (DataGridViewRow fila in dgv_calculos.Rows) //recorro el datagridview con los cálculos
+                                {
+                                    int i = 0;
+                                    for (i = 0; i < dgv_puntosF.Rows.Count; i++) //recorro el listado de los nombres de puntos F
+                                    {
+                                        if (fila.Cells[0].Value.ToString() == dgv_puntosF.Rows[i].Cells[0].Value.ToString()) //compruebo si el punto del cálculo es punto F
+                                        {
+                                            for (int j = 1; j < 8; j++) //recorro la fila del punto para obtener todos los valores
+                                            {
+                                                consulta2.InsertCommand.Parameters.Clear();
+
+                                                consulta2.InsertCommand.Parameters.Add(new SqlParameter("@codCalculo", SqlDbType.Int));
+                                                consulta2.InsertCommand.Parameters.Add(new SqlParameter("@codTipoCalculo", SqlDbType.Int));
+                                                consulta2.InsertCommand.Parameters.Add(new SqlParameter("@idPtoMed", SqlDbType.VarChar));
+                                                consulta2.InsertCommand.Parameters.Add(new SqlParameter("@resultadoCalculo", SqlDbType.Decimal));
+
+                                                SqlDataAdapter consulta3 = new SqlDataAdapter();
+                                                SqlCommand consultaCalculoCodigo = new SqlCommand("SELECT TOP 1 codCalculo FROM calculos ORDER BY codCalculo DESC", Conexion);
+                                                consulta3.SelectCommand = consultaCalculoCodigo;
+                                                DataTable dt_codigoCalculo = new DataTable();
+                                                consulta3.Fill(dt_codigoCalculo);
+                                                string aux1 = "";
+                                                if (dt_codigoCalculo.Rows.Count != 0)
+                                                {
+                                                    aux1 = dt_codigoCalculo.Rows[0][0].ToString();
+                                                }
+                                                consulta2.InsertCommand.Parameters["@codCalculo"].Value = Convert.ToInt32(aux1);
+
+                                                int tipoCalculo = 0;
+                                                if (j == 1)
+                                                {
+                                                    tipoCalculo = 1; //Rango Flotante
+                                                }
+                                                else
+                                                {
+                                                    if (j == 2)
+                                                    {
+                                                        tipoCalculo = 2; //Media
+                                                    }
+                                                    else
+                                                    {
+                                                        if (j == 3)
+                                                        {
+                                                            tipoCalculo = 3; //Sigma
+                                                        }
+                                                        else
+                                                        {
+                                                            if (j == 4)
+                                                            {
+                                                                tipoCalculo = 4; //Cp
+                                                            }
+                                                            else
+                                                            {
+                                                                if (j == 5)
+                                                                {
+                                                                    tipoCalculo = 5; //Cpk (Inferior)
+                                                                }
+                                                                else
+                                                                {
+                                                                    if (j == 6)
+                                                                    {
+                                                                        tipoCalculo = 6; //Cpk (Superior)
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        tipoCalculo = 7; //Cpk
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+
+                                                consulta2.InsertCommand.Parameters["@codTipoCalculo"].Value = tipoCalculo; //Rango Flotante
+                                                consulta2.InsertCommand.Parameters["@idPtoMed"].Value = fila.Cells[0].Value.ToString();
+                                                consulta2.InsertCommand.Parameters["@resultadoCalculo"].Value = Convert.ToDecimal(fila.Cells[j].Value.ToString());
+
+                                                consulta2.InsertCommand.ExecuteNonQuery();
+                                            }
+                                        }
+                                    }
+
+                                }
+                                mensaje += "- Detalles de Cálculos";
+                                MessageBox.Show(mensaje, "Felicitaciones!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                conocerMuestras();
+                                limpiarCalculosF();
+                                if (dgv_listaPuntos.Rows.Count != 0)
+                                {
+                                    dgv_listaPuntos.DataSource = null;
+                                    dgv_listaPuntos.Rows.Clear();
+                                    dgv_listaPuntos.Refresh();
+                                    lbl_muestra.Text = "";
+                                }
+                            }
+                            catch (SqlException ex2)
+                            {
+                                MessageBox.Show(ex2.ToString());
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Los 'Cálculos' de la 'Muestra' que está intentando registrar, ya han sido registrados.", "Atención!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                    }
+                    finally
+                    {
+                        Conexion.Close();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Usted está intentando registrar datos vacíos o no válidos. Recuerde que primero debe procesar los cálculos tras presionar el botón 'Calcular'.", "Atención!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void rellenarListaPuntos(string muestra)
@@ -350,6 +527,12 @@ namespace PrimerasHU_GES
             }
             else
             {
+                Puntos = new ArrayList();
+                Cp = new ArrayList();
+                Cpk = new ArrayList();
+
+                btn_registrar.Enabled = false;
+                btn_calcular.Enabled = false;
                 cant_cpV = 0;
                 cant_cpA = 0;
                 cant_cpR = 0;

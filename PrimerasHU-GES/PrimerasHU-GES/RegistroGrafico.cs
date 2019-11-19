@@ -15,11 +15,17 @@ namespace PrimerasHU_GES
 {
     public partial class RegistroGrafico : Form
     {
-        public RegistroGrafico(Bitmap bm, string muestra)
+        public RegistroGrafico(Bitmap bm, string muestra, string[]leyenda)
         {
             InitializeComponent();
             pb_regGrafico.Image = Clipboard.GetImage();
             txt_regGraficoMuestra.Text = muestra;
+            string comentario = "Puntos Contenidos en el gráfico: ";
+            for(int i=0;i<leyenda.Length;i++)
+            {
+                comentario += "\n - "+leyenda[i].ToString()+".";
+            }
+            txt_descGrafico.Text = comentario;
         }
 
         private SqlConnection Conexion;
@@ -61,7 +67,7 @@ namespace PrimerasHU_GES
             }
             else
             {
-                SqlCommand registro = new SqlCommand("INSERT INTO graficos VALUES (@codMuestra,@codTiposGraf,@nomGrafico,@grafica,@descGrafico)", Conexion);
+                SqlCommand registro = new SqlCommand("INSERT INTO graficos(codMuestra,codTiposGraf,nomGrafico,grafica,descGrafico) VALUES (@codMuestra,@codTiposGraf,@nomGrafico,@grafica,@descGrafico)", Conexion);
                 adaptador.InsertCommand = registro;
 
                 adaptador.InsertCommand.Parameters.Add(new SqlParameter("@codMuestra", SqlDbType.Int));

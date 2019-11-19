@@ -159,6 +159,12 @@
     <Compile Include="DetalleControlPlan.Designer.cs">
       <DependentUpon>DetalleControlPlan.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReporteAnalisis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteAnalisis.Designer.cs">
+      <DependentUpon>ReporteAnalisis.cs</DependentUpon>
+    </Compile>
     <Compile Include="ges_v01DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -275,10 +281,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ges_v01DataSetCodigosDmo.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ges_v01DataSetDocDmo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DataSetDocDmo.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ges_v01DataSetMuestrasGrafico.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ges_v01DataSetMuestrasGrafico.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ges_v01DataSetTiposMuestra.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DataSetTiposMuestra.xsd</DependentUpon>
     </Compile>
     <Compile Include="ges_v01DocumentosDmo.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -455,6 +471,9 @@
     <EmbeddedResource Include="DetalleControlPlan.resx">
       <DependentUpon>DetalleControlPlan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReporteAnalisis.resx">
+      <DependentUpon>ReporteAnalisis.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GraficoMarcos.resx">
       <DependentUpon>GraficoMarcos.cs</DependentUpon>
     </EmbeddedResource>
@@ -516,6 +535,7 @@
     <EmbeddedResource Include="VisorDmo.resx">
       <DependentUpon>VisorDmo.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="ges_v01DataSet.xsc">
       <DependentUpon>ges_v01DataSet.xsd</DependentUpon>
     </None>
@@ -776,6 +796,17 @@
     <None Include="ges_v01DataSetCodigosDmo.xss">
       <DependentUpon>ges_v01DataSetCodigosDmo.xsd</DependentUpon>
     </None>
+    <None Include="ges_v01DataSetDocDmo.xsc">
+      <DependentUpon>ges_v01DataSetDocDmo.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSetDocDmo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DataSetDocDmo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DataSetDocDmo.xss">
+      <DependentUpon>ges_v01DataSetDocDmo.xsd</DependentUpon>
+    </None>
     <None Include="ges_v01DataSetMuestrasGrafico.xsc">
       <DependentUpon>ges_v01DataSetMuestrasGrafico.xsd</DependentUpon>
     </None>
@@ -786,6 +817,17 @@
     </None>
     <None Include="ges_v01DataSetMuestrasGrafico.xss">
       <DependentUpon>ges_v01DataSetMuestrasGrafico.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSetTiposMuestra.xsc">
+      <DependentUpon>ges_v01DataSetTiposMuestra.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSetTiposMuestra.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DataSetTiposMuestra.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DataSetTiposMuestra.xss">
+      <DependentUpon>ges_v01DataSetTiposMuestra.xsd</DependentUpon>
     </None>
     <None Include="ges_v01DocumentosDmo.xsc">
       <DependentUpon>ges_v01DocumentosDmo.xsd</DependentUpon>
@@ -927,6 +969,12 @@
   <ItemGroup>
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0-rc2\tools\analyzers\C#\Microsoft.CodeAnalysis.Analyzers.dll" />
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0-rc2\tools\analyzers\C#\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\Desktop\Informe de analisis\howto_print_form.csproj">
+      <Project>{e36dbef2-0eed-4092-a76d-1ce3ebfa6e95}</Project>
+      <Name>howto_print_form</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
