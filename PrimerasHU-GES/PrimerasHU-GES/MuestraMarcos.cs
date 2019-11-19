@@ -26,7 +26,12 @@ namespace PrimerasHU_GES
         private SqlDataAdapter ad_detMuestra;
         private SqlDataAdapter ad_muestras;
 
+        int cantSeleccionados = 0;
+        int advertenciaTest1 = 0;
+        int advertenciaTest2 = 0;
+        int ventana = 0;
 
+        int minimosDmo = 8;
         private void Btn_Salir_Click(object sender, EventArgs e)
         {
             this.Dispose();
@@ -83,6 +88,12 @@ namespace PrimerasHU_GES
 
         private void MuestraMarcos_Load(object sender, EventArgs e)
         {
+            this.Size = new Size(597, 396);
+
+            // TODO: esta línea de código carga datos en la tabla 'ges_v01DataSetDocDmo.documentosDmo' Puede moverla o quitarla según sea necesario.
+            this.documentosDmoTableAdapter1.Fill(this.ges_v01DataSetDocDmo.documentosDmo);
+            // TODO: esta línea de código carga datos en la tabla 'ges_v01DataSetTiposMuestra.tiposMuestra' Puede moverla o quitarla según sea necesario.
+            this.tiposMuestraTableAdapter.Fill(this.ges_v01DataSetTiposMuestra.tiposMuestra);
             // TODO: esta línea de código carga datos en la tabla 'ges_v01DataSetCodigosDmo.documentosDmo' Puede moverla o quitarla según sea necesario.
             this.documentosDmoTableAdapter.Fill(this.ges_v01DataSetCodigosDmo.documentosDmo);
             Conexion = new SqlConnection("Data source=.\\SQLEXPRESS; Initial Catalog = ges_v01; Integrated Security = True");
@@ -91,6 +102,8 @@ namespace PrimerasHU_GES
             recuperaUltimaMuestra();
             recuperaUltimoDmoUsado();
             recuperarMuestras();
+
+            txt_seleccionados.Text = cantSeleccionados.ToString();
         }
         
         //EN EL SIGUIENTE EVENTO KEYPRESS DE LA CANTIDAD DE DMO, VALIDO QUE SÓLO SE INGRESEN NÚMEROS
@@ -115,13 +128,15 @@ namespace PrimerasHU_GES
             recuperaUltimaMuestra();
             recuperaUltimoDmoUsado();
             txt_cantidadDmo.Text = "";
-            txt_obserMuestra.Text = "";
             dgv_docDmo.DataSource = null;
             dgv_docDmo.Rows.Clear();
             dgv_docDmo.Refresh();
             btn_registrar.Enabled = false;
+            btn_limpiarMuestra.Enabled = false;
             txt_cantEncontrada.Text = "";
             txt_cantSolicitada.Text = "";
+            cantSeleccionados = 0;
+            dgv_docDmo.Enabled = true;
         }
 
         private void Btn_previsual_Click(object sender, EventArgs e)
@@ -130,13 +145,14 @@ namespace PrimerasHU_GES
             {
                 MessageBox.Show("Revise la cantidad de DMO que quiere que contenga la muestra.", "Atención!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 btn_registrar.Enabled = false;
+                btn_limpiarMuestra.Enabled = false;
             }
             else
             {
                 int cantidad = Convert.ToInt32(txt_cantidadDmo.Text);
-                if (cantidad < 8 || cantidad > 30)
+                if (cantidad < minimosDmo || cantidad > 30)
                 {
-                    MessageBox.Show("Revise la cantidad de DMO que quiere que contenga la muestra. " + "\n" + "Recuerde que el valor mínimo permitido es 8 y el máximo es 30.", "Atención!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Revise la cantidad de DMO que quiere que contenga la muestra. " + "\n" + "Recuerde que el valor mínimo permitido es "+ minimosDmo.ToString() +" y el máximo es 30.", "Atención!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
                 {
@@ -145,11 +161,14 @@ namespace PrimerasHU_GES
                     int cantDmo = int.Parse(txt_cantidadDmo.Text); //recupero la cantidad de dmo que va a contenerla muestra
                     string ultimoDmoUsado = "";
                     btn_registrar.Enabled = true;
+                    btn_limpiarMuestra.Enabled = true;
                     int cantEncontrada = 0;
-
-                    if (txt_ultDmo.Text == "N/A" || String.IsNullOrEmpty(txt_ultDmo.Text))
+                    string tipo = cb_TipoMuestra.Text;
+                    if (cb_PrimerDmo.Enabled == false)
                     {
-                        consultaUltDmo = "SELECT TOP " + cantDmo + " codDmo AS 'Documentos DMO (no utilizados)' FROM documentosDmo";
+
+                        //consultaUltDmo = "SELECT TOP " + cantDmo + " codDmo AS 'Documentos DMO' FROM documentosDmo";
+                        consultaUltDmo = "SELECT codDmo AS 'Documentos DMO' FROM documentosDmo";
 
                         SqlCommand cmd_dgvDmo = new SqlCommand(consultaUltDmo, Conexion);
                         SqlDataAdapter ad_dgvDmo = new SqlDataAdapter(cmd_dgvDmo);
@@ -157,10 +176,13 @@ namespace PrimerasHU_GES
                         ad_dgvDmo.Fill(dt_dgvDmo);
                         dgv_docDmo.DataSource = dt_dgvDmo;
                         cantEncontrada = dt_dgvDmo.Rows.Count;
+                        cantSeleccionados++;
+                        txt_seleccionados.Text = cantSeleccionados.ToString();
+
                     }
                     else
                     {
-                        consultaUltDmo = "SELECT TOP " + cantDmo + " codDmo AS 'Documentos DMO (no utilizados)' FROM documentosDmo WHERE codDmo >'" + txt_ultDmo.Text + "'";
+                        consultaUltDmo = "SELECT TOP " + cantDmo + " codDmo AS 'Documentos DMO' FROM documentosDmo WHERE codDmo >='" + cb_PrimerDmo.Text + "'";
 
                         SqlCommand cmd_dgvDmo = new SqlCommand(consultaUltDmo, Conexion);
                         SqlDataAdapter ad_dgvDmo = new SqlDataAdapter(cmd_dgvDmo);
@@ -174,7 +196,7 @@ namespace PrimerasHU_GES
                     {
                         MessageBox.Show("No se han encontrado Documentos DMO nuevos para registrar en las muestras. Póngase en contacto con el Administrador/Encargado.", "Atención!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         limpiar();
-                    }
+                    }                    
                 }
             }
         }
@@ -182,7 +204,9 @@ namespace PrimerasHU_GES
         private void Btn_registrar_Click(object sender, EventArgs e)
         {
 
-                string mensaje = "Se ha registrado correctamente: " + "\n";
+            string mensaje = "Se ha registrado correctamente: " + "\n";
+            if (cb_TipoMuestra.Text != "De Test")
+            {
                 if (txt_cantSolicitada.Text != txt_cantEncontrada.Text)
                 {
                     DialogResult registrar = MessageBox.Show("Ud. desea registrar una muestra de " + txt_cantSolicitada.Text + " DMO, pero en el sistema, sin utilizar sólo se encontraron " + txt_cantEncontrada.Text + ". \n \n - Presione 'SI' si desea que el sistema corrija los datos automáticamente para evitar errores y registre de igual manera. \n \n - Presione 'NO' para abrir el gestor de 'Documentos DMO' y registrar los faltantes. \n \n - Presione 'CANCELAR' para revisar si los datos fueron ingresados correctamente o corregirlos.", "Atención!", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
@@ -192,19 +216,14 @@ namespace PrimerasHU_GES
                         txt_cantSolicitada.Text = txt_cantidadDmo.Text;
 
                         //INSERCION DE MUESTRAS
-                        SqlCommand altaMuestra = new SqlCommand("INSERT INTO muestras VALUES (@fechaMuestra,@obserMuestra,@cantidadDmo)", Conexion);
+                        SqlCommand altaMuestra = new SqlCommand("INSERT INTO muestras VALUES (@fechaMuestra,@codTiposMuestra,@cantidadDmo)", Conexion);
                         adaptador.InsertCommand = altaMuestra;
                         adaptador.InsertCommand.Parameters.Add(new SqlParameter("@fechaMuestra", SqlDbType.Date));
-                        adaptador.InsertCommand.Parameters.Add(new SqlParameter("@obserMuestra", SqlDbType.Text));
+                        adaptador.InsertCommand.Parameters.Add(new SqlParameter("@codTiposMuestra", SqlDbType.Int));
                         adaptador.InsertCommand.Parameters.Add(new SqlParameter("@cantidadDmo", SqlDbType.Int));
 
                         adaptador.InsertCommand.Parameters["@fechaMuestra"].Value = dtp_fechaMuestra.Value.ToString("yyyy-MM-dd");
-                        string aux_obser = null;
-                        if (txt_obserMuestra.Text != null)
-                        {
-                            aux_obser = txt_obserMuestra.Text;
-                        }
-                        adaptador.InsertCommand.Parameters["@obserMuestra"].Value = aux_obser;
+                        adaptador.InsertCommand.Parameters["@codTiposMuestra"].Value = cb_TipoMuestra.SelectedValue;
                         adaptador.InsertCommand.Parameters["@cantidadDmo"].Value = int.Parse(txt_cantidadDmo.Text);
 
                         try
@@ -268,19 +287,14 @@ namespace PrimerasHU_GES
                 else
                 {
                     //INSERCION DE MUESTRAS
-                    SqlCommand altaMuestra = new SqlCommand("INSERT INTO muestras VALUES (@fechaMuestra,@obserMuestra,@cantidadDmo)", Conexion);
+                    SqlCommand altaMuestra = new SqlCommand("INSERT INTO muestras VALUES (@fechaMuestra,@codTiposMuestra,@cantidadDmo)", Conexion);
                     adaptador.InsertCommand = altaMuestra;
                     adaptador.InsertCommand.Parameters.Add(new SqlParameter("@fechaMuestra", SqlDbType.Date));
-                    adaptador.InsertCommand.Parameters.Add(new SqlParameter("@obserMuestra", SqlDbType.Text));
+                    adaptador.InsertCommand.Parameters.Add(new SqlParameter("@codTiposMuestra", SqlDbType.Int));
                     adaptador.InsertCommand.Parameters.Add(new SqlParameter("@cantidadDmo", SqlDbType.Int));
 
                     adaptador.InsertCommand.Parameters["@fechaMuestra"].Value = dtp_fechaMuestra.Value.ToString("yyyy-MM-dd");
-                    string aux_obser = null;
-                    if (txt_obserMuestra.Text != null)
-                    {
-                        aux_obser = txt_obserMuestra.Text;
-                    }
-                    adaptador.InsertCommand.Parameters["@obserMuestra"].Value = aux_obser;
+                    adaptador.InsertCommand.Parameters["@codTiposMuestra"].Value = cb_TipoMuestra.SelectedValue;
                     adaptador.InsertCommand.Parameters["@cantidadDmo"].Value = int.Parse(txt_cantidadDmo.Text);
 
                     try
@@ -324,11 +338,154 @@ namespace PrimerasHU_GES
                     }
                     finally
                     {
-                    Conexion.Close();
+                        Conexion.Close();
                     }
 
                 }
+            }
+            else
+            {
+                if (txt_cantSolicitada.Text == txt_seleccionados.Text)
+                {
+                    DialogResult registrar = MessageBox.Show("Ud. está a punto de registrar una muestra de " + txt_cantSolicitada.Text + " DMO que fueron seleccionados de manera personalizada."+ "\n ¿Está seguro de la selección realizada?" + "\n \n - Presione 'SI' para continuar con el registro. \n \n - Presione 'NO' para modificar la selección realizada. \n \n - Presione 'CANCELAR' para comenzar desde el inicio.", "Atención!", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+                    if (registrar == DialogResult.Yes)
+                    {
+                        //INSERCION DE MUESTRAS
+                        SqlCommand altaMuestra = new SqlCommand("INSERT INTO muestras VALUES (@fechaMuestra,@codTiposMuestra,@cantidadDmo)", Conexion);
+                        adaptador.InsertCommand = altaMuestra;
+                        adaptador.InsertCommand.Parameters.Add(new SqlParameter("@fechaMuestra", SqlDbType.Date));
+                        adaptador.InsertCommand.Parameters.Add(new SqlParameter("@codTiposMuestra", SqlDbType.Int));
+                        adaptador.InsertCommand.Parameters.Add(new SqlParameter("@cantidadDmo", SqlDbType.Int));
 
+                        adaptador.InsertCommand.Parameters["@fechaMuestra"].Value = dtp_fechaMuestra.Value.ToString("yyyy-MM-dd");
+                        adaptador.InsertCommand.Parameters["@codTiposMuestra"].Value = cb_TipoMuestra.SelectedValue;
+                        adaptador.InsertCommand.Parameters["@cantidadDmo"].Value = int.Parse(txt_cantidadDmo.Text);
+
+                        try
+                        {
+                            Conexion.Open();
+                            adaptador.InsertCommand.ExecuteNonQuery();
+                            mensaje += "- Muestras" + "\n";
+
+                            //INSERCION DE DETALLE DE MUESTRAS
+                            try
+                            {
+                                ad_detMuestra = new SqlDataAdapter();
+                                SqlCommand altaDetalleMuestra = new SqlCommand("INSERT INTO detalleMuestras (codMuestra,codDmo) VALUES (@codMuestra,@codDmo)", Conexion);
+                                ad_detMuestra.InsertCommand = altaDetalleMuestra;
+
+                                foreach (DataGridViewRow fila_docDmo in dgv_docDmo.Rows)
+                                {
+                                    if (fila_docDmo.Selected == true)
+                                    {
+                                        ad_detMuestra.InsertCommand.Parameters.Clear();
+
+                                        ad_detMuestra.InsertCommand.Parameters.Add(new SqlParameter("@codMuestra", SqlDbType.Int));
+                                        ad_detMuestra.InsertCommand.Parameters.Add(new SqlParameter("@codDmo", SqlDbType.VarChar));
+
+                                        ad_detMuestra.InsertCommand.Parameters["@codMuestra"].Value = Convert.ToInt32(txt_codMuestra.Text);
+                                        ad_detMuestra.InsertCommand.Parameters["@codDmo"].Value = fila_docDmo.Cells[0].Value;
+
+                                        ad_detMuestra.InsertCommand.ExecuteNonQuery();
+                                    }
+                                }
+                                mensaje += "- Detalles de Muestra";
+                                MessageBox.Show(mensaje, "Felicitaciones!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                limpiar();
+                            }
+                            catch (Exception ex2)
+                            {
+                                MessageBox.Show(ex2.ToString());
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.ToString());
+                        }
+                        finally
+                        {
+                            Conexion.Close();
+                        }
+
+                    }
+                    else
+                    {
+                        if (registrar == DialogResult.No)
+                        {
+                            recuperarMuestras();
+                            recuperaUltimaMuestra();
+                            recuperaUltimoDmoUsado();
+                            dgv_docDmo.ClearSelection();
+                            cantSeleccionados = 0;
+                            txt_seleccionados.Text = "0";
+                            dgv_docDmo.Enabled = true;
+                        }
+                        else
+                        {
+                            return;
+                        }
+                    }
+                }
+                /*
+                else
+                {
+                    //INSERCION DE MUESTRAS
+                    SqlCommand altaMuestra = new SqlCommand("INSERT INTO muestras VALUES (@fechaMuestra,@codTiposMuestra,@cantidadDmo)", Conexion);
+                    adaptador.InsertCommand = altaMuestra;
+                    adaptador.InsertCommand.Parameters.Add(new SqlParameter("@fechaMuestra", SqlDbType.Date));
+                    adaptador.InsertCommand.Parameters.Add(new SqlParameter("@codTiposMuestra", SqlDbType.Text));
+                    adaptador.InsertCommand.Parameters.Add(new SqlParameter("@cantidadDmo", SqlDbType.Int));
+
+                    adaptador.InsertCommand.Parameters["@fechaMuestra"].Value = dtp_fechaMuestra.Value.ToString("yyyy-MM-dd");
+                    adaptador.InsertCommand.Parameters["@codTiposMuestra"].Value = cb_TipoMuestra.SelectedValue;
+                    adaptador.InsertCommand.Parameters["@cantidadDmo"].Value = int.Parse(txt_cantidadDmo.Text);
+
+                    try
+                    {
+                        Conexion.Open();
+                        adaptador.InsertCommand.ExecuteNonQuery();
+                        mensaje += "- Muestras" + "\n";
+
+                        //INSERCION DE DETALLE DE MUESTRAS
+                        try
+                        {
+                            ad_detMuestra = new SqlDataAdapter();
+                            SqlCommand altaDetalleMuestra = new SqlCommand("INSERT INTO detalleMuestras (codMuestra,codDmo) VALUES (@codMuestra,@codDmo)", Conexion);
+                            ad_detMuestra.InsertCommand = altaDetalleMuestra;
+
+                            foreach (DataGridViewRow fila_docDmo in dgv_docDmo.Rows)
+                            {
+                                ad_detMuestra.InsertCommand.Parameters.Clear();
+
+                                ad_detMuestra.InsertCommand.Parameters.Add(new SqlParameter("@codMuestra", SqlDbType.Int));
+                                ad_detMuestra.InsertCommand.Parameters.Add(new SqlParameter("@codDmo", SqlDbType.VarChar));
+
+                                ad_detMuestra.InsertCommand.Parameters["@codMuestra"].Value = Convert.ToInt32(txt_codMuestra.Text);
+                                ad_detMuestra.InsertCommand.Parameters["@codDmo"].Value = fila_docDmo.Cells[0].Value;
+
+                                ad_detMuestra.InsertCommand.ExecuteNonQuery();
+
+                            }
+                            mensaje += "- Detalles de Muestra";
+                            MessageBox.Show(mensaje, "Felicitaciones!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            limpiar();
+                        }
+                        catch (Exception ex2)
+                        {
+                            MessageBox.Show(ex2.ToString());
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                    }
+                    finally
+                    {
+                        Conexion.Close();
+                    }
+                }
+                */
+            }
         }
 
         //cargar lo siguiente para el movimiento del panel 
@@ -358,6 +515,167 @@ namespace PrimerasHU_GES
         private void button1_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void cb_TipoMuestra_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cb_TipoMuestra.Text == "De Test")
+            {
+                minimosDmo = 2;
+                cb_PrimerDmo.Enabled = false;
+                lbl_mensaje.Visible = true;
+                lbl_seleccionados.Visible = true;
+                txt_seleccionados.Visible = true;
+                dgv_docDmo.MultiSelect = true;
+            }
+            else
+            {
+                minimosDmo = 8;
+                cb_PrimerDmo.Enabled = true;
+                lbl_mensaje.Visible = false;
+                lbl_seleccionados.Visible = false;
+                txt_seleccionados.Visible = false;
+                dgv_docDmo.MultiSelect = false;
+            }
+            limpiar();
+        }
+
+        private void cb_PrimerDmo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            recuperarMuestras();
+            recuperaUltimaMuestra();
+            recuperaUltimoDmoUsado();
+            dgv_docDmo.DataSource = null;
+            dgv_docDmo.Rows.Clear();
+            dgv_docDmo.Refresh();
+            btn_registrar.Enabled = false;
+            btn_limpiarMuestra.Enabled = false;
+            txt_cantEncontrada.Text = "";
+            txt_cantSolicitada.Text = "";
+            cantSeleccionados = 0;
+            dgv_docDmo.Enabled = true;
+        }
+
+        private void dgv_docDmo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int seleccion = 0;
+            foreach(DataGridViewRow fila in dgv_docDmo.Rows)
+            {
+                if (fila.Selected == true)
+                {
+                    seleccion++;
+                }
+            }
+            if (seleccion > Convert.ToInt32(txt_cantSolicitada.Text))
+            {
+                if (advertenciaTest1 == 0)
+                {
+                    MessageBox.Show("Está intentando seleccionar más Documentos DMO de los solicitados o del tamaño deseado. Revise la 'Cantidad de DMO' y vuelva a intentarlo.", "Atención!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    advertenciaTest1++;
+                }
+                else
+                {
+                    advertenciaTest1 = 0;
+                }
+                recuperarMuestras();
+                recuperaUltimaMuestra();
+                recuperaUltimoDmoUsado();
+                dgv_docDmo.ClearSelection();
+                cantSeleccionados = 0;
+                txt_seleccionados.Text = "0";
+                dgv_docDmo.Enabled = true;
+                return;
+            }
+            else
+            {
+                if (seleccion == Convert.ToInt32(txt_cantSolicitada.Text) - 1)
+                {
+                    if (advertenciaTest2 == 0)
+                    {
+                        MessageBox.Show("Atención, sólo le queda 1 selección disponible para llegar a la solicitada.", "Atención!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        advertenciaTest2++;
+                    }
+                    else
+                    {
+                        advertenciaTest2 = 0;
+                    }
+                }
+                if (seleccion == Convert.ToInt32(txt_cantSolicitada.Text))
+                {
+                    dgv_docDmo.Enabled = false;
+                }
+                cantSeleccionados = seleccion;
+                txt_seleccionados.Text = cantSeleccionados.ToString();
+            }
+        }
+
+        private void dgv_docDmo_MouseClick(object sender, MouseEventArgs e)
+        {
+            int seleccion = 0;
+            foreach (DataGridViewRow fila in dgv_docDmo.Rows)
+            {
+                if (fila.Selected == true)
+                {
+                    seleccion++;
+                }
+            }
+            if (seleccion > Convert.ToInt32(txt_cantSolicitada.Text))
+            {
+                if (advertenciaTest1 == 0)
+                {
+                    MessageBox.Show("Está intentando seleccionar más Documentos DMO de los solicitados o del tamaño deseado. Revise la 'Cantidad de DMO' y vuelva a intentarlo.", "Atención!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    advertenciaTest1++;
+                }
+                else
+                {
+                    advertenciaTest1 = 0;
+                }
+                recuperarMuestras();
+                recuperaUltimaMuestra();
+                recuperaUltimoDmoUsado();
+                dgv_docDmo.ClearSelection();
+                cantSeleccionados = 0;
+                txt_seleccionados.Text = "0";
+                dgv_docDmo.Enabled = true;
+                return;
+            }
+            else
+            {
+                if (seleccion == Convert.ToInt32(txt_cantSolicitada.Text) - 1)
+                {
+                    if (advertenciaTest2 == 0)
+                    {
+                        MessageBox.Show("Atención, sólo le queda 1 selección disponible para llegar a la solicitada.", "Atención!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        advertenciaTest2++;
+                    }
+                    else
+                    {
+                        advertenciaTest2 = 0;
+                    }
+                }
+                if (seleccion == Convert.ToInt32(txt_cantSolicitada.Text))
+                {
+                    dgv_docDmo.Enabled = false;
+                }
+                cantSeleccionados = seleccion;
+                txt_seleccionados.Text = cantSeleccionados.ToString();
+            }
+        }
+
+        private void btn_muestras_Click(object sender, EventArgs e)
+        {
+            if (ventana == 0)
+            {
+                this.Size = new Size(597, 600);
+                btn_muestras.Text = "Ocultar Muestras";
+                ventana++;
+            }
+            else
+            {
+                this.Size = new Size(597, 396);
+                btn_muestras.Text = "Conocer Muestras";
+                ventana--;
+            }
         }
     }
 }

@@ -33,6 +33,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txt_regGraficoMuestra = new System.Windows.Forms.TextBox();
             this.cb_regGraficoTipoG = new System.Windows.Forms.ComboBox();
+            this.tiposGraficoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ges_v01DataSet18TiposGraficos = new PrimerasHU_GES.ges_v01DataSet18TiposGraficos();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_nombreGrafico = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,14 +42,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pb_regGrafico = new System.Windows.Forms.PictureBox();
-            this.ges_v01DataSet18TiposGraficos = new PrimerasHU_GES.ges_v01DataSet18TiposGraficos();
-            this.tiposGraficoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tiposGraficoTableAdapter = new PrimerasHU_GES.ges_v01DataSet18TiposGraficosTableAdapters.tiposGraficoTableAdapter();
             this.btn_registrarGrafico = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_regGrafico)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18TiposGraficos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tiposGraficoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18TiposGraficos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_regGrafico)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -85,6 +85,16 @@
             this.cb_regGraficoTipoG.TabIndex = 3;
             this.cb_regGraficoTipoG.ValueMember = "codTiposGraf";
             // 
+            // tiposGraficoBindingSource
+            // 
+            this.tiposGraficoBindingSource.DataMember = "tiposGrafico";
+            this.tiposGraficoBindingSource.DataSource = this.ges_v01DataSet18TiposGraficos;
+            // 
+            // ges_v01DataSet18TiposGraficos
+            // 
+            this.ges_v01DataSet18TiposGraficos.DataSetName = "ges_v01DataSet18TiposGraficos";
+            this.ges_v01DataSet18TiposGraficos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -113,22 +123,22 @@
             // 
             // txt_descGrafico
             // 
+            this.txt_descGrafico.Enabled = false;
             this.txt_descGrafico.Location = new System.Drawing.Point(447, 181);
             this.txt_descGrafico.Multiline = true;
             this.txt_descGrafico.Name = "txt_descGrafico";
             this.txt_descGrafico.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txt_descGrafico.Size = new System.Drawing.Size(141, 127);
             this.txt_descGrafico.TabIndex = 8;
-            this.txt_descGrafico.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(444, 165);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 13);
+            this.label4.Size = new System.Drawing.Size(51, 13);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Comentarios:";
+            this.label4.Text = "Leyenda:";
             // 
             // label5
             // 
@@ -148,16 +158,6 @@
             this.pb_regGrafico.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_regGrafico.TabIndex = 0;
             this.pb_regGrafico.TabStop = false;
-            // 
-            // ges_v01DataSet18TiposGraficos
-            // 
-            this.ges_v01DataSet18TiposGraficos.DataSetName = "ges_v01DataSet18TiposGraficos";
-            this.ges_v01DataSet18TiposGraficos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tiposGraficoBindingSource
-            // 
-            this.tiposGraficoBindingSource.DataMember = "tiposGrafico";
-            this.tiposGraficoBindingSource.DataSource = this.ges_v01DataSet18TiposGraficos;
             // 
             // tiposGraficoTableAdapter
             // 
@@ -219,9 +219,9 @@
             this.Text = "RegistroGrafico";
             this.Load += new System.EventHandler(this.RegistroGrafico_Load);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.RegistroGrafico_MouseMove);
-            ((System.ComponentModel.ISupportInitialize)(this.pb_regGrafico)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18TiposGraficos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tiposGraficoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18TiposGraficos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_regGrafico)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

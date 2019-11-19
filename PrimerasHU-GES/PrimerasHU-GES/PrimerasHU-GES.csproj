@@ -275,10 +275,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ges_v01DataSetCodigosDmo.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ges_v01DataSetDocDmo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DataSetDocDmo.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ges_v01DataSetMuestrasGrafico.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ges_v01DataSetMuestrasGrafico.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ges_v01DataSetTiposMuestra.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DataSetTiposMuestra.xsd</DependentUpon>
     </Compile>
     <Compile Include="ges_v01DocumentosDmo.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -776,6 +786,17 @@
     <None Include="ges_v01DataSetCodigosDmo.xss">
       <DependentUpon>ges_v01DataSetCodigosDmo.xsd</DependentUpon>
     </None>
+    <None Include="ges_v01DataSetDocDmo.xsc">
+      <DependentUpon>ges_v01DataSetDocDmo.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSetDocDmo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DataSetDocDmo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DataSetDocDmo.xss">
+      <DependentUpon>ges_v01DataSetDocDmo.xsd</DependentUpon>
+    </None>
     <None Include="ges_v01DataSetMuestrasGrafico.xsc">
       <DependentUpon>ges_v01DataSetMuestrasGrafico.xsd</DependentUpon>
     </None>
@@ -786,6 +807,17 @@
     </None>
     <None Include="ges_v01DataSetMuestrasGrafico.xss">
       <DependentUpon>ges_v01DataSetMuestrasGrafico.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSetTiposMuestra.xsc">
+      <DependentUpon>ges_v01DataSetTiposMuestra.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSetTiposMuestra.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DataSetTiposMuestra.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DataSetTiposMuestra.xss">
+      <DependentUpon>ges_v01DataSetTiposMuestra.xsd</DependentUpon>
     </None>
     <None Include="ges_v01DocumentosDmo.xsc">
       <DependentUpon>ges_v01DocumentosDmo.xsd</DependentUpon>
