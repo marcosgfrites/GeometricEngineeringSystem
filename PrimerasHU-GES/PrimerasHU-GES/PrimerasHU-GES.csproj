@@ -159,12 +159,6 @@
     <Compile Include="DetalleControlPlan.Designer.cs">
       <DependentUpon>DetalleControlPlan.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReporteAnalisis.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReporteAnalisis.Designer.cs">
-      <DependentUpon>ReporteAnalisis.cs</DependentUpon>
-    </Compile>
     <Compile Include="ges_v01DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -421,6 +415,12 @@
     <Compile Include="RegistroGrafico.Designer.cs">
       <DependentUpon>RegistroGrafico.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReporteDeAnalisisPablo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -471,9 +471,6 @@
     <EmbeddedResource Include="DetalleControlPlan.resx">
       <DependentUpon>DetalleControlPlan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReporteAnalisis.resx">
-      <DependentUpon>ReporteAnalisis.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GraficoMarcos.resx">
       <DependentUpon>GraficoMarcos.cs</DependentUpon>
     </EmbeddedResource>
@@ -519,6 +516,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegistroGrafico.resx">
       <DependentUpon>RegistroGrafico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteDeAnalisisPablo.resx">
       <DependentUpon>ReporteDeAnalisisPablo.cs</DependentUpon>
@@ -969,12 +969,6 @@
   <ItemGroup>
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0-rc2\tools\analyzers\C#\Microsoft.CodeAnalysis.Analyzers.dll" />
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0-rc2\tools\analyzers\C#\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\Desktop\Informe de analisis\howto_print_form.csproj">
-      <Project>{e36dbef2-0eed-4092-a76d-1ce3ebfa6e95}</Project>
-      <Name>howto_print_form</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
