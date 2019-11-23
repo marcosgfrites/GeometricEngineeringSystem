@@ -420,6 +420,12 @@
     <Compile Include="RegistroGrafico.Designer.cs">
       <DependentUpon>RegistroGrafico.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReporteDeAnalisisPablo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -516,6 +522,9 @@
     <EmbeddedResource Include="RegistroGrafico.resx">
       <DependentUpon>RegistroGrafico.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReporteDeAnalisisPablo.resx">
       <DependentUpon>ReporteDeAnalisisPablo.cs</DependentUpon>
     </EmbeddedResource>
@@ -531,6 +540,7 @@
     <EmbeddedResource Include="VisorDmo.resx">
       <DependentUpon>VisorDmo.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="ges_v01DataSet.xsc">
       <DependentUpon>ges_v01DataSet.xsd</DependentUpon>
     </None>

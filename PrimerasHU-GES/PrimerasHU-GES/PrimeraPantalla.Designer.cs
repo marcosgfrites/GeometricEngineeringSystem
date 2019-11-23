@@ -928,7 +928,7 @@
             // 
             this.label4.BackColor = System.Drawing.Color.Black;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Helvetica", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
@@ -952,9 +952,9 @@
             // 
             this.sidebar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sidebar1.BackgroundImage")));
             this.sidebar1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.sidebar1.Controls.Add(this.btn_Analisis);
             this.sidebar1.Controls.Add(this.btn_CPlan);
             this.sidebar1.Controls.Add(this.btn_Dmo);
-            this.sidebar1.Controls.Add(this.btn_Analisis);
             this.sidebar1.Controls.Add(this.btn_Soporte);
             this.sidebar1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sidebar1.GradientBottomLeft = System.Drawing.Color.Black;

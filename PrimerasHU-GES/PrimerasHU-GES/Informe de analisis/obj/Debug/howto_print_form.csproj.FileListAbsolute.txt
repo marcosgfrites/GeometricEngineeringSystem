@@ -1,0 +1,8 @@
+C:\Users\Roqué\Desktop\Nueva carpeta\bin\Debug\howto_print_form.exe
+C:\Users\Roqué\Desktop\Nueva carpeta\bin\Debug\howto_print_form.pdb
+C:\Users\Roqué\Desktop\Nueva carpeta\obj\Debug\howto_print_form.csprojAssemblyReference.cache
+C:\Users\Roqué\Desktop\Nueva carpeta\obj\Debug\howto_print_form.Form1.resources
+C:\Users\Roqué\Desktop\Nueva carpeta\obj\Debug\howto_print_form.Properties.Resources.resources
+C:\Users\Roqué\Desktop\Nueva carpeta\obj\Debug\howto_print_form.csproj.GenerateResource.cache
+C:\Users\Roqué\Desktop\Nueva carpeta\obj\Debug\howto_print_form.exe
+C:\Users\Roqué\Desktop\Nueva carpeta\obj\Debug\howto_print_form.pdb
