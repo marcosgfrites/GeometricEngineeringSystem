@@ -450,3 +450,8 @@ SELECT * FROM tiposCalculo
 
 INSERT INTO tiposCalculo (descTipoCalculo) VALUES ('Rango Flotante'),('Media'),('Sigma'),('Cp'),
 ('Cpk (Inferior)'),('Cpk (Superior)'),('Cpk')
+
+SELECT dc.idPtoMed AS 'Punto de Medición', tc.descTipoCalculo AS 'Tipo de Cálculo', dc.resultadoCalculo AS 'Resultado Obtenido'
+FROM detallesCalculo AS dc
+JOIN tiposCalculo AS tc ON tc.codTipoCalculo=dc.codTipoCalculo
+WHERE dc.codCalculo=1

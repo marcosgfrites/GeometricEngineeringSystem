@@ -270,6 +270,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ges_v01DataSet9.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ges_v01DataSetCalculos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DataSetCalculos.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ges_v01DataSetCodigosDmo.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -784,6 +789,17 @@
     </None>
     <None Include="ges_v01DataSet9.xss">
       <DependentUpon>ges_v01DataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSetCalculos.xsc">
+      <DependentUpon>ges_v01DataSetCalculos.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSetCalculos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DataSetCalculos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DataSetCalculos.xss">
+      <DependentUpon>ges_v01DataSetCalculos.xsd</DependentUpon>
     </None>
     <None Include="ges_v01DataSetCodigosDmo.xsc">
       <DependentUpon>ges_v01DataSetCodigosDmo.xsd</DependentUpon>

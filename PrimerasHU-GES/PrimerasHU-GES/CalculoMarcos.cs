@@ -39,6 +39,8 @@ namespace PrimerasHU_GES
 
         private void CalculoMarcos_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'ges_v01DataSetCalculos.calculos' Puede moverla o quitarla según sea necesario.
+            this.calculosTableAdapter.Fill(this.ges_v01DataSetCalculos.calculos);
             btn_registrar.Enabled = false;
             panel_calculos.Visible = false;
             dgv_datosPunto.Hide();
@@ -149,7 +151,7 @@ namespace PrimerasHU_GES
             suma_cpkA = 0;
             suma_cpkR = 0; // acumula la suma de los valores CP o CPK en VERDE, AMARILLO y ROJO
 
-            CultureInfo culture = new CultureInfo("en-US");
+            CultureInfo culture = new CultureInfo("en-US"); //
             decimal verde = decimal.Parse("1.33",culture);
             decimal amarillo = decimal.Parse("1.00",culture);
             decimal rojo = decimal.Parse("0.00", culture);
@@ -488,6 +490,124 @@ namespace PrimerasHU_GES
                 {
                     MessageBox.Show("Usted está intentando registrar datos vacíos o no válidos. Recuerde que primero debe procesar los cálculos tras presionar el botón 'Calcular'.", "Atención!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int posi_calculos = dataGridView1.CurrentRow.Index;
+            string calculo = dataGridView1[0,posi_calculos].Value.ToString();
+
+            SqlCommand consultaPuntos = new SqlCommand("SELECT DISTINCT dc.idPtoMed AS 'Punto de Medición' FROM detallesCalculo AS dc WHERE dc.codCalculo=" + calculo, Conexion);
+            SqlDataAdapter ad_consultaPuntos = new SqlDataAdapter();
+            ad_consultaPuntos.SelectCommand = consultaPuntos;
+            DataTable dt_consultaPuntos = new DataTable();
+            ad_consultaPuntos.Fill(dt_consultaPuntos);
+            if (dgv_verCalculosPuntos.Rows.Count != 0)
+            {
+                dgv_verCalculosPuntos.DataSource = null;
+                dgv_verCalculosPuntos.Rows.Clear();
+                dgv_verCalculosPuntos.Refresh();
+            }
+            dgv_verCalculosPuntos.DataSource = dt_consultaPuntos;
+
+            pBar_verCalculo.Visible = true;
+            pBar_verCalculo.Maximum = dgv_verCalculosPuntos.Rows.Count;
+
+
+            dgv_verCalculos.Visible = true;
+
+            string punto = "";
+            SqlCommand consultaCalculoPunto;
+            SqlDataAdapter ad_consultaCalculoPunto;
+            DataTable dt_consultaCalculoPunto;
+            int x = dgv_verCalculosPuntos.Rows.Count;
+            int contador = 0;
+            if (dgv_verCalculos.Rows.Count != 0)
+            {
+                dgv_verCalculos.DataSource = null;
+                dgv_verCalculos.Rows.Clear();
+                dgv_verCalculos.Refresh();
+            }
+            foreach (DataGridViewRow fila in dgv_verCalculosPuntos.Rows)
+            {
+                dgv_verCalculos.Rows.Add(1);
+                punto = fila.Cells[0].Value.ToString();
+                dgv_verCalculos.Rows[contador].Cells[0].Value = punto;
+                for (int i=1;i<=7;i++)
+                {
+                    consultaCalculoPunto = new SqlCommand("SELECT resultadoCalculo FROM detallesCalculo WHERE codCalculo=" + calculo +" AND idPtoMed='" + punto + "' AND codTipoCalculo="+i, Conexion);
+                    ad_consultaCalculoPunto = new SqlDataAdapter();
+                    ad_consultaCalculoPunto.SelectCommand = consultaCalculoPunto;
+                    dt_consultaCalculoPunto = new DataTable();
+                    ad_consultaCalculoPunto.Fill(dt_consultaCalculoPunto);
+                    dgv_verCalculos.Rows[contador].Cells[i].Value = dt_consultaCalculoPunto.Rows[0][0].ToString();
+                }
+                contador++;
+            }
+            
+            CultureInfo culture = new CultureInfo("en-US"); //
+            decimal verde = decimal.Parse("1.33", culture);
+            decimal amarillo = decimal.Parse("1.00", culture);
+            decimal rojo = decimal.Parse("0.00", culture);
+            decimal auxCp, auxCpk;
+
+            foreach (DataGridViewRow fila in dgv_verCalculos.Rows)
+            {
+                auxCp = decimal.Parse(fila.Cells[4].Value.ToString(), System.Globalization.NumberStyles.AllowParentheses |
+                 System.Globalization.NumberStyles.AllowLeadingWhite |
+                 System.Globalization.NumberStyles.AllowTrailingWhite |
+                 System.Globalization.NumberStyles.AllowThousands |
+                 System.Globalization.NumberStyles.AllowDecimalPoint |
+                 System.Globalization.NumberStyles.AllowLeadingSign);
+                if (auxCp >= verde)
+                {
+                    fila.Cells[4].Style.ForeColor = Color.Green;
+                }
+                else
+                {
+                    if (auxCp < verde && auxCp >= amarillo)
+                    {
+                        fila.Cells[4].Style.ForeColor = Color.Yellow;
+                    }
+                    else
+                    {
+                        fila.Cells[4].Style.ForeColor = Color.Red;
+                    }
+                }
+
+                 auxCpk = decimal.Parse(fila.Cells[7].Value.ToString(), System.Globalization.NumberStyles.AllowParentheses |
+                  System.Globalization.NumberStyles.AllowLeadingWhite |
+                  System.Globalization.NumberStyles.AllowTrailingWhite |
+                  System.Globalization.NumberStyles.AllowThousands |
+                  System.Globalization.NumberStyles.AllowDecimalPoint |
+                  System.Globalization.NumberStyles.AllowLeadingSign);
+                if (auxCpk >= verde)
+                {
+                    fila.Cells[7].Style.ForeColor = Color.Green;
+                }
+                else
+                {
+                    if (auxCpk < verde && auxCpk >= amarillo)
+                    {
+                        fila.Cells[7].Style.ForeColor = Color.Yellow;
+                    }
+                    else
+                    {
+                        fila.Cells[7].Style.ForeColor = Color.Red;
+                    }
+                }
+            }
+
+        }
+
+        private void dgv_verCalculos_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            pBar_verCalculo.PerformStep();
+            if (pBar_verCalculo.Value == pBar_verCalculo.Maximum)
+            {
+                pBar_verCalculo.Visible = false;
+                pBar_verCalculo.Value = 0;
             }
         }
 

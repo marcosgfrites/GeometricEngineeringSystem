@@ -543,6 +543,7 @@
             this.btn_Calculos.TabIndex = 22;
             this.btn_Calculos.Text = "Cálculos";
             this.btn_Calculos.UseVisualStyleBackColor = false;
+            this.btn_Calculos.Click += new System.EventHandler(this.btn_Calculos_Click);
             // 
             // btn_Indicadores
             // 
@@ -559,6 +560,7 @@
             this.btn_Indicadores.TabIndex = 21;
             this.btn_Indicadores.Text = "Indicadores de Calidad";
             this.btn_Indicadores.UseVisualStyleBackColor = false;
+            this.btn_Indicadores.Click += new System.EventHandler(this.btn_Indicadores_Click);
             // 
             // btn_Muestras
             // 
