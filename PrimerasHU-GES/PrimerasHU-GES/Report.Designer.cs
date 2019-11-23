@@ -32,9 +32,11 @@
             this.gbInforme = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cmbGrafico = new System.Windows.Forms.ComboBox();
+            this.pbGrafico = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btImagen = new System.Windows.Forms.Button();
             this.txtImagen = new System.Windows.Forms.TextBox();
+            this.pbImagen = new System.Windows.Forms.PictureBox();
             this.RtxtPlan = new System.Windows.Forms.RichTextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -45,14 +47,12 @@
             this.btnForm = new System.Windows.Forms.Button();
             this.ppdForm = new System.Windows.Forms.PrintPreviewDialog();
             this.pdocForm = new System.Drawing.Printing.PrintDocument();
-            this.pbGrafico = new System.Windows.Forms.PictureBox();
-            this.pbImagen = new System.Windows.Forms.PictureBox();
             this.gbInforme.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbGrafico)).BeginInit();
+            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).BeginInit();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbInforme
@@ -88,6 +88,14 @@
             this.cmbGrafico.TabIndex = 3;
             this.cmbGrafico.ValueMember = "codGrafico";
             // 
+            // pbGrafico
+            // 
+            this.pbGrafico.Location = new System.Drawing.Point(6, 21);
+            this.pbGrafico.Name = "pbGrafico";
+            this.pbGrafico.Size = new System.Drawing.Size(334, 195);
+            this.pbGrafico.TabIndex = 1;
+            this.pbGrafico.TabStop = false;
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.btImagen);
@@ -117,6 +125,15 @@
             this.txtImagen.Name = "txtImagen";
             this.txtImagen.Size = new System.Drawing.Size(203, 22);
             this.txtImagen.TabIndex = 8;
+            // 
+            // pbImagen
+            // 
+            this.pbImagen.Location = new System.Drawing.Point(15, 21);
+            this.pbImagen.Name = "pbImagen";
+            this.pbImagen.Size = new System.Drawing.Size(236, 195);
+            this.pbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbImagen.TabIndex = 1;
+            this.pbImagen.TabStop = false;
             // 
             // RtxtPlan
             // 
@@ -155,6 +172,7 @@
             this.btnClientArea.TabIndex = 15;
             this.btnClientArea.Text = "Client Area";
             this.btnClientArea.UseVisualStyleBackColor = true;
+            this.btnClientArea.Click += new System.EventHandler(this.btnClientArea_Click_1);
             // 
             // btnPage2
             // 
@@ -208,22 +226,9 @@
             this.ppdForm.Name = "ppdForm";
             this.ppdForm.Visible = false;
             // 
-            // pbGrafico
+            // pdocForm
             // 
-            this.pbGrafico.Location = new System.Drawing.Point(6, 21);
-            this.pbGrafico.Name = "pbGrafico";
-            this.pbGrafico.Size = new System.Drawing.Size(334, 195);
-            this.pbGrafico.TabIndex = 1;
-            this.pbGrafico.TabStop = false;
-            // 
-            // pbImagen
-            // 
-            this.pbImagen.Location = new System.Drawing.Point(15, 21);
-            this.pbImagen.Name = "pbImagen";
-            this.pbImagen.Size = new System.Drawing.Size(236, 195);
-            this.pbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbImagen.TabIndex = 1;
-            this.pbImagen.TabStop = false;
+            this.pdocForm.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.pdocForm_PrintPage_1);
             // 
             // Report
             // 
@@ -241,12 +246,12 @@
             this.Load += new System.EventHandler(this.Report_Load);
             this.gbInforme.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbGrafico)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbGrafico)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).EndInit();
             this.ResumeLayout(false);
 
         }

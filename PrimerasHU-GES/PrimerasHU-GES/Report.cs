@@ -4,7 +4,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
 using System.Drawing.Printing;
 using System.Drawing.Drawing2D;
 using System;
@@ -17,16 +16,25 @@ namespace PrimerasHU_GES
         {
             InitializeComponent();
         }
-
-
-        private void btnClientArea_Click(object sender, EventArgs e)
+        private void Report_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnForm_Click_1(object sender, EventArgs e)
+        {
+            ShowControlImage(this);
+        }
+
+        private void btnClientArea_Click_1(object sender, EventArgs e)
+        {
+
             using (Bitmap bm = GetFormImageWithoutBorders(this))
             {
                 PrintImage(bm);
             }
         }
-
+        
         private void btnGroupBox_Click(object sender, EventArgs e)
         {
             ShowControlImage(gbInforme);
@@ -107,7 +115,7 @@ namespace PrimerasHU_GES
         }
 
         // Print the page.
-        private void pdocForm_PrintPage(object sender, PrintPageEventArgs e)
+        private void pdocForm_PrintPage_1(object sender, PrintPageEventArgs e)
         {
             // Center the image.
             int cx = e.MarginBounds.X + e.MarginBounds.Width / 2;
@@ -120,15 +128,6 @@ namespace PrimerasHU_GES
             e.Graphics.DrawImage(ImageToPrint, rect);
         }
 
-
-        private void Report_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnForm_Click_1(object sender, EventArgs e)
-        {
-            ShowControlImage(this);
-        }
+        
     }
 }

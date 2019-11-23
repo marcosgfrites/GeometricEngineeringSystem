@@ -18,7 +18,7 @@ namespace PrimerasHU_GES
             Application.SetCompatibleTextRenderingDefault(false);
 
          
-            Application.Run(new CalculoMarcos()); //
+            Application.Run(new Report()); //
 
         }
 
