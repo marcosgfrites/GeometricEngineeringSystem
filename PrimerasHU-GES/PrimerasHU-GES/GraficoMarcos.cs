@@ -979,7 +979,7 @@ namespace PrimerasHU_GES
             }
 
             AmpliarGrafico ag = new AmpliarGrafico(bm);
-            ag.Show();
+            ag.ShowDialog();
         }
 
         private void btn_registrarGrafico_Click(object sender, EventArgs e)
@@ -1061,7 +1061,7 @@ namespace PrimerasHU_GES
                     tipo = "";
                 }
             }
-            SqlCommand cargaGrafico = new SqlCommand("SELECT g.codGrafico AS 'Código',"+aux+"tg.descTiposGraf AS 'Tipo de Gráfico',g.nomGrafico AS 'Nombre',g.descGrafico AS 'Leyenda' FROM graficos AS g JOIN tiposGrafico AS tg ON tg.codTiposGraf=g.codTiposGraf WHERE tg.descTiposGraf='"+tipo+"'",Conexion);
+            SqlCommand cargaGrafico = new SqlCommand("SELECT g.codGrafico AS 'Código',"+aux+"tg.descTiposGraf AS 'Tipo de Gráfico',g.nomGrafico AS 'Nombre',g.descGrafico AS 'Leyenda',g.grafica AS 'Gráfica' FROM graficos AS g JOIN tiposGrafico AS tg ON tg.codTiposGraf=g.codTiposGraf WHERE tg.descTiposGraf='"+tipo+"'",Conexion);
             adaptador.SelectCommand = cargaGrafico;
             DataTable dt_cargaGrafico = new DataTable();
             adaptador.Fill(dt_cargaGrafico);
@@ -1081,6 +1081,42 @@ namespace PrimerasHU_GES
         {
             int x = cb_tipoGrafVisor.SelectedIndex;
             cargarGraficosVisor(x);
+        }
+
+        private void dgv_graficosVer_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int posi = 0;
+            if (dgv_graficosVer.Rows.Count !=0)
+            {
+                try
+                {
+                    // RECUPERA LA POSICIÓN SELECCIONADA EN EL DATAGRIDVIEW
+                    posi = dgv_graficosVer.CurrentRow.Index;
+
+                    //CONVIERTO DE ARRAY DE BITS A IMAGEN
+                    byte[] img = (byte[]) dgv_graficosVer[5, posi].Value;
+                    MemoryStream ms = new MemoryStream(img, 0, img.Length);
+                    ms.Write(img, 0, img.Length);
+                    Image pb = Image.FromStream(ms, true);
+                    pic_grafo.Image = pb;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+            }
+        }
+
+        private void btn_verGrafoLimpiar_Click(object sender, EventArgs e)
+        {
+            pic_grafo.Image = null;
+            if (dgv_graficosVer.Rows.Count !=0)
+            {
+                dgv_graficosVer.DataSource = null;
+                dgv_graficosVer.Rows.Clear();
+                dgv_graficosVer.Refresh();
+            }
+            this.tiposGraficoTableAdapter.Fill(this.ges_v01DataSet18TiposGraficos.tiposGrafico);
         }
     }
 }

@@ -38,7 +38,6 @@
             this.dgv_muestras = new System.Windows.Forms.DataGridView();
             this.dgv_listaPuntos = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
-            this.lbl_muestra = new System.Windows.Forms.Label();
             this.dgv_nombrePuntos = new System.Windows.Forms.DataGridView();
             this.btn_calcular = new System.Windows.Forms.Button();
             this.dgv_calculos = new System.Windows.Forms.DataGridView();
@@ -52,8 +51,7 @@
             this.cpk = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv_datosPunto = new System.Windows.Forms.DataGridView();
             this.pBar_calcular = new System.Windows.Forms.ProgressBar();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dtp_fechaCalculo = new System.Windows.Forms.DateTimePicker();
             this.btn_registrar = new System.Windows.Forms.Button();
             this.panel_calculos = new System.Windows.Forms.Panel();
             this.btn_verGrafo = new System.Windows.Forms.Button();
@@ -94,9 +92,30 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txt_cpAmarillo = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.lbl_muestra = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dtp_fechaCalculo = new System.Windows.Forms.DateTimePicker();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.lbl_tipoMuestra = new System.Windows.Forms.Label();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ges_v01DataSetCalculos = new PrimerasHU_GES.ges_v01DataSetCalculos();
+            this.calculosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.calculosTableAdapter = new PrimerasHU_GES.ges_v01DataSetCalculosTableAdapters.calculosTableAdapter();
+            this.codCalculoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codMuestraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaCalculoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label25 = new System.Windows.Forms.Label();
+            this.dgv_verCalculos = new System.Windows.Forms.DataGridView();
+            this.dgv_verCalculosPuntos = new System.Windows.Forms.DataGridView();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pBar_verCalculo = new System.Windows.Forms.ProgressBar();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_muestras)).BeginInit();
@@ -104,10 +123,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_nombrePuntos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_calculos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_datosPunto)).BeginInit();
-            this.tabControl1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             this.panel_calculos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_puntosF)).BeginInit();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSetCalculos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calculosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_verCalculos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_verCalculosPuntos)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -224,15 +249,6 @@
             this.label4.Size = new System.Drawing.Size(237, 13);
             this.label4.TabIndex = 9;
             this.label4.Text = "Puntos relacionados a la \'Muestra\' seleccionada:";
-            // 
-            // lbl_muestra
-            // 
-            this.lbl_muestra.AutoSize = true;
-            this.lbl_muestra.Location = new System.Drawing.Point(246, 128);
-            this.lbl_muestra.Name = "lbl_muestra";
-            this.lbl_muestra.Size = new System.Drawing.Size(0, 13);
-            this.lbl_muestra.TabIndex = 11;
-            this.lbl_muestra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // dgv_nombrePuntos
             // 
@@ -365,39 +381,14 @@
             this.pBar_calcular.TabIndex = 23;
             this.pBar_calcular.Visible = false;
             // 
-            // tabControl1
+            // dtp_fechaCalculo
             // 
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Location = new System.Drawing.Point(3, 56);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1295, 662);
-            this.tabControl1.TabIndex = 24;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.tabPage2.Controls.Add(this.lbl_tipoMuestra);
-            this.tabPage2.Controls.Add(this.dtp_fechaCalculo);
-            this.tabPage2.Controls.Add(this.btn_registrar);
-            this.tabPage2.Controls.Add(this.panel_calculos);
-            this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Controls.Add(this.lbl_muestra);
-            this.tabPage2.Controls.Add(this.pBar_calcular);
-            this.tabPage2.Controls.Add(this.dgv_muestras);
-            this.tabPage2.Controls.Add(this.dgv_datosPunto);
-            this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.dgv_calculos);
-            this.tabPage2.Controls.Add(this.dgv_listaPuntos);
-            this.tabPage2.Controls.Add(this.btn_calcular);
-            this.tabPage2.Controls.Add(this.dgv_nombrePuntos);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1287, 636);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Cálculos de Muestra";
+            this.dtp_fechaCalculo.Enabled = false;
+            this.dtp_fechaCalculo.Location = new System.Drawing.Point(7, 106);
+            this.dtp_fechaCalculo.Name = "dtp_fechaCalculo";
+            this.dtp_fechaCalculo.Size = new System.Drawing.Size(200, 20);
+            this.dtp_fechaCalculo.TabIndex = 26;
+            this.dtp_fechaCalculo.Visible = false;
             // 
             // btn_registrar
             // 
@@ -858,9 +849,23 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "CÁLCULOS ESTADÍSTICOS (Puntos F - Semáforo)";
             // 
+            // lbl_muestra
+            // 
+            this.lbl_muestra.AutoSize = true;
+            this.lbl_muestra.Location = new System.Drawing.Point(246, 128);
+            this.lbl_muestra.Name = "lbl_muestra";
+            this.lbl_muestra.Size = new System.Drawing.Size(0, 13);
+            this.lbl_muestra.TabIndex = 11;
+            this.lbl_muestra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.tabPage1.Controls.Add(this.pBar_verCalculo);
+            this.tabPage1.Controls.Add(this.dgv_verCalculosPuntos);
+            this.tabPage1.Controls.Add(this.dgv_verCalculos);
+            this.tabPage1.Controls.Add(this.label25);
+            this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -868,14 +873,29 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Visor de Cálculos";
             // 
-            // dtp_fechaCalculo
+            // tabPage2
             // 
-            this.dtp_fechaCalculo.Enabled = false;
-            this.dtp_fechaCalculo.Location = new System.Drawing.Point(7, 106);
-            this.dtp_fechaCalculo.Name = "dtp_fechaCalculo";
-            this.dtp_fechaCalculo.Size = new System.Drawing.Size(200, 20);
-            this.dtp_fechaCalculo.TabIndex = 26;
-            this.dtp_fechaCalculo.Visible = false;
+            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.tabPage2.Controls.Add(this.lbl_tipoMuestra);
+            this.tabPage2.Controls.Add(this.dtp_fechaCalculo);
+            this.tabPage2.Controls.Add(this.btn_registrar);
+            this.tabPage2.Controls.Add(this.panel_calculos);
+            this.tabPage2.Controls.Add(this.label2);
+            this.tabPage2.Controls.Add(this.lbl_muestra);
+            this.tabPage2.Controls.Add(this.pBar_calcular);
+            this.tabPage2.Controls.Add(this.dgv_muestras);
+            this.tabPage2.Controls.Add(this.dgv_datosPunto);
+            this.tabPage2.Controls.Add(this.label4);
+            this.tabPage2.Controls.Add(this.dgv_calculos);
+            this.tabPage2.Controls.Add(this.dgv_listaPuntos);
+            this.tabPage2.Controls.Add(this.btn_calcular);
+            this.tabPage2.Controls.Add(this.dgv_nombrePuntos);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1287, 636);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Cálculos de Muestra";
             // 
             // lbl_tipoMuestra
             // 
@@ -886,6 +906,176 @@
             this.lbl_tipoMuestra.Size = new System.Drawing.Size(0, 13);
             this.lbl_tipoMuestra.TabIndex = 27;
             this.lbl_tipoMuestra.Visible = false;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Location = new System.Drawing.Point(3, 56);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1295, 662);
+            this.tabControl1.TabIndex = 24;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codCalculoDataGridViewTextBoxColumn,
+            this.codMuestraDataGridViewTextBoxColumn,
+            this.fechaCalculoDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.calculosBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(9, 19);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // ges_v01DataSetCalculos
+            // 
+            this.ges_v01DataSetCalculos.DataSetName = "ges_v01DataSetCalculos";
+            this.ges_v01DataSetCalculos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // calculosBindingSource
+            // 
+            this.calculosBindingSource.DataMember = "calculos";
+            this.calculosBindingSource.DataSource = this.ges_v01DataSetCalculos;
+            // 
+            // calculosTableAdapter
+            // 
+            this.calculosTableAdapter.ClearBeforeFill = true;
+            // 
+            // codCalculoDataGridViewTextBoxColumn
+            // 
+            this.codCalculoDataGridViewTextBoxColumn.DataPropertyName = "codCalculo";
+            this.codCalculoDataGridViewTextBoxColumn.HeaderText = "Cálculo";
+            this.codCalculoDataGridViewTextBoxColumn.Name = "codCalculoDataGridViewTextBoxColumn";
+            this.codCalculoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codCalculoDataGridViewTextBoxColumn.Width = 67;
+            // 
+            // codMuestraDataGridViewTextBoxColumn
+            // 
+            this.codMuestraDataGridViewTextBoxColumn.DataPropertyName = "codMuestra";
+            this.codMuestraDataGridViewTextBoxColumn.HeaderText = "Muestra";
+            this.codMuestraDataGridViewTextBoxColumn.Name = "codMuestraDataGridViewTextBoxColumn";
+            this.codMuestraDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codMuestraDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // fechaCalculoDataGridViewTextBoxColumn
+            // 
+            this.fechaCalculoDataGridViewTextBoxColumn.DataPropertyName = "fechaCalculo";
+            this.fechaCalculoDataGridViewTextBoxColumn.HeaderText = "Fecha de Registro";
+            this.fechaCalculoDataGridViewTextBoxColumn.Name = "fechaCalculoDataGridViewTextBoxColumn";
+            this.fechaCalculoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fechaCalculoDataGridViewTextBoxColumn.Width = 109;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(6, 3);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(166, 13);
+            this.label25.TabIndex = 1;
+            this.label25.Text = "Seleccione el cálculo a visualizar:";
+            // 
+            // dgv_verCalculos
+            // 
+            this.dgv_verCalculos.AllowUserToAddRows = false;
+            this.dgv_verCalculos.AllowUserToDeleteRows = false;
+            this.dgv_verCalculos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_verCalculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_verCalculos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8,
+            this.Column9});
+            this.dgv_verCalculos.Location = new System.Drawing.Point(256, 19);
+            this.dgv_verCalculos.Name = "dgv_verCalculos";
+            this.dgv_verCalculos.ReadOnly = true;
+            this.dgv_verCalculos.Size = new System.Drawing.Size(1025, 611);
+            this.dgv_verCalculos.TabIndex = 2;
+            this.dgv_verCalculos.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgv_verCalculos_RowsAdded);
+            // 
+            // dgv_verCalculosPuntos
+            // 
+            this.dgv_verCalculosPuntos.AllowUserToAddRows = false;
+            this.dgv_verCalculosPuntos.AllowUserToDeleteRows = false;
+            this.dgv_verCalculosPuntos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_verCalculosPuntos.Location = new System.Drawing.Point(9, 176);
+            this.dgv_verCalculosPuntos.Name = "dgv_verCalculosPuntos";
+            this.dgv_verCalculosPuntos.ReadOnly = true;
+            this.dgv_verCalculosPuntos.Size = new System.Drawing.Size(240, 78);
+            this.dgv_verCalculosPuntos.TabIndex = 3;
+            this.dgv_verCalculosPuntos.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Punto de Medición";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Rango Flotante";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Media";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Sigma";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Cp";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Cpk (Inferior)";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Cpk (Superior)";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Cpk";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // pBar_verCalculo
+            // 
+            this.pBar_verCalculo.Location = new System.Drawing.Point(9, 200);
+            this.pBar_verCalculo.Name = "pBar_verCalculo";
+            this.pBar_verCalculo.Size = new System.Drawing.Size(241, 23);
+            this.pBar_verCalculo.Step = 1;
+            this.pBar_verCalculo.TabIndex = 24;
+            this.pBar_verCalculo.Visible = false;
             // 
             // CalculoMarcos
             // 
@@ -908,12 +1098,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_nombrePuntos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_calculos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_datosPunto)).EndInit();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
             this.panel_calculos.ResumeLayout(false);
             this.panel_calculos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_puntosF)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSetCalculos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calculosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_verCalculos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_verCalculosPuntos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -929,7 +1126,6 @@
         private System.Windows.Forms.DataGridView dgv_muestras;
         private System.Windows.Forms.DataGridView dgv_listaPuntos;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lbl_muestra;
         private System.Windows.Forms.DataGridView dgv_nombrePuntos;
         private System.Windows.Forms.Button btn_calcular;
         private System.Windows.Forms.DataGridView dgv_calculos;
@@ -943,9 +1139,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cpkSup;
         private System.Windows.Forms.DataGridViewTextBoxColumn cpk;
         private System.Windows.Forms.ProgressBar pBar_calcular;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel_calculos;
         private System.Windows.Forms.TextBox txt_cpRojo;
         private System.Windows.Forms.TextBox txt_cpVerde;
@@ -987,6 +1180,29 @@
         private System.Windows.Forms.Button btn_verGrafo;
         private System.Windows.Forms.Button btn_registrar;
         private System.Windows.Forms.DateTimePicker dtp_fechaCalculo;
+        private System.Windows.Forms.Label lbl_muestra;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label lbl_tipoMuestra;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private ges_v01DataSetCalculos ges_v01DataSetCalculos;
+        private System.Windows.Forms.BindingSource calculosBindingSource;
+        private ges_v01DataSetCalculosTableAdapters.calculosTableAdapter calculosTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codCalculoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codMuestraDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaCalculoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.DataGridView dgv_verCalculos;
+        private System.Windows.Forms.DataGridView dgv_verCalculosPuntos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.ProgressBar pBar_verCalculo;
     }
 }

@@ -273,5 +273,17 @@ namespace PrimerasHU_GES
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        private void btn_Calculos_Click(object sender, EventArgs e)
+        {
+            CalculoMarcos cm = new CalculoMarcos();
+            cm.Show();
+        }
+
+        private void btn_Indicadores_Click(object sender, EventArgs e)
+        {
+            IndicadoresCalidad ic = new IndicadoresCalidad();
+            ic.Show();
+        }
     }
 }
