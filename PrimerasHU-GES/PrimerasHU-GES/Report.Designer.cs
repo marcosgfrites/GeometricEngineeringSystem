@@ -28,14 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Report));
             this.gbInforme = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cmbGrafico = new System.Windows.Forms.ComboBox();
             this.pbGrafico = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btImagen = new System.Windows.Forms.Button();
-            this.txtImagen = new System.Windows.Forms.TextBox();
             this.pbImagen = new System.Windows.Forms.PictureBox();
             this.RtxtPlan = new System.Windows.Forms.RichTextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -47,6 +46,12 @@
             this.btnForm = new System.Windows.Forms.Button();
             this.ppdForm = new System.Windows.Forms.PrintPreviewDialog();
             this.pdocForm = new System.Drawing.Printing.PrintDocument();
+            this.graficosTableAdapter = new PrimerasHU_GES.ges_v01DataSet19TableAdapters.graficosTableAdapter();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.gbInforme.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbGrafico)).BeginInit();
@@ -62,7 +67,7 @@
             this.gbInforme.Controls.Add(this.groupBox4);
             this.gbInforme.Location = new System.Drawing.Point(27, 19);
             this.gbInforme.Name = "gbInforme";
-            this.gbInforme.Size = new System.Drawing.Size(629, 412);
+            this.gbInforme.Size = new System.Drawing.Size(637, 412);
             this.gbInforme.TabIndex = 19;
             this.gbInforme.TabStop = false;
             // 
@@ -73,33 +78,33 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(277, 11);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(346, 227);
+            this.groupBox2.Size = new System.Drawing.Size(360, 236);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Grafico";
             // 
             // cmbGrafico
             // 
-            this.cmbGrafico.DisplayMember = "nomGrafico";
             this.cmbGrafico.FormattingEnabled = true;
-            this.cmbGrafico.Location = new System.Drawing.Point(21, 39);
+            this.cmbGrafico.Location = new System.Drawing.Point(6, 39);
             this.cmbGrafico.Name = "cmbGrafico";
-            this.cmbGrafico.Size = new System.Drawing.Size(234, 24);
+            this.cmbGrafico.Size = new System.Drawing.Size(334, 24);
             this.cmbGrafico.TabIndex = 3;
             this.cmbGrafico.ValueMember = "codGrafico";
+            this.cmbGrafico.SelectedIndexChanged += new System.EventHandler(this.cmbGrafico_SelectedIndexChanged);
             // 
             // pbGrafico
             // 
             this.pbGrafico.Location = new System.Drawing.Point(6, 21);
             this.pbGrafico.Name = "pbGrafico";
             this.pbGrafico.Size = new System.Drawing.Size(334, 195);
+            this.pbGrafico.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbGrafico.TabIndex = 1;
             this.pbGrafico.TabStop = false;
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.btImagen);
-            this.groupBox3.Controls.Add(this.txtImagen);
+            this.groupBox3.Controls.Add(this.comboBox1);
             this.groupBox3.Controls.Add(this.pbImagen);
             this.groupBox3.Controls.Add(this.RtxtPlan);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -110,27 +115,11 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Imagen";
             // 
-            // btImagen
-            // 
-            this.btImagen.Location = new System.Drawing.Point(28, 175);
-            this.btImagen.Name = "btImagen";
-            this.btImagen.Size = new System.Drawing.Size(133, 23);
-            this.btImagen.TabIndex = 3;
-            this.btImagen.Text = "Cargar Imagen";
-            this.btImagen.UseVisualStyleBackColor = true;
-            // 
-            // txtImagen
-            // 
-            this.txtImagen.Location = new System.Drawing.Point(28, 39);
-            this.txtImagen.Name = "txtImagen";
-            this.txtImagen.Size = new System.Drawing.Size(203, 22);
-            this.txtImagen.TabIndex = 8;
-            // 
             // pbImagen
             // 
             this.pbImagen.Location = new System.Drawing.Point(15, 21);
             this.pbImagen.Name = "pbImagen";
-            this.pbImagen.Size = new System.Drawing.Size(236, 195);
+            this.pbImagen.Size = new System.Drawing.Size(240, 195);
             this.pbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbImagen.TabIndex = 1;
             this.pbImagen.TabStop = false;
@@ -203,6 +192,7 @@
             this.btnGroupBox.TabIndex = 16;
             this.btnGroupBox.Text = "GroupBox";
             this.btnGroupBox.UseVisualStyleBackColor = true;
+            this.btnGroupBox.Click += new System.EventHandler(this.btnGroupBox_Click);
             // 
             // btnForm
             // 
@@ -230,11 +220,51 @@
             // 
             this.pdocForm.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.pdocForm_PrintPage_1);
             // 
+            // graficosTableAdapter
+            // 
+            this.graficosTableAdapter.ClearBeforeFill = true;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // imageList2
+            // 
+            this.imageList2.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList2.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(15, 39);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(240, 24);
+            this.comboBox1.TabIndex = 4;
+            this.comboBox1.ValueMember = "codGrafico";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(685, 180);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 86);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "Imagenes Personalizadas";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // Report
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.gbInforme);
             this.Controls.Add(this.btnClientArea);
             this.Controls.Add(this.btnPage2);
@@ -248,7 +278,6 @@
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbGrafico)).EndInit();
             this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
@@ -263,8 +292,6 @@
         private System.Windows.Forms.ComboBox cmbGrafico;
         private System.Windows.Forms.PictureBox pbGrafico;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button btImagen;
-        private System.Windows.Forms.TextBox txtImagen;
         private System.Windows.Forms.PictureBox pbImagen;
         private System.Windows.Forms.RichTextBox RtxtPlan;
         private System.Windows.Forms.GroupBox groupBox4;
@@ -276,5 +303,11 @@
         private System.Windows.Forms.Button btnForm;
         private System.Windows.Forms.PrintPreviewDialog ppdForm;
         private System.Drawing.Printing.PrintDocument pdocForm;
+        private ges_v01DataSet19TableAdapters.graficosTableAdapter graficosTableAdapter;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ImageList imageList2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

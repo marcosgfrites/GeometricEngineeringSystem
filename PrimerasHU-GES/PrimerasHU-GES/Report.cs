@@ -7,19 +7,109 @@ using System.Windows.Forms;
 using System.Drawing.Printing;
 using System.Drawing.Drawing2D;
 using System;
+using System.Data.SqlClient;
+using System.IO;
 
 namespace PrimerasHU_GES
 {
     public partial class Report : Form
     {
+        
         public Report()
         {
+            
             InitializeComponent();
+            
         }
+        SqlConnection cn;
+        private SqlCommand cmd;
+        DataSet ds;
+        SqlDataAdapter da;
+        DataRow dr;
+        SqlDataReader sqldr;
+
+        
+        
         private void Report_Load(object sender, EventArgs e)
         {
-
+          
+           
+            
+            //--------------------------------------------------------------------------------------------
+            abrirConexion();
+            CargarImagenes(cmbGrafico);
+            cmbGrafico.SelectedIndex = 0;
         }
+        public string abrirConexion()
+        {
+            try
+            {
+                cn= new SqlConnection("Data source =.\\SQLEXPRESS; Initial Catalog = ges_v01; Integrated Security = True");
+                cn.Open();
+                return "Conectado";
+            }
+            catch (Exception ex)
+            {
+                return "No conectado: " + ex.ToString();
+            }
+        }
+        public void CargarImagenes(ComboBox cmbGrafico)
+        {
+            try
+            {
+                cmd = new SqlCommand("Select descGrafico from graficos",cn);
+                sqldr = cmd.ExecuteReader();
+                while (sqldr.Read())
+                {
+                    this.cmbGrafico.Items.Add(sqldr["descGrafico"]);
+                }
+                sqldr.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se cargaron las imagenes en el ComboBox: " + ex.ToString());
+            }
+        }
+
+        private void btImagen_Click(object sender, EventArgs e)
+        {
+           
+
+
+            try
+            {
+               
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+
+            }
+            finally
+            {
+                cn.Close();
+            }
+           
+        }
+        public void verImagen(PictureBox pictureBox, string descripcion)
+        {
+            try
+            {
+                da = new SqlDataAdapter("Select grafica from graficos where descGrafico = '" + descripcion + "'",cn);
+                ds = new DataSet();
+                da.Fill(ds,"graficos");
+                byte[] datos = new byte[0];
+                dr = ds.Tables["graficos"].Rows[0];
+                datos = (byte[])dr["grafica"];
+                System.IO.MemoryStream ms = new System.IO.MemoryStream(datos);
+                pbGrafico.Image = System.Drawing.Bitmap.FromStream(ms);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo consultar la Imagen: " + ex.ToString());
+            }
+        }
+
 
         private void btnForm_Click_1(object sender, EventArgs e)
         {
@@ -34,11 +124,12 @@ namespace PrimerasHU_GES
                 PrintImage(bm);
             }
         }
-        
+
         private void btnGroupBox_Click(object sender, EventArgs e)
         {
             ShowControlImage(gbInforme);
         }
+        
 
         //private void btnPage1_Click(object sender, EventArgs e)
         //{
@@ -68,7 +159,7 @@ namespace PrimerasHU_GES
             }
         }
 
-        // Return a Bitmap holding an image of the control.
+        // Devuelve un bitmap a la imagen del control
         private Bitmap GetControlImage(Control ctl)
         {
             Bitmap bm = new Bitmap(ctl.Width, ctl.Height);
@@ -76,10 +167,10 @@ namespace PrimerasHU_GES
             return bm;
         }
 
-        // Return the form's image without its borders and decorations.
+        // imagen del form sin los bordes
         private Bitmap GetFormImageWithoutBorders(Form frm)
         {
-            // Get the form's whole image.
+            
             using (Bitmap whole_form = GetControlImage(frm))
             {
                 // See how far the form's upper left corner is
@@ -88,7 +179,7 @@ namespace PrimerasHU_GES
                 int dx = origin.X - frm.Left;
                 int dy = origin.Y - frm.Top;
 
-                // Copy the client area into a new Bitmap.
+                // copia el area del cliente en un nuevo bitmap
                 int wid = frm.ClientSize.Width;
                 int hgt = frm.ClientSize.Height;
                 Bitmap bm = new Bitmap(wid, hgt);
@@ -102,22 +193,22 @@ namespace PrimerasHU_GES
             }
         }
 
-        // Send the image to a PrintPreviewDialog.
-        // (You could modify it to print directly.)
+        // envia la imagen a un PrintPreviewDialog.
+       
         private Image ImageToPrint;
         private void PrintImage(Image image)
         {
-            // Save a reference to the image to print.
+            //guarda una referencia de la imagen a imprimir
             ImageToPrint = image;
 
             // Display the dialog.
             ppdForm.ShowDialog();
         }
 
-        // Print the page.
+        // Imprime la pagina
         private void pdocForm_PrintPage_1(object sender, PrintPageEventArgs e)
         {
-            // Center the image.
+            // Centra la imagen
             int cx = e.MarginBounds.X + e.MarginBounds.Width / 2;
             int cy = e.MarginBounds.Y + e.MarginBounds.Height / 2;
             Rectangle rect = new Rectangle(
@@ -128,6 +219,25 @@ namespace PrimerasHU_GES
             e.Graphics.DrawImage(ImageToPrint, rect);
         }
 
-        
+        private void cmbGrafico_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            verImagen(pbGrafico, cmbGrafico.SelectedItem.ToString());
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.openFileDialog1.ShowDialog();
+                if (this.openFileDialog1.FileName.Equals("") == false)
+                {
+                    pbGrafico.Load(this.openFileDialog1.FileName);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo cargar la imagen: " + ex.ToString());
+            }
+        }
     }
 }
