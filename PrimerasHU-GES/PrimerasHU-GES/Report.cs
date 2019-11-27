@@ -21,24 +21,32 @@ namespace PrimerasHU_GES
             InitializeComponent();
             
         }
+
         SqlConnection cn;
         private SqlCommand cmd;
+        private SqlCommand cmd2;
+
         DataSet ds;
+        DataSet ds2;
         SqlDataAdapter da;
+        SqlDataAdapter da2;
         DataRow dr;
+        DataRow dr2;
         SqlDataReader sqldr;
+        SqlDataReader sqldr2;
+
 
         
         
         private void Report_Load(object sender, EventArgs e)
         {
-          
            
-            
             //--------------------------------------------------------------------------------------------
             abrirConexion();
             CargarImagenes(cmbGrafico);
+            CargarImagenes2(cmbImagen);
             cmbGrafico.SelectedIndex = 0;
+            cmbImagen.SelectedIndex = 0;
         }
         public string abrirConexion()
         {
@@ -58,10 +66,11 @@ namespace PrimerasHU_GES
             try
             {
                 cmd = new SqlCommand("Select descGrafico from graficos",cn);
+                
                 sqldr = cmd.ExecuteReader();
                 while (sqldr.Read())
                 {
-                    this.cmbGrafico.Items.Add(sqldr["descGrafico"]);
+                    cmbGrafico.Items.Add(sqldr["descGrafico"]);
                 }
                 sqldr.Close();
             }
@@ -70,12 +79,29 @@ namespace PrimerasHU_GES
                 MessageBox.Show("No se cargaron las imagenes en el ComboBox: " + ex.ToString());
             }
         }
+        public void CargarImagenes2(ComboBox cmbImagen)
+        {
+            try
+            {              
+                cmd2 = new SqlCommand("Select nomImagen from imagenes", cn);
+
+                sqldr2 = cmd2.ExecuteReader();
+
+                while (sqldr2.Read())
+                {
+                    cmbImagen.Items.Add(sqldr2["nomImagen"]);
+                }
+                sqldr2.Close();
+            }
+            catch (Exception ex2)
+            {
+                MessageBox.Show("No se cargaron las imagenes en el ComboBox: " + ex2.ToString());
+            }
+        }
 
         private void btImagen_Click(object sender, EventArgs e)
         {
            
-
-
             try
             {
                
@@ -103,15 +129,34 @@ namespace PrimerasHU_GES
                 datos = (byte[])dr["grafica"];
                 System.IO.MemoryStream ms = new System.IO.MemoryStream(datos);
                 pbGrafico.Image = System.Drawing.Bitmap.FromStream(ms);
+
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No se pudo consultar la Imagen: " + ex.ToString());
+                MessageBox.Show("No se pudo consultar la Imagen:" + ex.ToString());
             }
         }
+        public void verImagen2(PictureBox pictureBox, string descripcion)
+        {
+            try
+            {
+                da2 = new SqlDataAdapter("Select imgImagen from imagenes where nomImagen = '" + descripcion + "'", cn);
+                ds2 = new DataSet();
+                da2.Fill(ds2, "imagenes");
+                byte[] datos2 = new byte[0];
+                dr2 = ds2.Tables["imagenes"].Rows[0];
+                datos2 = (byte[])dr2["imgImagen"];
+                System.IO.MemoryStream ms2 = new System.IO.MemoryStream(datos2);
+                pbImagen.Image = System.Drawing.Bitmap.FromStream(ms2);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo consultar la Imagen:" + ex.ToString());
+            }
 
+        }
 
-        private void btnForm_Click_1(object sender, EventArgs e)
+            private void btnForm_Click_1(object sender, EventArgs e)
         {
             ShowControlImage(this);
         }
@@ -201,7 +246,7 @@ namespace PrimerasHU_GES
             //guarda una referencia de la imagen a imprimir
             ImageToPrint = image;
 
-            // Display the dialog.
+            // Muestra el dialogo
             ppdForm.ShowDialog();
         }
 
@@ -226,18 +271,56 @@ namespace PrimerasHU_GES
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
+
             try
             {
-                this.openFileDialog1.ShowDialog();
-                if (this.openFileDialog1.FileName.Equals("") == false)
+                string ruta = "C:\\Desktop\\ImagenesControlPlan";
+
+                if (Directory.Exists(ruta))
                 {
-                    pbGrafico.Load(this.openFileDialog1.FileName);
+
                 }
+                else
+                {
+                    MessageBox.Show("La carpeta no existe , ¡Atencion! sera creada coloque alli las imagenes que desea cargar",
+                        "Carpeta no existe", MessageBoxButtons.OK,
+                        MessageBoxIcon.Exclamation);
+
+                    if (!(Directory.Exists(ruta)))
+                    {
+                        Directory.CreateDirectory(ruta);
+                    }
+
+                }
+                if (rbGrafico.Checked)
+                {
+                    openFileDialog1.ShowDialog();
+                    if (openFileDialog1.FileName.Equals("C:\\Desktop\\ImagenesControlPlan") == false)
+                    {
+                        pbGrafico.Load(openFileDialog1.FileName);
+                    }
+                }
+                  else
+                    if (rbImagen.Checked)
+                {
+                    openFileDialog1.ShowDialog();
+                    if (openFileDialog1.FileName.Equals("C:\\Desktop\\ImagenesControlPlan") == false)
+                    {
+                       pbImagen.Load(openFileDialog1.FileName);
+                    }
+                }
+
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No se pudo cargar la imagen: " + ex.ToString());
+                //MessageBox.Show("No se pudo cargar la imagen: " + ex.ToString());
             }
+        }
+
+        private void cmbImagen_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            verImagen2(pbImagen, cmbImagen.SelectedItem.ToString());
         }
     }
 }
