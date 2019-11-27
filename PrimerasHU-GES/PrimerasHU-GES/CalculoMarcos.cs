@@ -31,11 +31,18 @@ namespace PrimerasHU_GES
         ArrayList Cp = new ArrayList();
         ArrayList Cpk = new ArrayList();
 
+        ArrayList Puntos2 = new ArrayList();
+        ArrayList Cp2 = new ArrayList();
+        ArrayList Cpk2 = new ArrayList();
+
 
         string muestraSeleccionada = "";
 
         int cant_cpV = 0, cant_cpA = 0, cant_cpR = 0, cant_cpkV = 0, cant_cpkA = 0, cant_cpkR = 0; // cuenta la cantidad de CP o CPK en VERDE(V), AMARILLO(A), ROJO(R)
         decimal suma_cpV = 0, suma_cpA = 0, suma_cpR = 0, suma_cpkV = 0, suma_cpkA = 0, suma_cpkR = 0; // acumula la suma de los valores CP o CPK en VERDE, AMARILLO y ROJO
+
+        int cant_cpV2 = 0, cant_cpA2 = 0, cant_cpR2 = 0, cant_cpkV2 = 0, cant_cpkA2 = 0, cant_cpkR2 = 0; // cuenta la cantidad de CP o CPK en VERDE(V), AMARILLO(A), ROJO(R)
+        decimal suma_cpV2 = 0, suma_cpA2 = 0, suma_cpR2 = 0, suma_cpkV2 = 0, suma_cpkA2 = 0, suma_cpkR2 = 0; // acumula la suma de los valores CP o CPK en VERDE, AMARILLO y ROJO
 
         private void CalculoMarcos_Load(object sender, EventArgs e)
         {
@@ -325,7 +332,9 @@ namespace PrimerasHU_GES
 
         private void btn_verGrafo_Click(object sender, EventArgs e)
         {
-            CalculoGrafo cg = new CalculoGrafo(Cp,Cpk,Puntos);
+            string ventana = "No Registrado";
+            string calculo2 = "";
+            CalculoGrafo cg = new CalculoGrafo(Cp,Cpk,Puntos,ventana,calculo2);
             cg.ShowDialog();
         }
 
@@ -611,6 +620,37 @@ namespace PrimerasHU_GES
             }
         }
 
+        private void btn_visorCalcGrafo_Click(object sender, EventArgs e)
+        {
+            Puntos2 = new ArrayList();
+            Cp2 = new ArrayList();
+            Cpk2 = new ArrayList();
+
+            foreach (DataGridViewRow fila in dgv_verCalculos.Rows)
+            {
+                Puntos2.Add(fila.Cells[0].Value.ToString());
+                Cp2.Add(decimal.Parse(fila.Cells[4].Value.ToString(), System.Globalization.NumberStyles.AllowParentheses |
+                 System.Globalization.NumberStyles.AllowLeadingWhite |
+                 System.Globalization.NumberStyles.AllowTrailingWhite |
+                 System.Globalization.NumberStyles.AllowThousands |
+                 System.Globalization.NumberStyles.AllowDecimalPoint |
+                 System.Globalization.NumberStyles.AllowLeadingSign));
+                Cpk2.Add(decimal.Parse(fila.Cells[7].Value.ToString(), System.Globalization.NumberStyles.AllowParentheses |
+                 System.Globalization.NumberStyles.AllowLeadingWhite |
+                 System.Globalization.NumberStyles.AllowTrailingWhite |
+                 System.Globalization.NumberStyles.AllowThousands |
+                 System.Globalization.NumberStyles.AllowDecimalPoint |
+                 System.Globalization.NumberStyles.AllowLeadingSign));
+            }
+
+            string ventana = "Registrado";
+            int posi_calculos = dataGridView1.CurrentRow.Index;
+            string calculo2 = dataGridView1[0, posi_calculos].Value.ToString();
+
+            CalculoGrafo cg = new CalculoGrafo(Cp2, Cpk2, Puntos2, ventana, calculo2);
+            cg.ShowDialog();
+        }
+
         private void rellenarListaPuntos(string muestra)
         {
             int aux_muestra = int.Parse(muestra);
@@ -779,12 +819,39 @@ namespace PrimerasHU_GES
             decimal[] rangos = new decimal[(int)cantDmo]; // recupero las desviaciones
             decimal[] resultados = new decimal[rangos.Length - 1]; // recuperar los rangos (max - min)
             int arrayRangos = 0; // puntero para recorrer []rangos
+
+            SqlCommand tolerancias = new SqlCommand("SELECT TOP 1 codCPlan,tolinferior,tolSuperior FROM detallesControlPlan WHERE idPtoMed='"+punto+"' ORDER BY codCPlan DESC",Conexion);
+            SqlDataAdapter ad_tolerancias = new SqlDataAdapter();
+            ad_tolerancias.SelectCommand = tolerancias;
+            DataTable dt_tolerancias = new DataTable();
+            ad_tolerancias.Fill(dt_tolerancias);
+
+            string aux_tolInf = dt_tolerancias.Rows[0][1].ToString();
+            char[] aux1 = aux_tolInf.ToCharArray();
+            aux1[aux1.Length-5] = '.';
+            aux_tolInf = "";
+            for(int i=0;i<aux1.Length;i++)
+            {
+                aux_tolInf += aux1[i];
+            }
+
+            string aux_tolSup = dt_tolerancias.Rows[0][2].ToString();
+            char[] aux2 = aux_tolSup.ToCharArray();
+            aux2[aux2.Length - 5] = '.';
+            aux_tolSup = "";
+            for (int i = 0; i < aux2.Length; i++)
+            {
+                aux_tolSup += aux2[i];
+            }
+
+            CultureInfo culture = new CultureInfo("en-US"); //
+
             decimal tolInf = 0, tolSup = 0;
             foreach (DataGridViewRow fila in dgv_datosPunto.Rows) // recorro los datos del punto en la muestra
             {
-                tolSup = (decimal)fila.Cells[3].Value;
+                tolSup = decimal.Parse(aux_tolSup,culture);
                 suma += (decimal)fila.Cells[6].Value; // voy sumando los medidos para la media
-                tolInf = (decimal)fila.Cells[5].Value;
+                tolInf = decimal.Parse(aux_tolInf,culture);
                 rangos[arrayRangos] = (decimal)fila.Cells[6].Value; // agrego desviacion al []rangos 
                 arrayRangos++; // aumento el puntero
             }

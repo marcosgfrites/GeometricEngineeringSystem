@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_numero = new System.Windows.Forms.Label();
             this.txt_regGraficoMuestra = new System.Windows.Forms.TextBox();
             this.cb_regGraficoTipoG = new System.Windows.Forms.ComboBox();
             this.tiposGraficoBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -55,14 +55,14 @@
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
             // 
-            // label1
+            // lbl_numero
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(444, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Número de Muestra:";
+            this.lbl_numero.AutoSize = true;
+            this.lbl_numero.Location = new System.Drawing.Point(444, 47);
+            this.lbl_numero.Name = "lbl_numero";
+            this.lbl_numero.Size = new System.Drawing.Size(103, 13);
+            this.lbl_numero.TabIndex = 1;
+            this.lbl_numero.Text = "Número de Muestra:";
             // 
             // txt_regGraficoMuestra
             // 
@@ -211,7 +211,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cb_regGraficoTipoG);
             this.Controls.Add(this.txt_regGraficoMuestra);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl_numero);
             this.Controls.Add(this.pb_regGrafico);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RegistroGrafico";
@@ -232,7 +232,7 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.PictureBox pb_regGrafico;
         private System.Windows.Forms.TextBox txt_regGraficoMuestra;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_numero;
         private System.Windows.Forms.ComboBox cb_regGraficoTipoG;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;

@@ -15,17 +15,23 @@ namespace PrimerasHU_GES
 {
     public partial class RegistroGrafico : Form
     {
-        public RegistroGrafico(Bitmap bm, string muestra, string[]leyenda)
+        public RegistroGrafico(Bitmap bm, string muestra, string[]leyenda, string numero)
         {
             InitializeComponent();
             pb_regGrafico.Image = Clipboard.GetImage();
             txt_regGraficoMuestra.Text = muestra;
             string comentario = "Puntos Contenidos en el gráfico: ";
-            for(int i=0;i<leyenda.Length;i++)
+            if (numero == "Número de Cálculo:")
+            {
+                comentario = "";
+            }
+            for (int i=0;i<leyenda.Length;i++)
             {
                 comentario += "\n - "+leyenda[i].ToString()+".";
             }
             txt_descGrafico.Text = comentario;
+
+            lbl_numero.Text = numero;
         }
 
         private SqlConnection Conexion;
@@ -40,6 +46,17 @@ namespace PrimerasHU_GES
             Conexion = new SqlConnection("Data source=.\\SQLEXPRESS; Initial Catalog = ges_v01; Integrated Security = True");
             adaptador = new SqlDataAdapter();
 
+            if (lbl_numero.Text == "Gráfico Personalizado:")
+            {
+                cb_regGraficoTipoG.SelectedValue = 3;
+            }
+            else
+            {
+                if(lbl_numero.Text == "Número de Cálculo:")
+                {
+                    cb_regGraficoTipoG.SelectedValue = 2;
+                }
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -67,51 +84,156 @@ namespace PrimerasHU_GES
             }
             else
             {
-                SqlCommand registro = new SqlCommand("INSERT INTO graficos(codMuestra,codTiposGraf,nomGrafico,grafica,descGrafico) VALUES (@codMuestra,@codTiposGraf,@nomGrafico,@grafica,@descGrafico)", Conexion);
-                adaptador.InsertCommand = registro;
-
-                adaptador.InsertCommand.Parameters.Add(new SqlParameter("@codMuestra", SqlDbType.Int));
-                adaptador.InsertCommand.Parameters.Add(new SqlParameter("@codTiposGraf", SqlDbType.Int));
-                adaptador.InsertCommand.Parameters.Add(new SqlParameter("@nomGrafico", SqlDbType.VarChar));
-                adaptador.InsertCommand.Parameters.Add(new SqlParameter("@grafica", SqlDbType.Image));
-                adaptador.InsertCommand.Parameters.Add(new SqlParameter("@descGrafico", SqlDbType.VarChar));
-
-                adaptador.InsertCommand.Parameters["@codMuestra"].Value = Convert.ToInt32(txt_regGraficoMuestra.Text);
-                adaptador.InsertCommand.Parameters["@codTiposGraf"].Value = cb_regGraficoTipoG.SelectedValue;
-                adaptador.InsertCommand.Parameters["@nomGrafico"].Value = txt_nombreGrafico.Text;
-
-                MemoryStream ms = new MemoryStream();
-                pb_regGrafico.Image.Save(ms,System.Drawing.Imaging.ImageFormat.Jpeg);
-                byte[] file = null;
-                file = ms.ToArray();
-
-                adaptador.InsertCommand.Parameters["@grafica"].Value = file;
-                
-                string auxComentarios = "";
-                if (string.IsNullOrEmpty(txt_descGrafico.Text))
+                if (lbl_numero.Text == "Número de Muestra:")
                 {
-                    auxComentarios = null;
+                    SqlCommand registro = new SqlCommand("INSERT INTO graficos(codMuestra,codTiposGraf,nomGrafico,grafica,descGrafico) VALUES (@codMuestra,@codTiposGraf,@nomGrafico,@grafica,@descGrafico)", Conexion);
+                    adaptador.InsertCommand = registro;
+
+                    adaptador.InsertCommand.Parameters.Add(new SqlParameter("@codMuestra", SqlDbType.Int));
+                    adaptador.InsertCommand.Parameters.Add(new SqlParameter("@codTiposGraf", SqlDbType.Int));
+                    adaptador.InsertCommand.Parameters.Add(new SqlParameter("@nomGrafico", SqlDbType.VarChar));
+                    adaptador.InsertCommand.Parameters.Add(new SqlParameter("@grafica", SqlDbType.Image));
+                    adaptador.InsertCommand.Parameters.Add(new SqlParameter("@descGrafico", SqlDbType.VarChar));
+
+                    adaptador.InsertCommand.Parameters["@codMuestra"].Value = Convert.ToInt32(txt_regGraficoMuestra.Text);
+                    adaptador.InsertCommand.Parameters["@codTiposGraf"].Value = cb_regGraficoTipoG.SelectedValue;
+                    adaptador.InsertCommand.Parameters["@nomGrafico"].Value = txt_nombreGrafico.Text;
+
+                    MemoryStream ms = new MemoryStream();
+                    pb_regGrafico.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                    byte[] file = null;
+                    file = ms.ToArray();
+
+                    adaptador.InsertCommand.Parameters["@grafica"].Value = file;
+
+                    string auxComentarios = "";
+                    if (string.IsNullOrEmpty(txt_descGrafico.Text))
+                    {
+                        auxComentarios = null;
+                    }
+                    else
+                    {
+                        auxComentarios = txt_descGrafico.Text;
+                    }
+                    adaptador.InsertCommand.Parameters["@descGrafico"].Value = auxComentarios;
+
+                    try
+                    {
+                        Conexion.Open();
+                        adaptador.InsertCommand.ExecuteNonQuery();
+                        MessageBox.Show("El gráfico se ha registrado correctamente.", "Felicidades!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        limpiar();
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                    }
+                    finally
+                    {
+                        Conexion.Close();
+                    }
                 }
                 else
                 {
-                    auxComentarios = txt_descGrafico.Text;
-                }
-                adaptador.InsertCommand.Parameters["@descGrafico"].Value = auxComentarios;
+                    if (lbl_numero.Text == "Gráfico Personalizado:")
+                    {
+                        SqlCommand registro = new SqlCommand("INSERT INTO graficos(codTiposGraf,nomGrafico,grafica,descGrafico) VALUES (@codTiposGraf,@nomGrafico,@grafica,@descGrafico)", Conexion);
+                        adaptador.InsertCommand = registro;
 
-                try
-                {
-                    Conexion.Open();
-                    adaptador.InsertCommand.ExecuteNonQuery();
-                    MessageBox.Show("El gráfico se ha registrado correctamente.","Felicidades!",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                    limpiar();
-                }
-                catch (SqlException ex)
-                {
-                    MessageBox.Show(ex.ToString());
-                }
-                finally
-                {
-                    Conexion.Close();
+                        adaptador.InsertCommand.Parameters.Add(new SqlParameter("@codTiposGraf", SqlDbType.Int));
+                        adaptador.InsertCommand.Parameters.Add(new SqlParameter("@nomGrafico", SqlDbType.VarChar));
+                        adaptador.InsertCommand.Parameters.Add(new SqlParameter("@grafica", SqlDbType.Image));
+                        adaptador.InsertCommand.Parameters.Add(new SqlParameter("@descGrafico", SqlDbType.VarChar));
+
+                        adaptador.InsertCommand.Parameters["@codTiposGraf"].Value = cb_regGraficoTipoG.SelectedValue;
+                        adaptador.InsertCommand.Parameters["@nomGrafico"].Value = txt_nombreGrafico.Text;
+
+                        MemoryStream ms = new MemoryStream();
+                        pb_regGrafico.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                        byte[] file = null;
+                        file = ms.ToArray();
+
+                        adaptador.InsertCommand.Parameters["@grafica"].Value = file;
+
+                        string auxComentarios = "";
+                        if (string.IsNullOrEmpty(txt_descGrafico.Text))
+                        {
+                            auxComentarios = null;
+                        }
+                        else
+                        {
+                            auxComentarios = txt_descGrafico.Text;
+                        }
+                        adaptador.InsertCommand.Parameters["@descGrafico"].Value = auxComentarios;
+
+                        try
+                        {
+                            Conexion.Open();
+                            adaptador.InsertCommand.ExecuteNonQuery();
+                            MessageBox.Show("El gráfico se ha registrado correctamente.", "Felicidades!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            limpiar();
+                        }
+                        catch (SqlException ex)
+                        {
+                            MessageBox.Show(ex.ToString());
+                        }
+                        finally
+                        {
+                            Conexion.Close();
+                        }
+                    }
+                    else
+                    {
+                        if (lbl_numero.Text == "Número de Cálculo:")
+                        {
+                            SqlCommand registro = new SqlCommand("INSERT INTO graficos(codCalculo,codTiposGraf,nomGrafico,grafica,descGrafico) VALUES (@codCalculo,@codTiposGraf,@nomGrafico,@grafica,@descGrafico)", Conexion);
+                            adaptador.InsertCommand = registro;
+
+                            adaptador.InsertCommand.Parameters.Add(new SqlParameter("@codCalculo", SqlDbType.Int));
+                            adaptador.InsertCommand.Parameters.Add(new SqlParameter("@codTiposGraf", SqlDbType.Int));
+                            adaptador.InsertCommand.Parameters.Add(new SqlParameter("@nomGrafico", SqlDbType.VarChar));
+                            adaptador.InsertCommand.Parameters.Add(new SqlParameter("@grafica", SqlDbType.Image));
+                            adaptador.InsertCommand.Parameters.Add(new SqlParameter("@descGrafico", SqlDbType.VarChar));
+
+                            adaptador.InsertCommand.Parameters["@codCalculo"].Value = Convert.ToInt32(txt_regGraficoMuestra.Text);
+                            adaptador.InsertCommand.Parameters["@codTiposGraf"].Value = cb_regGraficoTipoG.SelectedValue;
+                            adaptador.InsertCommand.Parameters["@nomGrafico"].Value = txt_nombreGrafico.Text;
+
+                            MemoryStream ms = new MemoryStream();
+                            pb_regGrafico.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                            byte[] file = null;
+                            file = ms.ToArray();
+
+                            adaptador.InsertCommand.Parameters["@grafica"].Value = file;
+
+                            string auxComentarios = "";
+                            if (string.IsNullOrEmpty(txt_descGrafico.Text))
+                            {
+                                auxComentarios = null;
+                            }
+                            else
+                            {
+                                auxComentarios = txt_descGrafico.Text;
+                            }
+                            adaptador.InsertCommand.Parameters["@descGrafico"].Value = auxComentarios;
+
+                            try
+                            {
+                                Conexion.Open();
+                                adaptador.InsertCommand.ExecuteNonQuery();
+                                MessageBox.Show("El gráfico se ha registrado correctamente.", "Felicidades!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                limpiar();
+                            }
+                            catch (SqlException ex)
+                            {
+                                MessageBox.Show(ex.ToString());
+                            }
+                            finally
+                            {
+                                Conexion.Close();
+                            }
+                        }
+                    }
                 }
             }
         }

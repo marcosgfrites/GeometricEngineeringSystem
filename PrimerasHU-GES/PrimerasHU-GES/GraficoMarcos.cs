@@ -1001,7 +1001,10 @@ namespace PrimerasHU_GES
                 puntos[i] = chart_Puntos.Series[serie1].Name;
                 serie1++;
             }
-            RegistroGrafico rg = new RegistroGrafico(bm,auxMuestra,puntos);
+
+            string numero = "Número de Muestra:";
+
+            RegistroGrafico rg = new RegistroGrafico(bm,auxMuestra,puntos, numero);
             rg.ShowDialog();
         }
 
@@ -1058,7 +1061,7 @@ namespace PrimerasHU_GES
                 else
                 {
                     aux = "";
-                    tipo = "";
+                    tipo = "Personalizado";
                 }
             }
             SqlCommand cargaGrafico = new SqlCommand("SELECT g.codGrafico AS 'Código',"+aux+"tg.descTiposGraf AS 'Tipo de Gráfico',g.nomGrafico AS 'Nombre',g.descGrafico AS 'Leyenda',g.grafica AS 'Gráfica' FROM graficos AS g JOIN tiposGrafico AS tg ON tg.codTiposGraf=g.codTiposGraf WHERE tg.descTiposGraf='"+tipo+"'",Conexion);
@@ -1092,9 +1095,16 @@ namespace PrimerasHU_GES
                 {
                     // RECUPERA LA POSICIÓN SELECCIONADA EN EL DATAGRIDVIEW
                     posi = dgv_graficosVer.CurrentRow.Index;
-
+                    byte[] img;
                     //CONVIERTO DE ARRAY DE BITS A IMAGEN
-                    byte[] img = (byte[]) dgv_graficosVer[5, posi].Value;
+                    if (cb_tipoGrafVisor.Text == "Personalizado")
+                    {
+                        img = (byte[])dgv_graficosVer[4, posi].Value;
+                    }
+                    else
+                    {
+                        img = (byte[])dgv_graficosVer[5, posi].Value;
+                    }
                     MemoryStream ms = new MemoryStream(img, 0, img.Length);
                     ms.Write(img, 0, img.Length);
                     Image pb = Image.FromStream(ms, true);
@@ -1117,6 +1127,32 @@ namespace PrimerasHU_GES
                 dgv_graficosVer.Refresh();
             }
             this.tiposGraficoTableAdapter.Fill(this.ges_v01DataSet18TiposGraficos.tiposGrafico);
+        }
+
+        private void btn_registrarGrafoPerson_Click(object sender, EventArgs e)
+        {
+            Bitmap bm;
+            using (MemoryStream ms = new MemoryStream())
+            {
+                chart_verPuntos.SaveImage(ms, ChartImageFormat.Bmp);
+                bm = new Bitmap(ms);
+                Clipboard.SetImage(bm);
+            }
+
+            string auxMuestra = "";
+            int serie1 = 1;
+            int cantidad = chart_verPuntos.Series.Count - serie1;
+            string[] puntos = new string[cantidad];
+            for (int i = 0; i < cantidad; i++)
+            {
+                puntos[i] = chart_verPuntos.Series[serie1].Name;
+                serie1++;
+            }
+
+            string numero = "Gráfico Personalizado:";
+
+            RegistroGrafico rg = new RegistroGrafico(bm, auxMuestra, puntos, numero);
+            rg.ShowDialog();
         }
     }
 }

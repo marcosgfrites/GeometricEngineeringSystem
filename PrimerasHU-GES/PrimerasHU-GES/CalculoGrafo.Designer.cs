@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -45,6 +45,10 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.lbl_ventana1 = new System.Windows.Forms.Label();
+            this.btn_registrarGraficoCpk = new System.Windows.Forms.Button();
+            this.btn_registrarGraficoCp = new System.Windows.Forms.Button();
+            this.lbl_calculo1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart_grafo1Calculo)).BeginInit();
@@ -118,43 +122,43 @@
             // 
             // chart_grafo1Calculo
             // 
-            chartArea1.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea1.AxisX.IsLabelAutoFit = false;
-            chartArea1.AxisX.LabelStyle.Angle = -90;
-            chartArea1.Name = "ChartArea1";
-            this.chart_grafo1Calculo.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart_grafo1Calculo.Legends.Add(legend1);
+            chartArea6.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea6.AxisX.IsLabelAutoFit = false;
+            chartArea6.AxisX.LabelStyle.Angle = -90;
+            chartArea6.Name = "ChartArea1";
+            this.chart_grafo1Calculo.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chart_grafo1Calculo.Legends.Add(legend6);
             this.chart_grafo1Calculo.Location = new System.Drawing.Point(6, 6);
             this.chart_grafo1Calculo.Name = "chart_grafo1Calculo";
-            series1.ChartArea = "ChartArea1";
-            series1.EmptyPointStyle.LabelAngle = -90;
-            series1.LabelAngle = -90;
-            series1.Legend = "Legend1";
-            series1.Name = "CP";
-            this.chart_grafo1Calculo.Series.Add(series1);
+            series6.ChartArea = "ChartArea1";
+            series6.EmptyPointStyle.LabelAngle = -90;
+            series6.LabelAngle = -90;
+            series6.Legend = "Legend1";
+            series6.Name = "CP";
+            this.chart_grafo1Calculo.Series.Add(series6);
             this.chart_grafo1Calculo.Size = new System.Drawing.Size(988, 463);
             this.chart_grafo1Calculo.TabIndex = 5;
             this.chart_grafo1Calculo.Text = "chart1";
             // 
             // chart_grafo2Calculo
             // 
-            chartArea2.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea2.AxisX.IsLabelAutoFit = false;
-            chartArea2.AxisX.LabelStyle.Angle = -90;
-            chartArea2.Name = "ChartArea1";
-            this.chart_grafo2Calculo.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart_grafo2Calculo.Legends.Add(legend2);
+            chartArea5.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea5.AxisX.IsLabelAutoFit = false;
+            chartArea5.AxisX.LabelStyle.Angle = -90;
+            chartArea5.Name = "ChartArea1";
+            this.chart_grafo2Calculo.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chart_grafo2Calculo.Legends.Add(legend5);
             this.chart_grafo2Calculo.Location = new System.Drawing.Point(6, 6);
             this.chart_grafo2Calculo.Name = "chart_grafo2Calculo";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn;
-            series2.EmptyPointStyle.LabelAngle = -90;
-            series2.LabelAngle = -90;
-            series2.Legend = "Legend1";
-            series2.Name = "CPK";
-            this.chart_grafo2Calculo.Series.Add(series2);
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn;
+            series5.EmptyPointStyle.LabelAngle = -90;
+            series5.LabelAngle = -90;
+            series5.Legend = "Legend1";
+            series5.Name = "CPK";
+            this.chart_grafo2Calculo.Series.Add(series5);
             this.chart_grafo2Calculo.Size = new System.Drawing.Size(988, 463);
             this.chart_grafo2Calculo.TabIndex = 6;
             this.chart_grafo2Calculo.Text = "chart1";
@@ -172,6 +176,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.tabPage1.Controls.Add(this.btn_registrarGraficoCp);
             this.tabPage1.Controls.Add(this.chart_grafo1Calculo);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -183,6 +188,7 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.tabPage2.Controls.Add(this.btn_registrarGraficoCpk);
             this.tabPage2.Controls.Add(this.chart_grafo2Calculo);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -191,17 +197,76 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "CPK = Capacidad de Centrado";
             // 
+            // lbl_ventana1
+            // 
+            this.lbl_ventana1.AutoSize = true;
+            this.lbl_ventana1.Location = new System.Drawing.Point(9, 547);
+            this.lbl_ventana1.Name = "lbl_ventana1";
+            this.lbl_ventana1.Size = new System.Drawing.Size(68, 13);
+            this.lbl_ventana1.TabIndex = 6;
+            this.lbl_ventana1.Text = "lbl_ventana1";
+            this.lbl_ventana1.Visible = false;
+            // 
+            // btn_registrarGraficoCpk
+            // 
+            this.btn_registrarGraficoCpk.BackColor = System.Drawing.Color.Black;
+            this.btn_registrarGraficoCpk.Enabled = false;
+            this.btn_registrarGraficoCpk.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.btn_registrarGraficoCpk.FlatAppearance.BorderSize = 0;
+            this.btn_registrarGraficoCpk.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btn_registrarGraficoCpk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_registrarGraficoCpk.ForeColor = System.Drawing.Color.White;
+            this.btn_registrarGraficoCpk.Location = new System.Drawing.Point(898, 45);
+            this.btn_registrarGraficoCpk.Name = "btn_registrarGraficoCpk";
+            this.btn_registrarGraficoCpk.Size = new System.Drawing.Size(96, 23);
+            this.btn_registrarGraficoCpk.TabIndex = 34;
+            this.btn_registrarGraficoCpk.Text = "Registrar Gráfico";
+            this.btn_registrarGraficoCpk.UseVisualStyleBackColor = false;
+            this.btn_registrarGraficoCpk.Visible = false;
+            this.btn_registrarGraficoCpk.Click += new System.EventHandler(this.btn_registrarGraficoCpk_Click);
+            // 
+            // btn_registrarGraficoCp
+            // 
+            this.btn_registrarGraficoCp.BackColor = System.Drawing.Color.Black;
+            this.btn_registrarGraficoCp.Enabled = false;
+            this.btn_registrarGraficoCp.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.btn_registrarGraficoCp.FlatAppearance.BorderSize = 0;
+            this.btn_registrarGraficoCp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btn_registrarGraficoCp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_registrarGraficoCp.ForeColor = System.Drawing.Color.White;
+            this.btn_registrarGraficoCp.Location = new System.Drawing.Point(898, 45);
+            this.btn_registrarGraficoCp.Name = "btn_registrarGraficoCp";
+            this.btn_registrarGraficoCp.Size = new System.Drawing.Size(96, 23);
+            this.btn_registrarGraficoCp.TabIndex = 35;
+            this.btn_registrarGraficoCp.Text = "Registrar Gráfico";
+            this.btn_registrarGraficoCp.UseVisualStyleBackColor = false;
+            this.btn_registrarGraficoCp.Visible = false;
+            this.btn_registrarGraficoCp.Click += new System.EventHandler(this.btn_registrarGraficoCp_Click);
+            // 
+            // lbl_calculo1
+            // 
+            this.lbl_calculo1.AutoSize = true;
+            this.lbl_calculo1.Location = new System.Drawing.Point(142, 547);
+            this.lbl_calculo1.Name = "lbl_calculo1";
+            this.lbl_calculo1.Size = new System.Drawing.Size(63, 13);
+            this.lbl_calculo1.TabIndex = 8;
+            this.lbl_calculo1.Text = "lbl_calculo1";
+            this.lbl_calculo1.Visible = false;
+            // 
             // CalculoGrafo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1032, 569);
+            this.Controls.Add(this.lbl_calculo1);
+            this.Controls.Add(this.lbl_ventana1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CalculoGrafo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CalculoGrafo";
+            this.Load += new System.EventHandler(this.CalculoGrafo_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -211,6 +276,7 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -226,5 +292,9 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Label lbl_ventana1;
+        private System.Windows.Forms.Button btn_registrarGraficoCp;
+        private System.Windows.Forms.Button btn_registrarGraficoCpk;
+        private System.Windows.Forms.Label lbl_calculo1;
     }
 }

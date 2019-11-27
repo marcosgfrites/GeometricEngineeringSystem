@@ -455,3 +455,7 @@ SELECT dc.idPtoMed AS 'Punto de Medición', tc.descTipoCalculo AS 'Tipo de Cálc
 FROM detallesCalculo AS dc
 JOIN tiposCalculo AS tc ON tc.codTipoCalculo=dc.codTipoCalculo
 WHERE dc.codCalculo=1
+
+SELECT TOP 1 codCPlan,tolinferior,tolSuperior FROM detallesControlPlan WHERE idPtoMed='10503Y' ORDER BY codCPlan DESC
+
+SELECT idPtoMed FROM detallesControlPlan

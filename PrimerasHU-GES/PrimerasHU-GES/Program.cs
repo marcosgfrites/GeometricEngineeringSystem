@@ -16,10 +16,7 @@ namespace PrimerasHU_GES
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-
-         
-            Application.Run(new Report()); //
+            Application.Run(new GraficoMarcos()); //
 
 
         }
