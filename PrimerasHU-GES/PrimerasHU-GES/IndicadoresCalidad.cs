@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Globalization;
+using System.Runtime.InteropServices;
 
 namespace PrimerasHU_GES
 {
@@ -22,7 +23,13 @@ namespace PrimerasHU_GES
         private SqlDataAdapter adaptador;
         int posicion = 0;
 
+        #region DLLs para poder mover el form
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
 
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        #endregion
         private void IndicadoresCalidad_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'ges_v01DataSet18.indicadoresCalidad' Puede moverla o quitarla según sea necesario.
@@ -210,6 +217,24 @@ namespace PrimerasHU_GES
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+            {
+                WindowState = FormWindowState.Minimized;
+            }
+            else if (WindowState == FormWindowState.Minimized)
+            {
+                WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

@@ -19,7 +19,7 @@ namespace PrimerasHU_GES
 
 
          
-            Application.Run(new Report()); //
+            Application.Run(new IndicadoresCalidad()); //
 
 
         }

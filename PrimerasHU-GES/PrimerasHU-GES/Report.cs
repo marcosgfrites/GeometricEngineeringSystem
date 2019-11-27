@@ -40,8 +40,6 @@ namespace PrimerasHU_GES
         
         private void Report_Load(object sender, EventArgs e)
         {
-           
-            //--------------------------------------------------------------------------------------------
             abrirConexion();
             CargarImagenes(cmbGrafico);
             CargarImagenes2(cmbImagen);
@@ -117,6 +115,8 @@ namespace PrimerasHU_GES
             }
            
         }
+
+        //Estos dos metodos permiten ver las imagenes en los picture box , segun la consulta efectuada a la base para llenar los comboBox
         public void verImagen(PictureBox pictureBox, string descripcion)
         {
             try
@@ -256,9 +256,7 @@ namespace PrimerasHU_GES
             // Centra la imagen
             int cx = e.MarginBounds.X + e.MarginBounds.Width / 2;
             int cy = e.MarginBounds.Y + e.MarginBounds.Height / 2;
-            Rectangle rect = new Rectangle(
-                cx - ImageToPrint.Width / 2, cy - ImageToPrint.Height / 2,
-                ImageToPrint.Width, ImageToPrint.Height);
+            Rectangle rect = new Rectangle(cx - ImageToPrint.Width / 2, cy - ImageToPrint.Height / 2,ImageToPrint.Width, ImageToPrint.Height);
 
             e.Graphics.InterpolationMode = InterpolationMode.High;
             e.Graphics.DrawImage(ImageToPrint, rect);
