@@ -45,8 +45,8 @@
             this.secionesVehiulobindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ges_v01DataSet2 = new PrimerasHU_GES.ges_v01DataSet2();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.btn_Salir = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.seccionesVehiculoTableAdapter = new PrimerasHU_GES.ges_v01DataSet2TableAdapters.seccionesVehiculoTableAdapter();
             this.btnRegCodSec = new System.Windows.Forms.Button();
@@ -60,7 +60,6 @@
             this.modelosVehiculoTableAdapter = new PrimerasHU_GES.ges_v01DataSet6TableAdapters.modelosVehiculoTableAdapter();
             this.errorProviderCodSeccion = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderVerSec = new System.Windows.Forms.ErrorProvider(this.components);
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSeccionesVehiculo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.secionesVehiulobindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet2)).BeginInit();
@@ -74,7 +73,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 154);
+            this.label4.Location = new System.Drawing.Point(25, 199);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 13);
             this.label4.TabIndex = 25;
@@ -83,7 +82,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 199);
+            this.label3.Location = new System.Drawing.Point(25, 158);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(108, 13);
             this.label3.TabIndex = 24;
@@ -150,11 +149,11 @@
             this.descSeccionDataGridViewTextBoxColumn,
             this.verSeccionDataGridViewTextBoxColumn});
             this.dgvSeccionesVehiculo.DataSource = this.secionesVehiulobindingSource;
-            this.dgvSeccionesVehiculo.Location = new System.Drawing.Point(429, 68);
+            this.dgvSeccionesVehiculo.Location = new System.Drawing.Point(432, 68);
             this.dgvSeccionesVehiculo.Name = "dgvSeccionesVehiculo";
             this.dgvSeccionesVehiculo.ReadOnly = true;
             this.dgvSeccionesVehiculo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSeccionesVehiculo.Size = new System.Drawing.Size(462, 409);
+            this.dgvSeccionesVehiculo.Size = new System.Drawing.Size(442, 409);
             this.dgvSeccionesVehiculo.TabIndex = 17;
             this.dgvSeccionesVehiculo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvSeccionesVehiculo_CellClick);
             // 
@@ -199,10 +198,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.btn_Salir);
             this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
@@ -211,6 +209,26 @@
             this.panel1.TabIndex = 46;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Black;
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.DarkBlue;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(922, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(52, 49);
+            this.button2.TabIndex = 8;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label8
             // 
@@ -223,25 +241,6 @@
             this.label8.Size = new System.Drawing.Size(378, 22);
             this.label8.TabIndex = 4;
             this.label8.Text = "GESTOR DE SECCIONES DE VEHÍCULO";
-            // 
-            // btn_Salir
-            // 
-            this.btn_Salir.BackColor = System.Drawing.Color.Black;
-            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Salir.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btn_Salir.FlatAppearance.BorderSize = 0;
-            this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btn_Salir.ForeColor = System.Drawing.Color.White;
-            this.btn_Salir.Location = new System.Drawing.Point(910, 0);
-            this.btn_Salir.Name = "btn_Salir";
-            this.btn_Salir.Size = new System.Drawing.Size(64, 49);
-            this.btn_Salir.TabIndex = 1;
-            this.btn_Salir.Text = "X";
-            this.btn_Salir.UseVisualStyleBackColor = false;
-            this.btn_Salir.Click += new System.EventHandler(this.Btn_Salir_Click);
             // 
             // panel2
             // 
@@ -381,26 +380,6 @@
             // 
             this.errorProviderVerSec.ContainerControl = this;
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.DarkBlue;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(846, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(64, 49);
-            this.button2.TabIndex = 8;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // SeccionesVehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -413,7 +392,6 @@
             this.Controls.Add(this.btnModSecVeh);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnRegCodSec);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -422,6 +400,7 @@
             this.Controls.Add(this.txtDescSec);
             this.Controls.Add(this.txtCodSec);
             this.Controls.Add(this.dgvSeccionesVehiculo);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SeccionesVehiculo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -454,7 +433,6 @@
         private System.Windows.Forms.TextBox txtCodSec;
         private System.Windows.Forms.DataGridView dgvSeccionesVehiculo;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btn_Salir;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.BindingSource secionesVehiulobindingSource;
         private ges_v01DataSet2 ges_v01DataSet2;
