@@ -60,6 +60,12 @@
             this.txtNombreUsuario = new System.Windows.Forms.TextBox();
             this.txtCodigoUsuario = new System.Windows.Forms.TextBox();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.nomUsuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codUsuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.claveUsuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codEstadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codTipoUsuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechoraUltSesionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ges_v01DataSet11 = new PrimerasHU_GES.ges_v01DataSet11();
             this.tiposUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -71,12 +77,6 @@
             this.tiposUsuarioTableAdapter = new PrimerasHU_GES.ges_v01DataSet15TableAdapters.tiposUsuarioTableAdapter();
             this.tiposUsuarioTableAdapter1 = new PrimerasHU_GES.ges_v01DataSet18TiposUsuarioTableAdapters.tiposUsuarioTableAdapter();
             this.estadosTableAdapter = new PrimerasHU_GES.ges_v01DataSet18EstadosTableAdapters.estadosTableAdapter();
-            this.nomUsuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codUsuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.claveUsuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codEstadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codTipoUsuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechoraUltSesionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -467,6 +467,49 @@
             this.dgvUsuarios.TabIndex = 108;
             this.dgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvUsuarios_CellClick);
             // 
+            // nomUsuDataGridViewTextBoxColumn
+            // 
+            this.nomUsuDataGridViewTextBoxColumn.DataPropertyName = "nomUsu";
+            this.nomUsuDataGridViewTextBoxColumn.HeaderText = "Nombre de Usuario";
+            this.nomUsuDataGridViewTextBoxColumn.Name = "nomUsuDataGridViewTextBoxColumn";
+            this.nomUsuDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // codUsuDataGridViewTextBoxColumn
+            // 
+            this.codUsuDataGridViewTextBoxColumn.DataPropertyName = "codUsu";
+            this.codUsuDataGridViewTextBoxColumn.HeaderText = "Codigo de Usuario";
+            this.codUsuDataGridViewTextBoxColumn.Name = "codUsuDataGridViewTextBoxColumn";
+            this.codUsuDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // claveUsuDataGridViewTextBoxColumn
+            // 
+            this.claveUsuDataGridViewTextBoxColumn.DataPropertyName = "claveUsu";
+            this.claveUsuDataGridViewTextBoxColumn.HeaderText = "Clave de Usuario";
+            this.claveUsuDataGridViewTextBoxColumn.Name = "claveUsuDataGridViewTextBoxColumn";
+            this.claveUsuDataGridViewTextBoxColumn.ReadOnly = true;
+            this.claveUsuDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // codEstadoDataGridViewTextBoxColumn
+            // 
+            this.codEstadoDataGridViewTextBoxColumn.DataPropertyName = "codEstado";
+            this.codEstadoDataGridViewTextBoxColumn.HeaderText = "Codigo de  Estado";
+            this.codEstadoDataGridViewTextBoxColumn.Name = "codEstadoDataGridViewTextBoxColumn";
+            this.codEstadoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // codTipoUsuDataGridViewTextBoxColumn
+            // 
+            this.codTipoUsuDataGridViewTextBoxColumn.DataPropertyName = "codTipoUsu";
+            this.codTipoUsuDataGridViewTextBoxColumn.HeaderText = "Codigo de Tipo de Usuario";
+            this.codTipoUsuDataGridViewTextBoxColumn.Name = "codTipoUsuDataGridViewTextBoxColumn";
+            this.codTipoUsuDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fechoraUltSesionDataGridViewTextBoxColumn
+            // 
+            this.fechoraUltSesionDataGridViewTextBoxColumn.DataPropertyName = "fechoraUltSesion";
+            this.fechoraUltSesionDataGridViewTextBoxColumn.HeaderText = "fecha y hora de la Ultima Sesion";
+            this.fechoraUltSesionDataGridViewTextBoxColumn.Name = "fechoraUltSesionDataGridViewTextBoxColumn";
+            this.fechoraUltSesionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // usuariosBindingSource
             // 
             this.usuariosBindingSource.DataMember = "usuarios";
@@ -516,49 +559,6 @@
             // estadosTableAdapter
             // 
             this.estadosTableAdapter.ClearBeforeFill = true;
-            // 
-            // nomUsuDataGridViewTextBoxColumn
-            // 
-            this.nomUsuDataGridViewTextBoxColumn.DataPropertyName = "nomUsu";
-            this.nomUsuDataGridViewTextBoxColumn.HeaderText = "Nombre de Usuario";
-            this.nomUsuDataGridViewTextBoxColumn.Name = "nomUsuDataGridViewTextBoxColumn";
-            this.nomUsuDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codUsuDataGridViewTextBoxColumn
-            // 
-            this.codUsuDataGridViewTextBoxColumn.DataPropertyName = "codUsu";
-            this.codUsuDataGridViewTextBoxColumn.HeaderText = "Codigo de Usuario";
-            this.codUsuDataGridViewTextBoxColumn.Name = "codUsuDataGridViewTextBoxColumn";
-            this.codUsuDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // claveUsuDataGridViewTextBoxColumn
-            // 
-            this.claveUsuDataGridViewTextBoxColumn.DataPropertyName = "claveUsu";
-            this.claveUsuDataGridViewTextBoxColumn.HeaderText = "Clave de Usuario";
-            this.claveUsuDataGridViewTextBoxColumn.Name = "claveUsuDataGridViewTextBoxColumn";
-            this.claveUsuDataGridViewTextBoxColumn.ReadOnly = true;
-            this.claveUsuDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // codEstadoDataGridViewTextBoxColumn
-            // 
-            this.codEstadoDataGridViewTextBoxColumn.DataPropertyName = "codEstado";
-            this.codEstadoDataGridViewTextBoxColumn.HeaderText = "Codigo de  Estado";
-            this.codEstadoDataGridViewTextBoxColumn.Name = "codEstadoDataGridViewTextBoxColumn";
-            this.codEstadoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codTipoUsuDataGridViewTextBoxColumn
-            // 
-            this.codTipoUsuDataGridViewTextBoxColumn.DataPropertyName = "codTipoUsu";
-            this.codTipoUsuDataGridViewTextBoxColumn.HeaderText = "Codigo de Tipo de Usuario";
-            this.codTipoUsuDataGridViewTextBoxColumn.Name = "codTipoUsuDataGridViewTextBoxColumn";
-            this.codTipoUsuDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fechoraUltSesionDataGridViewTextBoxColumn
-            // 
-            this.fechoraUltSesionDataGridViewTextBoxColumn.DataPropertyName = "fechoraUltSesion";
-            this.fechoraUltSesionDataGridViewTextBoxColumn.HeaderText = "fecha y hora de la Ultima Sesion";
-            this.fechoraUltSesionDataGridViewTextBoxColumn.Name = "fechoraUltSesionDataGridViewTextBoxColumn";
-            this.fechoraUltSesionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Usuarios
             // 
