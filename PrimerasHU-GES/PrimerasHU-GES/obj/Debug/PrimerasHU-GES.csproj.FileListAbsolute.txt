@@ -67,7 +67,6 @@ C:\Users\Roqué\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Deb
 C:\Users\Roqué\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU_GES.RegControlPlan.resources
 C:\Users\Roqué\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU_GES.RegistroGrafico.resources
 C:\Users\Roqué\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU_GES.Report.resources
-C:\Users\Roqué\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU_GES.ReporteDeAnalisisPablo.resources
 C:\Users\Roqué\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU_GES.SeccionesVehiculo.resources
 C:\Users\Roqué\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU_GES.tipoPuntoClasificacion.resources
 C:\Users\Roqué\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU_GES.Usuarios.resources
