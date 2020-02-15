@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -7,8 +6,10 @@ using System.Windows.Forms;
 using System.Drawing.Printing;
 using System.Drawing.Drawing2D;
 using System;
-using System.Data.SqlClient;
 using System.IO;
+using System.Data;
+using System.Data.SqlClient;
+
 
 namespace PrimerasHU_GES
 {
@@ -23,28 +24,37 @@ namespace PrimerasHU_GES
         }
 
         SqlConnection cn;
+        
         private SqlCommand cmd;
         private SqlCommand cmd2;
+        
+
 
         DataSet ds;
         DataSet ds2;
         SqlDataAdapter da;
         SqlDataAdapter da2;
+
         DataRow dr;
         DataRow dr2;
         SqlDataReader sqldr;
         SqlDataReader sqldr2;
+        SqlDataAdapter adaptador;
 
 
-        
-        
+
+
         private void Report_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'ges_v01DataSet20.analisis' Puede moverla o quitarla según sea necesario.
+            this.analisisTableAdapter.Fill(this.ges_v01DataSet20.analisis);
             abrirConexion();
             CargarImagenes(cmbGrafico);
             CargarImagenes2(cmbImagen);
             cmbGrafico.SelectedIndex = 0;
             cmbImagen.SelectedIndex = 0;
+
+
         }
         public string abrirConexion()
         {
@@ -320,5 +330,107 @@ namespace PrimerasHU_GES
         {
             verImagen2(pbImagen, cmbImagen.SelectedItem.ToString());
         }
+
+        private void btn_Salir_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+
+        private void btnRegistro_Click(object sender, EventArgs e)
+        {
+
+            SqlCommand alta = new SqlCommand("INSERT INTO analisis (grafica,imgImagen,codUsu,fechAnalisis,descripcion,observacion) VALUES (@grafica,@imgImagen,@codUsu,@fechAnalisis,@descripcion,@observacion)", cn);
+            adaptador = new SqlDataAdapter();
+            adaptador.InsertCommand = alta;
+           // adaptador.InsertCommand.Parameters.Add(new SqlParameter("@codAnalisis", SqlDbType.Int));
+            adaptador.InsertCommand.Parameters.Add(new SqlParameter("@grafica", SqlDbType.Image));
+            adaptador.InsertCommand.Parameters.Add(new SqlParameter("@imgImagen", SqlDbType.Image));
+            adaptador.InsertCommand.Parameters.Add(new SqlParameter("@codUsu", SqlDbType.Int));
+            adaptador.InsertCommand.Parameters.Add(new SqlParameter("@fechAnalisis", SqlDbType.DateTime));
+            adaptador.InsertCommand.Parameters.Add(new SqlParameter("@descripcion", SqlDbType.VarChar));
+            adaptador.InsertCommand.Parameters.Add(new SqlParameter("@observacion", SqlDbType.VarChar));
+
+
+           
+
+           // adaptador.InsertCommand.Parameters["@codAnalisis"].Value = lbCodAna.Text;
+            // Asignando el valor del grafico
+
+            // Stream usado como buffer
+            System.IO.MemoryStream ms1 = new System.IO.MemoryStream();
+            // Se guarda la imagen en el buffer
+            pbGrafico.Image.Save(ms1, System.Drawing.Imaging.ImageFormat.Jpeg);
+            // Se extraen los bytes del buffer para asignarlos como valor para el 
+            // parámetro.
+            adaptador.InsertCommand.Parameters["@grafica"].Value = ms1.GetBuffer();
+
+            
+            // Asignando el valor de la imagen
+
+            // Stream usado como buffer
+            System.IO.MemoryStream ms = new System.IO.MemoryStream();
+            // Se guarda la imagen en el buffer
+            pbImagen.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+            // Se extraen los bytes del buffer para asignarlos como valor para el 
+            // parámetro.
+            adaptador.InsertCommand.Parameters["@imgImagen"].Value = ms.GetBuffer();
+
+            
+           
+            adaptador.InsertCommand.Parameters["@codUsu"].Value = lbResp.Text;
+            adaptador.InsertCommand.Parameters["@fechAnalisis"].Value = dtCreaMod.Value;
+            adaptador.InsertCommand.Parameters["@descripcion"].Value = txtDesc.Text;
+            adaptador.InsertCommand.Parameters["@observacion"].Value = txtObser.Text;
+            
+
+                try
+                {
+                   
+                    adaptador.InsertCommand.ExecuteNonQuery();
+                    MessageBox.Show("Se registró el informe de manera correcta!");
+                   
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("ERROR:" + ex.ToString());
+                }
+                finally
+                {
+                    cn.Close();
+                }
+  
+        }
+
+     
+        private void Limpiar()
+    {
+        txtDesc.Text = "";
+        
+        txtObser.Text = "";
+
+
+     
+    }
+    private void listBcodCalc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+
+
+
+
+        }
+
+      
     }
 }

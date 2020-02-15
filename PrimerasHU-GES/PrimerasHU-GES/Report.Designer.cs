@@ -31,18 +31,23 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Report));
             this.gbInforme = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cmbGrafico = new System.Windows.Forms.ComboBox();
-            this.pbGrafico = new System.Windows.Forms.PictureBox();
+            this.lbCodAna = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cmbImagen = new System.Windows.Forms.ComboBox();
             this.pbImagen = new System.Windows.Forms.PictureBox();
             this.RtxtPlan = new System.Windows.Forms.RichTextBox();
-            this.btnClientArea = new System.Windows.Forms.Button();
-            this.btnPage2 = new System.Windows.Forms.Button();
-            this.btnPage1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbResp = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cmbGrafico = new System.Windows.Forms.ComboBox();
+            this.pbGrafico = new System.Windows.Forms.PictureBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txtObser = new System.Windows.Forms.TextBox();
+            this.txtDesc = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dtCreaMod = new System.Windows.Forms.DateTimePicker();
             this.btnGroupBox = new System.Windows.Forms.Button();
-            this.btnForm = new System.Windows.Forms.Button();
             this.ppdForm = new System.Windows.Forms.PrintPreviewDialog();
             this.pdocForm = new System.Drawing.Printing.PrintDocument();
             this.graficosTableAdapter = new PrimerasHU_GES.ges_v01DataSet19TableAdapters.graficosTableAdapter();
@@ -53,59 +58,60 @@
             this.rbImagen = new System.Windows.Forms.RadioButton();
             this.rbGrafico = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label22 = new System.Windows.Forms.Label();
+            this.btn_Salir = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnRegistro = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.dtLista = new System.Windows.Forms.DataGridView();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.ges_v01DataSet20 = new PrimerasHU_GES.ges_v01DataSet20();
+            this.analisisBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.analisisTableAdapter = new PrimerasHU_GES.ges_v01DataSet20TableAdapters.analisisTableAdapter();
+            this.lbListado = new System.Windows.Forms.Label();
+            this.codAnalisisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.graficaDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.imgImagenDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.codUsuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechAnalisisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbInforme.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbGrafico)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGrafico)).BeginInit();
             this.groupBox4.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtLista)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.analisisBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // gbInforme
             // 
-            this.gbInforme.Controls.Add(this.groupBox2);
+            this.gbInforme.Controls.Add(this.lbCodAna);
             this.gbInforme.Controls.Add(this.groupBox3);
+            this.gbInforme.Controls.Add(this.pictureBox1);
+            this.gbInforme.Controls.Add(this.lbResp);
+            this.gbInforme.Controls.Add(this.groupBox2);
             this.gbInforme.Controls.Add(this.groupBox4);
-            this.gbInforme.Location = new System.Drawing.Point(27, 19);
+            this.gbInforme.Location = new System.Drawing.Point(27, 82);
             this.gbInforme.Name = "gbInforme";
-            this.gbInforme.Size = new System.Drawing.Size(809, 463);
+            this.gbInforme.Size = new System.Drawing.Size(809, 558);
             this.gbInforme.TabIndex = 19;
             this.gbInforme.TabStop = false;
             // 
-            // groupBox2
+            // lbCodAna
             // 
-            this.groupBox2.Controls.Add(this.cmbGrafico);
-            this.groupBox2.Controls.Add(this.pbGrafico);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(291, 11);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(503, 250);
-            this.groupBox2.TabIndex = 11;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Grafico";
-            // 
-            // cmbGrafico
-            // 
-            this.cmbGrafico.DisplayMember = "codGrafico";
-            this.cmbGrafico.FormattingEnabled = true;
-            this.cmbGrafico.Location = new System.Drawing.Point(14, 39);
-            this.cmbGrafico.Name = "cmbGrafico";
-            this.cmbGrafico.Size = new System.Drawing.Size(326, 24);
-            this.cmbGrafico.TabIndex = 3;
-            this.cmbGrafico.ValueMember = "codGrafico";
-            this.cmbGrafico.SelectedIndexChanged += new System.EventHandler(this.cmbGrafico_SelectedIndexChanged);
-            // 
-            // pbGrafico
-            // 
-            this.pbGrafico.Location = new System.Drawing.Point(6, 21);
-            this.pbGrafico.Name = "pbGrafico";
-            this.pbGrafico.Size = new System.Drawing.Size(491, 218);
-            this.pbGrafico.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbGrafico.TabIndex = 1;
-            this.pbGrafico.TabStop = false;
+            this.lbCodAna.AutoSize = true;
+            this.lbCodAna.Font = new System.Drawing.Font("Microsoft YaHei Light", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCodAna.Location = new System.Drawing.Point(224, 41);
+            this.lbCodAna.Name = "lbCodAna";
+            this.lbCodAna.Size = new System.Drawing.Size(38, 17);
+            this.lbCodAna.TabIndex = 28;
+            this.lbCodAna.Text = "111111";
             // 
             // groupBox3
             // 
@@ -113,9 +119,9 @@
             this.groupBox3.Controls.Add(this.pbImagen);
             this.groupBox3.Controls.Add(this.RtxtPlan);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(10, 11);
+            this.groupBox3.Location = new System.Drawing.Point(10, 119);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(275, 250);
+            this.groupBox3.Size = new System.Drawing.Size(275, 266);
             this.groupBox3.TabIndex = 12;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Imagen";
@@ -124,18 +130,18 @@
             // 
             this.cmbImagen.DisplayMember = "codGrafico";
             this.cmbImagen.FormattingEnabled = true;
-            this.cmbImagen.Location = new System.Drawing.Point(15, 39);
+            this.cmbImagen.Location = new System.Drawing.Point(20, 54);
             this.cmbImagen.Name = "cmbImagen";
             this.cmbImagen.Size = new System.Drawing.Size(228, 24);
             this.cmbImagen.TabIndex = 4;
-            this.cmbImagen.ValueMember = "codGrafico";
+            this.cmbImagen.ValueMember = "codImagen";
             this.cmbImagen.SelectedIndexChanged += new System.EventHandler(this.cmbImagen_SelectedIndexChanged);
             // 
             // pbImagen
             // 
             this.pbImagen.Location = new System.Drawing.Point(6, 21);
             this.pbImagen.Name = "pbImagen";
-            this.pbImagen.Size = new System.Drawing.Size(263, 218);
+            this.pbImagen.Size = new System.Drawing.Size(263, 227);
             this.pbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbImagen.TabIndex = 1;
             this.pbImagen.TabStop = false;
@@ -148,58 +154,131 @@
             this.RtxtPlan.TabIndex = 7;
             this.RtxtPlan.Text = "";
             // 
-            // btnClientArea
+            // pictureBox1
             // 
-            this.btnClientArea.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClientArea.Location = new System.Drawing.Point(860, 48);
-            this.btnClientArea.Name = "btnClientArea";
-            this.btnClientArea.Size = new System.Drawing.Size(75, 23);
-            this.btnClientArea.TabIndex = 15;
-            this.btnClientArea.Text = "Client Area";
-            this.btnClientArea.UseVisualStyleBackColor = true;
-            this.btnClientArea.Click += new System.EventHandler(this.btnClientArea_Click_1);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(10, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(193, 94);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 26;
+            this.pictureBox1.TabStop = false;
             // 
-            // btnPage2
+            // lbResp
             // 
-            this.btnPage2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPage2.Location = new System.Drawing.Point(860, 135);
-            this.btnPage2.Name = "btnPage2";
-            this.btnPage2.Size = new System.Drawing.Size(75, 23);
-            this.btnPage2.TabIndex = 18;
-            this.btnPage2.Text = "Page 2";
-            this.btnPage2.UseVisualStyleBackColor = true;
+            this.lbResp.AutoSize = true;
+            this.lbResp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lbResp.Font = new System.Drawing.Font("Microsoft YaHei Light", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbResp.Location = new System.Drawing.Point(223, 8);
+            this.lbResp.Name = "lbResp";
+            this.lbResp.Size = new System.Drawing.Size(16, 19);
+            this.lbResp.TabIndex = 25;
+            this.lbResp.Text = "3";
             // 
-            // btnPage1
+            // groupBox2
             // 
-            this.btnPage1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPage1.Location = new System.Drawing.Point(860, 106);
-            this.btnPage1.Name = "btnPage1";
-            this.btnPage1.Size = new System.Drawing.Size(75, 23);
-            this.btnPage1.TabIndex = 17;
-            this.btnPage1.Text = "Page 1";
-            this.btnPage1.UseVisualStyleBackColor = true;
+            this.groupBox2.Controls.Add(this.cmbGrafico);
+            this.groupBox2.Controls.Add(this.pbGrafico);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(291, 71);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(518, 314);
+            this.groupBox2.TabIndex = 11;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Grafico";
+            // 
+            // cmbGrafico
+            // 
+            this.cmbGrafico.DisplayMember = "codGrafico";
+            this.cmbGrafico.FormattingEnabled = true;
+            this.cmbGrafico.Location = new System.Drawing.Point(14, 39);
+            this.cmbGrafico.Name = "cmbGrafico";
+            this.cmbGrafico.Size = new System.Drawing.Size(460, 24);
+            this.cmbGrafico.TabIndex = 3;
+            this.cmbGrafico.ValueMember = "codGrafico";
+            this.cmbGrafico.SelectedIndexChanged += new System.EventHandler(this.cmbGrafico_SelectedIndexChanged);
+            // 
+            // pbGrafico
+            // 
+            this.pbGrafico.Location = new System.Drawing.Point(6, 21);
+            this.pbGrafico.Name = "pbGrafico";
+            this.pbGrafico.Size = new System.Drawing.Size(506, 275);
+            this.pbGrafico.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbGrafico.TabIndex = 1;
+            this.pbGrafico.TabStop = false;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.txtObser);
+            this.groupBox4.Controls.Add(this.txtDesc);
+            this.groupBox4.Controls.Add(this.label4);
+            this.groupBox4.Controls.Add(this.label3);
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.groupBox4.Location = new System.Drawing.Point(10, 396);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(799, 162);
+            this.groupBox4.TabIndex = 10;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Plan de acción";
+            // 
+            // txtObser
+            // 
+            this.txtObser.Location = new System.Drawing.Point(584, 40);
+            this.txtObser.Multiline = true;
+            this.txtObser.Name = "txtObser";
+            this.txtObser.Size = new System.Drawing.Size(209, 112);
+            this.txtObser.TabIndex = 2;
+            // 
+            // txtDesc
+            // 
+            this.txtDesc.Location = new System.Drawing.Point(10, 40);
+            this.txtDesc.Multiline = true;
+            this.txtDesc.Name = "txtDesc";
+            this.txtDesc.Size = new System.Drawing.Size(568, 112);
+            this.txtDesc.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei Light", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label4.Location = new System.Drawing.Point(580, 18);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(217, 19);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "Fecha / Responsable/Observación :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei Light", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label3.Location = new System.Drawing.Point(6, 18);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 19);
+            this.label3.TabIndex = 27;
+            this.label3.Text = "Descripción :";
+            // 
+            // dtCreaMod
+            // 
+            this.dtCreaMod.Location = new System.Drawing.Point(780, 56);
+            this.dtCreaMod.Name = "dtCreaMod";
+            this.dtCreaMod.Size = new System.Drawing.Size(207, 20);
+            this.dtCreaMod.TabIndex = 24;
             // 
             // btnGroupBox
             // 
             this.btnGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGroupBox.Location = new System.Drawing.Point(860, 77);
+            this.btnGroupBox.Location = new System.Drawing.Point(842, 234);
             this.btnGroupBox.Name = "btnGroupBox";
-            this.btnGroupBox.Size = new System.Drawing.Size(75, 23);
+            this.btnGroupBox.Size = new System.Drawing.Size(132, 23);
             this.btnGroupBox.TabIndex = 16;
-            this.btnGroupBox.Text = "GroupBox";
+            this.btnGroupBox.Text = "GENERAR / IMPRIMIR";
             this.btnGroupBox.UseVisualStyleBackColor = true;
             this.btnGroupBox.Click += new System.EventHandler(this.btnGroupBox_Click);
-            // 
-            // btnForm
-            // 
-            this.btnForm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnForm.Location = new System.Drawing.Point(860, 19);
-            this.btnForm.Name = "btnForm";
-            this.btnForm.Size = new System.Drawing.Size(75, 23);
-            this.btnForm.TabIndex = 14;
-            this.btnForm.Text = "Form";
-            this.btnForm.UseVisualStyleBackColor = true;
-            this.btnForm.Click += new System.EventHandler(this.btnForm_Click_1);
             // 
             // ppdForm
             // 
@@ -235,9 +314,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(5, 34);
+            this.button1.Location = new System.Drawing.Point(7, 41);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 48);
+            this.button1.Size = new System.Drawing.Size(132, 48);
             this.button1.TabIndex = 20;
             this.button1.Text = "Cargar Imagen/Grafico";
             this.button1.UseVisualStyleBackColor = true;
@@ -250,9 +329,9 @@
             // rbImagen
             // 
             this.rbImagen.AutoSize = true;
-            this.rbImagen.Location = new System.Drawing.Point(15, 99);
+            this.rbImagen.Location = new System.Drawing.Point(17, 95);
             this.rbImagen.Name = "rbImagen";
-            this.rbImagen.Size = new System.Drawing.Size(60, 17);
+            this.rbImagen.Size = new System.Drawing.Size(73, 19);
             this.rbImagen.TabIndex = 21;
             this.rbImagen.TabStop = true;
             this.rbImagen.Text = "Imagen";
@@ -261,9 +340,9 @@
             // rbGrafico
             // 
             this.rbGrafico.AutoSize = true;
-            this.rbGrafico.Location = new System.Drawing.Point(16, 131);
+            this.rbGrafico.Location = new System.Drawing.Point(17, 120);
             this.rbGrafico.Name = "rbGrafico";
-            this.rbGrafico.Size = new System.Drawing.Size(59, 17);
+            this.rbGrafico.Size = new System.Drawing.Size(71, 19);
             this.rbGrafico.TabIndex = 22;
             this.rbGrafico.TabStop = true;
             this.rbGrafico.Text = "Grafico";
@@ -274,59 +353,224 @@
             this.groupBox1.Controls.Add(this.rbImagen);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.rbGrafico);
-            this.groupBox1.Location = new System.Drawing.Point(842, 195);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(842, 82);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(119, 179);
+            this.groupBox1.Size = new System.Drawing.Size(145, 146);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Imagenes Personalizadas";
             // 
-            // textBox1
+            // panel1
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 18);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(763, 158);
-            this.textBox1.TabIndex = 0;
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.label22);
+            this.panel1.Controls.Add(this.btn_Salir);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1075, 49);
+            this.panel1.TabIndex = 45;
             // 
-            // groupBox4
+            // label22
             // 
-            this.groupBox4.Controls.Add(this.textBox1);
-            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.groupBox4.Location = new System.Drawing.Point(10, 267);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(784, 196);
-            this.groupBox4.TabIndex = 10;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Plan de acción";
+            this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.Transparent;
+            this.label22.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.White;
+            this.label22.Location = new System.Drawing.Point(95, 12);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(222, 22);
+            this.label22.TabIndex = 3;
+            this.label22.Text = "INFORME DE ANALISIS";
+            // 
+            // btn_Salir
+            // 
+            this.btn_Salir.BackColor = System.Drawing.Color.Black;
+            this.btn_Salir.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btn_Salir.FlatAppearance.BorderSize = 0;
+            this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btn_Salir.ForeColor = System.Drawing.Color.White;
+            this.btn_Salir.Location = new System.Drawing.Point(1011, 0);
+            this.btn_Salir.Name = "btn_Salir";
+            this.btn_Salir.Size = new System.Drawing.Size(64, 49);
+            this.btn_Salir.TabIndex = 1;
+            this.btn_Salir.Text = "Volver atrás";
+            this.btn_Salir.UseVisualStyleBackColor = false;
+            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.panel2.BackgroundImage = global::PrimerasHU_GES.Properties.Resources.LOGOENCABEZADO_Mesa_de_trabajo_1;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(64, 49);
+            this.panel2.TabIndex = 0;
+            // 
+            // btnRegistro
+            // 
+            this.btnRegistro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRegistro.Location = new System.Drawing.Point(842, 276);
+            this.btnRegistro.Name = "btnRegistro";
+            this.btnRegistro.Size = new System.Drawing.Size(132, 23);
+            this.btnRegistro.TabIndex = 46;
+            this.btnRegistro.Text = "REGISTRAR";
+            this.btnRegistro.UseVisualStyleBackColor = true;
+            this.btnRegistro.Click += new System.EventHandler(this.btnRegistro_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Location = new System.Drawing.Point(842, 365);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(132, 23);
+            this.btnModificar.TabIndex = 47;
+            this.btnModificar.Text = "MODIFICAR";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // dtLista
+            // 
+            this.dtLista.AllowUserToAddRows = false;
+            this.dtLista.AllowUserToDeleteRows = false;
+            this.dtLista.AutoGenerateColumns = false;
+            this.dtLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtLista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codAnalisisDataGridViewTextBoxColumn,
+            this.graficaDataGridViewImageColumn,
+            this.imgImagenDataGridViewImageColumn,
+            this.codUsuDataGridViewTextBoxColumn,
+            this.fechAnalisisDataGridViewTextBoxColumn});
+            this.dtLista.DataSource = this.analisisBindingSource;
+            this.dtLista.Location = new System.Drawing.Point(842, 440);
+            this.dtLista.Name = "dtLista";
+            this.dtLista.ReadOnly = true;
+            this.dtLista.Size = new System.Drawing.Size(221, 190);
+            this.dtLista.TabIndex = 48;
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLimpiar.Location = new System.Drawing.Point(842, 322);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(132, 23);
+            this.btnLimpiar.TabIndex = 49;
+            this.btnLimpiar.Text = "LIMPIAR";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // ges_v01DataSet20
+            // 
+            this.ges_v01DataSet20.DataSetName = "ges_v01DataSet20";
+            this.ges_v01DataSet20.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // analisisBindingSource
+            // 
+            this.analisisBindingSource.DataMember = "analisis";
+            this.analisisBindingSource.DataSource = this.ges_v01DataSet20;
+            // 
+            // analisisTableAdapter
+            // 
+            this.analisisTableAdapter.ClearBeforeFill = true;
+            // 
+            // lbListado
+            // 
+            this.lbListado.AutoSize = true;
+            this.lbListado.Font = new System.Drawing.Font("Microsoft YaHei Light", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbListado.Location = new System.Drawing.Point(842, 407);
+            this.lbListado.Name = "lbListado";
+            this.lbListado.Size = new System.Drawing.Size(125, 17);
+            this.lbListado.TabIndex = 29;
+            this.lbListado.Text = "Listado de Informes :";
+            // 
+            // codAnalisisDataGridViewTextBoxColumn
+            // 
+            this.codAnalisisDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.codAnalisisDataGridViewTextBoxColumn.DataPropertyName = "codAnalisis";
+            this.codAnalisisDataGridViewTextBoxColumn.HeaderText = "N°";
+            this.codAnalisisDataGridViewTextBoxColumn.Name = "codAnalisisDataGridViewTextBoxColumn";
+            this.codAnalisisDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codAnalisisDataGridViewTextBoxColumn.Width = 44;
+            // 
+            // graficaDataGridViewImageColumn
+            // 
+            this.graficaDataGridViewImageColumn.DataPropertyName = "grafica";
+            this.graficaDataGridViewImageColumn.HeaderText = "Grafico Estadistico";
+            this.graficaDataGridViewImageColumn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.graficaDataGridViewImageColumn.Name = "graficaDataGridViewImageColumn";
+            this.graficaDataGridViewImageColumn.ReadOnly = true;
+            // 
+            // imgImagenDataGridViewImageColumn
+            // 
+            this.imgImagenDataGridViewImageColumn.DataPropertyName = "imgImagen";
+            this.imgImagenDataGridViewImageColumn.HeaderText = "Imagen ";
+            this.imgImagenDataGridViewImageColumn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.imgImagenDataGridViewImageColumn.Name = "imgImagenDataGridViewImageColumn";
+            this.imgImagenDataGridViewImageColumn.ReadOnly = true;
+            // 
+            // codUsuDataGridViewTextBoxColumn
+            // 
+            this.codUsuDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.codUsuDataGridViewTextBoxColumn.DataPropertyName = "codUsu";
+            this.codUsuDataGridViewTextBoxColumn.HeaderText = "Usuario";
+            this.codUsuDataGridViewTextBoxColumn.Name = "codUsuDataGridViewTextBoxColumn";
+            this.codUsuDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codUsuDataGridViewTextBoxColumn.Width = 68;
+            // 
+            // fechAnalisisDataGridViewTextBoxColumn
+            // 
+            this.fechAnalisisDataGridViewTextBoxColumn.DataPropertyName = "fechAnalisis";
+            this.fechAnalisisDataGridViewTextBoxColumn.HeaderText = "fecha";
+            this.fechAnalisisDataGridViewTextBoxColumn.Name = "fechAnalisisDataGridViewTextBoxColumn";
+            this.fechAnalisisDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Report
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(962, 649);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(1075, 676);
+            this.ControlBox = false;
+            this.Controls.Add(this.lbListado);
+            this.Controls.Add(this.btnLimpiar);
+            this.Controls.Add(this.dtLista);
+            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.btnRegistro);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.gbInforme);
-            this.Controls.Add(this.btnClientArea);
-            this.Controls.Add(this.btnPage2);
-            this.Controls.Add(this.btnPage1);
+            this.Controls.Add(this.dtCreaMod);
             this.Controls.Add(this.btnGroupBox);
-            this.Controls.Add(this.btnForm);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Controls.Add(this.gbInforme);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Report";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Report";
             this.Load += new System.EventHandler(this.Report_Load);
             this.gbInforme.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbGrafico)).EndInit();
+            this.gbInforme.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbGrafico)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtLista)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.analisisBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -339,11 +583,7 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.PictureBox pbImagen;
         private System.Windows.Forms.RichTextBox RtxtPlan;
-        private System.Windows.Forms.Button btnClientArea;
-        private System.Windows.Forms.Button btnPage2;
-        private System.Windows.Forms.Button btnPage1;
         private System.Windows.Forms.Button btnGroupBox;
-        private System.Windows.Forms.Button btnForm;
         private System.Windows.Forms.PrintPreviewDialog ppdForm;
         private System.Drawing.Printing.PrintDocument pdocForm;
         private ges_v01DataSet19TableAdapters.graficosTableAdapter graficosTableAdapter;
@@ -355,7 +595,31 @@
         private System.Windows.Forms.RadioButton rbImagen;
         private System.Windows.Forms.RadioButton rbGrafico;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.DateTimePicker dtCreaMod;
+        private System.Windows.Forms.Label lbResp;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtObser;
+        private System.Windows.Forms.TextBox txtDesc;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Button btn_Salir;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnRegistro;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.DataGridView dtLista;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Label lbCodAna;
+        private ges_v01DataSet20 ges_v01DataSet20;
+        private System.Windows.Forms.BindingSource analisisBindingSource;
+        private ges_v01DataSet20TableAdapters.analisisTableAdapter analisisTableAdapter;
+        private System.Windows.Forms.Label lbListado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codAnalisisDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewImageColumn graficaDataGridViewImageColumn;
+        private System.Windows.Forms.DataGridViewImageColumn imgImagenDataGridViewImageColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codUsuDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechAnalisisDataGridViewTextBoxColumn;
     }
 }
