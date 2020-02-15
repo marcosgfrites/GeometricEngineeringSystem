@@ -159,6 +159,18 @@
     <Compile Include="DetalleControlPlan.Designer.cs">
       <DependentUpon>DetalleControlPlan.cs</DependentUpon>
     </Compile>
+    <Compile Include="Entidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entidades.Designer.cs">
+      <DependentUpon>Entidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Establecimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Establecimientos.Designer.cs">
+      <DependentUpon>Establecimientos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Estados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,6 +233,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ges_v01DataSet18ClasifPto.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ges_v01DataSet18Entidades2.Designer.cs" />
     <Compile Include="ges_v01DataSet18Estados.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -241,6 +254,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ges_v01DataSet18TiposUsuario.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ges_v01DataSet18_Establecimientos2.Designer.cs" />
+    <Compile Include="ges_v01DataSet18_TiposDeControl2.Designer.cs" />
+    <Compile Include="ges_v01DataSet18_UdeMed2.Designer.cs" />
     <Compile Include="ges_v01DataSet19.cs">
       <DependentUpon>ges_v01DataSet19.xsd</DependentUpon>
     </Compile>
@@ -521,6 +537,12 @@
     <Compile Include="TiposCalculo.Designer.cs">
       <DependentUpon>TiposCalculo.cs</DependentUpon>
     </Compile>
+    <Compile Include="TiposDeControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TiposDeControl.Designer.cs">
+      <DependentUpon>TiposDeControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="TiposGrafico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -532,6 +554,12 @@
     </Compile>
     <Compile Include="TiposUsuario.Designer.cs">
       <DependentUpon>TiposUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UnidadesMedicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnidadesMedicion.Designer.cs">
+      <DependentUpon>UnidadesMedicion.cs</DependentUpon>
     </Compile>
     <Compile Include="Usuarios.cs">
       <SubType>Form</SubType>
@@ -564,6 +592,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DetalleControlPlan.resx">
       <DependentUpon>DetalleControlPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entidades.resx">
+      <DependentUpon>Entidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Establecimientos.resx">
+      <DependentUpon>Establecimientos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Estados.resx">
       <DependentUpon>Estados.cs</DependentUpon>
@@ -635,11 +669,17 @@
     <EmbeddedResource Include="TiposCalculo.resx">
       <DependentUpon>TiposCalculo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TiposDeControl.resx">
+      <DependentUpon>TiposDeControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TiposGrafico.resx">
       <DependentUpon>TiposGrafico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TiposUsuario.resx">
       <DependentUpon>TiposUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnidadesMedicion.resx">
+      <DependentUpon>UnidadesMedicion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios.resx">
       <DependentUpon>Usuarios.cs</DependentUpon>
@@ -776,6 +816,13 @@
     <None Include="ges_v01DataSet18ClasifPto.xss">
       <DependentUpon>ges_v01DataSet18ClasifPto.xsd</DependentUpon>
     </None>
+    <None Include="ges_v01DataSet18Entidades2.xsc">
+      <DependentUpon>ges_v01DataSet18Entidades2.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet18Entidades2.xsd" />
+    <None Include="ges_v01DataSet18Entidades2.xss">
+      <DependentUpon>ges_v01DataSet18Entidades2.xsd</DependentUpon>
+    </None>
     <None Include="ges_v01DataSet18Estados.xsc">
       <DependentUpon>ges_v01DataSet18Estados.xsd</DependentUpon>
     </None>
@@ -819,6 +866,27 @@
     </None>
     <None Include="ges_v01DataSet18TiposUsuario.xss">
       <DependentUpon>ges_v01DataSet18TiposUsuario.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet18_Establecimientos2.xsc">
+      <DependentUpon>ges_v01DataSet18_Establecimientos2.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet18_Establecimientos2.xsd" />
+    <None Include="ges_v01DataSet18_Establecimientos2.xss">
+      <DependentUpon>ges_v01DataSet18_Establecimientos2.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet18_TiposDeControl2.xsc">
+      <DependentUpon>ges_v01DataSet18_TiposDeControl2.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet18_TiposDeControl2.xsd" />
+    <None Include="ges_v01DataSet18_TiposDeControl2.xss">
+      <DependentUpon>ges_v01DataSet18_TiposDeControl2.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet18_UdeMed2.xsc">
+      <DependentUpon>ges_v01DataSet18_UdeMed2.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet18_UdeMed2.xsd" />
+    <None Include="ges_v01DataSet18_UdeMed2.xss">
+      <DependentUpon>ges_v01DataSet18_UdeMed2.xsd</DependentUpon>
     </None>
     <None Include="ges_v01DataSet19.xsc">
       <DependentUpon>ges_v01DataSet19.xsd</DependentUpon>
