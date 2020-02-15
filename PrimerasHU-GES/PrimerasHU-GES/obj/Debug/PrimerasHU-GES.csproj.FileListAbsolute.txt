@@ -153,3 +153,10 @@ D:\Marcos\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\Pri
 D:\Marcos\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU-GES.csproj.CopyComplete
 D:\Marcos\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU-GES.exe
 D:\Marcos\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU-GES.pdb
+D:\Marcos\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU_GES.Estados.resources
+D:\Marcos\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU_GES.TiposUsuario.resources
+D:\Marcos\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU_GES.TiposCalculo.resources
+D:\Marcos\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU_GES.TiposGrafico.resources
+D:\Marcos\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU_GES.MaquinaMedicion.resources
+D:\Marcos\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU_GES.Programas.resources
+D:\Marcos\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU_GES.ReglasMedicion.resources

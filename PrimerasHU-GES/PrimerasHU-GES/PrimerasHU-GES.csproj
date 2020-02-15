@@ -159,6 +159,12 @@
     <Compile Include="DetalleControlPlan.Designer.cs">
       <DependentUpon>DetalleControlPlan.cs</DependentUpon>
     </Compile>
+    <Compile Include="Estados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estados.Designer.cs">
+      <DependentUpon>Estados.cs</DependentUpon>
+    </Compile>
     <Compile Include="ges_v01DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -298,15 +304,55 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ges_v01DataSetDocDmo.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ges_v01DataSetEstados.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DataSetEstados.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ges_v01DataSetMaquinas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DataSetMaquinas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ges_v01DataSetMaquinasMedicion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DataSetMaquinasMedicion.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ges_v01DataSetMuestrasGrafico.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ges_v01DataSetMuestrasGrafico.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ges_v01DataSetProgramas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DataSetProgramas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ges_v01DataSetReglasMed.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DataSetReglasMed.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ges_v01DataSetTiposCalculo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DataSetTiposCalculo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ges_v01DataSetTiposGrafico.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DataSetTiposGrafico.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ges_v01DataSetTiposMuestra.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ges_v01DataSetTiposMuestra.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ges_v01DataSetTiposUsuario.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DataSetTiposUsuario.xsd</DependentUpon>
     </Compile>
     <Compile Include="ges_v01DocumentosDmo.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -381,6 +427,12 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="MaquinaMedicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaquinaMedicion.Designer.cs">
+      <DependentUpon>MaquinaMedicion.cs</DependentUpon>
+    </Compile>
     <Compile Include="MarcosDmo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -420,6 +472,12 @@
     <Compile Include="PrimerasHU_GES\ges_v01DataSet7.cs" />
     <Compile Include="PrimerasHU_GES\ges_v01DataSet7TableAdapters.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Programas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Programas.Designer.cs">
+      <DependentUpon>Programas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegControlPlan.cs">
       <SubType>Form</SubType>
@@ -432,6 +490,12 @@
     </Compile>
     <Compile Include="RegistroGrafico.Designer.cs">
       <DependentUpon>RegistroGrafico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReglasMedicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReglasMedicion.Designer.cs">
+      <DependentUpon>ReglasMedicion.cs</DependentUpon>
     </Compile>
     <Compile Include="Report.cs">
       <SubType>Form</SubType>
@@ -450,6 +514,24 @@
     </Compile>
     <Compile Include="tipoPuntoClasificacion.Designer.cs">
       <DependentUpon>tipoPuntoClasificacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TiposCalculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TiposCalculo.Designer.cs">
+      <DependentUpon>TiposCalculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TiposGrafico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TiposGrafico.Designer.cs">
+      <DependentUpon>TiposGrafico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TiposUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TiposUsuario.Designer.cs">
+      <DependentUpon>TiposUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Usuarios.cs">
       <SubType>Form</SubType>
@@ -483,6 +565,9 @@
     <EmbeddedResource Include="DetalleControlPlan.resx">
       <DependentUpon>DetalleControlPlan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Estados.resx">
+      <DependentUpon>Estados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GraficoMarcos.resx">
       <DependentUpon>GraficoMarcos.cs</DependentUpon>
     </EmbeddedResource>
@@ -494,6 +579,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaquinaMedicion.resx">
+      <DependentUpon>MaquinaMedicion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MarcosDmo.resx">
       <DependentUpon>MarcosDmo.cs</DependentUpon>
@@ -513,6 +601,9 @@
     <EmbeddedResource Include="PrimeraPantalla.resx">
       <DependentUpon>PrimeraPantalla.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Programas.resx">
+      <DependentUpon>Programas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -529,6 +620,9 @@
     <EmbeddedResource Include="RegistroGrafico.resx">
       <DependentUpon>RegistroGrafico.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReglasMedicion.resx">
+      <DependentUpon>ReglasMedicion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report.resx">
       <DependentUpon>Report.cs</DependentUpon>
     </EmbeddedResource>
@@ -537,6 +631,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="tipoPuntoClasificacion.resx">
       <DependentUpon>tipoPuntoClasificacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TiposCalculo.resx">
+      <DependentUpon>TiposCalculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TiposGrafico.resx">
+      <DependentUpon>TiposGrafico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TiposUsuario.resx">
+      <DependentUpon>TiposUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios.resx">
       <DependentUpon>Usuarios.cs</DependentUpon>
@@ -849,6 +952,39 @@
     <None Include="ges_v01DataSetDocDmo.xss">
       <DependentUpon>ges_v01DataSetDocDmo.xsd</DependentUpon>
     </None>
+    <None Include="ges_v01DataSetEstados.xsc">
+      <DependentUpon>ges_v01DataSetEstados.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSetEstados.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DataSetEstados.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DataSetEstados.xss">
+      <DependentUpon>ges_v01DataSetEstados.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSetMaquinas.xsc">
+      <DependentUpon>ges_v01DataSetMaquinas.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSetMaquinas.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DataSetMaquinas.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DataSetMaquinas.xss">
+      <DependentUpon>ges_v01DataSetMaquinas.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSetMaquinasMedicion.xsc">
+      <DependentUpon>ges_v01DataSetMaquinasMedicion.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSetMaquinasMedicion.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DataSetMaquinasMedicion.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DataSetMaquinasMedicion.xss">
+      <DependentUpon>ges_v01DataSetMaquinasMedicion.xsd</DependentUpon>
+    </None>
     <None Include="ges_v01DataSetMuestrasGrafico.xsc">
       <DependentUpon>ges_v01DataSetMuestrasGrafico.xsd</DependentUpon>
     </None>
@@ -860,6 +996,50 @@
     <None Include="ges_v01DataSetMuestrasGrafico.xss">
       <DependentUpon>ges_v01DataSetMuestrasGrafico.xsd</DependentUpon>
     </None>
+    <None Include="ges_v01DataSetProgramas.xsc">
+      <DependentUpon>ges_v01DataSetProgramas.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSetProgramas.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DataSetProgramas.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DataSetProgramas.xss">
+      <DependentUpon>ges_v01DataSetProgramas.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSetReglasMed.xsc">
+      <DependentUpon>ges_v01DataSetReglasMed.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSetReglasMed.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DataSetReglasMed.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DataSetReglasMed.xss">
+      <DependentUpon>ges_v01DataSetReglasMed.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSetTiposCalculo.xsc">
+      <DependentUpon>ges_v01DataSetTiposCalculo.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSetTiposCalculo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DataSetTiposCalculo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DataSetTiposCalculo.xss">
+      <DependentUpon>ges_v01DataSetTiposCalculo.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSetTiposGrafico.xsc">
+      <DependentUpon>ges_v01DataSetTiposGrafico.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSetTiposGrafico.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DataSetTiposGrafico.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DataSetTiposGrafico.xss">
+      <DependentUpon>ges_v01DataSetTiposGrafico.xsd</DependentUpon>
+    </None>
     <None Include="ges_v01DataSetTiposMuestra.xsc">
       <DependentUpon>ges_v01DataSetTiposMuestra.xsd</DependentUpon>
     </None>
@@ -870,6 +1050,17 @@
     </None>
     <None Include="ges_v01DataSetTiposMuestra.xss">
       <DependentUpon>ges_v01DataSetTiposMuestra.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSetTiposUsuario.xsc">
+      <DependentUpon>ges_v01DataSetTiposUsuario.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSetTiposUsuario.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DataSetTiposUsuario.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DataSetTiposUsuario.xss">
+      <DependentUpon>ges_v01DataSetTiposUsuario.xsd</DependentUpon>
     </None>
     <None Include="ges_v01DocumentosDmo.xsc">
       <DependentUpon>ges_v01DocumentosDmo.xsd</DependentUpon>

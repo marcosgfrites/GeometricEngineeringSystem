@@ -418,7 +418,7 @@
     <value>14, 9</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>185, 16</value>
+    <value>204, 16</value>
   </data>
   <data name="label7.TabIndex" type="System.Int32, mscorlib">
     <value>58</value>
@@ -805,7 +805,7 @@
     <value>12, 9</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>187, 16</value>
+    <value>206, 16</value>
   </data>
   <data name="label4.TabIndex" type="System.Int32, mscorlib">
     <value>58</value>
@@ -1192,7 +1192,7 @@
     <value>11, 8</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 16</value>
+    <value>173, 16</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>46</value>
@@ -1458,6 +1458,18 @@
   <data name="&gt;&gt;bunifuElipse1.Type" xml:space="preserve">
     <value>Bunifu.Framework.UI.BunifuElipse, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
+  <data name="&gt;&gt;codTipoVDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>codTipoVDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;codTipoVDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;descTipoVDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>descTipoVDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;descTipoVDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;tiposVehiculoBindingSource.Name" xml:space="preserve">
     <value>tiposVehiculoBindingSource</value>
   </data>
@@ -1475,6 +1487,18 @@
   </data>
   <data name="&gt;&gt;tiposVehiculoTableAdapter.Type" xml:space="preserve">
     <value>PrimerasHU_GES.ges_v01DS_tiposVehiculoTableAdapters.tiposVehiculoTableAdapter, ges_v01DS_tiposVehiculo.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;codVersionDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>codVersionDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;codVersionDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;descVersionDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>descVersionDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;descVersionDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;versionesModeloBindingSource.Name" xml:space="preserve">
     <value>versionesModeloBindingSource</value>
@@ -1559,30 +1583,6 @@
   </data>
   <data name="&gt;&gt;modelosVehiculoTableAdapter1.Type" xml:space="preserve">
     <value>PrimerasHU_GES.ges_v01modelosVehiculo2TableAdapters.modelosVehiculoTableAdapter, ges_v01modelosVehiculo2.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;codTipoVDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>codTipoVDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;codTipoVDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;descTipoVDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>descTipoVDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;descTipoVDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;codVersionDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>codVersionDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;codVersionDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;descVersionDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>descVersionDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;descVersionDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Modelos</value>
