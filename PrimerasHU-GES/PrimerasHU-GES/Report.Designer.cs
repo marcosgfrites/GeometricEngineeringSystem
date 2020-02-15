@@ -38,8 +38,6 @@
             this.cmbImagen = new System.Windows.Forms.ComboBox();
             this.pbImagen = new System.Windows.Forms.PictureBox();
             this.RtxtPlan = new System.Windows.Forms.RichTextBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnClientArea = new System.Windows.Forms.Button();
             this.btnPage2 = new System.Windows.Forms.Button();
             this.btnPage1 = new System.Windows.Forms.Button();
@@ -55,13 +53,15 @@
             this.rbImagen = new System.Windows.Forms.RadioButton();
             this.rbGrafico = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.gbInforme.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbGrafico)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).BeginInit();
-            this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbInforme
@@ -71,7 +71,7 @@
             this.gbInforme.Controls.Add(this.groupBox4);
             this.gbInforme.Location = new System.Drawing.Point(27, 19);
             this.gbInforme.Name = "gbInforme";
-            this.gbInforme.Size = new System.Drawing.Size(637, 412);
+            this.gbInforme.Size = new System.Drawing.Size(809, 463);
             this.gbInforme.TabIndex = 19;
             this.gbInforme.TabStop = false;
             // 
@@ -80,9 +80,9 @@
             this.groupBox2.Controls.Add(this.cmbGrafico);
             this.groupBox2.Controls.Add(this.pbGrafico);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(277, 11);
+            this.groupBox2.Location = new System.Drawing.Point(291, 11);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(360, 236);
+            this.groupBox2.Size = new System.Drawing.Size(503, 250);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Grafico";
@@ -91,9 +91,9 @@
             // 
             this.cmbGrafico.DisplayMember = "codGrafico";
             this.cmbGrafico.FormattingEnabled = true;
-            this.cmbGrafico.Location = new System.Drawing.Point(6, 39);
+            this.cmbGrafico.Location = new System.Drawing.Point(14, 39);
             this.cmbGrafico.Name = "cmbGrafico";
-            this.cmbGrafico.Size = new System.Drawing.Size(334, 24);
+            this.cmbGrafico.Size = new System.Drawing.Size(326, 24);
             this.cmbGrafico.TabIndex = 3;
             this.cmbGrafico.ValueMember = "codGrafico";
             this.cmbGrafico.SelectedIndexChanged += new System.EventHandler(this.cmbGrafico_SelectedIndexChanged);
@@ -102,7 +102,7 @@
             // 
             this.pbGrafico.Location = new System.Drawing.Point(6, 21);
             this.pbGrafico.Name = "pbGrafico";
-            this.pbGrafico.Size = new System.Drawing.Size(334, 195);
+            this.pbGrafico.Size = new System.Drawing.Size(491, 218);
             this.pbGrafico.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbGrafico.TabIndex = 1;
             this.pbGrafico.TabStop = false;
@@ -115,7 +115,7 @@
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(10, 11);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(261, 227);
+            this.groupBox3.Size = new System.Drawing.Size(275, 250);
             this.groupBox3.TabIndex = 12;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Imagen";
@@ -126,16 +126,16 @@
             this.cmbImagen.FormattingEnabled = true;
             this.cmbImagen.Location = new System.Drawing.Point(15, 39);
             this.cmbImagen.Name = "cmbImagen";
-            this.cmbImagen.Size = new System.Drawing.Size(240, 24);
+            this.cmbImagen.Size = new System.Drawing.Size(228, 24);
             this.cmbImagen.TabIndex = 4;
             this.cmbImagen.ValueMember = "codGrafico";
             this.cmbImagen.SelectedIndexChanged += new System.EventHandler(this.cmbImagen_SelectedIndexChanged);
             // 
             // pbImagen
             // 
-            this.pbImagen.Location = new System.Drawing.Point(15, 21);
+            this.pbImagen.Location = new System.Drawing.Point(6, 21);
             this.pbImagen.Name = "pbImagen";
-            this.pbImagen.Size = new System.Drawing.Size(240, 195);
+            this.pbImagen.Size = new System.Drawing.Size(263, 218);
             this.pbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbImagen.TabIndex = 1;
             this.pbImagen.TabStop = false;
@@ -148,30 +148,10 @@
             this.RtxtPlan.TabIndex = 7;
             this.RtxtPlan.Text = "";
             // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.textBox1);
-            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.groupBox4.Location = new System.Drawing.Point(10, 244);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(613, 158);
-            this.groupBox4.TabIndex = 10;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Plan de acción";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(15, 18);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(592, 134);
-            this.textBox1.TabIndex = 0;
-            // 
             // btnClientArea
             // 
             this.btnClientArea.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClientArea.Location = new System.Drawing.Point(698, 48);
+            this.btnClientArea.Location = new System.Drawing.Point(860, 48);
             this.btnClientArea.Name = "btnClientArea";
             this.btnClientArea.Size = new System.Drawing.Size(75, 23);
             this.btnClientArea.TabIndex = 15;
@@ -182,7 +162,7 @@
             // btnPage2
             // 
             this.btnPage2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPage2.Location = new System.Drawing.Point(698, 135);
+            this.btnPage2.Location = new System.Drawing.Point(860, 135);
             this.btnPage2.Name = "btnPage2";
             this.btnPage2.Size = new System.Drawing.Size(75, 23);
             this.btnPage2.TabIndex = 18;
@@ -192,7 +172,7 @@
             // btnPage1
             // 
             this.btnPage1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPage1.Location = new System.Drawing.Point(698, 106);
+            this.btnPage1.Location = new System.Drawing.Point(860, 106);
             this.btnPage1.Name = "btnPage1";
             this.btnPage1.Size = new System.Drawing.Size(75, 23);
             this.btnPage1.TabIndex = 17;
@@ -202,7 +182,7 @@
             // btnGroupBox
             // 
             this.btnGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGroupBox.Location = new System.Drawing.Point(698, 77);
+            this.btnGroupBox.Location = new System.Drawing.Point(860, 77);
             this.btnGroupBox.Name = "btnGroupBox";
             this.btnGroupBox.Size = new System.Drawing.Size(75, 23);
             this.btnGroupBox.TabIndex = 16;
@@ -213,7 +193,7 @@
             // btnForm
             // 
             this.btnForm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnForm.Location = new System.Drawing.Point(698, 19);
+            this.btnForm.Location = new System.Drawing.Point(860, 19);
             this.btnForm.Name = "btnForm";
             this.btnForm.Size = new System.Drawing.Size(75, 23);
             this.btnForm.TabIndex = 14;
@@ -230,6 +210,7 @@
             this.ppdForm.Enabled = true;
             this.ppdForm.Icon = ((System.Drawing.Icon)(resources.GetObject("ppdForm.Icon")));
             this.ppdForm.Name = "ppdForm";
+            this.ppdForm.UseAntiAlias = true;
             this.ppdForm.Visible = false;
             // 
             // pdocForm
@@ -254,7 +235,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(14, 34);
+            this.button1.Location = new System.Drawing.Point(5, 34);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(103, 48);
             this.button1.TabIndex = 20;
@@ -293,18 +274,38 @@
             this.groupBox1.Controls.Add(this.rbImagen);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.rbGrafico);
-            this.groupBox1.Location = new System.Drawing.Point(670, 164);
+            this.groupBox1.Location = new System.Drawing.Point(842, 195);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(128, 169);
+            this.groupBox1.Size = new System.Drawing.Size(119, 179);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Imagenes Personalizadas";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(15, 18);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(763, 158);
+            this.textBox1.TabIndex = 0;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.textBox1);
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.groupBox4.Location = new System.Drawing.Point(10, 267);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(784, 196);
+            this.groupBox4.TabIndex = 10;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Plan de acción";
             // 
             // Report
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(962, 649);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbInforme);
             this.Controls.Add(this.btnClientArea);
@@ -312,6 +313,7 @@
             this.Controls.Add(this.btnPage1);
             this.Controls.Add(this.btnGroupBox);
             this.Controls.Add(this.btnForm);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Report";
             this.Text = "Report";
             this.Load += new System.EventHandler(this.Report_Load);
@@ -320,10 +322,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbGrafico)).EndInit();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).EndInit();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -337,8 +339,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.PictureBox pbImagen;
         private System.Windows.Forms.RichTextBox RtxtPlan;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnClientArea;
         private System.Windows.Forms.Button btnPage2;
         private System.Windows.Forms.Button btnPage1;
@@ -355,5 +355,7 @@
         private System.Windows.Forms.RadioButton rbImagen;
         private System.Windows.Forms.RadioButton rbGrafico;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.GroupBox groupBox4;
     }
 }
