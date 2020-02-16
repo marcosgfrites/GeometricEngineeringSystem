@@ -654,6 +654,7 @@
             this.btn_TipoUsuario.TabIndex = 31;
             this.btn_TipoUsuario.Text = "Tipos de Usuario";
             this.btn_TipoUsuario.UseVisualStyleBackColor = false;
+            this.btn_TipoUsuario.Click += new System.EventHandler(this.btn_TipoUsuario_Click);
             // 
             // btn_Estados
             // 
@@ -670,6 +671,7 @@
             this.btn_Estados.TabIndex = 30;
             this.btn_Estados.Text = "Estados";
             this.btn_Estados.UseVisualStyleBackColor = false;
+            this.btn_Estados.Click += new System.EventHandler(this.btn_Estados_Click);
             // 
             // btn_TipoGrafico
             // 
@@ -686,6 +688,7 @@
             this.btn_TipoGrafico.TabIndex = 29;
             this.btn_TipoGrafico.Text = "Tipos de Gráfico";
             this.btn_TipoGrafico.UseVisualStyleBackColor = false;
+            this.btn_TipoGrafico.Click += new System.EventHandler(this.btn_TipoGrafico_Click);
             // 
             // btn_Formulas
             // 
@@ -702,6 +705,7 @@
             this.btn_Formulas.TabIndex = 28;
             this.btn_Formulas.Text = "Fórmulas";
             this.btn_Formulas.UseVisualStyleBackColor = false;
+            this.btn_Formulas.Click += new System.EventHandler(this.btn_Formulas_Click);
             // 
             // btn_TipoCalculo
             // 
@@ -718,6 +722,7 @@
             this.btn_TipoCalculo.TabIndex = 27;
             this.btn_TipoCalculo.Text = "Tipos de Cálculo";
             this.btn_TipoCalculo.UseVisualStyleBackColor = false;
+            this.btn_TipoCalculo.Click += new System.EventHandler(this.btn_TipoCalculo_Click);
             // 
             // btn_Establecimientos
             // 
@@ -734,6 +739,7 @@
             this.btn_Establecimientos.TabIndex = 26;
             this.btn_Establecimientos.Text = "Establecimientos";
             this.btn_Establecimientos.UseVisualStyleBackColor = false;
+            this.btn_Establecimientos.Click += new System.EventHandler(this.btn_Establecimientos_Click);
             // 
             // btn_Grupos
             // 
@@ -783,6 +789,7 @@
             this.btn_Reglas.TabIndex = 23;
             this.btn_Reglas.Text = "Reglas de Medición";
             this.btn_Reglas.UseVisualStyleBackColor = false;
+            this.btn_Reglas.Click += new System.EventHandler(this.btn_Reglas_Click);
             // 
             // btn_Unidades
             // 
@@ -799,6 +806,7 @@
             this.btn_Unidades.TabIndex = 22;
             this.btn_Unidades.Text = "Unidades de Medición";
             this.btn_Unidades.UseVisualStyleBackColor = false;
+            this.btn_Unidades.Click += new System.EventHandler(this.btn_Unidades_Click);
             // 
             // btn_TipoControl
             // 
@@ -815,6 +823,7 @@
             this.btn_TipoControl.TabIndex = 21;
             this.btn_TipoControl.Text = "Tipos de Control";
             this.btn_TipoControl.UseVisualStyleBackColor = false;
+            this.btn_TipoControl.Click += new System.EventHandler(this.btn_TipoControl_Click);
             // 
             // btn_Entidades
             // 
@@ -831,6 +840,7 @@
             this.btn_Entidades.TabIndex = 20;
             this.btn_Entidades.Text = "Entidades";
             this.btn_Entidades.UseVisualStyleBackColor = false;
+            this.btn_Entidades.Click += new System.EventHandler(this.btn_Entidades_Click);
             // 
             // btn_Compiladores
             // 
@@ -881,6 +891,7 @@
             this.btn_Programas.TabIndex = 17;
             this.btn_Programas.Text = "Programas";
             this.btn_Programas.UseVisualStyleBackColor = false;
+            this.btn_Programas.Click += new System.EventHandler(this.btn_Programas_Click);
             // 
             // btn_Maquinas
             // 
@@ -897,6 +908,7 @@
             this.btn_Maquinas.TabIndex = 16;
             this.btn_Maquinas.Text = "Máquinas de Medición";
             this.btn_Maquinas.UseVisualStyleBackColor = false;
+            this.btn_Maquinas.Click += new System.EventHandler(this.btn_Maquinas_Click);
             // 
             // fileSystemWatcher1
             // 

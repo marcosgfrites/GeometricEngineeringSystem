@@ -241,8 +241,8 @@ namespace PrimerasHU_GES
 
         private void Btn_Operarios_Click(object sender, EventArgs e)
         {
-            AprobadoresCompiladores ac = new AprobadoresCompiladores();
-            ac.Show();
+            OperariosMaquinaMedicion opmm = new OperariosMaquinaMedicion();
+            opmm.Show();
         }
         
         private void Btn_Graficos_Click (object sender, EventArgs e)
@@ -284,6 +284,77 @@ namespace PrimerasHU_GES
         {
             IndicadoresCalidad ic = new IndicadoresCalidad();
             ic.Show();
+        }
+
+        private void btn_Maquinas_Click(object sender, EventArgs e)
+        {
+            MaquinaMedicion mmd = new MaquinaMedicion();
+            mmd.Show();
+        }
+
+        private void btn_Establecimientos_Click(object sender, EventArgs e)
+        {
+            Establecimientos es = new Establecimientos();
+            es.Show();
+        }
+
+        private void btn_Unidades_Click(object sender, EventArgs e)
+        {
+            UnidadesMedicion udm = new UnidadesMedicion();
+            udm.Show();
+        }
+
+        private void btn_Entidades_Click(object sender, EventArgs e)
+        {
+            Entidades ent = new Entidades();
+            ent.Show();
+        }
+
+        private void btn_TipoControl_Click(object sender, EventArgs e)
+        {
+            TiposDeControl tdc = new TiposDeControl();
+            tdc.Show();
+        }
+
+        private void btn_Programas_Click(object sender, EventArgs e)
+        {
+            Programas prg = new Programas();
+            prg.Show();
+        }
+
+        private void btn_Reglas_Click(object sender, EventArgs e)
+        {
+            ReglasMedicion rdm = new ReglasMedicion();
+            rdm.Show();
+        }
+
+        private void btn_TipoCalculo_Click(object sender, EventArgs e)
+        {
+            TiposCalculo tdc = new TiposCalculo();
+            tdc.Show();
+        }
+
+        private void btn_Formulas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_TipoGrafico_Click(object sender, EventArgs e)
+        {
+            TiposGrafico tdg = new TiposGrafico();
+            tdg.Show();
+        }
+
+        private void btn_Estados_Click(object sender, EventArgs e)
+        {
+            Estados ests = new Estados();
+            ests.Show();
+        }
+
+        private void btn_TipoUsuario_Click(object sender, EventArgs e)
+        {
+            TiposUsuario tus = new TiposUsuario();
+            tus.Show();
         }
     }
 }
