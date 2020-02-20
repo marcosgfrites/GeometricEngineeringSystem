@@ -15,6 +15,7 @@ namespace PrimerasHU_GES
 {
     public partial class PrimeraPantalla : Form
     {
+        
         public PrimeraPantalla()
         {
             InitializeComponent();
@@ -83,6 +84,7 @@ namespace PrimerasHU_GES
             panelDmo.Hide();
             panelAnalisis.Hide();
             p_Administrador.Hide();
+            
         }
 
         private void btn_ControlPlan_Click(object sender, EventArgs e)
@@ -97,13 +99,14 @@ namespace PrimerasHU_GES
             f.Show();
         }
 
-        private void btn_Analisis_Click(object sender, EventArgs e)
+        public void btn_Analisis_Click(object sender, EventArgs e)
         {
             if (lbl_TipoUsu.Text == "Administrador" || lbl_TipoUsu.Text == "Encargado DE&MS" || lbl_TipoUsu.Text == "Responsable Analista")
             {
                 if (panelAnalisis.Visible == true)
                 {
                     panelAnalisis.Visible = false;
+                   
                 }
                 else
                 {
@@ -117,10 +120,16 @@ namespace PrimerasHU_GES
             {
                 MessageBox.Show("Este menú se encuentra deshabilitado porque no cuenta con los permisos necesarios. Para más información consulte con el Administrador.", "Atención!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+
+           
         }
 
         private void btn_Soporte_Click(object sender, EventArgs e)
         {
+
+
+
+
             if (lbl_TipoUsu.Text == "Administrador")
             {
                 if (p_Administrador.Visible == true)
@@ -137,7 +146,7 @@ namespace PrimerasHU_GES
             }
             else
             {
-                MessageBox.Show("Este menú se encuentra deshabilitado porque no cuenta con los permisos necesarios. Para más información consulte con el Administrador.","Atención!",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Este menú se encuentra deshabilitado porque no cuenta con los permisos necesarios. Para más información consulte con el Administrador.", "Atención!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -175,14 +184,14 @@ namespace PrimerasHU_GES
         {
             playSimpleSound();
             MessageBox.Show(string.Format("Alerta!!!!!! archivo creado {0} {1}", e.FullPath, e.Name));
-           
+
         }
 
         private void FileSystemWatcher1_Deleted(object sender, FileSystemEventArgs e)
         {
             playSimpleSound();
             MessageBox.Show(string.Format("Alerta!!!!!! archivo Borrado {0} {1}", e.FullPath, e.Name));
-            
+
         }
 
         private void FileSystemWatcher1_Renamed(object sender, RenamedEventArgs e)
@@ -195,7 +204,7 @@ namespace PrimerasHU_GES
             string mdoc = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             string sonido = Path.Combine(mdoc, @"GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\Resources\sonidos\buzzer3_x.wav");
             //SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\Roqué\Documents\GitHub\Tesis\PrimerasHU-GES\PrimerasHU-GES\Resources\sonidos\buzzer3_x.wav");
-            SoundPlayer simpleSound = new SoundPlayer(@""+sonido);
+            SoundPlayer simpleSound = new SoundPlayer(@"" + sonido);
             simpleSound.Play();
         }
 
@@ -244,8 +253,8 @@ namespace PrimerasHU_GES
             OperariosMaquinaMedicion opmm = new OperariosMaquinaMedicion();
             opmm.Show();
         }
-        
-        private void Btn_Graficos_Click (object sender, EventArgs e)
+
+        private void Btn_Graficos_Click(object sender, EventArgs e)
         {
             GraficoMarcos gm = new GraficoMarcos();
             gm.Show();
@@ -355,6 +364,17 @@ namespace PrimerasHU_GES
         {
             TiposUsuario tus = new TiposUsuario();
             tus.Show();
+        }
+
+        public void btn_Informe_Click(object sender, EventArgs e)
+        {
+           
+            Report Re = new Report();
+            Re.lbResp.Text = lbl_Usuario.Text;
+            Re.lbCodUsu.Text = lb_CodUsu.Text;
+            Re.Show();
+          
+           
         }
     }
 }

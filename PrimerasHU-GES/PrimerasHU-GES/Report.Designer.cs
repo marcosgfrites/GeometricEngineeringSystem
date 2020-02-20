@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Report));
             this.gbInforme = new System.Windows.Forms.GroupBox();
             this.lbCodAna = new System.Windows.Forms.Label();
+            this.lbCodUsu = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cmbImagen = new System.Windows.Forms.ComboBox();
             this.pbImagen = new System.Windows.Forms.PictureBox();
@@ -64,17 +66,25 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnRegistro = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.dtLista = new System.Windows.Forms.DataGridView();
-            this.btnLimpiar = new System.Windows.Forms.Button();
-            this.ges_v01DataSet20 = new PrimerasHU_GES.ges_v01DataSet20();
             this.analisisBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ges_v01DataSet20 = new PrimerasHU_GES.ges_v01DataSet20();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.analisisTableAdapter = new PrimerasHU_GES.ges_v01DataSet20TableAdapters.analisisTableAdapter();
             this.lbListado = new System.Windows.Forms.Label();
+            this.btnClipboard = new System.Windows.Forms.Button();
+            this.btnBorrar = new System.Windows.Forms.Button();
+            this.analisisBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.codAnalisisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.graficaDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.imgImagenDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.codUsuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechAnalisisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.observacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.analisisBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.ges_v01DataSet21 = new PrimerasHU_GES.ges_v01DataSet21();
+            this.analisisTableAdapter1 = new PrimerasHU_GES.ges_v01DataSet21TableAdapters.analisisTableAdapter();
             this.gbInforme.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).BeginInit();
@@ -84,14 +94,19 @@
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtLista)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.analisisBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.analisisBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.analisisBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet21)).BeginInit();
             this.SuspendLayout();
             // 
             // gbInforme
             // 
             this.gbInforme.Controls.Add(this.lbCodAna);
+            this.gbInforme.Controls.Add(this.lbCodUsu);
+            this.gbInforme.Controls.Add(this.label1);
             this.gbInforme.Controls.Add(this.groupBox3);
             this.gbInforme.Controls.Add(this.pictureBox1);
             this.gbInforme.Controls.Add(this.lbResp);
@@ -106,12 +121,31 @@
             // lbCodAna
             // 
             this.lbCodAna.AutoSize = true;
-            this.lbCodAna.Font = new System.Drawing.Font("Microsoft YaHei Light", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCodAna.Location = new System.Drawing.Point(224, 41);
+            this.lbCodAna.Location = new System.Drawing.Point(507, 41);
             this.lbCodAna.Name = "lbCodAna";
-            this.lbCodAna.Size = new System.Drawing.Size(38, 17);
-            this.lbCodAna.TabIndex = 28;
-            this.lbCodAna.Text = "111111";
+            this.lbCodAna.Size = new System.Drawing.Size(93, 13);
+            this.lbCodAna.TabIndex = 29;
+            this.lbCodAna.Text = "Codigo de Analisis";
+            this.lbCodAna.Visible = false;
+            // 
+            // lbCodUsu
+            // 
+            this.lbCodUsu.AutoSize = true;
+            this.lbCodUsu.Location = new System.Drawing.Point(642, 41);
+            this.lbCodUsu.Name = "lbCodUsu";
+            this.lbCodUsu.Size = new System.Drawing.Size(92, 13);
+            this.lbCodUsu.TabIndex = 28;
+            this.lbCodUsu.Text = "Codigo de usuario";
+            this.lbCodUsu.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(507, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(128, 13);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Responsable de Análisis :";
             // 
             // groupBox3
             // 
@@ -169,11 +203,11 @@
             this.lbResp.AutoSize = true;
             this.lbResp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lbResp.Font = new System.Drawing.Font("Microsoft YaHei Light", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbResp.Location = new System.Drawing.Point(223, 8);
+            this.lbResp.Location = new System.Drawing.Point(641, 10);
             this.lbResp.Name = "lbResp";
-            this.lbResp.Size = new System.Drawing.Size(16, 19);
+            this.lbResp.Size = new System.Drawing.Size(135, 19);
             this.lbResp.TabIndex = 25;
-            this.lbResp.Text = "3";
+            this.lbResp.Text = "---------------------";
             // 
             // groupBox2
             // 
@@ -264,6 +298,7 @@
             // 
             // dtCreaMod
             // 
+            this.dtCreaMod.Enabled = false;
             this.dtCreaMod.Location = new System.Drawing.Point(780, 56);
             this.dtCreaMod.Name = "dtCreaMod";
             this.dtCreaMod.Size = new System.Drawing.Size(207, 20);
@@ -272,7 +307,7 @@
             // btnGroupBox
             // 
             this.btnGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGroupBox.Location = new System.Drawing.Point(842, 234);
+            this.btnGroupBox.Location = new System.Drawing.Point(842, 255);
             this.btnGroupBox.Name = "btnGroupBox";
             this.btnGroupBox.Size = new System.Drawing.Size(132, 23);
             this.btnGroupBox.TabIndex = 16;
@@ -373,6 +408,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1075, 49);
             this.panel1.TabIndex = 45;
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
             // label22
             // 
@@ -418,7 +454,7 @@
             // btnRegistro
             // 
             this.btnRegistro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRegistro.Location = new System.Drawing.Point(842, 276);
+            this.btnRegistro.Location = new System.Drawing.Point(842, 313);
             this.btnRegistro.Name = "btnRegistro";
             this.btnRegistro.Size = new System.Drawing.Size(132, 23);
             this.btnRegistro.TabIndex = 46;
@@ -428,7 +464,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(842, 365);
+            this.btnModificar.Location = new System.Drawing.Point(842, 342);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(132, 23);
             this.btnModificar.TabIndex = 47;
@@ -436,45 +472,26 @@
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // dtLista
+            // analisisBindingSource
             // 
-            this.dtLista.AllowUserToAddRows = false;
-            this.dtLista.AllowUserToDeleteRows = false;
-            this.dtLista.AutoGenerateColumns = false;
-            this.dtLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtLista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codAnalisisDataGridViewTextBoxColumn,
-            this.graficaDataGridViewImageColumn,
-            this.imgImagenDataGridViewImageColumn,
-            this.codUsuDataGridViewTextBoxColumn,
-            this.fechAnalisisDataGridViewTextBoxColumn});
-            this.dtLista.DataSource = this.analisisBindingSource;
-            this.dtLista.Location = new System.Drawing.Point(842, 440);
-            this.dtLista.Name = "dtLista";
-            this.dtLista.ReadOnly = true;
-            this.dtLista.Size = new System.Drawing.Size(221, 190);
-            this.dtLista.TabIndex = 48;
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLimpiar.Location = new System.Drawing.Point(842, 322);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(132, 23);
-            this.btnLimpiar.TabIndex = 49;
-            this.btnLimpiar.Text = "LIMPIAR";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            this.analisisBindingSource.DataMember = "analisis";
+            this.analisisBindingSource.DataSource = this.ges_v01DataSet20;
             // 
             // ges_v01DataSet20
             // 
             this.ges_v01DataSet20.DataSetName = "ges_v01DataSet20";
             this.ges_v01DataSet20.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // analisisBindingSource
+            // btnLimpiar
             // 
-            this.analisisBindingSource.DataMember = "analisis";
-            this.analisisBindingSource.DataSource = this.ges_v01DataSet20;
+            this.btnLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLimpiar.Location = new System.Drawing.Point(842, 400);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(132, 23);
+            this.btnLimpiar.TabIndex = 49;
+            this.btnLimpiar.Text = "LIMPIAR";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // analisisTableAdapter
             // 
@@ -484,52 +501,141 @@
             // 
             this.lbListado.AutoSize = true;
             this.lbListado.Font = new System.Drawing.Font("Microsoft YaHei Light", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbListado.Location = new System.Drawing.Point(842, 407);
+            this.lbListado.Location = new System.Drawing.Point(842, 445);
             this.lbListado.Name = "lbListado";
             this.lbListado.Size = new System.Drawing.Size(125, 17);
             this.lbListado.TabIndex = 29;
             this.lbListado.Text = "Listado de Informes :";
             // 
+            // btnClipboard
+            // 
+            this.btnClipboard.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClipboard.Location = new System.Drawing.Point(842, 284);
+            this.btnClipboard.Name = "btnClipboard";
+            this.btnClipboard.Size = new System.Drawing.Size(132, 23);
+            this.btnClipboard.TabIndex = 50;
+            this.btnClipboard.Text = "COPIAR";
+            this.btnClipboard.UseVisualStyleBackColor = true;
+            this.btnClipboard.Click += new System.EventHandler(this.btnClipboard_Click);
+            // 
+            // btnBorrar
+            // 
+            this.btnBorrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBorrar.Location = new System.Drawing.Point(842, 371);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(132, 23);
+            this.btnBorrar.TabIndex = 51;
+            this.btnBorrar.Text = "BORRAR";
+            this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
+            // 
+            // analisisBindingSource1
+            // 
+            this.analisisBindingSource1.DataMember = "analisis";
+            this.analisisBindingSource1.DataSource = this.ges_v01DataSet20;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codAnalisisDataGridViewTextBoxColumn,
+            this.graficaDataGridViewImageColumn,
+            this.imgImagenDataGridViewImageColumn,
+            this.codUsuDataGridViewTextBoxColumn,
+            this.fechAnalisisDataGridViewTextBoxColumn,
+            this.descripcionDataGridViewTextBoxColumn,
+            this.observacionDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.analisisBindingSource2;
+            this.dataGridView1.Location = new System.Drawing.Point(849, 478);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(218, 152);
+            this.dataGridView1.TabIndex = 52;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
             // codAnalisisDataGridViewTextBoxColumn
             // 
-            this.codAnalisisDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.codAnalisisDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
             this.codAnalisisDataGridViewTextBoxColumn.DataPropertyName = "codAnalisis";
             this.codAnalisisDataGridViewTextBoxColumn.HeaderText = "N°";
             this.codAnalisisDataGridViewTextBoxColumn.Name = "codAnalisisDataGridViewTextBoxColumn";
             this.codAnalisisDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codAnalisisDataGridViewTextBoxColumn.Width = 44;
+            this.codAnalisisDataGridViewTextBoxColumn.Width = 5;
             // 
             // graficaDataGridViewImageColumn
             // 
+            this.graficaDataGridViewImageColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.graficaDataGridViewImageColumn.DataPropertyName = "grafica";
             this.graficaDataGridViewImageColumn.HeaderText = "Grafico Estadistico";
             this.graficaDataGridViewImageColumn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.graficaDataGridViewImageColumn.Name = "graficaDataGridViewImageColumn";
             this.graficaDataGridViewImageColumn.ReadOnly = true;
+            this.graficaDataGridViewImageColumn.Width = 91;
             // 
             // imgImagenDataGridViewImageColumn
             // 
+            this.imgImagenDataGridViewImageColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.imgImagenDataGridViewImageColumn.DataPropertyName = "imgImagen";
-            this.imgImagenDataGridViewImageColumn.HeaderText = "Imagen ";
+            this.imgImagenDataGridViewImageColumn.HeaderText = "Imagen";
             this.imgImagenDataGridViewImageColumn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.imgImagenDataGridViewImageColumn.Name = "imgImagenDataGridViewImageColumn";
             this.imgImagenDataGridViewImageColumn.ReadOnly = true;
+            this.imgImagenDataGridViewImageColumn.Width = 48;
             // 
             // codUsuDataGridViewTextBoxColumn
             // 
             this.codUsuDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.codUsuDataGridViewTextBoxColumn.DataPropertyName = "codUsu";
-            this.codUsuDataGridViewTextBoxColumn.HeaderText = "Usuario";
+            this.codUsuDataGridViewTextBoxColumn.HeaderText = "Cod.";
             this.codUsuDataGridViewTextBoxColumn.Name = "codUsuDataGridViewTextBoxColumn";
             this.codUsuDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codUsuDataGridViewTextBoxColumn.Width = 68;
+            this.codUsuDataGridViewTextBoxColumn.Width = 54;
             // 
             // fechAnalisisDataGridViewTextBoxColumn
             // 
+            this.fechAnalisisDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.fechAnalisisDataGridViewTextBoxColumn.DataPropertyName = "fechAnalisis";
-            this.fechAnalisisDataGridViewTextBoxColumn.HeaderText = "fecha";
+            this.fechAnalisisDataGridViewTextBoxColumn.HeaderText = "Fecha Análisis";
             this.fechAnalisisDataGridViewTextBoxColumn.Name = "fechAnalisisDataGridViewTextBoxColumn";
             this.fechAnalisisDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fechAnalisisDataGridViewTextBoxColumn.Width = 92;
+            // 
+            // descripcionDataGridViewTextBoxColumn
+            // 
+            this.descripcionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "descripcion";
+            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripción";
+            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descripcionDataGridViewTextBoxColumn.Width = 88;
+            // 
+            // observacionDataGridViewTextBoxColumn
+            // 
+            this.observacionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.observacionDataGridViewTextBoxColumn.DataPropertyName = "observacion";
+            this.observacionDataGridViewTextBoxColumn.HeaderText = "Observsación";
+            this.observacionDataGridViewTextBoxColumn.Name = "observacionDataGridViewTextBoxColumn";
+            this.observacionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.observacionDataGridViewTextBoxColumn.Width = 97;
+            // 
+            // analisisBindingSource2
+            // 
+            this.analisisBindingSource2.DataMember = "analisis";
+            this.analisisBindingSource2.DataSource = this.ges_v01DataSet21;
+            // 
+            // ges_v01DataSet21
+            // 
+            this.ges_v01DataSet21.DataSetName = "ges_v01DataSet21";
+            this.ges_v01DataSet21.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // analisisTableAdapter1
+            // 
+            this.analisisTableAdapter1.ClearBeforeFill = true;
             // 
             // Report
             // 
@@ -538,9 +644,11 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1075, 676);
             this.ControlBox = false;
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnBorrar);
+            this.Controls.Add(this.btnClipboard);
             this.Controls.Add(this.lbListado);
             this.Controls.Add(this.btnLimpiar);
-            this.Controls.Add(this.dtLista);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnRegistro);
             this.Controls.Add(this.panel1);
@@ -553,6 +661,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Report";
             this.Load += new System.EventHandler(this.Report_Load);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Report_MouseMove);
             this.gbInforme.ResumeLayout(false);
             this.gbInforme.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -566,9 +675,12 @@
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtLista)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.analisisBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.analisisBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.analisisBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet21)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -597,7 +709,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DateTimePicker dtCreaMod;
-        private System.Windows.Forms.Label lbResp;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -609,17 +720,28 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnRegistro;
         private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.DataGridView dtLista;
         private System.Windows.Forms.Button btnLimpiar;
-        private System.Windows.Forms.Label lbCodAna;
         private ges_v01DataSet20 ges_v01DataSet20;
         private System.Windows.Forms.BindingSource analisisBindingSource;
         private ges_v01DataSet20TableAdapters.analisisTableAdapter analisisTableAdapter;
         private System.Windows.Forms.Label lbListado;
+        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label lbResp;
+        private System.Windows.Forms.Button btnClipboard;
+        private System.Windows.Forms.Button btnBorrar;
+        private System.Windows.Forms.BindingSource analisisBindingSource1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private ges_v01DataSet21 ges_v01DataSet21;
+        private System.Windows.Forms.BindingSource analisisBindingSource2;
+        private ges_v01DataSet21TableAdapters.analisisTableAdapter analisisTableAdapter1;
         private System.Windows.Forms.DataGridViewTextBoxColumn codAnalisisDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewImageColumn graficaDataGridViewImageColumn;
         private System.Windows.Forms.DataGridViewImageColumn imgImagenDataGridViewImageColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codUsuDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechAnalisisDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn observacionDataGridViewTextBoxColumn;
+        public System.Windows.Forms.Label lbCodUsu;
+        public System.Windows.Forms.Label lbCodAna;
     }
 }

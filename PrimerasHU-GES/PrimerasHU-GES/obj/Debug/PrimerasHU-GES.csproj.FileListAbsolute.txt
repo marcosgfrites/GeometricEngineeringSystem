@@ -248,3 +248,14 @@ C:\Users\mauro\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\bin\Debu
 C:\Users\mauro\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\bin\Debug\System.Reflection.Metadata.xml
 C:\Users\mauro\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\bin\Debug\System.ValueTuple.xml
 C:\Users\mauro\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU-GES.csproj.CopyComplete
+C:\Users\Roqué\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU_GES.Entidades.resources
+C:\Users\Roqué\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU_GES.Establecimientos.resources
+C:\Users\Roqué\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU_GES.Estados.resources
+C:\Users\Roqué\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU_GES.MaquinaMedicion.resources
+C:\Users\Roqué\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU_GES.Programas.resources
+C:\Users\Roqué\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU_GES.ReglasMedicion.resources
+C:\Users\Roqué\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU_GES.TiposCalculo.resources
+C:\Users\Roqué\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU_GES.TiposDeControl.resources
+C:\Users\Roqué\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU_GES.TiposGrafico.resources
+C:\Users\Roqué\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU_GES.TiposUsuario.resources
+C:\Users\Roqué\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU_GES.UnidadesMedicion.resources

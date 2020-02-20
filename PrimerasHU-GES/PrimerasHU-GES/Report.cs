@@ -9,7 +9,7 @@ using System;
 using System.IO;
 using System.Data;
 using System.Data.SqlClient;
-
+using System.Runtime.InteropServices;
 
 namespace PrimerasHU_GES
 {
@@ -39,13 +39,20 @@ namespace PrimerasHU_GES
         DataRow dr2;
         SqlDataReader sqldr;
         SqlDataReader sqldr2;
+
         SqlDataAdapter adaptador;
+        SqlDataAdapter adaptador1;
+        SqlDataAdapter adaptador2;
+       
 
 
 
 
-        private void Report_Load(object sender, EventArgs e)
+
+        public void Report_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'ges_v01DataSet21.analisis' Puede moverla o quitarla según sea necesario.
+            this.analisisTableAdapter1.Fill(this.ges_v01DataSet21.analisis);
             // TODO: esta línea de código carga datos en la tabla 'ges_v01DataSet20.analisis' Puede moverla o quitarla según sea necesario.
             this.analisisTableAdapter.Fill(this.ges_v01DataSet20.analisis);
             abrirConexion();
@@ -53,9 +60,10 @@ namespace PrimerasHU_GES
             CargarImagenes2(cmbImagen);
             cmbGrafico.SelectedIndex = 0;
             cmbImagen.SelectedIndex = 0;
-
+            btnModificar.Enabled = false;
 
         }
+        
         public string abrirConexion()
         {
             try
@@ -163,6 +171,10 @@ namespace PrimerasHU_GES
             {
                 MessageBox.Show("No se pudo consultar la Imagen:" + ex.ToString());
             }
+            finally
+            {
+                cn.Close();
+            }
 
         }
 
@@ -211,11 +223,13 @@ namespace PrimerasHU_GES
             using (Bitmap bm = GetControlImage(ctl))
             {
                 PrintImage(bm);
+                
+
             }
         }
 
         // Devuelve un bitmap a la imagen del control
-        private Bitmap GetControlImage(Control ctl)
+        public Bitmap GetControlImage(Control ctl)
         {
             Bitmap bm = new Bitmap(ctl.Width, ctl.Height);
             ctl.DrawToBitmap(bm, new Rectangle(0, 0, ctl.Width, ctl.Height));
@@ -250,18 +264,32 @@ namespace PrimerasHU_GES
 
         // envia la imagen a un PrintPreviewDialog.
        
-        private Image ImageToPrint;
-        private void PrintImage(Image image)
+        public Image ImageToPrint;
+       
+
+        public void PrintImage(Image image)
         {
             //guarda una referencia de la imagen a imprimir
-            ImageToPrint = image;
+           ImageToPrint = image;
+            //Imagen al portapapeles
+           Clipboard.SetImage(image);
 
             // Muestra el dialogo
             ppdForm.ShowDialog();
         }
+        public void btnClipboard_Click(object sender, EventArgs e)
+        {
+
+            //Obtiene un bitmap del control
+            Bitmap cop = GetControlImage(gbInforme);
+            //Imagen al portapapeles
+            Clipboard.SetImage(cop);
+            MessageBox.Show( lbResp.Text +" , tu analisis se copio al portapapeles");
+
+        }
 
         // Imprime la pagina
-        private void pdocForm_PrintPage_1(object sender, PrintPageEventArgs e)
+        public void pdocForm_PrintPage_1(object sender, PrintPageEventArgs e)
         {
             // Centra la imagen
             int cx = e.MarginBounds.X + e.MarginBounds.Width / 2;
@@ -378,7 +406,7 @@ namespace PrimerasHU_GES
 
             
            
-            adaptador.InsertCommand.Parameters["@codUsu"].Value = lbResp.Text;
+            adaptador.InsertCommand.Parameters["@codUsu"].Value = lbCodUsu.Text;
             adaptador.InsertCommand.Parameters["@fechAnalisis"].Value = dtCreaMod.Value;
             adaptador.InsertCommand.Parameters["@descripcion"].Value = txtDesc.Text;
             adaptador.InsertCommand.Parameters["@observacion"].Value = txtObser.Text;
@@ -386,10 +414,13 @@ namespace PrimerasHU_GES
 
                 try
                 {
-                   
+                    cn.Open();
                     adaptador.InsertCommand.ExecuteNonQuery();
                     MessageBox.Show("Se registró el informe de manera correcta!");
-                   
+
+                    Limpiar();
+                    
+                 
                 }
                 catch (Exception ex)
                 {
@@ -404,19 +435,19 @@ namespace PrimerasHU_GES
 
      
         private void Limpiar()
-    {
-        txtDesc.Text = "";
-        
-        txtObser.Text = "";
-
-
-     
-    }
-    private void listBcodCalc_SelectedIndexChanged(object sender, EventArgs e)
         {
+            txtDesc.Text = "";     
+            txtObser.Text = "";
+            this.analisisTableAdapter1.Fill(this.ges_v01DataSet21.analisis);
+            btnRegistro.Enabled = true;
+            btnModificar.Enabled = false;
+            cmbGrafico.SelectedIndex = 0;
+            cmbImagen.SelectedIndex = 0;
+            verImagen2(pbImagen, cmbImagen.SelectedItem.ToString());
+            verImagen(pbGrafico, cmbGrafico.SelectedItem.ToString());
 
         }
-
+   
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             Limpiar();
@@ -426,11 +457,162 @@ namespace PrimerasHU_GES
         private void btnModificar_Click(object sender, EventArgs e)
         {
 
+            SqlCommand modifica = new SqlCommand("UPDATE analisis SET grafica=@grafica,imgImagen=@imgImagen,codUsu=@codUsu,fechAnalisis=@fechAnalisis,descripcion=@descripcion,observacion=@observacion WHERE codAnalisis=@codAnalisis",cn);
+            adaptador1 = new SqlDataAdapter();
+            adaptador1.UpdateCommand = modifica;
+
+            adaptador1.UpdateCommand.Parameters.Add(new SqlParameter("@codAnalisis", SqlDbType.Int));
+            adaptador1.UpdateCommand.Parameters.Add(new SqlParameter("@grafica", SqlDbType.Image));
+            adaptador1.UpdateCommand.Parameters.Add(new SqlParameter("@imgImagen", SqlDbType.Image));
+            adaptador1.UpdateCommand.Parameters.Add(new SqlParameter("@codUsu", SqlDbType.Int));
+            adaptador1.UpdateCommand.Parameters.Add(new SqlParameter("@fechAnalisis", SqlDbType.DateTime));
+            adaptador1.UpdateCommand.Parameters.Add(new SqlParameter("@descripcion", SqlDbType.VarChar));
+            adaptador1.UpdateCommand.Parameters.Add(new SqlParameter("@observacion", SqlDbType.VarChar));
 
 
+            adaptador1.UpdateCommand.Parameters["@codAnalisis"].Value = lbCodAna.Text;
+            // Stream usado como buffer
+            System.IO.MemoryStream ms1 = new System.IO.MemoryStream();
+            // Se guarda la imagen en el buffer
+            pbGrafico.Image.Save(ms1, System.Drawing.Imaging.ImageFormat.Jpeg);
+            // Se extraen los bytes del buffer para asignarlos como valor para el 
+            // parámetro.
+            adaptador1.UpdateCommand.Parameters["@grafica"].Value = ms1.GetBuffer();
+
+
+            // Asignando el valor de la imagen
+
+            // Stream usado como buffer
+            System.IO.MemoryStream ms = new System.IO.MemoryStream();
+            // Se guarda la imagen en el buffer
+            pbImagen.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+            // Se extraen los bytes del buffer para asignarlos como valor para el 
+            // parámetro.
+            adaptador1.UpdateCommand.Parameters["@imgImagen"].Value = ms.GetBuffer();
+            //label del codigo de usuario que esta oculta
+            adaptador1.UpdateCommand.Parameters["@codUsu"].Value = lbCodUsu.Text;
+            adaptador1.UpdateCommand.Parameters["@fechAnalisis"].Value = dtCreaMod.Value;
+            adaptador1.UpdateCommand.Parameters["@descripcion"].Value = txtDesc.Text;
+            adaptador1.UpdateCommand.Parameters["@observacion"].Value = txtObser.Text;
+           
+            if ((string.IsNullOrEmpty(txtObser.Text) || string.IsNullOrEmpty(txtDesc.Text)))
+            {
+                MessageBox.Show("Por seguridad de los datos, primero debe seleccionar del listado el Analisis a modificar.", "Atención!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                DialogResult modificar = MessageBox.Show("¿Está seguro que desea modificar el elemento", "Atención!", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                if (modificar == DialogResult.OK)
+                {
+                    try
+                    {
+                        cn.Open();
+                        adaptador1.UpdateCommand.ExecuteNonQuery();
+                        MessageBox.Show("Se ha modificado correctamente el Análisis.", "Operación Exitosa!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        Limpiar();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("ERROR:" + ex.ToString());
+                    }
+                    finally
+                    {
+                        cn.Close();
+                       
+                    }
+                }
+                else
+                {
+                    return;
+                }
+            }
 
         }
 
-      
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int posi = dataGridView1.CurrentRow.Index;
+
+            byte[] img1 = (byte[])dataGridView1[1, posi].Value;
+            MemoryStream ms1 = new MemoryStream(img1, 0, img1.Length);
+            ms1.Write(img1, 0, img1.Length);
+            Image pbg = Image.FromStream(ms1, true);
+            pbGrafico.Image = pbg;
+
+            byte[] img2 = (byte[])dataGridView1[2, posi].Value;
+            MemoryStream ms = new MemoryStream(img2, 0, img2.Length);
+            ms.Write(img2, 0, img2.Length);
+            Image pbi = Image.FromStream(ms, true);
+            pbImagen.Image = pbi;
+
+            lbCodAna.Text = dataGridView1[0, posi].Value.ToString();
+            txtDesc.Text = dataGridView1[5, posi].Value.ToString();
+            txtObser.Text = dataGridView1[6, posi].Value.ToString();
+
+            btnRegistro.Enabled = false;
+            btnModificar.Enabled = true;
+            btnLimpiar.Enabled = true;
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            SqlCommand baja = new SqlCommand("DELETE FROM analisis WHERE codAnalisis=@codAnalisis", cn);
+            adaptador2 = new SqlDataAdapter();
+            adaptador2.DeleteCommand = baja;
+            adaptador2.DeleteCommand.Parameters.Add(new SqlParameter("@codAnalisis", SqlDbType.Int));
+
+
+            adaptador2.DeleteCommand.Parameters["@codAnalisis"].Value = int.Parse(lbCodAna.Text);
+            try
+            {
+                if (lbCodAna.Text == null)
+                {
+                    MessageBox.Show("No ha seleccionado ningun registro para borrar. Debe seleccionar una del listado.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    cn.Open();
+                    int cantidad = adaptador2.DeleteCommand.ExecuteNonQuery();
+                    if (cantidad == 0)
+                    {
+                        MessageBox.Show("El elemento seleccionado no existe.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("El elemento elegido ha sido borrado con éxito!");
+                    }
+                    Limpiar();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                cn.Close();
+            }
+
+        }
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void Report_MouseMove(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
     }
+
 }

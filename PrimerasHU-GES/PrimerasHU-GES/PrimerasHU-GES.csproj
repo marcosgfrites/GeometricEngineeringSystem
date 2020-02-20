@@ -275,6 +275,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ges_v01DataSet20.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ges_v01DataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ges_v01DataSet21.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ges_v01DataSet3.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -920,6 +925,17 @@
     </None>
     <None Include="ges_v01DataSet20.xss">
       <DependentUpon>ges_v01DataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet21.xsc">
+      <DependentUpon>ges_v01DataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="ges_v01DataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ges_v01DataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ges_v01DataSet21.xss">
+      <DependentUpon>ges_v01DataSet21.xsd</DependentUpon>
     </None>
     <None Include="ges_v01DataSet3.xsc">
       <DependentUpon>ges_v01DataSet3.xsd</DependentUpon>

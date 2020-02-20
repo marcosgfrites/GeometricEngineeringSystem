@@ -87,6 +87,7 @@ namespace PrimerasHU_GES
                                 MessageBox.Show("Usuario deshabilitado! Póngase en contacto con el administrador.");
                             }
                         }
+                        f.lb_CodUsu.Text = txt_Usuario.Text;
                         f.Show();
 
                         //registro Fecha y Hora de la Última Sesión del Usuario

@@ -57,11 +57,6 @@
             this.btn_DocumentoDmo = new System.Windows.Forms.Button();
             this.panelAnalisis = new System.Windows.Forms.Panel();
             this.btn_Informe = new System.Windows.Forms.Button();
-            this.btn_Graficos = new System.Windows.Forms.Button();
-            this.btn_Calculos = new System.Windows.Forms.Button();
-            this.btn_Indicadores = new System.Windows.Forms.Button();
-            this.btn_Muestras = new System.Windows.Forms.Button();
-            this.btn_Soporte = new System.Windows.Forms.Button();
             this.p_Administrador = new System.Windows.Forms.Panel();
             this.btn_Usuarios = new System.Windows.Forms.Button();
             this.btn_TipoUsuario = new System.Windows.Forms.Button();
@@ -80,12 +75,18 @@
             this.btn_Aprobadores = new System.Windows.Forms.Button();
             this.btn_Programas = new System.Windows.Forms.Button();
             this.btn_Maquinas = new System.Windows.Forms.Button();
+            this.btn_Graficos = new System.Windows.Forms.Button();
+            this.btn_Calculos = new System.Windows.Forms.Button();
+            this.btn_Indicadores = new System.Windows.Forms.Button();
+            this.btn_Muestras = new System.Windows.Forms.Button();
+            this.btn_Soporte = new System.Windows.Forms.Button();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.pb_menu = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel_menu1 = new System.Windows.Forms.Panel();
             this.sidebar1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lb_CodUsu = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelCplan.SuspendLayout();
@@ -107,6 +108,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.lb_CodUsu);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.lbl_TipoUsu);
@@ -297,7 +299,7 @@
             this.panelCplan.Controls.Add(this.btn_ControlPlan);
             this.panelCplan.Controls.Add(this.btn_Secciones);
             this.panelCplan.Controls.Add(this.btn_TipoVehiculo);
-            this.panelCplan.Location = new System.Drawing.Point(171, 104);
+            this.panelCplan.Location = new System.Drawing.Point(197, 56);
             this.panelCplan.Margin = new System.Windows.Forms.Padding(0);
             this.panelCplan.Name = "panelCplan";
             this.panelCplan.Size = new System.Drawing.Size(211, 317);
@@ -486,7 +488,9 @@
             // 
             this.panelAnalisis.BackColor = System.Drawing.Color.Transparent;
             this.panelAnalisis.Controls.Add(this.btn_Informe);
+            this.panelAnalisis.Controls.Add(this.p_Administrador);
             this.panelAnalisis.Controls.Add(this.btn_Graficos);
+            this.panelAnalisis.Controls.Add(this.panelCplan);
             this.panelAnalisis.Controls.Add(this.btn_Calculos);
             this.panelAnalisis.Controls.Add(this.btn_Indicadores);
             this.panelAnalisis.Controls.Add(this.btn_Muestras);
@@ -510,91 +514,7 @@
             this.btn_Informe.TabIndex = 24;
             this.btn_Informe.Text = "Informes de Análisis";
             this.btn_Informe.UseVisualStyleBackColor = false;
-            // 
-            // btn_Graficos
-            // 
-            this.btn_Graficos.BackColor = System.Drawing.Color.Black;
-            this.btn_Graficos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Graficos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_Graficos.FlatAppearance.BorderSize = 0;
-            this.btn_Graficos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
-            this.btn_Graficos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Graficos.Location = new System.Drawing.Point(0, 135);
-            this.btn_Graficos.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_Graficos.Name = "btn_Graficos";
-            this.btn_Graficos.Size = new System.Drawing.Size(197, 45);
-            this.btn_Graficos.TabIndex = 23;
-            this.btn_Graficos.Text = "Gráficos";
-            this.btn_Graficos.UseVisualStyleBackColor = false;
-            this.btn_Graficos.Click += new System.EventHandler(this.Btn_Graficos_Click);
-            // 
-            // btn_Calculos
-            // 
-            this.btn_Calculos.BackColor = System.Drawing.Color.Black;
-            this.btn_Calculos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Calculos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_Calculos.FlatAppearance.BorderSize = 0;
-            this.btn_Calculos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
-            this.btn_Calculos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Calculos.Location = new System.Drawing.Point(0, 90);
-            this.btn_Calculos.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_Calculos.Name = "btn_Calculos";
-            this.btn_Calculos.Size = new System.Drawing.Size(197, 45);
-            this.btn_Calculos.TabIndex = 22;
-            this.btn_Calculos.Text = "Cálculos";
-            this.btn_Calculos.UseVisualStyleBackColor = false;
-            this.btn_Calculos.Click += new System.EventHandler(this.btn_Calculos_Click);
-            // 
-            // btn_Indicadores
-            // 
-            this.btn_Indicadores.BackColor = System.Drawing.Color.Black;
-            this.btn_Indicadores.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Indicadores.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_Indicadores.FlatAppearance.BorderSize = 0;
-            this.btn_Indicadores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
-            this.btn_Indicadores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Indicadores.Location = new System.Drawing.Point(0, 45);
-            this.btn_Indicadores.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_Indicadores.Name = "btn_Indicadores";
-            this.btn_Indicadores.Size = new System.Drawing.Size(197, 45);
-            this.btn_Indicadores.TabIndex = 21;
-            this.btn_Indicadores.Text = "Indicadores de Calidad";
-            this.btn_Indicadores.UseVisualStyleBackColor = false;
-            this.btn_Indicadores.Click += new System.EventHandler(this.btn_Indicadores_Click);
-            // 
-            // btn_Muestras
-            // 
-            this.btn_Muestras.BackColor = System.Drawing.Color.Black;
-            this.btn_Muestras.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Muestras.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_Muestras.FlatAppearance.BorderSize = 0;
-            this.btn_Muestras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
-            this.btn_Muestras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Muestras.Location = new System.Drawing.Point(0, 0);
-            this.btn_Muestras.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_Muestras.Name = "btn_Muestras";
-            this.btn_Muestras.Size = new System.Drawing.Size(197, 45);
-            this.btn_Muestras.TabIndex = 20;
-            this.btn_Muestras.Text = "Muestras";
-            this.btn_Muestras.UseVisualStyleBackColor = false;
-            this.btn_Muestras.Click += new System.EventHandler(this.Btn_Muestras_Click);
-            // 
-            // btn_Soporte
-            // 
-            this.btn_Soporte.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Soporte.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Soporte.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-            this.btn_Soporte.FlatAppearance.BorderSize = 0;
-            this.btn_Soporte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.btn_Soporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Soporte.Location = new System.Drawing.Point(5, 139);
-            this.btn_Soporte.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_Soporte.Name = "btn_Soporte";
-            this.btn_Soporte.Size = new System.Drawing.Size(155, 48);
-            this.btn_Soporte.TabIndex = 11;
-            this.btn_Soporte.Text = "GESTIONES DE SOPORTE";
-            this.btn_Soporte.UseVisualStyleBackColor = false;
-            this.btn_Soporte.Click += new System.EventHandler(this.btn_Soporte_Click);
+            this.btn_Informe.Click += new System.EventHandler(this.btn_Informe_Click);
             // 
             // p_Administrador
             // 
@@ -616,7 +536,7 @@
             this.p_Administrador.Controls.Add(this.btn_Aprobadores);
             this.p_Administrador.Controls.Add(this.btn_Programas);
             this.p_Administrador.Controls.Add(this.btn_Maquinas);
-            this.p_Administrador.Location = new System.Drawing.Point(171, 104);
+            this.p_Administrador.Location = new System.Drawing.Point(0, 0);
             this.p_Administrador.Margin = new System.Windows.Forms.Padding(0);
             this.p_Administrador.Name = "p_Administrador";
             this.p_Administrador.Size = new System.Drawing.Size(397, 409);
@@ -910,6 +830,91 @@
             this.btn_Maquinas.UseVisualStyleBackColor = false;
             this.btn_Maquinas.Click += new System.EventHandler(this.btn_Maquinas_Click);
             // 
+            // btn_Graficos
+            // 
+            this.btn_Graficos.BackColor = System.Drawing.Color.Black;
+            this.btn_Graficos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Graficos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
+            this.btn_Graficos.FlatAppearance.BorderSize = 0;
+            this.btn_Graficos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btn_Graficos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Graficos.Location = new System.Drawing.Point(0, 135);
+            this.btn_Graficos.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Graficos.Name = "btn_Graficos";
+            this.btn_Graficos.Size = new System.Drawing.Size(197, 45);
+            this.btn_Graficos.TabIndex = 23;
+            this.btn_Graficos.Text = "Gráficos";
+            this.btn_Graficos.UseVisualStyleBackColor = false;
+            this.btn_Graficos.Click += new System.EventHandler(this.Btn_Graficos_Click);
+            // 
+            // btn_Calculos
+            // 
+            this.btn_Calculos.BackColor = System.Drawing.Color.Black;
+            this.btn_Calculos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Calculos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
+            this.btn_Calculos.FlatAppearance.BorderSize = 0;
+            this.btn_Calculos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btn_Calculos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Calculos.Location = new System.Drawing.Point(0, 90);
+            this.btn_Calculos.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Calculos.Name = "btn_Calculos";
+            this.btn_Calculos.Size = new System.Drawing.Size(197, 45);
+            this.btn_Calculos.TabIndex = 22;
+            this.btn_Calculos.Text = "Cálculos";
+            this.btn_Calculos.UseVisualStyleBackColor = false;
+            this.btn_Calculos.Click += new System.EventHandler(this.btn_Calculos_Click);
+            // 
+            // btn_Indicadores
+            // 
+            this.btn_Indicadores.BackColor = System.Drawing.Color.Black;
+            this.btn_Indicadores.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Indicadores.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
+            this.btn_Indicadores.FlatAppearance.BorderSize = 0;
+            this.btn_Indicadores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btn_Indicadores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Indicadores.Location = new System.Drawing.Point(0, 45);
+            this.btn_Indicadores.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Indicadores.Name = "btn_Indicadores";
+            this.btn_Indicadores.Size = new System.Drawing.Size(197, 45);
+            this.btn_Indicadores.TabIndex = 21;
+            this.btn_Indicadores.Text = "Indicadores de Calidad";
+            this.btn_Indicadores.UseVisualStyleBackColor = false;
+            this.btn_Indicadores.Click += new System.EventHandler(this.btn_Indicadores_Click);
+            // 
+            // btn_Muestras
+            // 
+            this.btn_Muestras.BackColor = System.Drawing.Color.Black;
+            this.btn_Muestras.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Muestras.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
+            this.btn_Muestras.FlatAppearance.BorderSize = 0;
+            this.btn_Muestras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btn_Muestras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Muestras.Location = new System.Drawing.Point(0, 0);
+            this.btn_Muestras.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Muestras.Name = "btn_Muestras";
+            this.btn_Muestras.Size = new System.Drawing.Size(197, 45);
+            this.btn_Muestras.TabIndex = 20;
+            this.btn_Muestras.Text = "Muestras";
+            this.btn_Muestras.UseVisualStyleBackColor = false;
+            this.btn_Muestras.Click += new System.EventHandler(this.Btn_Muestras_Click);
+            // 
+            // btn_Soporte
+            // 
+            this.btn_Soporte.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Soporte.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Soporte.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.btn_Soporte.FlatAppearance.BorderSize = 0;
+            this.btn_Soporte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btn_Soporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Soporte.Location = new System.Drawing.Point(5, 139);
+            this.btn_Soporte.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Soporte.Name = "btn_Soporte";
+            this.btn_Soporte.Size = new System.Drawing.Size(155, 48);
+            this.btn_Soporte.TabIndex = 11;
+            this.btn_Soporte.Text = "GESTIONES DE SOPORTE";
+            this.btn_Soporte.UseVisualStyleBackColor = false;
+            this.btn_Soporte.Click += new System.EventHandler(this.btn_Soporte_Click);
+            // 
             // fileSystemWatcher1
             // 
             this.fileSystemWatcher1.EnableRaisingEvents = true;
@@ -989,6 +994,18 @@
             this.panel2.Size = new System.Drawing.Size(165, 41);
             this.panel2.TabIndex = 0;
             // 
+            // lb_CodUsu
+            // 
+            this.lb_CodUsu.AutoSize = true;
+            this.lb_CodUsu.BackColor = System.Drawing.Color.Transparent;
+            this.lb_CodUsu.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_CodUsu.Location = new System.Drawing.Point(556, 11);
+            this.lb_CodUsu.Name = "lb_CodUsu";
+            this.lb_CodUsu.Size = new System.Drawing.Size(110, 22);
+            this.lb_CodUsu.TabIndex = 10;
+            this.lb_CodUsu.Text = "CodUsuario";
+            this.lb_CodUsu.Visible = false;
+            // 
             // PrimeraPantalla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -999,8 +1016,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(809, 517);
             this.Controls.Add(this.panel_menu1);
-            this.Controls.Add(this.p_Administrador);
-            this.Controls.Add(this.panelCplan);
             this.Controls.Add(this.panelAnalisis);
             this.Controls.Add(this.panelDmo);
             this.Controls.Add(this.panel1);
@@ -1059,7 +1074,6 @@
         private System.Windows.Forms.Button btn_Calculos;
         private System.Windows.Forms.Button btn_Indicadores;
         private System.Windows.Forms.Button btn_Muestras;
-        private System.Windows.Forms.Button btn_Informe;
         private System.Windows.Forms.Button btn_Graficos;
         private System.Windows.Forms.Button btn_Soporte;
         private System.Windows.Forms.Panel p_Administrador;
@@ -1089,5 +1103,7 @@
         private System.Windows.Forms.PictureBox pb_menu;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button btn_Informe;
+        public System.Windows.Forms.Label lb_CodUsu;
     }
 }
