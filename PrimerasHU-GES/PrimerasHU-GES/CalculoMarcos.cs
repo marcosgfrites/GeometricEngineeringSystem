@@ -60,6 +60,11 @@ namespace PrimerasHU_GES
             dgv_muestras.ClearSelection(); // >> esta linea deselecciona una fila del dgv_muestras, obliga al usuario a seleccionar si o si.
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
         private void conocerMuestras()
         {
             if (dgv_muestras.Rows.Count != 0)
