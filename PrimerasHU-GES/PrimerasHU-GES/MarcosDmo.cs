@@ -1940,5 +1940,18 @@ namespace PrimerasHU_GES
             VisorDmo f = new VisorDmo();
             f.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+
+        }
+
+        private void btn_Salir_Click_1(object sender, EventArgs e)
+        {
+
+            this.Dispose();
+
+        }
     }
 }

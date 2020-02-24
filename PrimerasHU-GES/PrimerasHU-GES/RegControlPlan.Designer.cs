@@ -38,10 +38,6 @@ namespace PrimerasHU_GES
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -52,6 +48,11 @@ namespace PrimerasHU_GES
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegControlPlan));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLimpiar = new System.Windows.Forms.Button();
@@ -61,6 +62,20 @@ namespace PrimerasHU_GES
             this.cabeceraDtg = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.actualDTGV = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.idPtoMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codEntidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.denominacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codTipoControlDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clasiTipoPtoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coordXPtoMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coordYPtoMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coordZPtoMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nominalPtoMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codUnidMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tolinferior = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tolSuperior = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.detallesControlPlanBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.ges_v01DataSet17 = new PrimerasHU_GES.ges_v01DataSet17();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -75,7 +90,6 @@ namespace PrimerasHU_GES
             this.panel2 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btn_Salir = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.registrarBtn = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -97,25 +111,15 @@ namespace PrimerasHU_GES
             this.ges_v01DataSet = new PrimerasHU_GES.ges_v01DataSet();
             this.gesv01DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.detallesControlPlanTableAdapter = new PrimerasHU_GES.ges_v01DataSet12TableAdapters.detallesControlPlanTableAdapter();
-            this.tolinferior = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tolSuperior = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idPtoMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codEntidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.denominacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codTipoControlDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clasiTipoPtoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coordXPtoMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coordYPtoMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coordZPtoMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nominalPtoMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codUnidMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.detallesControlPlanBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.ges_v01DataSet17 = new PrimerasHU_GES.ges_v01DataSet17();
             this.detallesControlPlanTableAdapter1 = new PrimerasHU_GES.ges_v01DataSet17TableAdapters.detallesControlPlanTableAdapter();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Salir = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cabeceraDtg)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.actualDTGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detallesControlPlanBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet17)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -125,8 +129,6 @@ namespace PrimerasHU_GES
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gesv01DataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.detallesControlPlanBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet17)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -396,6 +398,136 @@ namespace PrimerasHU_GES
             this.actualDTGV.Size = new System.Drawing.Size(603, 232);
             this.actualDTGV.TabIndex = 0;
             // 
+            // idPtoMedDataGridViewTextBoxColumn
+            // 
+            this.idPtoMedDataGridViewTextBoxColumn.DataPropertyName = "idPtoMed";
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            this.idPtoMedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            this.idPtoMedDataGridViewTextBoxColumn.HeaderText = "Cod. de punto";
+            this.idPtoMedDataGridViewTextBoxColumn.Name = "idPtoMedDataGridViewTextBoxColumn";
+            this.idPtoMedDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idPtoMedDataGridViewTextBoxColumn.Width = 129;
+            // 
+            // codEntidadDataGridViewTextBoxColumn
+            // 
+            this.codEntidadDataGridViewTextBoxColumn.DataPropertyName = "codEntidad";
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            this.codEntidadDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            this.codEntidadDataGridViewTextBoxColumn.HeaderText = "Entidad";
+            this.codEntidadDataGridViewTextBoxColumn.Name = "codEntidadDataGridViewTextBoxColumn";
+            this.codEntidadDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codEntidadDataGridViewTextBoxColumn.Width = 92;
+            // 
+            // denominacionDataGridViewTextBoxColumn
+            // 
+            this.denominacionDataGridViewTextBoxColumn.DataPropertyName = "denominacion";
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            this.denominacionDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
+            this.denominacionDataGridViewTextBoxColumn.HeaderText = "Denominación";
+            this.denominacionDataGridViewTextBoxColumn.Name = "denominacionDataGridViewTextBoxColumn";
+            this.denominacionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.denominacionDataGridViewTextBoxColumn.Width = 144;
+            // 
+            // codTipoControlDataGridViewTextBoxColumn
+            // 
+            this.codTipoControlDataGridViewTextBoxColumn.DataPropertyName = "codTipoControl";
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            this.codTipoControlDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
+            this.codTipoControlDataGridViewTextBoxColumn.HeaderText = "Tipologia";
+            this.codTipoControlDataGridViewTextBoxColumn.Name = "codTipoControlDataGridViewTextBoxColumn";
+            this.codTipoControlDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codTipoControlDataGridViewTextBoxColumn.Width = 104;
+            // 
+            // clasiTipoPtoDataGridViewTextBoxColumn
+            // 
+            this.clasiTipoPtoDataGridViewTextBoxColumn.DataPropertyName = "clasiTipoPto";
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            this.clasiTipoPtoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
+            this.clasiTipoPtoDataGridViewTextBoxColumn.HeaderText = "Tipo de Punto";
+            this.clasiTipoPtoDataGridViewTextBoxColumn.Name = "clasiTipoPtoDataGridViewTextBoxColumn";
+            this.clasiTipoPtoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.clasiTipoPtoDataGridViewTextBoxColumn.Width = 128;
+            // 
+            // coordXPtoMedDataGridViewTextBoxColumn
+            // 
+            this.coordXPtoMedDataGridViewTextBoxColumn.DataPropertyName = "coordXPtoMed";
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            this.coordXPtoMedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
+            this.coordXPtoMedDataGridViewTextBoxColumn.HeaderText = "X nominal";
+            this.coordXPtoMedDataGridViewTextBoxColumn.Name = "coordXPtoMedDataGridViewTextBoxColumn";
+            this.coordXPtoMedDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // coordYPtoMedDataGridViewTextBoxColumn
+            // 
+            this.coordYPtoMedDataGridViewTextBoxColumn.DataPropertyName = "coordYPtoMed";
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            this.coordYPtoMedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle11;
+            this.coordYPtoMedDataGridViewTextBoxColumn.HeaderText = "Y nominal";
+            this.coordYPtoMedDataGridViewTextBoxColumn.Name = "coordYPtoMedDataGridViewTextBoxColumn";
+            this.coordYPtoMedDataGridViewTextBoxColumn.ReadOnly = true;
+            this.coordYPtoMedDataGridViewTextBoxColumn.Width = 99;
+            // 
+            // coordZPtoMedDataGridViewTextBoxColumn
+            // 
+            this.coordZPtoMedDataGridViewTextBoxColumn.DataPropertyName = "coordZPtoMed";
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            this.coordZPtoMedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle12;
+            this.coordZPtoMedDataGridViewTextBoxColumn.HeaderText = "Z nominal";
+            this.coordZPtoMedDataGridViewTextBoxColumn.Name = "coordZPtoMedDataGridViewTextBoxColumn";
+            this.coordZPtoMedDataGridViewTextBoxColumn.ReadOnly = true;
+            this.coordZPtoMedDataGridViewTextBoxColumn.Width = 98;
+            // 
+            // nominalPtoMedDataGridViewTextBoxColumn
+            // 
+            this.nominalPtoMedDataGridViewTextBoxColumn.DataPropertyName = "nominalPtoMed";
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            this.nominalPtoMedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle13;
+            this.nominalPtoMedDataGridViewTextBoxColumn.HeaderText = "Nominal";
+            this.nominalPtoMedDataGridViewTextBoxColumn.Name = "nominalPtoMedDataGridViewTextBoxColumn";
+            this.nominalPtoMedDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nominalPtoMedDataGridViewTextBoxColumn.Width = 96;
+            // 
+            // codUnidMedDataGridViewTextBoxColumn
+            // 
+            this.codUnidMedDataGridViewTextBoxColumn.DataPropertyName = "codUnidMed";
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
+            this.codUnidMedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle14;
+            this.codUnidMedDataGridViewTextBoxColumn.HeaderText = "Unidad de Medición";
+            this.codUnidMedDataGridViewTextBoxColumn.Name = "codUnidMedDataGridViewTextBoxColumn";
+            this.codUnidMedDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codUnidMedDataGridViewTextBoxColumn.Width = 167;
+            // 
+            // tolinferior
+            // 
+            this.tolinferior.DataPropertyName = "tolinferior";
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            this.tolinferior.DefaultCellStyle = dataGridViewCellStyle15;
+            this.tolinferior.HeaderText = "tol. limite inferior";
+            this.tolinferior.Name = "tolinferior";
+            this.tolinferior.ReadOnly = true;
+            this.tolinferior.Width = 144;
+            // 
+            // tolSuperior
+            // 
+            this.tolSuperior.DataPropertyName = "tolSuperior";
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
+            this.tolSuperior.DefaultCellStyle = dataGridViewCellStyle16;
+            this.tolSuperior.HeaderText = "tol. limite superior";
+            this.tolSuperior.Name = "tolSuperior";
+            this.tolSuperior.ReadOnly = true;
+            this.tolSuperior.Width = 153;
+            // 
+            // detallesControlPlanBindingSource1
+            // 
+            this.detallesControlPlanBindingSource1.DataMember = "detallesControlPlan";
+            this.detallesControlPlanBindingSource1.DataSource = this.ges_v01DataSet17;
+            // 
+            // ges_v01DataSet17
+            // 
+            this.ges_v01DataSet17.DataSetName = "ges_v01DataSet17";
+            this.ges_v01DataSet17.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -570,9 +702,10 @@ namespace PrimerasHU_GES
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btn_Salir);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(this.btn_Salir);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -603,25 +736,6 @@ namespace PrimerasHU_GES
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(64, 49);
             this.panel4.TabIndex = 7;
-            // 
-            // btn_Salir
-            // 
-            this.btn_Salir.BackColor = System.Drawing.Color.Black;
-            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Salir.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btn_Salir.FlatAppearance.BorderSize = 0;
-            this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btn_Salir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_Salir.Location = new System.Drawing.Point(1278, 0);
-            this.btn_Salir.Name = "btn_Salir";
-            this.btn_Salir.Size = new System.Drawing.Size(64, 49);
-            this.btn_Salir.TabIndex = 6;
-            this.btn_Salir.Text = "Volver atrás";
-            this.btn_Salir.UseVisualStyleBackColor = false;
-            this.btn_Salir.Click += new System.EventHandler(this.Btn_Salir_Click);
             // 
             // label1
             // 
@@ -703,21 +817,23 @@ namespace PrimerasHU_GES
             this.nuevoDtgv.AllowUserToDeleteRows = false;
             this.nuevoDtgv.AllowUserToResizeColumns = false;
             this.nuevoDtgv.AllowUserToResizeRows = false;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.nuevoDtgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
             this.nuevoDtgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.nuevoDtgv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.nuevoDtgv.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.nuevoDtgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.nuevoDtgv.CausesValidation = false;
             this.nuevoDtgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle19.NullValue = null;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.nuevoDtgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.DeepSkyBlue;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle20.NullValue = null;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.nuevoDtgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.nuevoDtgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.nuevoDtgv.DoubleBuffered = true;
             this.nuevoDtgv.EnableHeadersVisualStyles = false;
@@ -728,10 +844,10 @@ namespace PrimerasHU_GES
             this.nuevoDtgv.ReadOnly = true;
             this.nuevoDtgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.nuevoDtgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
-            this.nuevoDtgv.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
+            this.nuevoDtgv.RowsDefaultCellStyle = dataGridViewCellStyle21;
             this.nuevoDtgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.nuevoDtgv.ShowCellErrors = false;
             this.nuevoDtgv.Size = new System.Drawing.Size(603, 204);
@@ -922,139 +1038,51 @@ namespace PrimerasHU_GES
             // 
             this.detallesControlPlanTableAdapter.ClearBeforeFill = true;
             // 
-            // tolinferior
-            // 
-            this.tolinferior.DataPropertyName = "tolinferior";
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
-            this.tolinferior.DefaultCellStyle = dataGridViewCellStyle15;
-            this.tolinferior.HeaderText = "tol. limite inferior";
-            this.tolinferior.Name = "tolinferior";
-            this.tolinferior.ReadOnly = true;
-            this.tolinferior.Width = 144;
-            // 
-            // tolSuperior
-            // 
-            this.tolSuperior.DataPropertyName = "tolSuperior";
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
-            this.tolSuperior.DefaultCellStyle = dataGridViewCellStyle16;
-            this.tolSuperior.HeaderText = "tol. limite superior";
-            this.tolSuperior.Name = "tolSuperior";
-            this.tolSuperior.ReadOnly = true;
-            this.tolSuperior.Width = 153;
-            // 
-            // idPtoMedDataGridViewTextBoxColumn
-            // 
-            this.idPtoMedDataGridViewTextBoxColumn.DataPropertyName = "idPtoMed";
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            this.idPtoMedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
-            this.idPtoMedDataGridViewTextBoxColumn.HeaderText = "Cod. de punto";
-            this.idPtoMedDataGridViewTextBoxColumn.Name = "idPtoMedDataGridViewTextBoxColumn";
-            this.idPtoMedDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idPtoMedDataGridViewTextBoxColumn.Width = 129;
-            // 
-            // codEntidadDataGridViewTextBoxColumn
-            // 
-            this.codEntidadDataGridViewTextBoxColumn.DataPropertyName = "codEntidad";
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            this.codEntidadDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
-            this.codEntidadDataGridViewTextBoxColumn.HeaderText = "Entidad";
-            this.codEntidadDataGridViewTextBoxColumn.Name = "codEntidadDataGridViewTextBoxColumn";
-            this.codEntidadDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codEntidadDataGridViewTextBoxColumn.Width = 92;
-            // 
-            // denominacionDataGridViewTextBoxColumn
-            // 
-            this.denominacionDataGridViewTextBoxColumn.DataPropertyName = "denominacion";
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            this.denominacionDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
-            this.denominacionDataGridViewTextBoxColumn.HeaderText = "Denominación";
-            this.denominacionDataGridViewTextBoxColumn.Name = "denominacionDataGridViewTextBoxColumn";
-            this.denominacionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.denominacionDataGridViewTextBoxColumn.Width = 144;
-            // 
-            // codTipoControlDataGridViewTextBoxColumn
-            // 
-            this.codTipoControlDataGridViewTextBoxColumn.DataPropertyName = "codTipoControl";
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            this.codTipoControlDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
-            this.codTipoControlDataGridViewTextBoxColumn.HeaderText = "Tipologia";
-            this.codTipoControlDataGridViewTextBoxColumn.Name = "codTipoControlDataGridViewTextBoxColumn";
-            this.codTipoControlDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codTipoControlDataGridViewTextBoxColumn.Width = 104;
-            // 
-            // clasiTipoPtoDataGridViewTextBoxColumn
-            // 
-            this.clasiTipoPtoDataGridViewTextBoxColumn.DataPropertyName = "clasiTipoPto";
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            this.clasiTipoPtoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
-            this.clasiTipoPtoDataGridViewTextBoxColumn.HeaderText = "Tipo de Punto";
-            this.clasiTipoPtoDataGridViewTextBoxColumn.Name = "clasiTipoPtoDataGridViewTextBoxColumn";
-            this.clasiTipoPtoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.clasiTipoPtoDataGridViewTextBoxColumn.Width = 128;
-            // 
-            // coordXPtoMedDataGridViewTextBoxColumn
-            // 
-            this.coordXPtoMedDataGridViewTextBoxColumn.DataPropertyName = "coordXPtoMed";
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            this.coordXPtoMedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
-            this.coordXPtoMedDataGridViewTextBoxColumn.HeaderText = "X nominal";
-            this.coordXPtoMedDataGridViewTextBoxColumn.Name = "coordXPtoMedDataGridViewTextBoxColumn";
-            this.coordXPtoMedDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // coordYPtoMedDataGridViewTextBoxColumn
-            // 
-            this.coordYPtoMedDataGridViewTextBoxColumn.DataPropertyName = "coordYPtoMed";
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
-            this.coordYPtoMedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle11;
-            this.coordYPtoMedDataGridViewTextBoxColumn.HeaderText = "Y nominal";
-            this.coordYPtoMedDataGridViewTextBoxColumn.Name = "coordYPtoMedDataGridViewTextBoxColumn";
-            this.coordYPtoMedDataGridViewTextBoxColumn.ReadOnly = true;
-            this.coordYPtoMedDataGridViewTextBoxColumn.Width = 99;
-            // 
-            // coordZPtoMedDataGridViewTextBoxColumn
-            // 
-            this.coordZPtoMedDataGridViewTextBoxColumn.DataPropertyName = "coordZPtoMed";
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            this.coordZPtoMedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle12;
-            this.coordZPtoMedDataGridViewTextBoxColumn.HeaderText = "Z nominal";
-            this.coordZPtoMedDataGridViewTextBoxColumn.Name = "coordZPtoMedDataGridViewTextBoxColumn";
-            this.coordZPtoMedDataGridViewTextBoxColumn.ReadOnly = true;
-            this.coordZPtoMedDataGridViewTextBoxColumn.Width = 98;
-            // 
-            // nominalPtoMedDataGridViewTextBoxColumn
-            // 
-            this.nominalPtoMedDataGridViewTextBoxColumn.DataPropertyName = "nominalPtoMed";
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
-            this.nominalPtoMedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle13;
-            this.nominalPtoMedDataGridViewTextBoxColumn.HeaderText = "Nominal";
-            this.nominalPtoMedDataGridViewTextBoxColumn.Name = "nominalPtoMedDataGridViewTextBoxColumn";
-            this.nominalPtoMedDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nominalPtoMedDataGridViewTextBoxColumn.Width = 96;
-            // 
-            // codUnidMedDataGridViewTextBoxColumn
-            // 
-            this.codUnidMedDataGridViewTextBoxColumn.DataPropertyName = "codUnidMed";
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
-            this.codUnidMedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle14;
-            this.codUnidMedDataGridViewTextBoxColumn.HeaderText = "Unidad de Medición";
-            this.codUnidMedDataGridViewTextBoxColumn.Name = "codUnidMedDataGridViewTextBoxColumn";
-            this.codUnidMedDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codUnidMedDataGridViewTextBoxColumn.Width = 167;
-            // 
-            // detallesControlPlanBindingSource1
-            // 
-            this.detallesControlPlanBindingSource1.DataMember = "detallesControlPlan";
-            this.detallesControlPlanBindingSource1.DataSource = this.ges_v01DataSet17;
-            // 
-            // ges_v01DataSet17
-            // 
-            this.ges_v01DataSet17.DataSetName = "ges_v01DataSet17";
-            this.ges_v01DataSet17.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // detallesControlPlanTableAdapter1
             // 
             this.detallesControlPlanTableAdapter1.ClearBeforeFill = true;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(1240, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(51, 49);
+            this.button1.TabIndex = 14;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btn_Salir
+            // 
+            this.btn_Salir.BackColor = System.Drawing.Color.Black;
+            this.btn_Salir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Salir.BackgroundImage")));
+            this.btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Salir.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btn_Salir.FlatAppearance.BorderSize = 0;
+            this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Salir.ForeColor = System.Drawing.Color.White;
+            this.btn_Salir.Location = new System.Drawing.Point(1291, 0);
+            this.btn_Salir.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Salir.Name = "btn_Salir";
+            this.btn_Salir.Size = new System.Drawing.Size(51, 49);
+            this.btn_Salir.TabIndex = 13;
+            this.btn_Salir.UseVisualStyleBackColor = false;
+            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click_1);
             // 
             // RegControlPlan
             // 
@@ -1076,6 +1104,8 @@ namespace PrimerasHU_GES
             ((System.ComponentModel.ISupportInitialize)(this.cabeceraDtg)).EndInit();
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.actualDTGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detallesControlPlanBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet17)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -1088,8 +1118,6 @@ namespace PrimerasHU_GES
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gesv01DataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.detallesControlPlanBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet17)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1129,7 +1157,6 @@ namespace PrimerasHU_GES
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel8;
-        private System.Windows.Forms.Button btn_Salir;
         private Bunifu.Framework.UI.BunifuCustomDataGrid actualDTGV;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
@@ -1157,5 +1184,7 @@ namespace PrimerasHU_GES
         private DataGridViewTextBoxColumn codUnidMedDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn tolinferior;
         private DataGridViewTextBoxColumn tolSuperior;
+        private Button button1;
+        private Button btn_Salir;
     }
 }

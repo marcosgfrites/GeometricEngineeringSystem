@@ -31,9 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Entidades));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.btn_Salir = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -49,28 +47,29 @@
             this.dgvEntidad = new System.Windows.Forms.DataGridView();
             this.codEntidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descEntidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.entidadesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.ges_v01DataSet18Entidades2 = new PrimerasHU_GES.ges_v01DataSet18Entidades2();
             this.entidadesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ges_v01DataSet17_Entidades = new PrimerasHU_GES.ges_v01DataSet17();
-            //this.entidadesTableAdapter = new PrimerasHU_GES.ges_v01DataSet17TableAdapters.entidadesTableAdapter();
-            this.ges_v01DataSet18Entidades2 = new PrimerasHU_GES.ges_v01DataSet18Entidades2();
-            this.entidadesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.entidadesTableAdapter1 = new PrimerasHU_GES.ges_v01DataSet18Entidades2TableAdapters.entidadesTableAdapter();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Salir = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEntidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.entidadesBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18Entidades2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.entidadesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet17_Entidades)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18Entidades2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.entidadesBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btn_Salir);
+            this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -78,26 +77,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(840, 49);
             this.panel1.TabIndex = 47;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.DarkBlue;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(712, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(64, 49);
-            this.button2.TabIndex = 8;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label8
             // 
@@ -110,25 +89,6 @@
             this.label8.Size = new System.Drawing.Size(240, 22);
             this.label8.TabIndex = 4;
             this.label8.Text = "GESTOR DE ENTIDADES";
-            // 
-            // btn_Salir
-            // 
-            this.btn_Salir.BackColor = System.Drawing.Color.Black;
-            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Salir.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btn_Salir.FlatAppearance.BorderSize = 0;
-            this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btn_Salir.ForeColor = System.Drawing.Color.White;
-            this.btn_Salir.Location = new System.Drawing.Point(776, 0);
-            this.btn_Salir.Name = "btn_Salir";
-            this.btn_Salir.Size = new System.Drawing.Size(64, 49);
-            this.btn_Salir.TabIndex = 1;
-            this.btn_Salir.Text = "X";
-            this.btn_Salir.UseVisualStyleBackColor = false;
-            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
             // 
             // panel2
             // 
@@ -329,6 +289,16 @@
             this.descEntidadDataGridViewTextBoxColumn.ReadOnly = true;
             this.descEntidadDataGridViewTextBoxColumn.Width = 150;
             // 
+            // entidadesBindingSource1
+            // 
+            this.entidadesBindingSource1.DataMember = "entidades";
+            this.entidadesBindingSource1.DataSource = this.ges_v01DataSet18Entidades2;
+            // 
+            // ges_v01DataSet18Entidades2
+            // 
+            this.ges_v01DataSet18Entidades2.DataSetName = "ges_v01DataSet18Entidades2";
+            this.ges_v01DataSet18Entidades2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // entidadesBindingSource
             // 
             this.entidadesBindingSource.DataMember = "entidades";
@@ -339,23 +309,51 @@
             this.ges_v01DataSet17_Entidades.DataSetName = "ges_v01DataSet17_Entidades";
             this.ges_v01DataSet17_Entidades.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // entidadesTableAdapter
-            // 
-           // this.entidadesTableAdapter.ClearBeforeFill = true;
-            // 
-            // ges_v01DataSet18Entidades2
-            // 
-            this.ges_v01DataSet18Entidades2.DataSetName = "ges_v01DataSet18Entidades2";
-            this.ges_v01DataSet18Entidades2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // entidadesBindingSource1
-            // 
-            this.entidadesBindingSource1.DataMember = "entidades";
-            this.entidadesBindingSource1.DataSource = this.ges_v01DataSet18Entidades2;
-            // 
             // entidadesTableAdapter1
             // 
             this.entidadesTableAdapter1.ClearBeforeFill = true;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(738, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(51, 49);
+            this.button1.TabIndex = 14;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btn_Salir
+            // 
+            this.btn_Salir.BackColor = System.Drawing.Color.Black;
+            this.btn_Salir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Salir.BackgroundImage")));
+            this.btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Salir.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btn_Salir.FlatAppearance.BorderSize = 0;
+            this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Salir.ForeColor = System.Drawing.Color.White;
+            this.btn_Salir.Location = new System.Drawing.Point(789, 0);
+            this.btn_Salir.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Salir.Name = "btn_Salir";
+            this.btn_Salir.Size = new System.Drawing.Size(51, 49);
+            this.btn_Salir.TabIndex = 13;
+            this.btn_Salir.UseVisualStyleBackColor = false;
+            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click_1);
             // 
             // Entidades
             // 
@@ -374,10 +372,10 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEntidad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.entidadesBindingSource)).EndInit();
-           // ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet17_Entidades)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18Entidades2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.entidadesBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18Entidades2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.entidadesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet17_Entidades)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -385,9 +383,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btn_Salir;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
@@ -409,5 +405,7 @@
         private ges_v01DataSet18Entidades2 ges_v01DataSet18Entidades2;
         private System.Windows.Forms.BindingSource entidadesBindingSource1;
         private ges_v01DataSet18Entidades2TableAdapters.entidadesTableAdapter entidadesTableAdapter1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Salir;
     }
 }

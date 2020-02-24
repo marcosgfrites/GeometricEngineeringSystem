@@ -29,12 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Imagenes));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.label1 = new System.Windows.Forms.Label();
@@ -49,6 +48,12 @@
             this.txt_fechoraModif = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dgv_Imagenes = new System.Windows.Forms.DataGridView();
+            this.codImagenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codCPlanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomImagenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechoraCreImagenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechoraModImagenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imgImagenDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.imagenesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ges_v01Imagenes4 = new PrimerasHU_GES.ges_v01Imagenes4();
             this.pb_Imagen = new System.Windows.Forms.PictureBox();
@@ -76,16 +81,10 @@
             this.controlPlanTableAdapter = new PrimerasHU_GES.ges_v01Imagenes2TableAdapters.controlPlanTableAdapter();
             this.imagenesTableAdapter = new PrimerasHU_GES.ges_v01Imagenes4TableAdapters.imagenesTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.btn_Salir = new System.Windows.Forms.Button();
-            this.codImagenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codCPlanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomImagenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechoraCreImagenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechoraModImagenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.imgImagenDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Imagenes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01Imagenes4)).BeginInit();
@@ -238,15 +237,7 @@
             this.dgv_Imagenes.AllowUserToResizeRows = false;
             this.dgv_Imagenes.AutoGenerateColumns = false;
             this.dgv_Imagenes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_Imagenes.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Imagenes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_Imagenes.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgv_Imagenes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Imagenes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codImagenDataGridViewTextBoxColumn,
@@ -267,6 +258,58 @@
             this.dgv_Imagenes.TabIndex = 17;
             this.dgv_Imagenes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Imagenes_CellClick);
             this.dgv_Imagenes.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgv_Imagenes_CellFormatting);
+            // 
+            // codImagenDataGridViewTextBoxColumn
+            // 
+            this.codImagenDataGridViewTextBoxColumn.DataPropertyName = "codImagen";
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.codImagenDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            this.codImagenDataGridViewTextBoxColumn.HeaderText = "Código";
+            this.codImagenDataGridViewTextBoxColumn.Name = "codImagenDataGridViewTextBoxColumn";
+            this.codImagenDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // codCPlanDataGridViewTextBoxColumn
+            // 
+            this.codCPlanDataGridViewTextBoxColumn.DataPropertyName = "codCPlan";
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.codCPlanDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
+            this.codCPlanDataGridViewTextBoxColumn.HeaderText = "Control Plan";
+            this.codCPlanDataGridViewTextBoxColumn.Name = "codCPlanDataGridViewTextBoxColumn";
+            this.codCPlanDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nomImagenDataGridViewTextBoxColumn
+            // 
+            this.nomImagenDataGridViewTextBoxColumn.DataPropertyName = "nomImagen";
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomImagenDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
+            this.nomImagenDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nomImagenDataGridViewTextBoxColumn.Name = "nomImagenDataGridViewTextBoxColumn";
+            this.nomImagenDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fechoraCreImagenDataGridViewTextBoxColumn
+            // 
+            this.fechoraCreImagenDataGridViewTextBoxColumn.DataPropertyName = "fechoraCreImagen";
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fechoraCreImagenDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
+            this.fechoraCreImagenDataGridViewTextBoxColumn.HeaderText = "Fecha - Creación";
+            this.fechoraCreImagenDataGridViewTextBoxColumn.Name = "fechoraCreImagenDataGridViewTextBoxColumn";
+            this.fechoraCreImagenDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fechoraModImagenDataGridViewTextBoxColumn
+            // 
+            this.fechoraModImagenDataGridViewTextBoxColumn.DataPropertyName = "fechoraModImagen";
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fechoraModImagenDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
+            this.fechoraModImagenDataGridViewTextBoxColumn.HeaderText = "Fecha - Modificación";
+            this.fechoraModImagenDataGridViewTextBoxColumn.Name = "fechoraModImagenDataGridViewTextBoxColumn";
+            this.fechoraModImagenDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // imgImagenDataGridViewImageColumn
+            // 
+            this.imgImagenDataGridViewImageColumn.DataPropertyName = "imgImagen";
+            this.imgImagenDataGridViewImageColumn.HeaderText = "Imagen (Vista Previa)";
+            this.imgImagenDataGridViewImageColumn.Name = "imgImagenDataGridViewImageColumn";
+            this.imgImagenDataGridViewImageColumn.ReadOnly = true;
             // 
             // imagenesBindingSource
             // 
@@ -489,35 +532,15 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btn_Salir);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.btn_Salir);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1366, 49);
             this.panel1.TabIndex = 30;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1264, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(51, 49);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "_";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -543,9 +566,32 @@
             this.label11.TabIndex = 2;
             this.label11.Text = "GESTOR DE IMAGENES";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(1264, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(51, 49);
+            this.button1.TabIndex = 14;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // btn_Salir
             // 
             this.btn_Salir.BackColor = System.Drawing.Color.Black;
+            this.btn_Salir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Salir.BackgroundImage")));
+            this.btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Salir.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
@@ -558,62 +604,9 @@
             this.btn_Salir.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Salir.Name = "btn_Salir";
             this.btn_Salir.Size = new System.Drawing.Size(51, 49);
-            this.btn_Salir.TabIndex = 1;
-            this.btn_Salir.Text = "Salir";
+            this.btn_Salir.TabIndex = 13;
             this.btn_Salir.UseVisualStyleBackColor = false;
-            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click_1);
-            // 
-            // codImagenDataGridViewTextBoxColumn
-            // 
-            this.codImagenDataGridViewTextBoxColumn.DataPropertyName = "codImagen";
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.codImagenDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
-            this.codImagenDataGridViewTextBoxColumn.HeaderText = "Código";
-            this.codImagenDataGridViewTextBoxColumn.Name = "codImagenDataGridViewTextBoxColumn";
-            this.codImagenDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codCPlanDataGridViewTextBoxColumn
-            // 
-            this.codCPlanDataGridViewTextBoxColumn.DataPropertyName = "codCPlan";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.codCPlanDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
-            this.codCPlanDataGridViewTextBoxColumn.HeaderText = "Control Plan";
-            this.codCPlanDataGridViewTextBoxColumn.Name = "codCPlanDataGridViewTextBoxColumn";
-            this.codCPlanDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nomImagenDataGridViewTextBoxColumn
-            // 
-            this.nomImagenDataGridViewTextBoxColumn.DataPropertyName = "nomImagen";
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nomImagenDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
-            this.nomImagenDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nomImagenDataGridViewTextBoxColumn.Name = "nomImagenDataGridViewTextBoxColumn";
-            this.nomImagenDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fechoraCreImagenDataGridViewTextBoxColumn
-            // 
-            this.fechoraCreImagenDataGridViewTextBoxColumn.DataPropertyName = "fechoraCreImagen";
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fechoraCreImagenDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
-            this.fechoraCreImagenDataGridViewTextBoxColumn.HeaderText = "Fecha - Creación";
-            this.fechoraCreImagenDataGridViewTextBoxColumn.Name = "fechoraCreImagenDataGridViewTextBoxColumn";
-            this.fechoraCreImagenDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fechoraModImagenDataGridViewTextBoxColumn
-            // 
-            this.fechoraModImagenDataGridViewTextBoxColumn.DataPropertyName = "fechoraModImagen";
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fechoraModImagenDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
-            this.fechoraModImagenDataGridViewTextBoxColumn.HeaderText = "Fecha - Modificación";
-            this.fechoraModImagenDataGridViewTextBoxColumn.Name = "fechoraModImagenDataGridViewTextBoxColumn";
-            this.fechoraModImagenDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // imgImagenDataGridViewImageColumn
-            // 
-            this.imgImagenDataGridViewImageColumn.DataPropertyName = "imgImagen";
-            this.imgImagenDataGridViewImageColumn.HeaderText = "Imagen (Vista Previa)";
-            this.imgImagenDataGridViewImageColumn.Name = "imgImagenDataGridViewImageColumn";
-            this.imgImagenDataGridViewImageColumn.ReadOnly = true;
+            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click_2);
             // 
             // Imagenes
             // 
@@ -718,15 +711,15 @@
         private System.Windows.Forms.BindingSource imagenesBindingSource;
         private ges_v01Imagenes4TableAdapters.imagenesTableAdapter imagenesTableAdapter;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button btn_Salir;
         private System.Windows.Forms.DataGridViewTextBoxColumn codImagenDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codCPlanDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomImagenDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechoraCreImagenDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechoraModImagenDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewImageColumn imgImagenDataGridViewImageColumn;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Salir;
     }
 }
