@@ -20,7 +20,12 @@ namespace PrimerasHU_GES
         {
             
             InitializeComponent();
-            
+            lbCodUsu.Text = "sadfad";
+            lbCodAna.Text = "sdfsd";
+
+            lbCodAna.Visible = true;
+            lbCodUsu.Visible = true;
+
         }
 
         SqlConnection cn;
