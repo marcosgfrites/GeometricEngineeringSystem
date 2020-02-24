@@ -241,14 +241,67 @@ SELECT TOP 1 codDmo FROM documentosDmo ORDER BY codDmo DESC
 
 SELECT TOP 3 codDmo FROM documentosDmo
 
+SELECT * FROM puntosMedidosD
+DELETE FROM puntosMedidosD
+DBCC CHECKIDENT ('puntosMedidosD',RESEED,0)
+
+SELECT * FROM puntosMedidosX
+DELETE FROM puntosMedidosX
+DBCC CHECKIDENT ('puntosMedidosX',RESEED,0)
+
+SELECT * FROM puntosMedidosY
+DELETE FROM puntosMedidosY
+DBCC CHECKIDENT ('puntosMedidosY',RESEED,0)
+
+SELECT * FROM puntosMedidosZ
+DELETE FROM puntosMedidosZ
+DBCC CHECKIDENT ('puntosMedidosZ',RESEED,0)
+
+SELECT * FROM detallesDocumentoDmo
+DELETE FROM detallesDocumentoDmo
+DBCC CHECKIDENT ('detallesDocumentoDmo',RESEED,0)
+
+SELECT * FROM documentosDmo
+DELETE FROM documentosDmo
+DBCC CHECKIDENT ('documentosDmo',RESEED,0)
+
+SELECT * FROM detallesControlPlan
+DELETE FROM detallesControlPlan
+DBCC CHECKIDENT ('detallesControlPlan',RESEED,0)
+
+SELECT * FROM controlPlan
+DELETE FROM controlPlan
+DBCC CHECKIDENT ('controlPlan',RESEED,0)
+
+SELECT * FROM imagenes
+DELETE FROM imagenes
+DBCC CHECKIDENT ('imagenes',RESEED,0)
 
 SELECT * FROM muestras
 DELETE FROM muestras
 DBCC CHECKIDENT ('muestras',RESEED,0)
 
+SELECT * FROM detalleMuestras
+DELETE FROM detalleMuestras
+DBCC CHECKIDENT ('detalleMuestras',RESEED,0)
+
+
 SELECT * FROM graficos
 DELETE FROM graficos
 DBCC CHECKIDENT ('graficos',RESEED,0)
+
+SELECT * FROM calculos
+DELETE FROM calculos
+DBCC CHECKIDENT ('calculos',RESEED,0)
+
+SELECT * FROM detallesCalculo
+DELETE FROM detallesCalculo
+DBCC CHECKIDENT ('detallesCalculo',RESEED,0)
+
+SELECT * FROM analisis
+DELETE FROM analisis
+DBCC CHECKIDENT ('analisis',RESEED,0)
+
 
 
 SELECT * FROM detalleMuestras
