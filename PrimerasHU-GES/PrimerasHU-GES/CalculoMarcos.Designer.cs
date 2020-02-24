@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalculoMarcos));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -94,6 +95,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.lbl_muestra = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btn_visorCalcGrafo = new System.Windows.Forms.Button();
             this.pBar_verCalculo = new System.Windows.Forms.ProgressBar();
             this.dgv_verCalculosPuntos = new System.Windows.Forms.DataGridView();
             this.dgv_verCalculos = new System.Windows.Forms.DataGridView();
@@ -116,7 +118,7 @@
             this.lbl_tipoMuestra = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.calculosTableAdapter = new PrimerasHU_GES.ges_v01DataSetCalculosTableAdapters.calculosTableAdapter();
-            this.btn_visorCalcGrafo = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_muestras)).BeginInit();
@@ -145,9 +147,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(91, 11);
+            this.label1.Location = new System.Drawing.Point(55, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(233, 22);
             this.label1.TabIndex = 2;
@@ -156,6 +158,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btn_Salir);
@@ -182,6 +185,8 @@
             // btn_Salir
             // 
             this.btn_Salir.BackColor = System.Drawing.Color.Black;
+            this.btn_Salir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Salir.BackgroundImage")));
+            this.btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Salir.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
@@ -195,7 +200,6 @@
             this.btn_Salir.Name = "btn_Salir";
             this.btn_Salir.Size = new System.Drawing.Size(51, 49);
             this.btn_Salir.TabIndex = 1;
-            this.btn_Salir.Text = "Salir";
             this.btn_Salir.UseVisualStyleBackColor = false;
             this.btn_Salir.Click += new System.EventHandler(this.Btn_Salir_Click);
             // 
@@ -215,6 +219,7 @@
             this.dgv_muestras.AllowUserToResizeColumns = false;
             this.dgv_muestras.AllowUserToResizeRows = false;
             this.dgv_muestras.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_muestras.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgv_muestras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_muestras.Location = new System.Drawing.Point(6, 19);
             this.dgv_muestras.MultiSelect = false;
@@ -232,6 +237,7 @@
             this.dgv_listaPuntos.AllowUserToResizeColumns = false;
             this.dgv_listaPuntos.AllowUserToResizeRows = false;
             this.dgv_listaPuntos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_listaPuntos.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgv_listaPuntos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_listaPuntos.Location = new System.Drawing.Point(6, 144);
             this.dgv_listaPuntos.MultiSelect = false;
@@ -258,6 +264,7 @@
             this.dgv_nombrePuntos.AllowUserToResizeColumns = false;
             this.dgv_nombrePuntos.AllowUserToResizeRows = false;
             this.dgv_nombrePuntos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_nombrePuntos.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgv_nombrePuntos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_nombrePuntos.Location = new System.Drawing.Point(6, 589);
             this.dgv_nombrePuntos.MultiSelect = false;
@@ -274,10 +281,11 @@
             this.btn_calcular.FlatAppearance.BorderSize = 0;
             this.btn_calcular.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_calcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_calcular.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_calcular.ForeColor = System.Drawing.Color.White;
-            this.btn_calcular.Location = new System.Drawing.Point(351, 373);
+            this.btn_calcular.Location = new System.Drawing.Point(351, 380);
             this.btn_calcular.Name = "btn_calcular";
-            this.btn_calcular.Size = new System.Drawing.Size(75, 23);
+            this.btn_calcular.Size = new System.Drawing.Size(75, 27);
             this.btn_calcular.TabIndex = 20;
             this.btn_calcular.Text = "Calcular";
             this.btn_calcular.UseVisualStyleBackColor = false;
@@ -290,6 +298,7 @@
             this.dgv_calculos.AllowUserToResizeColumns = false;
             this.dgv_calculos.AllowUserToResizeRows = false;
             this.dgv_calculos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_calculos.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgv_calculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_calculos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nombrePunto,
@@ -364,6 +373,7 @@
             this.dgv_datosPunto.AllowUserToResizeColumns = false;
             this.dgv_datosPunto.AllowUserToResizeRows = false;
             this.dgv_datosPunto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_datosPunto.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgv_datosPunto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_datosPunto.Location = new System.Drawing.Point(46, 589);
             this.dgv_datosPunto.MultiSelect = false;
@@ -399,10 +409,11 @@
             this.btn_registrar.FlatAppearance.BorderSize = 0;
             this.btn_registrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGreen;
             this.btn_registrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_registrar.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_registrar.ForeColor = System.Drawing.Color.White;
-            this.btn_registrar.Location = new System.Drawing.Point(351, 402);
+            this.btn_registrar.Location = new System.Drawing.Point(351, 413);
             this.btn_registrar.Name = "btn_registrar";
-            this.btn_registrar.Size = new System.Drawing.Size(75, 23);
+            this.btn_registrar.Size = new System.Drawing.Size(75, 27);
             this.btn_registrar.TabIndex = 25;
             this.btn_registrar.Text = "Registrar";
             this.btn_registrar.UseVisualStyleBackColor = false;
@@ -460,10 +471,11 @@
             this.btn_verGrafo.FlatAppearance.BorderSize = 0;
             this.btn_verGrafo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_verGrafo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_verGrafo.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_verGrafo.ForeColor = System.Drawing.Color.White;
-            this.btn_verGrafo.Location = new System.Drawing.Point(510, 103);
+            this.btn_verGrafo.Location = new System.Drawing.Point(510, 76);
             this.btn_verGrafo.Name = "btn_verGrafo";
-            this.btn_verGrafo.Size = new System.Drawing.Size(75, 23);
+            this.btn_verGrafo.Size = new System.Drawing.Size(75, 48);
             this.btn_verGrafo.TabIndex = 25;
             this.btn_verGrafo.Text = "Ver gráfica";
             this.btn_verGrafo.UseVisualStyleBackColor = false;
@@ -737,6 +749,7 @@
             this.dgv_puntosF.AllowUserToResizeColumns = false;
             this.dgv_puntosF.AllowUserToResizeRows = false;
             this.dgv_puntosF.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_puntosF.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgv_puntosF.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_puntosF.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1});
@@ -755,7 +768,7 @@
             // 
             // txt_muestraF
             // 
-            this.txt_muestraF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txt_muestraF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txt_muestraF.Enabled = false;
             this.txt_muestraF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_muestraF.ForeColor = System.Drawing.Color.Black;
@@ -776,7 +789,7 @@
             // 
             // txt_cantidadF
             // 
-            this.txt_cantidadF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txt_cantidadF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txt_cantidadF.Enabled = false;
             this.txt_cantidadF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_cantidadF.ForeColor = System.Drawing.Color.Black;
@@ -861,7 +874,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.tabPage1.BackColor = System.Drawing.Color.White;
             this.tabPage1.Controls.Add(this.btn_visorCalcGrafo);
             this.tabPage1.Controls.Add(this.pBar_verCalculo);
             this.tabPage1.Controls.Add(this.dgv_verCalculosPuntos);
@@ -874,6 +887,23 @@
             this.tabPage1.Size = new System.Drawing.Size(1287, 636);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Visor de Cálculos";
+            // 
+            // btn_visorCalcGrafo
+            // 
+            this.btn_visorCalcGrafo.BackColor = System.Drawing.Color.Black;
+            this.btn_visorCalcGrafo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btn_visorCalcGrafo.FlatAppearance.BorderSize = 0;
+            this.btn_visorCalcGrafo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btn_visorCalcGrafo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_visorCalcGrafo.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_visorCalcGrafo.ForeColor = System.Drawing.Color.White;
+            this.btn_visorCalcGrafo.Location = new System.Drawing.Point(130, 260);
+            this.btn_visorCalcGrafo.Name = "btn_visorCalcGrafo";
+            this.btn_visorCalcGrafo.Size = new System.Drawing.Size(120, 27);
+            this.btn_visorCalcGrafo.TabIndex = 26;
+            this.btn_visorCalcGrafo.Text = "Generar gráfico";
+            this.btn_visorCalcGrafo.UseVisualStyleBackColor = false;
+            this.btn_visorCalcGrafo.Click += new System.EventHandler(this.btn_visorCalcGrafo_Click);
             // 
             // pBar_verCalculo
             // 
@@ -888,6 +918,7 @@
             // 
             this.dgv_verCalculosPuntos.AllowUserToAddRows = false;
             this.dgv_verCalculosPuntos.AllowUserToDeleteRows = false;
+            this.dgv_verCalculosPuntos.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgv_verCalculosPuntos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_verCalculosPuntos.Location = new System.Drawing.Point(9, 176);
             this.dgv_verCalculosPuntos.Name = "dgv_verCalculosPuntos";
@@ -901,6 +932,7 @@
             this.dgv_verCalculos.AllowUserToAddRows = false;
             this.dgv_verCalculos.AllowUserToDeleteRows = false;
             this.dgv_verCalculos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_verCalculos.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgv_verCalculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_verCalculos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column2,
@@ -983,6 +1015,7 @@
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codCalculoDataGridViewTextBoxColumn,
@@ -1033,7 +1066,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.tabPage2.BackColor = System.Drawing.Color.White;
             this.tabPage2.Controls.Add(this.lbl_tipoMuestra);
             this.tabPage2.Controls.Add(this.dtp_fechaCalculo);
             this.tabPage2.Controls.Add(this.btn_registrar);
@@ -1079,27 +1112,32 @@
             // 
             this.calculosTableAdapter.ClearBeforeFill = true;
             // 
-            // btn_visorCalcGrafo
+            // button1
             // 
-            this.btn_visorCalcGrafo.BackColor = System.Drawing.Color.Black;
-            this.btn_visorCalcGrafo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
-            this.btn_visorCalcGrafo.FlatAppearance.BorderSize = 0;
-            this.btn_visorCalcGrafo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
-            this.btn_visorCalcGrafo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_visorCalcGrafo.ForeColor = System.Drawing.Color.White;
-            this.btn_visorCalcGrafo.Location = new System.Drawing.Point(157, 260);
-            this.btn_visorCalcGrafo.Name = "btn_visorCalcGrafo";
-            this.btn_visorCalcGrafo.Size = new System.Drawing.Size(93, 23);
-            this.btn_visorCalcGrafo.TabIndex = 26;
-            this.btn_visorCalcGrafo.Text = "Generar gráfico";
-            this.btn_visorCalcGrafo.UseVisualStyleBackColor = false;
-            this.btn_visorCalcGrafo.Click += new System.EventHandler(this.btn_visorCalcGrafo_Click);
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(1208, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(51, 49);
+            this.button1.TabIndex = 9;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // CalculoMarcos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1310, 728);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
@@ -1223,5 +1261,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.ProgressBar pBar_verCalculo;
         private System.Windows.Forms.Button btn_visorCalcGrafo;
+        private System.Windows.Forms.Button button1;
     }
 }

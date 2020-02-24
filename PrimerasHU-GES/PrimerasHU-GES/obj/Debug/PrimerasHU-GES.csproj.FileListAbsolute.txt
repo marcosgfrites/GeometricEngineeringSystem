@@ -259,3 +259,7 @@ C:\Users\Roqué\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Deb
 C:\Users\Roqué\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU_GES.TiposGrafico.resources
 C:\Users\Roqué\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU_GES.TiposUsuario.resources
 C:\Users\Roqué\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU_GES.UnidadesMedicion.resources
+D:\Marcos\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU_GES.Entidades.resources
+D:\Marcos\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU_GES.Establecimientos.resources
+D:\Marcos\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU_GES.TiposDeControl.resources
+D:\Marcos\Documents\GitHub\GES_FINAL\PrimerasHU-GES\PrimerasHU-GES\obj\Debug\PrimerasHU_GES.UnidadesMedicion.resources
