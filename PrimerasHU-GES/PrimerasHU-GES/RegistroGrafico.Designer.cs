@@ -143,10 +143,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(12, 11);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(429, 25);
+            this.label5.Size = new System.Drawing.Size(384, 24);
             this.label5.TabIndex = 9;
             this.label5.Text = "REGISTRO DE GRÁFICO DE MUESTRA";
             // 
@@ -170,10 +170,11 @@
             this.btn_registrarGrafico.FlatAppearance.BorderSize = 0;
             this.btn_registrarGrafico.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.btn_registrarGrafico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_registrarGrafico.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_registrarGrafico.ForeColor = System.Drawing.Color.White;
             this.btn_registrarGrafico.Location = new System.Drawing.Point(447, 314);
             this.btn_registrarGrafico.Name = "btn_registrarGrafico";
-            this.btn_registrarGrafico.Size = new System.Drawing.Size(111, 23);
+            this.btn_registrarGrafico.Size = new System.Drawing.Size(141, 27);
             this.btn_registrarGrafico.TabIndex = 34;
             this.btn_registrarGrafico.Text = "Registro de Gráfico";
             this.btn_registrarGrafico.UseVisualStyleBackColor = false;
@@ -186,10 +187,11 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(477, 449);
+            this.button1.Location = new System.Drawing.Point(447, 445);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 23);
+            this.button1.Size = new System.Drawing.Size(141, 27);
             this.button1.TabIndex = 35;
             this.button1.Text = "Salir del Registro";
             this.button1.UseVisualStyleBackColor = false;
@@ -199,7 +201,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(601, 484);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_registrarGrafico);

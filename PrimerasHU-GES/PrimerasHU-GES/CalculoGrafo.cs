@@ -138,5 +138,10 @@ namespace PrimerasHU_GES
             RegistroGrafico rg = new RegistroGrafico(bm, auxMuestra, puntos, numero);
             rg.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
