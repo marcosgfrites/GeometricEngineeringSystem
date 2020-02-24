@@ -36,11 +36,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_Salir = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lbl_mensaje = new System.Windows.Forms.Label();
+            this.cb_PrimerDmo = new System.Windows.Forms.ComboBox();
+            this.documentosDmoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.ges_v01DataSetDocDmo = new PrimerasHU_GES.ges_v01DataSetDocDmo();
+            this.label14 = new System.Windows.Forms.Label();
+            this.cb_TipoMuestra = new System.Windows.Forms.ComboBox();
+            this.tiposMuestraBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ges_v01DataSetTiposMuestra = new PrimerasHU_GES.ges_v01DataSetTiposMuestra();
             this.btn_previsual = new System.Windows.Forms.Button();
             this.btn_limpiarMuestra = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             this.txt_cantidadDmo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.txt_ultDmo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dtp_fechaMuestra = new System.Windows.Forms.DateTimePicker();
@@ -60,30 +68,22 @@
             this.label10 = new System.Windows.Forms.Label();
             this.dgv_muestras = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
-            this.cb_TipoMuestra = new System.Windows.Forms.ComboBox();
-            this.ges_v01DataSetTiposMuestra = new PrimerasHU_GES.ges_v01DataSetTiposMuestra();
-            this.tiposMuestraBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tiposMuestraTableAdapter = new PrimerasHU_GES.ges_v01DataSetTiposMuestraTableAdapters.tiposMuestraTableAdapter();
-            this.cb_PrimerDmo = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.ges_v01DataSetDocDmo = new PrimerasHU_GES.ges_v01DataSetDocDmo();
-            this.documentosDmoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.documentosDmoTableAdapter1 = new PrimerasHU_GES.ges_v01DataSetDocDmoTableAdapters.documentosDmoTableAdapter();
-            this.lbl_mensaje = new System.Windows.Forms.Label();
             this.txt_seleccionados = new System.Windows.Forms.TextBox();
             this.lbl_seleccionados = new System.Windows.Forms.Label();
             this.btn_muestras = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.documentosDmoBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSetDocDmo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tiposMuestraBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSetTiposMuestra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_docDmo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSetCodigosDmo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentosDmoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_muestras)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSetTiposMuestra)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tiposMuestraBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSetDocDmo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.documentosDmoBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -193,6 +193,75 @@
             this.panel2.Size = new System.Drawing.Size(323, 273);
             this.panel2.TabIndex = 2;
             // 
+            // lbl_mensaje
+            // 
+            this.lbl_mensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_mensaje.ForeColor = System.Drawing.Color.Red;
+            this.lbl_mensaje.Location = new System.Drawing.Point(3, 208);
+            this.lbl_mensaje.Name = "lbl_mensaje";
+            this.lbl_mensaje.Size = new System.Drawing.Size(147, 61);
+            this.lbl_mensaje.TabIndex = 16;
+            this.lbl_mensaje.Text = "(*) Recuerde que debe seleccionar los Documentos DMO a utilizar.";
+            this.lbl_mensaje.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbl_mensaje.Visible = false;
+            // 
+            // cb_PrimerDmo
+            // 
+            this.cb_PrimerDmo.DataSource = this.documentosDmoBindingSource1;
+            this.cb_PrimerDmo.DisplayMember = "codDmo";
+            this.cb_PrimerDmo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_PrimerDmo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cb_PrimerDmo.FormattingEnabled = true;
+            this.cb_PrimerDmo.Location = new System.Drawing.Point(108, 106);
+            this.cb_PrimerDmo.Name = "cb_PrimerDmo";
+            this.cb_PrimerDmo.Size = new System.Drawing.Size(202, 21);
+            this.cb_PrimerDmo.TabIndex = 15;
+            this.cb_PrimerDmo.ValueMember = "codDmo";
+            this.cb_PrimerDmo.SelectedIndexChanged += new System.EventHandler(this.cb_PrimerDmo_SelectedIndexChanged);
+            // 
+            // documentosDmoBindingSource1
+            // 
+            this.documentosDmoBindingSource1.DataMember = "documentosDmo";
+            this.documentosDmoBindingSource1.DataSource = this.ges_v01DataSetDocDmo;
+            // 
+            // ges_v01DataSetDocDmo
+            // 
+            this.ges_v01DataSetDocDmo.DataSetName = "ges_v01DataSetDocDmo";
+            this.ges_v01DataSetDocDmo.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(7, 109);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(101, 13);
+            this.label14.TabIndex = 14;
+            this.label14.Text = "Primer DMO a Usar:";
+            // 
+            // cb_TipoMuestra
+            // 
+            this.cb_TipoMuestra.DataSource = this.tiposMuestraBindingSource;
+            this.cb_TipoMuestra.DisplayMember = "descTiposMuestra";
+            this.cb_TipoMuestra.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_TipoMuestra.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cb_TipoMuestra.FormattingEnabled = true;
+            this.cb_TipoMuestra.Location = new System.Drawing.Point(107, 39);
+            this.cb_TipoMuestra.Name = "cb_TipoMuestra";
+            this.cb_TipoMuestra.Size = new System.Drawing.Size(202, 21);
+            this.cb_TipoMuestra.TabIndex = 13;
+            this.cb_TipoMuestra.ValueMember = "codTiposMuestra";
+            this.cb_TipoMuestra.SelectedIndexChanged += new System.EventHandler(this.cb_TipoMuestra_SelectedIndexChanged);
+            // 
+            // tiposMuestraBindingSource
+            // 
+            this.tiposMuestraBindingSource.DataMember = "tiposMuestra";
+            this.tiposMuestraBindingSource.DataSource = this.ges_v01DataSetTiposMuestra;
+            // 
+            // ges_v01DataSetTiposMuestra
+            // 
+            this.ges_v01DataSetTiposMuestra.DataSetName = "ges_v01DataSetTiposMuestra";
+            this.ges_v01DataSetTiposMuestra.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // btn_previsual
             // 
             this.btn_previsual.BackColor = System.Drawing.Color.Black;
@@ -201,10 +270,11 @@
             this.btn_previsual.FlatAppearance.BorderSize = 0;
             this.btn_previsual.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_previsual.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_previsual.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.btn_previsual.ForeColor = System.Drawing.Color.White;
-            this.btn_previsual.Location = new System.Drawing.Point(153, 208);
+            this.btn_previsual.Location = new System.Drawing.Point(189, 196);
             this.btn_previsual.Name = "btn_previsual";
-            this.btn_previsual.Size = new System.Drawing.Size(75, 23);
+            this.btn_previsual.Size = new System.Drawing.Size(120, 23);
             this.btn_previsual.TabIndex = 11;
             this.btn_previsual.Text = "Previsualizar";
             this.btn_previsual.UseVisualStyleBackColor = false;
@@ -219,23 +289,15 @@
             this.btn_limpiarMuestra.FlatAppearance.BorderSize = 0;
             this.btn_limpiarMuestra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_limpiarMuestra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_limpiarMuestra.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.btn_limpiarMuestra.ForeColor = System.Drawing.Color.White;
-            this.btn_limpiarMuestra.Location = new System.Drawing.Point(234, 208);
+            this.btn_limpiarMuestra.Location = new System.Drawing.Point(189, 225);
             this.btn_limpiarMuestra.Name = "btn_limpiarMuestra";
-            this.btn_limpiarMuestra.Size = new System.Drawing.Size(75, 23);
+            this.btn_limpiarMuestra.Size = new System.Drawing.Size(120, 25);
             this.btn_limpiarMuestra.TabIndex = 10;
             this.btn_limpiarMuestra.Text = "Limpiar";
             this.btn_limpiarMuestra.UseVisualStyleBackColor = false;
             this.btn_limpiarMuestra.Click += new System.EventHandler(this.Btn_limpiarMuestra_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(7, 42);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(87, 13);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Tipo de Muestra:";
             // 
             // txt_cantidadDmo
             // 
@@ -255,6 +317,15 @@
             this.label4.Size = new System.Drawing.Size(95, 13);
             this.label4.TabIndex = 6;
             this.label4.Text = "Cantidad de DMO:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(7, 42);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(87, 13);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Tipo de Muestra:";
             // 
             // txt_ultDmo
             // 
@@ -356,14 +427,15 @@
             this.btn_registrar.BackColor = System.Drawing.Color.Black;
             this.btn_registrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_registrar.Enabled = false;
-            this.btn_registrar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
+            this.btn_registrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_registrar.FlatAppearance.BorderSize = 0;
-            this.btn_registrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGreen;
+            this.btn_registrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_registrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_registrar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.btn_registrar.ForeColor = System.Drawing.Color.White;
             this.btn_registrar.Location = new System.Drawing.Point(140, 336);
             this.btn_registrar.Name = "btn_registrar";
-            this.btn_registrar.Size = new System.Drawing.Size(196, 23);
+            this.btn_registrar.Size = new System.Drawing.Size(196, 48);
             this.btn_registrar.TabIndex = 12;
             this.btn_registrar.Text = "Registrar Muestra/Detalle de Muestra";
             this.btn_registrar.UseVisualStyleBackColor = false;
@@ -440,82 +512,13 @@
             this.label11.TabIndex = 19;
             this.label11.Text = "Listado de Muestras registradas";
             // 
-            // cb_TipoMuestra
-            // 
-            this.cb_TipoMuestra.DataSource = this.tiposMuestraBindingSource;
-            this.cb_TipoMuestra.DisplayMember = "descTiposMuestra";
-            this.cb_TipoMuestra.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_TipoMuestra.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cb_TipoMuestra.FormattingEnabled = true;
-            this.cb_TipoMuestra.Location = new System.Drawing.Point(107, 39);
-            this.cb_TipoMuestra.Name = "cb_TipoMuestra";
-            this.cb_TipoMuestra.Size = new System.Drawing.Size(202, 21);
-            this.cb_TipoMuestra.TabIndex = 13;
-            this.cb_TipoMuestra.ValueMember = "codTiposMuestra";
-            this.cb_TipoMuestra.SelectedIndexChanged += new System.EventHandler(this.cb_TipoMuestra_SelectedIndexChanged);
-            // 
-            // ges_v01DataSetTiposMuestra
-            // 
-            this.ges_v01DataSetTiposMuestra.DataSetName = "ges_v01DataSetTiposMuestra";
-            this.ges_v01DataSetTiposMuestra.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tiposMuestraBindingSource
-            // 
-            this.tiposMuestraBindingSource.DataMember = "tiposMuestra";
-            this.tiposMuestraBindingSource.DataSource = this.ges_v01DataSetTiposMuestra;
-            // 
             // tiposMuestraTableAdapter
             // 
             this.tiposMuestraTableAdapter.ClearBeforeFill = true;
             // 
-            // cb_PrimerDmo
-            // 
-            this.cb_PrimerDmo.DataSource = this.documentosDmoBindingSource1;
-            this.cb_PrimerDmo.DisplayMember = "codDmo";
-            this.cb_PrimerDmo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_PrimerDmo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cb_PrimerDmo.FormattingEnabled = true;
-            this.cb_PrimerDmo.Location = new System.Drawing.Point(108, 106);
-            this.cb_PrimerDmo.Name = "cb_PrimerDmo";
-            this.cb_PrimerDmo.Size = new System.Drawing.Size(202, 21);
-            this.cb_PrimerDmo.TabIndex = 15;
-            this.cb_PrimerDmo.ValueMember = "codDmo";
-            this.cb_PrimerDmo.SelectedIndexChanged += new System.EventHandler(this.cb_PrimerDmo_SelectedIndexChanged);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(7, 109);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(101, 13);
-            this.label14.TabIndex = 14;
-            this.label14.Text = "Primer DMO a Usar:";
-            // 
-            // ges_v01DataSetDocDmo
-            // 
-            this.ges_v01DataSetDocDmo.DataSetName = "ges_v01DataSetDocDmo";
-            this.ges_v01DataSetDocDmo.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // documentosDmoBindingSource1
-            // 
-            this.documentosDmoBindingSource1.DataMember = "documentosDmo";
-            this.documentosDmoBindingSource1.DataSource = this.ges_v01DataSetDocDmo;
-            // 
             // documentosDmoTableAdapter1
             // 
             this.documentosDmoTableAdapter1.ClearBeforeFill = true;
-            // 
-            // lbl_mensaje
-            // 
-            this.lbl_mensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mensaje.ForeColor = System.Drawing.Color.Red;
-            this.lbl_mensaje.Location = new System.Drawing.Point(3, 208);
-            this.lbl_mensaje.Name = "lbl_mensaje";
-            this.lbl_mensaje.Size = new System.Drawing.Size(147, 61);
-            this.lbl_mensaje.TabIndex = 16;
-            this.lbl_mensaje.Text = "(*) Recuerde que debe seleccionar los Documentos DMO a utilizar.";
-            this.lbl_mensaje.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbl_mensaje.Visible = false;
             // 
             // txt_seleccionados
             // 
@@ -545,10 +548,11 @@
             this.btn_muestras.FlatAppearance.BorderSize = 0;
             this.btn_muestras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_muestras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_muestras.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.btn_muestras.ForeColor = System.Drawing.Color.White;
             this.btn_muestras.Location = new System.Drawing.Point(13, 336);
             this.btn_muestras.Name = "btn_muestras";
-            this.btn_muestras.Size = new System.Drawing.Size(105, 23);
+            this.btn_muestras.Size = new System.Drawing.Size(105, 48);
             this.btn_muestras.TabIndex = 17;
             this.btn_muestras.Text = "Conocer Muestras";
             this.btn_muestras.UseVisualStyleBackColor = false;
@@ -558,7 +562,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(597, 600);
             this.Controls.Add(this.btn_muestras);
             this.Controls.Add(this.txt_seleccionados);
@@ -575,6 +579,7 @@
             this.Controls.Add(this.dgv_docDmo);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MuestraMarcos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -586,14 +591,14 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.documentosDmoBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSetDocDmo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tiposMuestraBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSetTiposMuestra)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_docDmo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSetCodigosDmo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentosDmoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_muestras)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSetTiposMuestra)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tiposMuestraBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSetDocDmo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.documentosDmoBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
