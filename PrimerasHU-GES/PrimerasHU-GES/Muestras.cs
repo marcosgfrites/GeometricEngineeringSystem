@@ -26,5 +26,18 @@ namespace PrimerasHU_GES
         {
             this.Dispose();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            this.WindowState = FormWindowState.Minimized;
+
+        }
+
+        private void btn_Salir_Click_2(object sender, EventArgs e)
+        {
+            this.Dispose();
+
+        }
     }
 }

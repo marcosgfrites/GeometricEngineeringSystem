@@ -32,31 +32,31 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TiposGrafico));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btn_Salir = new System.Windows.Forms.Button();
-            this.btn_min = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txt_descripcion = new System.Windows.Forms.TextBox();
             this.txt_codigo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgv_tiposGrafico = new System.Windows.Forms.DataGridView();
+            this.codTiposGrafDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descTiposGrafDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tiposGraficoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ges_v01DataSetTiposGrafico = new PrimerasHU_GES.ges_v01DataSetTiposGrafico();
             this.btn_limpiar = new System.Windows.Forms.Button();
             this.btn_eliminar = new System.Windows.Forms.Button();
             this.btn_modificar = new System.Windows.Forms.Button();
             this.btn_registrar = new System.Windows.Forms.Button();
-            this.ges_v01DataSetTiposGrafico = new PrimerasHU_GES.ges_v01DataSetTiposGrafico();
-            this.tiposGraficoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tiposGraficoTableAdapter = new PrimerasHU_GES.ges_v01DataSetTiposGraficoTableAdapters.tiposGraficoTableAdapter();
-            this.codTiposGrafDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descTiposGrafDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Salir = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_tiposGrafico)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSetTiposGrafico)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tiposGraficoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSetTiposGrafico)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -67,68 +67,16 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.btn_min);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btn_Salir);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.btn_Salir);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(489, 49);
             this.panel1.TabIndex = 124;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(90, 14);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(253, 18);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "GESTOR DE TIPOS DE GRÁFICO";
-            // 
-            // btn_Salir
-            // 
-            this.btn_Salir.BackColor = System.Drawing.Color.Black;
-            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Salir.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btn_Salir.FlatAppearance.BorderSize = 0;
-            this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Salir.ForeColor = System.Drawing.Color.White;
-            this.btn_Salir.Location = new System.Drawing.Point(425, 0);
-            this.btn_Salir.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Salir.Name = "btn_Salir";
-            this.btn_Salir.Size = new System.Drawing.Size(64, 49);
-            this.btn_Salir.TabIndex = 1;
-            this.btn_Salir.Text = "Volver atrás";
-            this.btn_Salir.UseVisualStyleBackColor = false;
-            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
-            // 
-            // btn_min
-            // 
-            this.btn_min.BackColor = System.Drawing.Color.Black;
-            this.btn_min.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_min.BackgroundImage")));
-            this.btn_min.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_min.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_min.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_min.FlatAppearance.BorderColor = System.Drawing.Color.DarkBlue;
-            this.btn_min.FlatAppearance.BorderSize = 0;
-            this.btn_min.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
-            this.btn_min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_min.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btn_min.ForeColor = System.Drawing.Color.White;
-            this.btn_min.Location = new System.Drawing.Point(361, 0);
-            this.btn_min.Name = "btn_min";
-            this.btn_min.Size = new System.Drawing.Size(64, 49);
-            this.btn_min.TabIndex = 7;
-            this.btn_min.UseVisualStyleBackColor = false;
-            this.btn_min.Click += new System.EventHandler(this.btn_min_Click);
             // 
             // pictureBox1
             // 
@@ -141,6 +89,18 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(90, 14);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(253, 18);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "GESTOR DE TIPOS DE GRÁFICO";
             // 
             // panel2
             // 
@@ -212,6 +172,32 @@
             this.dgv_tiposGrafico.TabIndex = 130;
             this.dgv_tiposGrafico.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_tiposGrafico_CellContentClick);
             // 
+            // codTiposGrafDataGridViewTextBoxColumn
+            // 
+            this.codTiposGrafDataGridViewTextBoxColumn.DataPropertyName = "codTiposGraf";
+            this.codTiposGrafDataGridViewTextBoxColumn.HeaderText = "Código";
+            this.codTiposGrafDataGridViewTextBoxColumn.Name = "codTiposGrafDataGridViewTextBoxColumn";
+            this.codTiposGrafDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codTiposGrafDataGridViewTextBoxColumn.Width = 65;
+            // 
+            // descTiposGrafDataGridViewTextBoxColumn
+            // 
+            this.descTiposGrafDataGridViewTextBoxColumn.DataPropertyName = "descTiposGraf";
+            this.descTiposGrafDataGridViewTextBoxColumn.HeaderText = "Descripción";
+            this.descTiposGrafDataGridViewTextBoxColumn.Name = "descTiposGrafDataGridViewTextBoxColumn";
+            this.descTiposGrafDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descTiposGrafDataGridViewTextBoxColumn.Width = 88;
+            // 
+            // tiposGraficoBindingSource
+            // 
+            this.tiposGraficoBindingSource.DataMember = "tiposGrafico";
+            this.tiposGraficoBindingSource.DataSource = this.ges_v01DataSetTiposGrafico;
+            // 
+            // ges_v01DataSetTiposGrafico
+            // 
+            this.ges_v01DataSetTiposGrafico.DataSetName = "ges_v01DataSetTiposGrafico";
+            this.ges_v01DataSetTiposGrafico.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // btn_limpiar
             // 
             this.btn_limpiar.BackColor = System.Drawing.Color.Black;
@@ -278,35 +264,51 @@
             this.btn_registrar.UseVisualStyleBackColor = false;
             this.btn_registrar.Click += new System.EventHandler(this.btn_registrar_Click);
             // 
-            // ges_v01DataSetTiposGrafico
-            // 
-            this.ges_v01DataSetTiposGrafico.DataSetName = "ges_v01DataSetTiposGrafico";
-            this.ges_v01DataSetTiposGrafico.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tiposGraficoBindingSource
-            // 
-            this.tiposGraficoBindingSource.DataMember = "tiposGrafico";
-            this.tiposGraficoBindingSource.DataSource = this.ges_v01DataSetTiposGrafico;
-            // 
             // tiposGraficoTableAdapter
             // 
             this.tiposGraficoTableAdapter.ClearBeforeFill = true;
             // 
-            // codTiposGrafDataGridViewTextBoxColumn
+            // button1
             // 
-            this.codTiposGrafDataGridViewTextBoxColumn.DataPropertyName = "codTiposGraf";
-            this.codTiposGrafDataGridViewTextBoxColumn.HeaderText = "Código";
-            this.codTiposGrafDataGridViewTextBoxColumn.Name = "codTiposGrafDataGridViewTextBoxColumn";
-            this.codTiposGrafDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codTiposGrafDataGridViewTextBoxColumn.Width = 65;
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(387, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(51, 49);
+            this.button1.TabIndex = 14;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // descTiposGrafDataGridViewTextBoxColumn
+            // btn_Salir
             // 
-            this.descTiposGrafDataGridViewTextBoxColumn.DataPropertyName = "descTiposGraf";
-            this.descTiposGrafDataGridViewTextBoxColumn.HeaderText = "Descripción";
-            this.descTiposGrafDataGridViewTextBoxColumn.Name = "descTiposGrafDataGridViewTextBoxColumn";
-            this.descTiposGrafDataGridViewTextBoxColumn.ReadOnly = true;
-            this.descTiposGrafDataGridViewTextBoxColumn.Width = 88;
+            this.btn_Salir.BackColor = System.Drawing.Color.Black;
+            this.btn_Salir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Salir.BackgroundImage")));
+            this.btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Salir.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btn_Salir.FlatAppearance.BorderSize = 0;
+            this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Salir.ForeColor = System.Drawing.Color.White;
+            this.btn_Salir.Location = new System.Drawing.Point(438, 0);
+            this.btn_Salir.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Salir.Name = "btn_Salir";
+            this.btn_Salir.Size = new System.Drawing.Size(51, 49);
+            this.btn_Salir.TabIndex = 13;
+            this.btn_Salir.UseVisualStyleBackColor = false;
+            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click_1);
             // 
             // TiposGrafico
             // 
@@ -332,8 +334,8 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_tiposGrafico)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSetTiposGrafico)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tiposGraficoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSetTiposGrafico)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -342,10 +344,8 @@
 
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btn_min;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btn_Salir;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txt_descripcion;
         private System.Windows.Forms.TextBox txt_codigo;
@@ -361,5 +361,7 @@
         private ges_v01DataSetTiposGraficoTableAdapters.tiposGraficoTableAdapter tiposGraficoTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn codTiposGrafDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descTiposGrafDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Salir;
     }
 }

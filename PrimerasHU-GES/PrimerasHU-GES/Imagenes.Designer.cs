@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Imagenes));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_Salir = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_NomImg = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -79,7 +80,11 @@
             this.ges_v01Imagenes2 = new PrimerasHU_GES.ges_v01Imagenes2();
             this.controlPlanTableAdapter = new PrimerasHU_GES.ges_v01Imagenes2TableAdapters.controlPlanTableAdapter();
             this.imagenesTableAdapter = new PrimerasHU_GES.ges_v01Imagenes4TableAdapters.imagenesTableAdapter();
-            this.panel1.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Salir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Imagenes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01Imagenes4)).BeginInit();
@@ -94,6 +99,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gesv01ImagenesBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.controlPlanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01Imagenes2)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -101,82 +108,33 @@
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
-            this.panel1.Controls.Add(this.btn_Salir);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1366, 49);
-            this.panel1.TabIndex = 0;
-            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Panel1_MouseMove);
-            // 
-            // btn_Salir
-            // 
-            this.btn_Salir.BackColor = System.Drawing.Color.Black;
-            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Salir.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btn_Salir.FlatAppearance.BorderSize = 0;
-            this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btn_Salir.Location = new System.Drawing.Point(1266, 0);
-            this.btn_Salir.Name = "btn_Salir";
-            this.btn_Salir.Size = new System.Drawing.Size(100, 49);
-            this.btn_Salir.TabIndex = 1;
-            this.btn_Salir.Text = "Volver atrás";
-            this.btn_Salir.UseVisualStyleBackColor = false;
-            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = global::PrimerasHU_GES.Properties.Resources.LOGOENCABEZADO_Mesa_de_trabajo_1;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(85, 49);
-            this.panel2.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(352, 53);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(255, 27);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "GESTOR DE IMÁGENES";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(23, 145);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 16);
+            this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 7;
             this.label1.Text = "Nombre:";
             // 
             // txt_NomImg
             // 
+            this.txt_NomImg.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txt_NomImg.Location = new System.Drawing.Point(26, 164);
             this.txt_NomImg.Name = "txt_NomImg";
-            this.txt_NomImg.Size = new System.Drawing.Size(280, 22);
+            this.txt_NomImg.Size = new System.Drawing.Size(280, 20);
             this.txt_NomImg.TabIndex = 8;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(23, 195);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 16);
+            this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 9;
             this.label2.Text = "Archivo:";
             // 
@@ -184,9 +142,10 @@
             // 
             this.txt_Archivo.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Archivo.Enabled = false;
+            this.txt_Archivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txt_Archivo.Location = new System.Drawing.Point(26, 214);
             this.txt_Archivo.Name = "txt_Archivo";
-            this.txt_Archivo.Size = new System.Drawing.Size(280, 22);
+            this.txt_Archivo.Size = new System.Drawing.Size(280, 20);
             this.txt_Archivo.TabIndex = 10;
             // 
             // btn_BuscarArchivo
@@ -213,9 +172,9 @@
             // 
             this.btn_Guardar.BackColor = System.Drawing.Color.Black;
             this.btn_Guardar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Guardar.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.btn_Guardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_Guardar.FlatAppearance.BorderSize = 0;
-            this.btn_Guardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btn_Guardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Guardar.Location = new System.Drawing.Point(203, 351);
             this.btn_Guardar.Name = "btn_Guardar";
@@ -229,39 +188,44 @@
             // 
             this.txt_fechoraCreacion.BackColor = System.Drawing.SystemColors.Window;
             this.txt_fechoraCreacion.Enabled = false;
+            this.txt_fechoraCreacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txt_fechoraCreacion.Location = new System.Drawing.Point(26, 263);
             this.txt_fechoraCreacion.Name = "txt_fechoraCreacion";
-            this.txt_fechoraCreacion.Size = new System.Drawing.Size(280, 22);
+            this.txt_fechoraCreacion.Size = new System.Drawing.Size(280, 20);
             this.txt_fechoraCreacion.TabIndex = 14;
             this.txt_fechoraCreacion.Text = "01/01/1900";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(23, 244);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(132, 16);
+            this.label4.Size = new System.Drawing.Size(100, 13);
             this.label4.TabIndex = 13;
             this.label4.Text = "Fecha de Creación:";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // txt_fechoraModif
             // 
             this.txt_fechoraModif.BackColor = System.Drawing.SystemColors.Window;
             this.txt_fechoraModif.Enabled = false;
+            this.txt_fechoraModif.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txt_fechoraModif.Location = new System.Drawing.Point(26, 313);
             this.txt_fechoraModif.Name = "txt_fechoraModif";
-            this.txt_fechoraModif.Size = new System.Drawing.Size(280, 22);
+            this.txt_fechoraModif.Size = new System.Drawing.Size(280, 20);
             this.txt_fechoraModif.TabIndex = 16;
             this.txt_fechoraModif.Text = "01/01/1900";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(23, 294);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(156, 16);
+            this.label5.Size = new System.Drawing.Size(118, 13);
             this.label5.TabIndex = 15;
             this.label5.Text = "Fecha de Modificación:";
             // 
@@ -273,7 +237,7 @@
             this.dgv_Imagenes.AllowUserToResizeRows = false;
             this.dgv_Imagenes.AutoGenerateColumns = false;
             this.dgv_Imagenes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_Imagenes.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dgv_Imagenes.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgv_Imagenes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Imagenes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codImagenDataGridViewTextBoxColumn,
@@ -298,6 +262,8 @@
             // codImagenDataGridViewTextBoxColumn
             // 
             this.codImagenDataGridViewTextBoxColumn.DataPropertyName = "codImagen";
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.codImagenDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
             this.codImagenDataGridViewTextBoxColumn.HeaderText = "Código";
             this.codImagenDataGridViewTextBoxColumn.Name = "codImagenDataGridViewTextBoxColumn";
             this.codImagenDataGridViewTextBoxColumn.ReadOnly = true;
@@ -305,6 +271,8 @@
             // codCPlanDataGridViewTextBoxColumn
             // 
             this.codCPlanDataGridViewTextBoxColumn.DataPropertyName = "codCPlan";
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.codCPlanDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
             this.codCPlanDataGridViewTextBoxColumn.HeaderText = "Control Plan";
             this.codCPlanDataGridViewTextBoxColumn.Name = "codCPlanDataGridViewTextBoxColumn";
             this.codCPlanDataGridViewTextBoxColumn.ReadOnly = true;
@@ -312,6 +280,8 @@
             // nomImagenDataGridViewTextBoxColumn
             // 
             this.nomImagenDataGridViewTextBoxColumn.DataPropertyName = "nomImagen";
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomImagenDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
             this.nomImagenDataGridViewTextBoxColumn.HeaderText = "Nombre";
             this.nomImagenDataGridViewTextBoxColumn.Name = "nomImagenDataGridViewTextBoxColumn";
             this.nomImagenDataGridViewTextBoxColumn.ReadOnly = true;
@@ -319,6 +289,8 @@
             // fechoraCreImagenDataGridViewTextBoxColumn
             // 
             this.fechoraCreImagenDataGridViewTextBoxColumn.DataPropertyName = "fechoraCreImagen";
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fechoraCreImagenDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
             this.fechoraCreImagenDataGridViewTextBoxColumn.HeaderText = "Fecha - Creación";
             this.fechoraCreImagenDataGridViewTextBoxColumn.Name = "fechoraCreImagenDataGridViewTextBoxColumn";
             this.fechoraCreImagenDataGridViewTextBoxColumn.ReadOnly = true;
@@ -326,6 +298,8 @@
             // fechoraModImagenDataGridViewTextBoxColumn
             // 
             this.fechoraModImagenDataGridViewTextBoxColumn.DataPropertyName = "fechoraModImagen";
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fechoraModImagenDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
             this.fechoraModImagenDataGridViewTextBoxColumn.HeaderText = "Fecha - Modificación";
             this.fechoraModImagenDataGridViewTextBoxColumn.Name = "fechoraModImagenDataGridViewTextBoxColumn";
             this.fechoraModImagenDataGridViewTextBoxColumn.ReadOnly = true;
@@ -377,9 +351,9 @@
             // 
             this.btn_Actualizar.BackColor = System.Drawing.Color.Black;
             this.btn_Actualizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Actualizar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn_Actualizar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_Actualizar.FlatAppearance.BorderSize = 0;
-            this.btn_Actualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn_Actualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_Actualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Actualizar.Location = new System.Drawing.Point(354, 586);
             this.btn_Actualizar.Name = "btn_Actualizar";
@@ -402,11 +376,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))));
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(354, 111);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(249, 18);
+            this.label6.Size = new System.Drawing.Size(184, 15);
             this.label6.TabIndex = 21;
             this.label6.Text = "Listado de imágenes archivadas";
             // 
@@ -440,9 +414,9 @@
             // 
             this.btn_Modificar.BackColor = System.Drawing.Color.Black;
             this.btn_Modificar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Modificar.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.btn_Modificar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_Modificar.FlatAppearance.BorderSize = 0;
-            this.btn_Modificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btn_Modificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_Modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Modificar.Location = new System.Drawing.Point(572, 586);
             this.btn_Modificar.Name = "btn_Modificar";
@@ -464,39 +438,42 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic);
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(31, 398);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(137, 16);
+            this.label8.Size = new System.Drawing.Size(121, 15);
             this.label8.TabIndex = 25;
             this.label8.Text = "Vista previa - Imágen";
             // 
             // txt_Codigo
             // 
             this.txt_Codigo.Enabled = false;
+            this.txt_Codigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txt_Codigo.Location = new System.Drawing.Point(86, 81);
             this.txt_Codigo.Name = "txt_Codigo";
-            this.txt_Codigo.Size = new System.Drawing.Size(220, 22);
+            this.txt_Codigo.Size = new System.Drawing.Size(220, 20);
             this.txt_Codigo.TabIndex = 27;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(23, 84);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(57, 16);
+            this.label9.Size = new System.Drawing.Size(43, 13);
             this.label9.TabIndex = 26;
             this.label9.Text = "Código:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Location = new System.Drawing.Point(23, 117);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(95, 16);
+            this.label10.Size = new System.Drawing.Size(71, 13);
             this.label10.TabIndex = 28;
             this.label10.Text = "Contron Plan:";
             // 
@@ -525,10 +502,11 @@
             this.cb_controlPlanImagenes.DataSource = this.controlPlanBindingSource;
             this.cb_controlPlanImagenes.DisplayMember = "codPrograma";
             this.cb_controlPlanImagenes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_controlPlanImagenes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.cb_controlPlanImagenes.FormattingEnabled = true;
             this.cb_controlPlanImagenes.Location = new System.Drawing.Point(125, 114);
             this.cb_controlPlanImagenes.Name = "cb_controlPlanImagenes";
-            this.cb_controlPlanImagenes.Size = new System.Drawing.Size(181, 24);
+            this.cb_controlPlanImagenes.Size = new System.Drawing.Size(181, 21);
             this.cb_controlPlanImagenes.TabIndex = 29;
             this.cb_controlPlanImagenes.ValueMember = "codCPlan";
             // 
@@ -550,12 +528,93 @@
             // 
             this.imagenesTableAdapter.ClearBeforeFill = true;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btn_Salir);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1366, 49);
+            this.panel1.TabIndex = 30;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = global::PrimerasHU_GES.Properties.Resources.LOGOENCABEZADO_Mesa_de_trabajo_1;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(49, 49);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(91, 11);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(230, 22);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "GESTOR DE IMAGENES";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(1264, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(51, 49);
+            this.button1.TabIndex = 14;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // btn_Salir
+            // 
+            this.btn_Salir.BackColor = System.Drawing.Color.Black;
+            this.btn_Salir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Salir.BackgroundImage")));
+            this.btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Salir.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btn_Salir.FlatAppearance.BorderSize = 0;
+            this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Salir.ForeColor = System.Drawing.Color.White;
+            this.btn_Salir.Location = new System.Drawing.Point(1315, 0);
+            this.btn_Salir.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Salir.Name = "btn_Salir";
+            this.btn_Salir.Size = new System.Drawing.Size(51, 49);
+            this.btn_Salir.TabIndex = 13;
+            this.btn_Salir.UseVisualStyleBackColor = false;
+            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click_2);
+            // 
             // Imagenes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1366, 700);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.cb_controlPlanImagenes);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txt_Codigo);
@@ -579,8 +638,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_NomImg);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -590,7 +647,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Imagenes";
             this.Load += new System.EventHandler(this.Imagenes_Load);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Imagenes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01Imagenes4)).EndInit();
@@ -605,6 +661,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.gesv01ImagenesBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.controlPlanBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01Imagenes2)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -613,10 +672,6 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btn_Salir;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_NomImg;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -655,11 +710,16 @@
         private ges_v01Imagenes4 ges_v01Imagenes4;
         private System.Windows.Forms.BindingSource imagenesBindingSource;
         private ges_v01Imagenes4TableAdapters.imagenesTableAdapter imagenesTableAdapter;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridViewTextBoxColumn codImagenDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codCPlanDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomImagenDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechoraCreImagenDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechoraModImagenDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewImageColumn imgImagenDataGridViewImageColumn;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Salir;
     }
 }

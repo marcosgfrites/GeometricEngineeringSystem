@@ -66,7 +66,7 @@ namespace PrimerasHU_GES
 
                     nuevoDtgv.AutoGenerateColumns = false;
 
-                    nuevoDtgv.Columns[0].HeaderText = "Cod.de punto";
+                    nuevoDtgv.Columns[0].HeaderText = "Cod. de punto";
                     nuevoDtgv.Columns[1].HeaderText = "Entidad";
                     nuevoDtgv.Columns[2].HeaderText = "Denominación";
                     nuevoDtgv.Columns[3].HeaderText = "Tipologia";
@@ -82,8 +82,8 @@ namespace PrimerasHU_GES
                     //nuevoDtgv.Columns[13].HeaderText = "CD J";
                     //nuevoDtgv.Columns[14].HeaderText = "CD K";
                     nuevoDtgv.Columns[9].HeaderText = "Unidad de medición";
-                    nuevoDtgv.Columns[10].HeaderText = "Tol. Limite Inferior";
-                    nuevoDtgv.Columns[11].HeaderText = "Tol. Limite Superior";
+                    nuevoDtgv.Columns[10].HeaderText = "Tol. limite inferior";
+                    nuevoDtgv.Columns[11].HeaderText = "Tol. limite superior";
                     //nuevoDtgv.Columns[18].HeaderText = "Medio de control";
                     //nuevoDtgv.Columns[19].HeaderText = "Frecuencia de control";
                     //nuevoDtgv.Columns[20].HeaderText = "Modo de registro";
@@ -101,7 +101,7 @@ namespace PrimerasHU_GES
 
                     registrarBtn.Enabled = true;
 
-                    limpiarTxt.Enabled = true;
+                    btnLimpiar.Enabled = true;
 
 
                   /*  foreach (DataGridViewRow fila in nuevoDtgv.Rows)
@@ -261,10 +261,7 @@ namespace PrimerasHU_GES
         }
 
 
-        private void LimpiarTxt_Click(object sender, EventArgs e)
-        {
-            limpiar();
-        }
+       
         //cargar lo siguiente para el movimiento del panel 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -448,6 +445,23 @@ namespace PrimerasHU_GES
             }
         }
 
+        private void btnLimpiar_Click_1(object sender, EventArgs e)
+        {
+            limpiar();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            this.WindowState = FormWindowState.Minimized;
+
+        }
+
+        private void btn_Salir_Click_1(object sender, EventArgs e)
+        {
+            this.Dispose();
+
+        }
     }      
 }    
    

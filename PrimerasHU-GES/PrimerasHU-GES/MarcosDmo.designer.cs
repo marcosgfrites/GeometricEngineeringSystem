@@ -73,9 +73,9 @@
             this.label18 = new System.Windows.Forms.Label();
             this.p_EncabezadoDmo = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
-            this.btn_Salir = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label22 = new System.Windows.Forms.Label();
             this.btn_Alta = new System.Windows.Forms.Button();
             this.txt_CodigoDmo = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -94,7 +94,8 @@
             this.LoTol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CritOot = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_conocer = new System.Windows.Forms.Button();
-            this.label22 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btn_Salir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Dmo)).BeginInit();
             this.p_EncabezadoDmo.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -127,6 +128,7 @@
             this.btn_Examinar.FlatAppearance.BorderSize = 0;
             this.btn_Examinar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_Examinar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Examinar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.btn_Examinar.ForeColor = System.Drawing.Color.White;
             this.btn_Examinar.Location = new System.Drawing.Point(336, 71);
             this.btn_Examinar.Name = "btn_Examinar";
@@ -143,6 +145,7 @@
             // dgv_Dmo
             // 
             this.dgv_Dmo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_Dmo.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgv_Dmo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Dmo.Location = new System.Drawing.Point(417, 56);
             this.dgv_Dmo.Name = "dgv_Dmo";
@@ -156,6 +159,7 @@
             this.btn_Datos.FlatAppearance.BorderSize = 0;
             this.btn_Datos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_Datos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Datos.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.btn_Datos.ForeColor = System.Drawing.Color.White;
             this.btn_Datos.Location = new System.Drawing.Point(216, 636);
             this.btn_Datos.Name = "btn_Datos";
@@ -511,24 +515,6 @@
             this.label19.TabIndex = 43;
             this.label19.Text = "ENCABEZADO - DOCUMENTO DMO";
             // 
-            // btn_Salir
-            // 
-            this.btn_Salir.BackColor = System.Drawing.Color.Black;
-            this.btn_Salir.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btn_Salir.FlatAppearance.BorderSize = 0;
-            this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btn_Salir.ForeColor = System.Drawing.Color.White;
-            this.btn_Salir.Location = new System.Drawing.Point(1302, 0);
-            this.btn_Salir.Name = "btn_Salir";
-            this.btn_Salir.Size = new System.Drawing.Size(64, 49);
-            this.btn_Salir.TabIndex = 1;
-            this.btn_Salir.Text = "Volver atrás";
-            this.btn_Salir.UseVisualStyleBackColor = false;
-            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
@@ -543,8 +529,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.label22);
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.btn_Salir);
+            this.panel1.Controls.Add(this.label22);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -553,13 +540,26 @@
             this.panel1.Size = new System.Drawing.Size(1366, 49);
             this.panel1.TabIndex = 44;
             // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.Transparent;
+            this.label22.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.White;
+            this.label22.Location = new System.Drawing.Point(95, 12);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(315, 22);
+            this.label22.TabIndex = 3;
+            this.label22.Text = "GESTOR DE DOCUMENTOS DMO";
+            // 
             // btn_Alta
             // 
             this.btn_Alta.BackColor = System.Drawing.Color.Black;
-            this.btn_Alta.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.btn_Alta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_Alta.FlatAppearance.BorderSize = 0;
-            this.btn_Alta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btn_Alta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_Alta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Alta.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.btn_Alta.ForeColor = System.Drawing.Color.White;
             this.btn_Alta.Location = new System.Drawing.Point(429, 636);
             this.btn_Alta.Name = "btn_Alta";
@@ -589,10 +589,11 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(12, 636);
             this.button1.Name = "button1";
@@ -607,6 +608,7 @@
             this.dgv_DetDmo.AllowUserToAddRows = false;
             this.dgv_DetDmo.AllowUserToDeleteRows = false;
             this.dgv_DetDmo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_DetDmo.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgv_DetDmo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DetDmo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ptos});
@@ -627,6 +629,7 @@
             this.dgv_nombresPuntos.AllowUserToAddRows = false;
             this.dgv_nombresPuntos.AllowUserToDeleteRows = false;
             this.dgv_nombresPuntos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_nombresPuntos.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgv_nombresPuntos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_nombresPuntos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1});
@@ -649,6 +652,7 @@
             this.dgv_datos.AllowUserToResizeColumns = false;
             this.dgv_datos.AllowUserToResizeRows = false;
             this.dgv_datos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_datos.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgv_datos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_datos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Punto,
@@ -719,10 +723,11 @@
             // btn_conocer
             // 
             this.btn_conocer.BackColor = System.Drawing.Color.Black;
-            this.btn_conocer.FlatAppearance.BorderColor = System.Drawing.Color.Coral;
+            this.btn_conocer.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_conocer.FlatAppearance.BorderSize = 0;
-            this.btn_conocer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Coral;
+            this.btn_conocer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_conocer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_conocer.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.btn_conocer.ForeColor = System.Drawing.Color.White;
             this.btn_conocer.Location = new System.Drawing.Point(1046, 636);
             this.btn_conocer.Name = "btn_conocer";
@@ -732,23 +737,53 @@
             this.btn_conocer.UseVisualStyleBackColor = false;
             this.btn_conocer.Click += new System.EventHandler(this.Btn_conocer_Click);
             // 
-            // label22
+            // button2
             // 
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.Transparent;
-            this.label22.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.White;
-            this.label22.Location = new System.Drawing.Point(95, 12);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(315, 22);
-            this.label22.TabIndex = 3;
-            this.label22.Text = "GESTOR DE DOCUMENTOS DMO";
+            this.button2.BackColor = System.Drawing.Color.Black;
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(1264, 0);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(51, 49);
+            this.button2.TabIndex = 14;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btn_Salir
+            // 
+            this.btn_Salir.BackColor = System.Drawing.Color.Black;
+            this.btn_Salir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Salir.BackgroundImage")));
+            this.btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Salir.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btn_Salir.FlatAppearance.BorderSize = 0;
+            this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Salir.ForeColor = System.Drawing.Color.White;
+            this.btn_Salir.Location = new System.Drawing.Point(1315, 0);
+            this.btn_Salir.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Salir.Name = "btn_Salir";
+            this.btn_Salir.Size = new System.Drawing.Size(51, 49);
+            this.btn_Salir.TabIndex = 13;
+            this.btn_Salir.UseVisualStyleBackColor = false;
+            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click_1);
             // 
             // MarcosDmo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1366, 700);
             this.Controls.Add(this.btn_conocer);
             this.Controls.Add(this.dgv_datos);
@@ -831,7 +866,6 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Panel p_EncabezadoDmo;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btn_Salir;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btn_Alta;
         private System.Windows.Forms.TextBox txt_CodigoDmo;
@@ -852,5 +886,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CritOot;
         private System.Windows.Forms.Button btn_conocer;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_Salir;
     }
 }

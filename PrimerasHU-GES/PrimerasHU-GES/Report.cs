@@ -20,7 +20,12 @@ namespace PrimerasHU_GES
         {
             
             InitializeComponent();
-            
+            lbCodUsu.Text = "sadfad";
+            lbCodAna.Text = "sdfsd";
+
+            lbCodAna.Visible = true;
+            lbCodUsu.Visible = true;
+
         }
 
         SqlConnection cn;
@@ -612,6 +617,19 @@ namespace PrimerasHU_GES
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            this.WindowState = FormWindowState.Minimized;
+
+        }
+
+        private void btn_Salir_Click_1(object sender, EventArgs e)
+        {
+            this.Dispose();
+
         }
     }
 

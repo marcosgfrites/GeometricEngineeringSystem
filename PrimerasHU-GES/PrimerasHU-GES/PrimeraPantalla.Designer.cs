@@ -33,12 +33,13 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.btn_Salir = new System.Windows.Forms.Button();
+            this.lb_CodUsu = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_TipoUsu = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lbl_Usuario = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_Salir = new System.Windows.Forms.Button();
             this.btn_CPlan = new System.Windows.Forms.Button();
             this.btn_Dmo = new System.Windows.Forms.Button();
             this.btn_Img = new System.Windows.Forms.Button();
@@ -86,7 +87,6 @@
             this.panel_menu1 = new System.Windows.Forms.Panel();
             this.sidebar1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lb_CodUsu = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelCplan.SuspendLayout();
@@ -108,14 +108,14 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.lb_CodUsu);
             this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btn_Salir);
+            this.panel1.Controls.Add(this.lb_CodUsu);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.lbl_TipoUsu);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.lbl_Usuario);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.btn_Salir);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
@@ -141,10 +141,42 @@
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(51, 49);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "_";
+            this.button1.TabIndex = 12;
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // btn_Salir
+            // 
+            this.btn_Salir.BackColor = System.Drawing.Color.Black;
+            this.btn_Salir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Salir.BackgroundImage")));
+            this.btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Salir.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btn_Salir.FlatAppearance.BorderSize = 0;
+            this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Salir.ForeColor = System.Drawing.Color.White;
+            this.btn_Salir.Location = new System.Drawing.Point(758, 0);
+            this.btn_Salir.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Salir.Name = "btn_Salir";
+            this.btn_Salir.Size = new System.Drawing.Size(51, 49);
+            this.btn_Salir.TabIndex = 11;
+            this.btn_Salir.UseVisualStyleBackColor = false;
+            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click_1);
+            // 
+            // lb_CodUsu
+            // 
+            this.lb_CodUsu.AutoSize = true;
+            this.lb_CodUsu.BackColor = System.Drawing.Color.Transparent;
+            this.lb_CodUsu.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_CodUsu.Location = new System.Drawing.Point(556, 11);
+            this.lb_CodUsu.Name = "lb_CodUsu";
+            this.lb_CodUsu.Size = new System.Drawing.Size(110, 22);
+            this.lb_CodUsu.TabIndex = 10;
+            this.lb_CodUsu.Text = "CodUsuario";
+            this.lb_CodUsu.Visible = false;
             // 
             // pictureBox1
             // 
@@ -201,26 +233,6 @@
             this.label1.Size = new System.Drawing.Size(109, 22);
             this.label1.TabIndex = 2;
             this.label1.Text = "Bienvenido:";
-            // 
-            // btn_Salir
-            // 
-            this.btn_Salir.BackColor = System.Drawing.Color.Black;
-            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Salir.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btn_Salir.FlatAppearance.BorderSize = 0;
-            this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Salir.ForeColor = System.Drawing.Color.White;
-            this.btn_Salir.Location = new System.Drawing.Point(758, 0);
-            this.btn_Salir.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Salir.Name = "btn_Salir";
-            this.btn_Salir.Size = new System.Drawing.Size(51, 49);
-            this.btn_Salir.TabIndex = 1;
-            this.btn_Salir.Text = "Salir";
-            this.btn_Salir.UseVisualStyleBackColor = false;
-            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
             // 
             // btn_CPlan
             // 
@@ -299,7 +311,7 @@
             this.panelCplan.Controls.Add(this.btn_ControlPlan);
             this.panelCplan.Controls.Add(this.btn_Secciones);
             this.panelCplan.Controls.Add(this.btn_TipoVehiculo);
-            this.panelCplan.Location = new System.Drawing.Point(197, 56);
+            this.panelCplan.Location = new System.Drawing.Point(168, 100);
             this.panelCplan.Margin = new System.Windows.Forms.Padding(0);
             this.panelCplan.Name = "panelCplan";
             this.panelCplan.Size = new System.Drawing.Size(211, 317);
@@ -398,9 +410,9 @@
             this.panelDmo.Controls.Add(this.btn_PtoY);
             this.panelDmo.Controls.Add(this.btn_PtoX);
             this.panelDmo.Controls.Add(this.btn_DocumentoDmo);
-            this.panelDmo.Location = new System.Drawing.Point(171, 104);
+            this.panelDmo.Location = new System.Drawing.Point(168, 99);
             this.panelDmo.Name = "panelDmo";
-            this.panelDmo.Size = new System.Drawing.Size(209, 225);
+            this.panelDmo.Size = new System.Drawing.Size(210, 235);
             this.panelDmo.TabIndex = 9;
             // 
             // btn_PtoD
@@ -488,15 +500,13 @@
             // 
             this.panelAnalisis.BackColor = System.Drawing.Color.Transparent;
             this.panelAnalisis.Controls.Add(this.btn_Informe);
-            this.panelAnalisis.Controls.Add(this.p_Administrador);
             this.panelAnalisis.Controls.Add(this.btn_Graficos);
-            this.panelAnalisis.Controls.Add(this.panelCplan);
             this.panelAnalisis.Controls.Add(this.btn_Calculos);
             this.panelAnalisis.Controls.Add(this.btn_Indicadores);
             this.panelAnalisis.Controls.Add(this.btn_Muestras);
-            this.panelAnalisis.Location = new System.Drawing.Point(171, 104);
+            this.panelAnalisis.Location = new System.Drawing.Point(168, 99);
             this.panelAnalisis.Name = "panelAnalisis";
-            this.panelAnalisis.Size = new System.Drawing.Size(213, 225);
+            this.panelAnalisis.Size = new System.Drawing.Size(208, 244);
             this.panelAnalisis.TabIndex = 10;
             // 
             // btn_Informe
@@ -536,7 +546,7 @@
             this.p_Administrador.Controls.Add(this.btn_Aprobadores);
             this.p_Administrador.Controls.Add(this.btn_Programas);
             this.p_Administrador.Controls.Add(this.btn_Maquinas);
-            this.p_Administrador.Location = new System.Drawing.Point(0, 0);
+            this.p_Administrador.Location = new System.Drawing.Point(168, 99);
             this.p_Administrador.Margin = new System.Windows.Forms.Padding(0);
             this.p_Administrador.Name = "p_Administrador";
             this.p_Administrador.Size = new System.Drawing.Size(397, 409);
@@ -994,18 +1004,6 @@
             this.panel2.Size = new System.Drawing.Size(165, 41);
             this.panel2.TabIndex = 0;
             // 
-            // lb_CodUsu
-            // 
-            this.lb_CodUsu.AutoSize = true;
-            this.lb_CodUsu.BackColor = System.Drawing.Color.Transparent;
-            this.lb_CodUsu.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_CodUsu.Location = new System.Drawing.Point(556, 11);
-            this.lb_CodUsu.Name = "lb_CodUsu";
-            this.lb_CodUsu.Size = new System.Drawing.Size(110, 22);
-            this.lb_CodUsu.TabIndex = 10;
-            this.lb_CodUsu.Text = "CodUsuario";
-            this.lb_CodUsu.Visible = false;
-            // 
             // PrimeraPantalla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1016,6 +1014,8 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(809, 517);
             this.Controls.Add(this.panel_menu1);
+            this.Controls.Add(this.p_Administrador);
+            this.Controls.Add(this.panelCplan);
             this.Controls.Add(this.panelAnalisis);
             this.Controls.Add(this.panelDmo);
             this.Controls.Add(this.panel1);
@@ -1050,7 +1050,6 @@
 
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btn_Salir;
         private System.Windows.Forms.Button btn_CPlan;
         private System.Windows.Forms.Button btn_Dmo;
         public System.Windows.Forms.Label lbl_Usuario;
@@ -1102,8 +1101,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pb_menu;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
         public System.Windows.Forms.Button btn_Informe;
         public System.Windows.Forms.Label lb_CodUsu;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Salir;
     }
 }

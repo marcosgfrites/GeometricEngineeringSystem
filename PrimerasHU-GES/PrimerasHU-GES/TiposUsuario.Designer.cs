@@ -33,15 +33,13 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_min = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.btn_Salir = new System.Windows.Forms.Button();
             this.dgv_tiposUsuario = new System.Windows.Forms.DataGridView();
-            this.ges_v01DataSetTiposUsuario = new PrimerasHU_GES.ges_v01DataSetTiposUsuario();
-            this.tiposUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tiposUsuarioTableAdapter = new PrimerasHU_GES.ges_v01DataSetTiposUsuarioTableAdapters.tiposUsuarioTableAdapter();
             this.codTipoUsuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descTipoUsuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tiposUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ges_v01DataSetTiposUsuario = new PrimerasHU_GES.ges_v01DataSetTiposUsuario();
+            this.tiposUsuarioTableAdapter = new PrimerasHU_GES.ges_v01DataSetTiposUsuarioTableAdapters.tiposUsuarioTableAdapter();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txt_descripcion = new System.Windows.Forms.TextBox();
             this.txt_codigo = new System.Windows.Forms.TextBox();
@@ -51,11 +49,13 @@
             this.btn_eliminar = new System.Windows.Forms.Button();
             this.btn_modificar = new System.Windows.Forms.Button();
             this.btn_registrar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Salir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_tiposUsuario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSetTiposUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tiposUsuarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSetTiposUsuario)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,36 +79,16 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.btn_min);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btn_Salir);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.btn_Salir);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(489, 49);
             this.panel1.TabIndex = 112;
-            // 
-            // btn_min
-            // 
-            this.btn_min.BackColor = System.Drawing.Color.Black;
-            this.btn_min.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_min.BackgroundImage")));
-            this.btn_min.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_min.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_min.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_min.FlatAppearance.BorderColor = System.Drawing.Color.DarkBlue;
-            this.btn_min.FlatAppearance.BorderSize = 0;
-            this.btn_min.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
-            this.btn_min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_min.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btn_min.ForeColor = System.Drawing.Color.White;
-            this.btn_min.Location = new System.Drawing.Point(361, 0);
-            this.btn_min.Name = "btn_min";
-            this.btn_min.Size = new System.Drawing.Size(64, 49);
-            this.btn_min.TabIndex = 7;
-            this.btn_min.UseVisualStyleBackColor = false;
-            this.btn_min.Click += new System.EventHandler(this.btn_min_Click);
             // 
             // label3
             // 
@@ -121,26 +101,6 @@
             this.label3.Size = new System.Drawing.Size(252, 18);
             this.label3.TabIndex = 2;
             this.label3.Text = "GESTOR DE TIPOS DE USUARIO";
-            // 
-            // btn_Salir
-            // 
-            this.btn_Salir.BackColor = System.Drawing.Color.Black;
-            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Salir.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btn_Salir.FlatAppearance.BorderSize = 0;
-            this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Salir.ForeColor = System.Drawing.Color.White;
-            this.btn_Salir.Location = new System.Drawing.Point(425, 0);
-            this.btn_Salir.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Salir.Name = "btn_Salir";
-            this.btn_Salir.Size = new System.Drawing.Size(64, 49);
-            this.btn_Salir.TabIndex = 1;
-            this.btn_Salir.Text = "Volver atrás";
-            this.btn_Salir.UseVisualStyleBackColor = false;
-            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
             // 
             // dgv_tiposUsuario
             // 
@@ -164,20 +124,6 @@
             this.dgv_tiposUsuario.TabIndex = 113;
             this.dgv_tiposUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_tiposUsuario_CellContentClick);
             // 
-            // ges_v01DataSetTiposUsuario
-            // 
-            this.ges_v01DataSetTiposUsuario.DataSetName = "ges_v01DataSetTiposUsuario";
-            this.ges_v01DataSetTiposUsuario.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tiposUsuarioBindingSource
-            // 
-            this.tiposUsuarioBindingSource.DataMember = "tiposUsuario";
-            this.tiposUsuarioBindingSource.DataSource = this.ges_v01DataSetTiposUsuario;
-            // 
-            // tiposUsuarioTableAdapter
-            // 
-            this.tiposUsuarioTableAdapter.ClearBeforeFill = true;
-            // 
             // codTipoUsuDataGridViewTextBoxColumn
             // 
             this.codTipoUsuDataGridViewTextBoxColumn.DataPropertyName = "codTipoUsu";
@@ -193,6 +139,20 @@
             this.descTipoUsuDataGridViewTextBoxColumn.Name = "descTipoUsuDataGridViewTextBoxColumn";
             this.descTipoUsuDataGridViewTextBoxColumn.ReadOnly = true;
             this.descTipoUsuDataGridViewTextBoxColumn.Width = 85;
+            // 
+            // tiposUsuarioBindingSource
+            // 
+            this.tiposUsuarioBindingSource.DataMember = "tiposUsuario";
+            this.tiposUsuarioBindingSource.DataSource = this.ges_v01DataSetTiposUsuario;
+            // 
+            // ges_v01DataSetTiposUsuario
+            // 
+            this.ges_v01DataSetTiposUsuario.DataSetName = "ges_v01DataSetTiposUsuario";
+            this.ges_v01DataSetTiposUsuario.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tiposUsuarioTableAdapter
+            // 
+            this.tiposUsuarioTableAdapter.ClearBeforeFill = true;
             // 
             // panel2
             // 
@@ -308,6 +268,48 @@
             this.btn_registrar.UseVisualStyleBackColor = false;
             this.btn_registrar.Click += new System.EventHandler(this.btn_registrar_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(387, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(51, 49);
+            this.button1.TabIndex = 14;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btn_Salir
+            // 
+            this.btn_Salir.BackColor = System.Drawing.Color.Black;
+            this.btn_Salir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Salir.BackgroundImage")));
+            this.btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Salir.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btn_Salir.FlatAppearance.BorderSize = 0;
+            this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Salir.ForeColor = System.Drawing.Color.White;
+            this.btn_Salir.Location = new System.Drawing.Point(438, 0);
+            this.btn_Salir.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Salir.Name = "btn_Salir";
+            this.btn_Salir.Size = new System.Drawing.Size(51, 49);
+            this.btn_Salir.TabIndex = 13;
+            this.btn_Salir.UseVisualStyleBackColor = false;
+            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click_1);
+            // 
             // TiposUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -330,8 +332,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_tiposUsuario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSetTiposUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tiposUsuarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSetTiposUsuario)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -342,10 +344,8 @@
 
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btn_min;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btn_Salir;
         private System.Windows.Forms.DataGridView dgv_tiposUsuario;
         private ges_v01DataSetTiposUsuario ges_v01DataSetTiposUsuario;
         private System.Windows.Forms.BindingSource tiposUsuarioBindingSource;
@@ -361,5 +361,7 @@
         private System.Windows.Forms.Button btn_eliminar;
         private System.Windows.Forms.Button btn_modificar;
         private System.Windows.Forms.Button btn_registrar;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Salir;
     }
 }

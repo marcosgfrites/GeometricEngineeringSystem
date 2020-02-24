@@ -37,6 +37,8 @@
             this.txt_codTipoV = new System.Windows.Forms.TextBox();
             this.txt_descTipoV = new System.Windows.Forms.TextBox();
             this.dgv_tiposVehiculo = new System.Windows.Forms.DataGridView();
+            this.codTipoVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descTipoVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tiposVehiculoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ges_v01DS_tiposVehiculo = new PrimerasHU_GES.ges_v01DS_tiposVehiculo();
             this.tiposVehiculoTableAdapter = new PrimerasHU_GES.ges_v01DS_tiposVehiculoTableAdapters.tiposVehiculoTableAdapter();
@@ -49,6 +51,8 @@
             this.txt_codTipoVModif = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dgv_versionesModelo = new System.Windows.Forms.DataGridView();
+            this.codVersionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descVersionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.versionesModeloBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ges_v01VersionesModelo = new PrimerasHU_GES.ges_v01VersionesModelo();
             this.versionesModeloTableAdapter = new PrimerasHU_GES.ges_v01VersionesModeloTableAdapters.versionesModeloTableAdapter();
@@ -95,11 +99,8 @@
             this.label22 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btn_Salir = new System.Windows.Forms.Button();
-            this.codTipoVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descTipoVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codVersionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descVersionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_tiposVehiculo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tiposVehiculoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DS_tiposVehiculo)).BeginInit();
@@ -166,6 +167,22 @@
             this.dgv_tiposVehiculo.ReadOnly = true;
             this.dgv_tiposVehiculo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_tiposVehiculo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_tiposVehiculo_CellClick);
+            // 
+            // codTipoVDataGridViewTextBoxColumn
+            // 
+            this.codTipoVDataGridViewTextBoxColumn.DataPropertyName = "codTipoV";
+            resources.ApplyResources(this.codTipoVDataGridViewTextBoxColumn, "codTipoVDataGridViewTextBoxColumn");
+            this.codTipoVDataGridViewTextBoxColumn.Name = "codTipoVDataGridViewTextBoxColumn";
+            this.codTipoVDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codTipoVDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // descTipoVDataGridViewTextBoxColumn
+            // 
+            this.descTipoVDataGridViewTextBoxColumn.DataPropertyName = "descTipoV";
+            resources.ApplyResources(this.descTipoVDataGridViewTextBoxColumn, "descTipoVDataGridViewTextBoxColumn");
+            this.descTipoVDataGridViewTextBoxColumn.Name = "descTipoVDataGridViewTextBoxColumn";
+            this.descTipoVDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descTipoVDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // tiposVehiculoBindingSource
             // 
@@ -282,6 +299,20 @@
             this.dgv_versionesModelo.ReadOnly = true;
             this.dgv_versionesModelo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_versionesModelo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_versionesModelo_CellClick);
+            // 
+            // codVersionDataGridViewTextBoxColumn
+            // 
+            this.codVersionDataGridViewTextBoxColumn.DataPropertyName = "codVersion";
+            resources.ApplyResources(this.codVersionDataGridViewTextBoxColumn, "codVersionDataGridViewTextBoxColumn");
+            this.codVersionDataGridViewTextBoxColumn.Name = "codVersionDataGridViewTextBoxColumn";
+            this.codVersionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descVersionDataGridViewTextBoxColumn
+            // 
+            this.descVersionDataGridViewTextBoxColumn.DataPropertyName = "descVersion";
+            resources.ApplyResources(this.descVersionDataGridViewTextBoxColumn, "descVersionDataGridViewTextBoxColumn");
+            this.descVersionDataGridViewTextBoxColumn.Name = "descVersionDataGridViewTextBoxColumn";
+            this.descVersionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // versionesModeloBindingSource
             // 
@@ -645,54 +676,39 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.label22);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btn_Salir);
+            this.panel1.Controls.Add(this.label22);
             this.panel1.Controls.Add(this.panel2);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btn_Salir
             // 
             this.btn_Salir.BackColor = System.Drawing.Color.Black;
             resources.ApplyResources(this.btn_Salir, "btn_Salir");
+            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.btn_Salir.FlatAppearance.BorderSize = 0;
             this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btn_Salir.ForeColor = System.Drawing.Color.White;
             this.btn_Salir.Name = "btn_Salir";
             this.btn_Salir.UseVisualStyleBackColor = false;
-            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click_1);
-            // 
-            // codTipoVDataGridViewTextBoxColumn
-            // 
-            this.codTipoVDataGridViewTextBoxColumn.DataPropertyName = "codTipoV";
-            resources.ApplyResources(this.codTipoVDataGridViewTextBoxColumn, "codTipoVDataGridViewTextBoxColumn");
-            this.codTipoVDataGridViewTextBoxColumn.Name = "codTipoVDataGridViewTextBoxColumn";
-            this.codTipoVDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codTipoVDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // descTipoVDataGridViewTextBoxColumn
-            // 
-            this.descTipoVDataGridViewTextBoxColumn.DataPropertyName = "descTipoV";
-            resources.ApplyResources(this.descTipoVDataGridViewTextBoxColumn, "descTipoVDataGridViewTextBoxColumn");
-            this.descTipoVDataGridViewTextBoxColumn.Name = "descTipoVDataGridViewTextBoxColumn";
-            this.descTipoVDataGridViewTextBoxColumn.ReadOnly = true;
-            this.descTipoVDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // codVersionDataGridViewTextBoxColumn
-            // 
-            this.codVersionDataGridViewTextBoxColumn.DataPropertyName = "codVersion";
-            resources.ApplyResources(this.codVersionDataGridViewTextBoxColumn, "codVersionDataGridViewTextBoxColumn");
-            this.codVersionDataGridViewTextBoxColumn.Name = "codVersionDataGridViewTextBoxColumn";
-            this.codVersionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // descVersionDataGridViewTextBoxColumn
-            // 
-            this.descVersionDataGridViewTextBoxColumn.DataPropertyName = "descVersion";
-            resources.ApplyResources(this.descVersionDataGridViewTextBoxColumn, "descVersionDataGridViewTextBoxColumn");
-            this.descVersionDataGridViewTextBoxColumn.Name = "descVersionDataGridViewTextBoxColumn";
-            this.descVersionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click_2);
             // 
             // Modelos
             // 
@@ -791,7 +807,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Button btn_Salir;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txt_codTipoVModif;
@@ -801,5 +816,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn descVersionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codTipoVDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descTipoVDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Salir;
     }
 }

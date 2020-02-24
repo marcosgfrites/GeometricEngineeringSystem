@@ -32,23 +32,50 @@ namespace PrimerasHU_GES
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegControlPlan));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegControlPlan));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.regDetCPbtn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.actualizarBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.limpiarTxt = new Bunifu.Framework.UI.BunifuFlatButton();
             this.cabeceraDtg = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.actualDTGV = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.idPtoMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codEntidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.denominacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codTipoControlDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clasiTipoPtoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coordXPtoMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coordYPtoMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coordZPtoMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nominalPtoMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codUnidMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tolinferior = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tolSuperior = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.detallesControlPlanBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.ges_v01DataSet17 = new PrimerasHU_GES.ges_v01DataSet17();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -63,7 +90,6 @@ namespace PrimerasHU_GES
             this.panel2 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btn_Salir = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.registrarBtn = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -85,25 +111,15 @@ namespace PrimerasHU_GES
             this.ges_v01DataSet = new PrimerasHU_GES.ges_v01DataSet();
             this.gesv01DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.detallesControlPlanTableAdapter = new PrimerasHU_GES.ges_v01DataSet12TableAdapters.detallesControlPlanTableAdapter();
-            this.tolinferior = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tolSuperior = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idPtoMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codEntidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.denominacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codTipoControlDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clasiTipoPtoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coordXPtoMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coordYPtoMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coordZPtoMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nominalPtoMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codUnidMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.detallesControlPlanBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.ges_v01DataSet17 = new PrimerasHU_GES.ges_v01DataSet17();
             this.detallesControlPlanTableAdapter1 = new PrimerasHU_GES.ges_v01DataSet17TableAdapters.detallesControlPlanTableAdapter();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Salir = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cabeceraDtg)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.actualDTGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detallesControlPlanBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet17)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -113,19 +129,16 @@ namespace PrimerasHU_GES
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gesv01DataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.detallesControlPlanBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet17)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btnLimpiar);
             this.panel1.Controls.Add(this.regDetCPbtn);
-            this.panel1.Controls.Add(this.actualizarBtn);
             this.panel1.Controls.Add(this.bunifuFlatButton2);
             this.panel1.Controls.Add(this.bunifuFlatButton1);
-            this.panel1.Controls.Add(this.limpiarTxt);
             this.panel1.Controls.Add(this.cabeceraDtg);
             this.panel1.Controls.Add(this.groupBox4);
             this.panel1.Controls.Add(this.groupBox2);
@@ -136,23 +149,38 @@ namespace PrimerasHU_GES
             this.panel1.Controls.Add(this.groupBox3);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.ForeColor = System.Drawing.Color.GhostWhite;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1344, 611);
             this.panel1.TabIndex = 2;
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.BackColor = System.Drawing.Color.Black;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.Location = new System.Drawing.Point(526, 525);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(117, 73);
+            this.btnLimpiar.TabIndex = 30;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click_1);
+            // 
             // regDetCPbtn
             // 
-            this.regDetCPbtn.Activecolor = System.Drawing.Color.Lime;
+            this.regDetCPbtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.regDetCPbtn.BackColor = System.Drawing.Color.Blue;
             this.regDetCPbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.regDetCPbtn.BorderRadius = 0;
             this.regDetCPbtn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.regDetCPbtn.ButtonText = "4-Registrar Detalle de Control Plan";
+            this.regDetCPbtn.ButtonText = "4- Registrar Detalle de Control Plan";
             this.regDetCPbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.regDetCPbtn.DisabledColor = System.Drawing.Color.Gray;
             this.regDetCPbtn.Enabled = false;
-            this.regDetCPbtn.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.regDetCPbtn.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.regDetCPbtn.ForeColor = System.Drawing.Color.White;
             this.regDetCPbtn.Iconcolor = System.Drawing.Color.Transparent;
             this.regDetCPbtn.Iconimage = null;
@@ -166,65 +194,26 @@ namespace PrimerasHU_GES
             this.regDetCPbtn.IconVisible = false;
             this.regDetCPbtn.IconZoom = 90D;
             this.regDetCPbtn.IsTab = false;
-            this.regDetCPbtn.Location = new System.Drawing.Point(526, 448);
+            this.regDetCPbtn.Location = new System.Drawing.Point(526, 412);
             this.regDetCPbtn.Margin = new System.Windows.Forms.Padding(0);
             this.regDetCPbtn.Name = "regDetCPbtn";
             this.regDetCPbtn.Normalcolor = System.Drawing.Color.Blue;
             this.regDetCPbtn.OnHovercolor = System.Drawing.Color.Red;
             this.regDetCPbtn.OnHoverTextColor = System.Drawing.Color.Black;
             this.regDetCPbtn.selected = false;
-            this.regDetCPbtn.Size = new System.Drawing.Size(117, 88);
+            this.regDetCPbtn.Size = new System.Drawing.Size(117, 74);
             this.regDetCPbtn.TabIndex = 29;
-            this.regDetCPbtn.Text = "4-Registrar Detalle de Control Plan";
-            this.regDetCPbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.regDetCPbtn.Text = "4- Registrar Detalle de Control Plan";
+            this.regDetCPbtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.regDetCPbtn.Textcolor = System.Drawing.Color.White;
             this.regDetCPbtn.TextFont = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.regDetCPbtn.Click += new System.EventHandler(this.RegDetCPbtn_Click);
             // 
-            // actualizarBtn
-            // 
-            this.actualizarBtn.Activecolor = System.Drawing.Color.Lime;
-            this.actualizarBtn.BackColor = System.Drawing.Color.Red;
-            this.actualizarBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.actualizarBtn.BorderRadius = 3;
-            this.actualizarBtn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.actualizarBtn.ButtonText = "5- Actualizar Sistema";
-            this.actualizarBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.actualizarBtn.DisabledColor = System.Drawing.Color.Gray;
-            this.actualizarBtn.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.actualizarBtn.ForeColor = System.Drawing.Color.White;
-            this.actualizarBtn.Iconcolor = System.Drawing.Color.Transparent;
-            this.actualizarBtn.Iconimage = ((System.Drawing.Image)(resources.GetObject("actualizarBtn.Iconimage")));
-            this.actualizarBtn.Iconimage_right = null;
-            this.actualizarBtn.Iconimage_right_Selected = null;
-            this.actualizarBtn.Iconimage_Selected = null;
-            this.actualizarBtn.IconMarginLeft = 0;
-            this.actualizarBtn.IconMarginRight = 0;
-            this.actualizarBtn.IconRightVisible = false;
-            this.actualizarBtn.IconRightZoom = 0D;
-            this.actualizarBtn.IconVisible = true;
-            this.actualizarBtn.IconZoom = 75D;
-            this.actualizarBtn.IsTab = false;
-            this.actualizarBtn.Location = new System.Drawing.Point(789, 287);
-            this.actualizarBtn.Margin = new System.Windows.Forms.Padding(0, 0, 0, 2);
-            this.actualizarBtn.Name = "actualizarBtn";
-            this.actualizarBtn.Normalcolor = System.Drawing.Color.Red;
-            this.actualizarBtn.OnHovercolor = System.Drawing.Color.Fuchsia;
-            this.actualizarBtn.OnHoverTextColor = System.Drawing.Color.Black;
-            this.actualizarBtn.selected = false;
-            this.actualizarBtn.Size = new System.Drawing.Size(206, 43);
-            this.actualizarBtn.TabIndex = 28;
-            this.actualizarBtn.Text = "5- Actualizar Sistema";
-            this.actualizarBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.actualizarBtn.Textcolor = System.Drawing.Color.White;
-            this.actualizarBtn.TextFont = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.actualizarBtn.Click += new System.EventHandler(this.actualizarBtn_Click);
-            // 
             // bunifuFlatButton2
             // 
-            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.Lime;
+            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.bunifuFlatButton2.BackColor = System.Drawing.Color.Blue;
-            this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.bunifuFlatButton2.BorderRadius = 0;
             this.bunifuFlatButton2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.bunifuFlatButton2.ButtonText = "1- Cargar Control Plan";
@@ -244,7 +233,7 @@ namespace PrimerasHU_GES
             this.bunifuFlatButton2.IconVisible = false;
             this.bunifuFlatButton2.IconZoom = 90D;
             this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(526, 103);
+            this.bunifuFlatButton2.Location = new System.Drawing.Point(526, 74);
             this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(0);
             this.bunifuFlatButton2.Name = "bunifuFlatButton2";
             this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.Blue;
@@ -254,14 +243,14 @@ namespace PrimerasHU_GES
             this.bunifuFlatButton2.Size = new System.Drawing.Size(117, 77);
             this.bunifuFlatButton2.TabIndex = 27;
             this.bunifuFlatButton2.Text = "1- Cargar Control Plan";
-            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuFlatButton2.Click += new System.EventHandler(this.BunifuFlatButton2_Click);
             // 
             // bunifuFlatButton1
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.Lime;
+            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.bunifuFlatButton1.BackColor = System.Drawing.Color.Blue;
             this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton1.BorderRadius = 0;
@@ -283,7 +272,7 @@ namespace PrimerasHU_GES
             this.bunifuFlatButton1.IconVisible = false;
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(526, 219);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(526, 182);
             this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(0);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Blue;
@@ -293,48 +282,10 @@ namespace PrimerasHU_GES
             this.bunifuFlatButton1.Size = new System.Drawing.Size(117, 77);
             this.bunifuFlatButton1.TabIndex = 26;
             this.bunifuFlatButton1.Text = "2- Comparar Nuevo / Actual";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
-            // 
-            // limpiarTxt
-            // 
-            this.limpiarTxt.Activecolor = System.Drawing.Color.Lime;
-            this.limpiarTxt.BackColor = System.Drawing.Color.Teal;
-            this.limpiarTxt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.limpiarTxt.BorderRadius = 0;
-            this.limpiarTxt.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.limpiarTxt.ButtonText = "LIMPIAR";
-            this.limpiarTxt.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.limpiarTxt.DisabledColor = System.Drawing.Color.Gray;
-            this.limpiarTxt.Enabled = false;
-            this.limpiarTxt.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.limpiarTxt.Iconcolor = System.Drawing.Color.Transparent;
-            this.limpiarTxt.Iconimage = null;
-            this.limpiarTxt.Iconimage_right = null;
-            this.limpiarTxt.Iconimage_right_Selected = null;
-            this.limpiarTxt.Iconimage_Selected = null;
-            this.limpiarTxt.IconMarginLeft = 0;
-            this.limpiarTxt.IconMarginRight = 0;
-            this.limpiarTxt.IconRightVisible = true;
-            this.limpiarTxt.IconRightZoom = 0D;
-            this.limpiarTxt.IconVisible = true;
-            this.limpiarTxt.IconZoom = 90D;
-            this.limpiarTxt.IsTab = false;
-            this.limpiarTxt.Location = new System.Drawing.Point(526, 563);
-            this.limpiarTxt.Name = "limpiarTxt";
-            this.limpiarTxt.Normalcolor = System.Drawing.Color.Teal;
-            this.limpiarTxt.OnHovercolor = System.Drawing.Color.Blue;
-            this.limpiarTxt.OnHoverTextColor = System.Drawing.Color.White;
-            this.limpiarTxt.selected = false;
-            this.limpiarTxt.Size = new System.Drawing.Size(117, 43);
-            this.limpiarTxt.TabIndex = 25;
-            this.limpiarTxt.Text = "LIMPIAR";
-            this.limpiarTxt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.limpiarTxt.Textcolor = System.Drawing.Color.Black;
-            this.limpiarTxt.TextFont = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.limpiarTxt.Click += new System.EventHandler(this.LimpiarTxt_Click);
             // 
             // cabeceraDtg
             // 
@@ -348,7 +299,7 @@ namespace PrimerasHU_GES
             this.cabeceraDtg.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Chartreuse;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -376,7 +327,7 @@ namespace PrimerasHU_GES
             this.groupBox4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(657, 335);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(656, 226);
+            this.groupBox4.Size = new System.Drawing.Size(656, 271);
             this.groupBox4.TabIndex = 13;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Detalle Control Plan Actual";
@@ -385,16 +336,21 @@ namespace PrimerasHU_GES
             // 
             this.actualDTGV.AllowUserToAddRows = false;
             this.actualDTGV.AllowUserToDeleteRows = false;
+            this.actualDTGV.AllowUserToResizeColumns = false;
+            this.actualDTGV.AllowUserToResizeRows = false;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             this.actualDTGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.actualDTGV.AutoGenerateColumns = false;
-            this.actualDTGV.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.actualDTGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.actualDTGV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.actualDTGV.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.actualDTGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.actualDTGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.actualDTGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DeepSkyBlue;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -413,22 +369,169 @@ namespace PrimerasHU_GES
             this.codUnidMedDataGridViewTextBoxColumn,
             this.tolinferior,
             this.tolSuperior});
+            this.actualDTGV.Cursor = System.Windows.Forms.Cursors.Default;
             this.actualDTGV.DataSource = this.detallesControlPlanBindingSource1;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.GhostWhite;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.actualDTGV.DefaultCellStyle = dataGridViewCellStyle17;
             this.actualDTGV.DoubleBuffered = true;
             this.actualDTGV.EnableHeadersVisualStyles = false;
-            this.actualDTGV.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.actualDTGV.HeaderForeColor = System.Drawing.Color.White;
+            this.actualDTGV.HeaderBgColor = System.Drawing.Color.DeepSkyBlue;
+            this.actualDTGV.HeaderForeColor = System.Drawing.Color.Black;
             this.actualDTGV.Location = new System.Drawing.Point(47, 31);
+            this.actualDTGV.MultiSelect = false;
             this.actualDTGV.Name = "actualDTGV";
             this.actualDTGV.ReadOnly = true;
-            this.actualDTGV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.actualDTGV.Size = new System.Drawing.Size(603, 195);
+            this.actualDTGV.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.actualDTGV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.actualDTGV.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
+            this.actualDTGV.RowsDefaultCellStyle = dataGridViewCellStyle18;
+            this.actualDTGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.actualDTGV.Size = new System.Drawing.Size(603, 232);
             this.actualDTGV.TabIndex = 0;
+            // 
+            // idPtoMedDataGridViewTextBoxColumn
+            // 
+            this.idPtoMedDataGridViewTextBoxColumn.DataPropertyName = "idPtoMed";
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            this.idPtoMedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            this.idPtoMedDataGridViewTextBoxColumn.HeaderText = "Cod. de punto";
+            this.idPtoMedDataGridViewTextBoxColumn.Name = "idPtoMedDataGridViewTextBoxColumn";
+            this.idPtoMedDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idPtoMedDataGridViewTextBoxColumn.Width = 129;
+            // 
+            // codEntidadDataGridViewTextBoxColumn
+            // 
+            this.codEntidadDataGridViewTextBoxColumn.DataPropertyName = "codEntidad";
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            this.codEntidadDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            this.codEntidadDataGridViewTextBoxColumn.HeaderText = "Entidad";
+            this.codEntidadDataGridViewTextBoxColumn.Name = "codEntidadDataGridViewTextBoxColumn";
+            this.codEntidadDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codEntidadDataGridViewTextBoxColumn.Width = 92;
+            // 
+            // denominacionDataGridViewTextBoxColumn
+            // 
+            this.denominacionDataGridViewTextBoxColumn.DataPropertyName = "denominacion";
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            this.denominacionDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
+            this.denominacionDataGridViewTextBoxColumn.HeaderText = "Denominación";
+            this.denominacionDataGridViewTextBoxColumn.Name = "denominacionDataGridViewTextBoxColumn";
+            this.denominacionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.denominacionDataGridViewTextBoxColumn.Width = 144;
+            // 
+            // codTipoControlDataGridViewTextBoxColumn
+            // 
+            this.codTipoControlDataGridViewTextBoxColumn.DataPropertyName = "codTipoControl";
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            this.codTipoControlDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
+            this.codTipoControlDataGridViewTextBoxColumn.HeaderText = "Tipologia";
+            this.codTipoControlDataGridViewTextBoxColumn.Name = "codTipoControlDataGridViewTextBoxColumn";
+            this.codTipoControlDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codTipoControlDataGridViewTextBoxColumn.Width = 104;
+            // 
+            // clasiTipoPtoDataGridViewTextBoxColumn
+            // 
+            this.clasiTipoPtoDataGridViewTextBoxColumn.DataPropertyName = "clasiTipoPto";
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            this.clasiTipoPtoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
+            this.clasiTipoPtoDataGridViewTextBoxColumn.HeaderText = "Tipo de Punto";
+            this.clasiTipoPtoDataGridViewTextBoxColumn.Name = "clasiTipoPtoDataGridViewTextBoxColumn";
+            this.clasiTipoPtoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.clasiTipoPtoDataGridViewTextBoxColumn.Width = 128;
+            // 
+            // coordXPtoMedDataGridViewTextBoxColumn
+            // 
+            this.coordXPtoMedDataGridViewTextBoxColumn.DataPropertyName = "coordXPtoMed";
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            this.coordXPtoMedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
+            this.coordXPtoMedDataGridViewTextBoxColumn.HeaderText = "X nominal";
+            this.coordXPtoMedDataGridViewTextBoxColumn.Name = "coordXPtoMedDataGridViewTextBoxColumn";
+            this.coordXPtoMedDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // coordYPtoMedDataGridViewTextBoxColumn
+            // 
+            this.coordYPtoMedDataGridViewTextBoxColumn.DataPropertyName = "coordYPtoMed";
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            this.coordYPtoMedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle11;
+            this.coordYPtoMedDataGridViewTextBoxColumn.HeaderText = "Y nominal";
+            this.coordYPtoMedDataGridViewTextBoxColumn.Name = "coordYPtoMedDataGridViewTextBoxColumn";
+            this.coordYPtoMedDataGridViewTextBoxColumn.ReadOnly = true;
+            this.coordYPtoMedDataGridViewTextBoxColumn.Width = 99;
+            // 
+            // coordZPtoMedDataGridViewTextBoxColumn
+            // 
+            this.coordZPtoMedDataGridViewTextBoxColumn.DataPropertyName = "coordZPtoMed";
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            this.coordZPtoMedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle12;
+            this.coordZPtoMedDataGridViewTextBoxColumn.HeaderText = "Z nominal";
+            this.coordZPtoMedDataGridViewTextBoxColumn.Name = "coordZPtoMedDataGridViewTextBoxColumn";
+            this.coordZPtoMedDataGridViewTextBoxColumn.ReadOnly = true;
+            this.coordZPtoMedDataGridViewTextBoxColumn.Width = 98;
+            // 
+            // nominalPtoMedDataGridViewTextBoxColumn
+            // 
+            this.nominalPtoMedDataGridViewTextBoxColumn.DataPropertyName = "nominalPtoMed";
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            this.nominalPtoMedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle13;
+            this.nominalPtoMedDataGridViewTextBoxColumn.HeaderText = "Nominal";
+            this.nominalPtoMedDataGridViewTextBoxColumn.Name = "nominalPtoMedDataGridViewTextBoxColumn";
+            this.nominalPtoMedDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nominalPtoMedDataGridViewTextBoxColumn.Width = 96;
+            // 
+            // codUnidMedDataGridViewTextBoxColumn
+            // 
+            this.codUnidMedDataGridViewTextBoxColumn.DataPropertyName = "codUnidMed";
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
+            this.codUnidMedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle14;
+            this.codUnidMedDataGridViewTextBoxColumn.HeaderText = "Unidad de Medición";
+            this.codUnidMedDataGridViewTextBoxColumn.Name = "codUnidMedDataGridViewTextBoxColumn";
+            this.codUnidMedDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codUnidMedDataGridViewTextBoxColumn.Width = 167;
+            // 
+            // tolinferior
+            // 
+            this.tolinferior.DataPropertyName = "tolinferior";
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            this.tolinferior.DefaultCellStyle = dataGridViewCellStyle15;
+            this.tolinferior.HeaderText = "tol. limite inferior";
+            this.tolinferior.Name = "tolinferior";
+            this.tolinferior.ReadOnly = true;
+            this.tolinferior.Width = 144;
+            // 
+            // tolSuperior
+            // 
+            this.tolSuperior.DataPropertyName = "tolSuperior";
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
+            this.tolSuperior.DefaultCellStyle = dataGridViewCellStyle16;
+            this.tolSuperior.HeaderText = "tol. limite superior";
+            this.tolSuperior.Name = "tolSuperior";
+            this.tolSuperior.ReadOnly = true;
+            this.tolSuperior.Width = 153;
+            // 
+            // detallesControlPlanBindingSource1
+            // 
+            this.detallesControlPlanBindingSource1.DataMember = "detallesControlPlan";
+            this.detallesControlPlanBindingSource1.DataSource = this.ges_v01DataSet17;
+            // 
+            // ges_v01DataSet17
+            // 
+            this.ges_v01DataSet17.DataSetName = "ges_v01DataSet17";
+            this.ges_v01DataSet17.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.groupBox2.BackColor = System.Drawing.Color.White;
+            this.groupBox2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.groupBox2.Controls.Add(this.bunifuCustomLabel4);
             this.groupBox2.Controls.Add(this.bunifuCustomLabel5);
             this.groupBox2.Controls.Add(this.bunifuMetroTextbox1);
@@ -439,10 +542,10 @@ namespace PrimerasHU_GES
             this.groupBox2.Controls.Add(this.bunifuCustomLabel6);
             this.groupBox2.Controls.Add(this.bunifuCustomLabel7);
             this.groupBox2.Controls.Add(this.bunifuCustomLabel8);
-            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox2.Cursor = System.Windows.Forms.Cursors.Default;
             this.groupBox2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox2.Location = new System.Drawing.Point(36, 348);
+            this.groupBox2.Location = new System.Drawing.Point(36, 366);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(5);
@@ -454,20 +557,20 @@ namespace PrimerasHU_GES
             // bunifuCustomLabel4
             // 
             this.bunifuCustomLabel4.AutoSize = true;
-            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel4.Location = new System.Drawing.Point(8, 71);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
-            this.bunifuCustomLabel4.Size = new System.Drawing.Size(59, 20);
+            this.bunifuCustomLabel4.Size = new System.Drawing.Size(59, 16);
             this.bunifuCustomLabel4.TabIndex = 13;
             this.bunifuCustomLabel4.Text = "Sección";
             // 
             // bunifuCustomLabel5
             // 
             this.bunifuCustomLabel5.AutoSize = true;
-            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel5.Location = new System.Drawing.Point(8, 100);
             this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
-            this.bunifuCustomLabel5.Size = new System.Drawing.Size(124, 20);
+            this.bunifuCustomLabel5.Size = new System.Drawing.Size(125, 16);
             this.bunifuCustomLabel5.TabIndex = 12;
             this.bunifuCustomLabel5.Text = "Numero de Diseño";
             // 
@@ -476,7 +579,7 @@ namespace PrimerasHU_GES
             this.bunifuMetroTextbox1.BorderColorFocused = System.Drawing.Color.Blue;
             this.bunifuMetroTextbox1.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMetroTextbox1.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.bunifuMetroTextbox1.BorderThickness = 3;
+            this.bunifuMetroTextbox1.BorderThickness = 1;
             this.bunifuMetroTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuMetroTextbox1.Enabled = false;
             this.bunifuMetroTextbox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -495,7 +598,7 @@ namespace PrimerasHU_GES
             this.bunifuMetroTextbox2.BorderColorFocused = System.Drawing.Color.Blue;
             this.bunifuMetroTextbox2.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMetroTextbox2.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.bunifuMetroTextbox2.BorderThickness = 3;
+            this.bunifuMetroTextbox2.BorderThickness = 1;
             this.bunifuMetroTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuMetroTextbox2.Enabled = false;
             this.bunifuMetroTextbox2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -514,13 +617,13 @@ namespace PrimerasHU_GES
             this.bunifuMetroTextbox4.BorderColorFocused = System.Drawing.Color.Blue;
             this.bunifuMetroTextbox4.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMetroTextbox4.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.bunifuMetroTextbox4.BorderThickness = 3;
+            this.bunifuMetroTextbox4.BorderThickness = 1;
             this.bunifuMetroTextbox4.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuMetroTextbox4.Enabled = false;
             this.bunifuMetroTextbox4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuMetroTextbox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMetroTextbox4.isPassword = false;
-            this.bunifuMetroTextbox4.Location = new System.Drawing.Point(187, 150);
+            this.bunifuMetroTextbox4.Location = new System.Drawing.Point(187, 152);
             this.bunifuMetroTextbox4.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.bunifuMetroTextbox4.Name = "bunifuMetroTextbox4";
             this.bunifuMetroTextbox4.Size = new System.Drawing.Size(264, 29);
@@ -533,7 +636,7 @@ namespace PrimerasHU_GES
             this.bunifuMetroTextbox5.BorderColorFocused = System.Drawing.Color.Blue;
             this.bunifuMetroTextbox5.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMetroTextbox5.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.bunifuMetroTextbox5.BorderThickness = 3;
+            this.bunifuMetroTextbox5.BorderThickness = 1;
             this.bunifuMetroTextbox5.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuMetroTextbox5.Enabled = false;
             this.bunifuMetroTextbox5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -552,7 +655,7 @@ namespace PrimerasHU_GES
             this.bunifuMetroTextbox6.BorderColorFocused = System.Drawing.Color.Blue;
             this.bunifuMetroTextbox6.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMetroTextbox6.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.bunifuMetroTextbox6.BorderThickness = 3;
+            this.bunifuMetroTextbox6.BorderThickness = 1;
             this.bunifuMetroTextbox6.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuMetroTextbox6.Enabled = false;
             this.bunifuMetroTextbox6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -569,39 +672,40 @@ namespace PrimerasHU_GES
             // bunifuCustomLabel6
             // 
             this.bunifuCustomLabel6.AutoSize = true;
-            this.bunifuCustomLabel6.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel6.Location = new System.Drawing.Point(8, 41);
             this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
-            this.bunifuCustomLabel6.Size = new System.Drawing.Size(133, 20);
+            this.bunifuCustomLabel6.Size = new System.Drawing.Size(135, 16);
             this.bunifuCustomLabel6.TabIndex = 1;
             this.bunifuCustomLabel6.Text = "Codigo de Progama";
             // 
             // bunifuCustomLabel7
             // 
             this.bunifuCustomLabel7.AutoSize = true;
-            this.bunifuCustomLabel7.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel7.Location = new System.Drawing.Point(8, 129);
             this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
-            this.bunifuCustomLabel7.Size = new System.Drawing.Size(63, 20);
+            this.bunifuCustomLabel7.Size = new System.Drawing.Size(62, 16);
             this.bunifuCustomLabel7.TabIndex = 2;
             this.bunifuCustomLabel7.Text = "Revisión";
             // 
             // bunifuCustomLabel8
             // 
             this.bunifuCustomLabel8.AutoSize = true;
-            this.bunifuCustomLabel8.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel8.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel8.Location = new System.Drawing.Point(8, 159);
             this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
-            this.bunifuCustomLabel8.Size = new System.Drawing.Size(150, 20);
+            this.bunifuCustomLabel8.Size = new System.Drawing.Size(156, 16);
             this.bunifuCustomLabel8.TabIndex = 3;
             this.bunifuCustomLabel8.Text = "Fecha de actualización";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btn_Salir);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(this.btn_Salir);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -633,31 +737,13 @@ namespace PrimerasHU_GES
             this.panel4.Size = new System.Drawing.Size(64, 49);
             this.panel4.TabIndex = 7;
             // 
-            // btn_Salir
-            // 
-            this.btn_Salir.BackColor = System.Drawing.Color.Black;
-            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Salir.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btn_Salir.FlatAppearance.BorderSize = 0;
-            this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btn_Salir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_Salir.Location = new System.Drawing.Point(1278, 0);
-            this.btn_Salir.Name = "btn_Salir";
-            this.btn_Salir.Size = new System.Drawing.Size(64, 49);
-            this.btn_Salir.TabIndex = 6;
-            this.btn_Salir.Text = "Volver atrás";
-            this.btn_Salir.UseVisualStyleBackColor = false;
-            this.btn_Salir.Click += new System.EventHandler(this.Btn_Salir_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Enabled = false;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(33, 286);
+            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.Location = new System.Drawing.Point(30, 278);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(144, 18);
             this.label1.TabIndex = 23;
@@ -677,7 +763,7 @@ namespace PrimerasHU_GES
             // 
             // registrarBtn
             // 
-            this.registrarBtn.Activecolor = System.Drawing.Color.Lime;
+            this.registrarBtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.registrarBtn.BackColor = System.Drawing.Color.Blue;
             this.registrarBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.registrarBtn.BorderRadius = 0;
@@ -699,7 +785,7 @@ namespace PrimerasHU_GES
             this.registrarBtn.IconVisible = true;
             this.registrarBtn.IconZoom = 90D;
             this.registrarBtn.IsTab = false;
-            this.registrarBtn.Location = new System.Drawing.Point(526, 332);
+            this.registrarBtn.Location = new System.Drawing.Point(526, 295);
             this.registrarBtn.Name = "registrarBtn";
             this.registrarBtn.Normalcolor = System.Drawing.Color.Blue;
             this.registrarBtn.OnHovercolor = System.Drawing.Color.Yellow;
@@ -708,7 +794,7 @@ namespace PrimerasHU_GES
             this.registrarBtn.Size = new System.Drawing.Size(117, 77);
             this.registrarBtn.TabIndex = 16;
             this.registrarBtn.Text = "3- Registrar Control Plan en DB";
-            this.registrarBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.registrarBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.registrarBtn.Textcolor = System.Drawing.Color.White;
             this.registrarBtn.TextFont = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registrarBtn.Click += new System.EventHandler(this.RegistrarBtn_Click);
@@ -720,7 +806,7 @@ namespace PrimerasHU_GES
             this.groupBox3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(657, 60);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(656, 223);
+            this.groupBox3.Size = new System.Drawing.Size(656, 251);
             this.groupBox3.TabIndex = 12;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Detalle Nuevo Control Plan";
@@ -731,44 +817,47 @@ namespace PrimerasHU_GES
             this.nuevoDtgv.AllowUserToDeleteRows = false;
             this.nuevoDtgv.AllowUserToResizeColumns = false;
             this.nuevoDtgv.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.nuevoDtgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.nuevoDtgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
             this.nuevoDtgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.nuevoDtgv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.nuevoDtgv.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.nuevoDtgv.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.nuevoDtgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.nuevoDtgv.CausesValidation = false;
             this.nuevoDtgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Lime;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.NullValue = null;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.nuevoDtgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.DeepSkyBlue;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle20.NullValue = null;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.nuevoDtgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.nuevoDtgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.nuevoDtgv.DoubleBuffered = true;
             this.nuevoDtgv.EnableHeadersVisualStyles = false;
-            this.nuevoDtgv.HeaderBgColor = System.Drawing.Color.Lime;
+            this.nuevoDtgv.HeaderBgColor = System.Drawing.Color.DeepSkyBlue;
             this.nuevoDtgv.HeaderForeColor = System.Drawing.Color.Black;
             this.nuevoDtgv.Location = new System.Drawing.Point(47, 32);
             this.nuevoDtgv.Name = "nuevoDtgv";
             this.nuevoDtgv.ReadOnly = true;
-            this.nuevoDtgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.nuevoDtgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.nuevoDtgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.nuevoDtgv.RowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
+            this.nuevoDtgv.RowsDefaultCellStyle = dataGridViewCellStyle21;
             this.nuevoDtgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.nuevoDtgv.ShowCellErrors = false;
-            this.nuevoDtgv.Size = new System.Drawing.Size(603, 185);
+            this.nuevoDtgv.Size = new System.Drawing.Size(603, 204);
             this.nuevoDtgv.TabIndex = 0;
             this.nuevoDtgv.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.NuevoDtgv_RowPostPaint);
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.groupBox1.Controls.Add(this.DtFecha);
             this.groupBox1.Controls.Add(this.bunifuCustomLabel3);
             this.groupBox1.Controls.Add(this.bunifuCustomLabel2);
@@ -782,7 +871,7 @@ namespace PrimerasHU_GES
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox1.Location = new System.Drawing.Point(36, 60);
+            this.groupBox1.Location = new System.Drawing.Point(33, 92);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(5);
@@ -793,31 +882,33 @@ namespace PrimerasHU_GES
             // 
             // DtFecha
             // 
+            this.DtFecha.CalendarMonthBackground = System.Drawing.Color.WhiteSmoke;
             this.DtFecha.Enabled = false;
+            this.DtFecha.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DtFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DtFecha.Location = new System.Drawing.Point(187, 152);
             this.DtFecha.Name = "DtFecha";
-            this.DtFecha.Size = new System.Drawing.Size(264, 29);
+            this.DtFecha.Size = new System.Drawing.Size(264, 22);
             this.DtFecha.TabIndex = 14;
             this.DtFecha.Value = new System.DateTime(2019, 7, 15, 22, 2, 33, 0);
             // 
             // bunifuCustomLabel3
             // 
             this.bunifuCustomLabel3.AutoSize = true;
-            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel3.Location = new System.Drawing.Point(8, 71);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
-            this.bunifuCustomLabel3.Size = new System.Drawing.Size(59, 20);
+            this.bunifuCustomLabel3.Size = new System.Drawing.Size(59, 16);
             this.bunifuCustomLabel3.TabIndex = 13;
             this.bunifuCustomLabel3.Text = "Sección";
             // 
             // bunifuCustomLabel2
             // 
             this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.Location = new System.Drawing.Point(8, 100);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(124, 20);
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(125, 16);
             this.bunifuCustomLabel2.TabIndex = 12;
             this.bunifuCustomLabel2.Text = "Numero de Diseño";
             // 
@@ -826,7 +917,7 @@ namespace PrimerasHU_GES
             this.numDisTxt.BorderColorFocused = System.Drawing.Color.Blue;
             this.numDisTxt.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.numDisTxt.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.numDisTxt.BorderThickness = 3;
+            this.numDisTxt.BorderThickness = 1;
             this.numDisTxt.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.numDisTxt.Enabled = false;
             this.numDisTxt.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -844,7 +935,7 @@ namespace PrimerasHU_GES
             this.descSeccionTxt.BorderColorFocused = System.Drawing.Color.Blue;
             this.descSeccionTxt.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.descSeccionTxt.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.descSeccionTxt.BorderThickness = 3;
+            this.descSeccionTxt.BorderThickness = 1;
             this.descSeccionTxt.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.descSeccionTxt.Enabled = false;
             this.descSeccionTxt.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -862,7 +953,7 @@ namespace PrimerasHU_GES
             this.revisionText.BorderColorFocused = System.Drawing.Color.Blue;
             this.revisionText.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.revisionText.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.revisionText.BorderThickness = 3;
+            this.revisionText.BorderThickness = 1;
             this.revisionText.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.revisionText.Enabled = false;
             this.revisionText.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -880,7 +971,7 @@ namespace PrimerasHU_GES
             this.codigoProTxt.BorderColorFocused = System.Drawing.Color.Blue;
             this.codigoProTxt.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.codigoProTxt.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.codigoProTxt.BorderThickness = 3;
+            this.codigoProTxt.BorderThickness = 1;
             this.codigoProTxt.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.codigoProTxt.Enabled = false;
             this.codigoProTxt.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -896,30 +987,30 @@ namespace PrimerasHU_GES
             // seccionLabel
             // 
             this.seccionLabel.AutoSize = true;
-            this.seccionLabel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.seccionLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.seccionLabel.Location = new System.Drawing.Point(8, 41);
             this.seccionLabel.Name = "seccionLabel";
-            this.seccionLabel.Size = new System.Drawing.Size(133, 20);
+            this.seccionLabel.Size = new System.Drawing.Size(135, 16);
             this.seccionLabel.TabIndex = 1;
             this.seccionLabel.Text = "Codigo de Progama";
             // 
             // revisionLabel
             // 
             this.revisionLabel.AutoSize = true;
-            this.revisionLabel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.revisionLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.revisionLabel.Location = new System.Drawing.Point(8, 129);
             this.revisionLabel.Name = "revisionLabel";
-            this.revisionLabel.Size = new System.Drawing.Size(63, 20);
+            this.revisionLabel.Size = new System.Drawing.Size(62, 16);
             this.revisionLabel.TabIndex = 2;
             this.revisionLabel.Text = "Revisión";
             // 
             // fechaLabel
             // 
             this.fechaLabel.AutoSize = true;
-            this.fechaLabel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fechaLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fechaLabel.Location = new System.Drawing.Point(8, 159);
             this.fechaLabel.Name = "fechaLabel";
-            this.fechaLabel.Size = new System.Drawing.Size(150, 20);
+            this.fechaLabel.Size = new System.Drawing.Size(156, 16);
             this.fechaLabel.TabIndex = 3;
             this.fechaLabel.Text = "Fecha de actualización";
             // 
@@ -947,103 +1038,51 @@ namespace PrimerasHU_GES
             // 
             this.detallesControlPlanTableAdapter.ClearBeforeFill = true;
             // 
-            // tolinferior
-            // 
-            this.tolinferior.DataPropertyName = "tolinferior";
-            this.tolinferior.HeaderText = "tol.Inferior";
-            this.tolinferior.Name = "tolinferior";
-            this.tolinferior.ReadOnly = true;
-            // 
-            // tolSuperior
-            // 
-            this.tolSuperior.DataPropertyName = "tolSuperior";
-            this.tolSuperior.HeaderText = "tol. Superior";
-            this.tolSuperior.Name = "tolSuperior";
-            this.tolSuperior.ReadOnly = true;
-            // 
-            // idPtoMedDataGridViewTextBoxColumn
-            // 
-            this.idPtoMedDataGridViewTextBoxColumn.DataPropertyName = "idPtoMed";
-            this.idPtoMedDataGridViewTextBoxColumn.HeaderText = "Cod. de punto";
-            this.idPtoMedDataGridViewTextBoxColumn.Name = "idPtoMedDataGridViewTextBoxColumn";
-            this.idPtoMedDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codEntidadDataGridViewTextBoxColumn
-            // 
-            this.codEntidadDataGridViewTextBoxColumn.DataPropertyName = "codEntidad";
-            this.codEntidadDataGridViewTextBoxColumn.HeaderText = "Entidad";
-            this.codEntidadDataGridViewTextBoxColumn.Name = "codEntidadDataGridViewTextBoxColumn";
-            this.codEntidadDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // denominacionDataGridViewTextBoxColumn
-            // 
-            this.denominacionDataGridViewTextBoxColumn.DataPropertyName = "denominacion";
-            this.denominacionDataGridViewTextBoxColumn.HeaderText = "Denominación";
-            this.denominacionDataGridViewTextBoxColumn.Name = "denominacionDataGridViewTextBoxColumn";
-            this.denominacionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codTipoControlDataGridViewTextBoxColumn
-            // 
-            this.codTipoControlDataGridViewTextBoxColumn.DataPropertyName = "codTipoControl";
-            this.codTipoControlDataGridViewTextBoxColumn.HeaderText = "Tipologia";
-            this.codTipoControlDataGridViewTextBoxColumn.Name = "codTipoControlDataGridViewTextBoxColumn";
-            this.codTipoControlDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // clasiTipoPtoDataGridViewTextBoxColumn
-            // 
-            this.clasiTipoPtoDataGridViewTextBoxColumn.DataPropertyName = "clasiTipoPto";
-            this.clasiTipoPtoDataGridViewTextBoxColumn.HeaderText = "Tipo de Punto";
-            this.clasiTipoPtoDataGridViewTextBoxColumn.Name = "clasiTipoPtoDataGridViewTextBoxColumn";
-            this.clasiTipoPtoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // coordXPtoMedDataGridViewTextBoxColumn
-            // 
-            this.coordXPtoMedDataGridViewTextBoxColumn.DataPropertyName = "coordXPtoMed";
-            this.coordXPtoMedDataGridViewTextBoxColumn.HeaderText = "X nominal";
-            this.coordXPtoMedDataGridViewTextBoxColumn.Name = "coordXPtoMedDataGridViewTextBoxColumn";
-            this.coordXPtoMedDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // coordYPtoMedDataGridViewTextBoxColumn
-            // 
-            this.coordYPtoMedDataGridViewTextBoxColumn.DataPropertyName = "coordYPtoMed";
-            this.coordYPtoMedDataGridViewTextBoxColumn.HeaderText = "Y nominal";
-            this.coordYPtoMedDataGridViewTextBoxColumn.Name = "coordYPtoMedDataGridViewTextBoxColumn";
-            this.coordYPtoMedDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // coordZPtoMedDataGridViewTextBoxColumn
-            // 
-            this.coordZPtoMedDataGridViewTextBoxColumn.DataPropertyName = "coordZPtoMed";
-            this.coordZPtoMedDataGridViewTextBoxColumn.HeaderText = "Z nominal";
-            this.coordZPtoMedDataGridViewTextBoxColumn.Name = "coordZPtoMedDataGridViewTextBoxColumn";
-            this.coordZPtoMedDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nominalPtoMedDataGridViewTextBoxColumn
-            // 
-            this.nominalPtoMedDataGridViewTextBoxColumn.DataPropertyName = "nominalPtoMed";
-            this.nominalPtoMedDataGridViewTextBoxColumn.HeaderText = "Nominal";
-            this.nominalPtoMedDataGridViewTextBoxColumn.Name = "nominalPtoMedDataGridViewTextBoxColumn";
-            this.nominalPtoMedDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codUnidMedDataGridViewTextBoxColumn
-            // 
-            this.codUnidMedDataGridViewTextBoxColumn.DataPropertyName = "codUnidMed";
-            this.codUnidMedDataGridViewTextBoxColumn.HeaderText = "Unidad de Medición";
-            this.codUnidMedDataGridViewTextBoxColumn.Name = "codUnidMedDataGridViewTextBoxColumn";
-            this.codUnidMedDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // detallesControlPlanBindingSource1
-            // 
-            this.detallesControlPlanBindingSource1.DataMember = "detallesControlPlan";
-            this.detallesControlPlanBindingSource1.DataSource = this.ges_v01DataSet17;
-            // 
-            // ges_v01DataSet17
-            // 
-            this.ges_v01DataSet17.DataSetName = "ges_v01DataSet17";
-            this.ges_v01DataSet17.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // detallesControlPlanTableAdapter1
             // 
             this.detallesControlPlanTableAdapter1.ClearBeforeFill = true;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(1240, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(51, 49);
+            this.button1.TabIndex = 14;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btn_Salir
+            // 
+            this.btn_Salir.BackColor = System.Drawing.Color.Black;
+            this.btn_Salir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Salir.BackgroundImage")));
+            this.btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Salir.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btn_Salir.FlatAppearance.BorderSize = 0;
+            this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Salir.ForeColor = System.Drawing.Color.White;
+            this.btn_Salir.Location = new System.Drawing.Point(1291, 0);
+            this.btn_Salir.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Salir.Name = "btn_Salir";
+            this.btn_Salir.Size = new System.Drawing.Size(51, 49);
+            this.btn_Salir.TabIndex = 13;
+            this.btn_Salir.UseVisualStyleBackColor = false;
+            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click_1);
             // 
             // RegControlPlan
             // 
@@ -1065,6 +1104,8 @@ namespace PrimerasHU_GES
             ((System.ComponentModel.ISupportInitialize)(this.cabeceraDtg)).EndInit();
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.actualDTGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detallesControlPlanBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet17)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -1077,8 +1118,6 @@ namespace PrimerasHU_GES
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gesv01DataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.detallesControlPlanBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet17)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1118,16 +1157,12 @@ namespace PrimerasHU_GES
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel8;
-        private System.Windows.Forms.Button btn_Salir;
-        private Bunifu.Framework.UI.BunifuFlatButton limpiarTxt;
         private Bunifu.Framework.UI.BunifuCustomDataGrid actualDTGV;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
-        private Bunifu.Framework.UI.BunifuFlatButton actualizarBtn;
         private Bunifu.Framework.UI.BunifuFlatButton regDetCPbtn;
         public Bunifu.Framework.UI.BunifuCustomDataGrid nuevoDtgv;
         private DateTimePicker DtFecha;
-        private Panel panel4;
         private Label label8;
         private ges_v01DataSet12 ges_v01DataSet12;
         private BindingSource detallesControlPlanBindingSource;
@@ -1135,6 +1170,8 @@ namespace PrimerasHU_GES
         private ges_v01DataSet17 ges_v01DataSet17;
         private BindingSource detallesControlPlanBindingSource1;
         private ges_v01DataSet17TableAdapters.detallesControlPlanTableAdapter detallesControlPlanTableAdapter1;
+        private Panel panel4;
+        private Button btnLimpiar;
         private DataGridViewTextBoxColumn idPtoMedDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn codEntidadDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn denominacionDataGridViewTextBoxColumn;
@@ -1147,5 +1184,7 @@ namespace PrimerasHU_GES
         private DataGridViewTextBoxColumn codUnidMedDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn tolinferior;
         private DataGridViewTextBoxColumn tolSuperior;
+        private Button button1;
+        private Button btn_Salir;
     }
 }

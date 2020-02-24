@@ -31,10 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AprobadoresCompiladores));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnMinimizar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btn_Salir = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -82,12 +80,14 @@
             this.txtNombreOperario = new System.Windows.Forms.TextBox();
             this.txtCodigoOperario = new System.Windows.Forms.TextBox();
             this.dgvOperarios = new System.Windows.Forms.DataGridView();
-            this.ges_v01DataSet18Operarios = new PrimerasHU_GES.ges_v01DataSet18Operarios();
-            this.operariosMaquinaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.operariosMaquinaTableAdapter = new PrimerasHU_GES.ges_v01DataSet18OperariosTableAdapters.operariosMaquinaTableAdapter();
             this.codOperDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomOperDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.operariosMaquinaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ges_v01DataSet18Operarios = new PrimerasHU_GES.ges_v01DataSet18Operarios();
+            this.operariosMaquinaTableAdapter = new PrimerasHU_GES.ges_v01DataSet18OperariosTableAdapters.operariosMaquinaTableAdapter();
             this.cbEleccion = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Salir = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
@@ -103,17 +103,17 @@
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOperarios)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18Operarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.operariosMaquinaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18Operarios)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.btnMinimizar);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btn_Salir);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.btn_Salir);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
@@ -121,26 +121,6 @@
             this.panel1.Size = new System.Drawing.Size(940, 49);
             this.panel1.TabIndex = 108;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
-            // 
-            // btnMinimizar
-            // 
-            this.btnMinimizar.BackColor = System.Drawing.Color.Black;
-            this.btnMinimizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.BackgroundImage")));
-            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinimizar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMinimizar.FlatAppearance.BorderColor = System.Drawing.Color.DarkBlue;
-            this.btnMinimizar.FlatAppearance.BorderSize = 0;
-            this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
-            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnMinimizar.ForeColor = System.Drawing.Color.White;
-            this.btnMinimizar.Location = new System.Drawing.Point(825, 0);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(64, 49);
-            this.btnMinimizar.TabIndex = 8;
-            this.btnMinimizar.UseVisualStyleBackColor = false;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
             // pictureBox1
             // 
@@ -165,26 +145,6 @@
             this.label3.Size = new System.Drawing.Size(582, 22);
             this.label3.TabIndex = 2;
             this.label3.Text = "GESTOR DE OPERARIOS, APROBADORES Y COMPILADORES";
-            // 
-            // btn_Salir
-            // 
-            this.btn_Salir.BackColor = System.Drawing.Color.Black;
-            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Salir.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btn_Salir.FlatAppearance.BorderSize = 0;
-            this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Salir.ForeColor = System.Drawing.Color.White;
-            this.btn_Salir.Location = new System.Drawing.Point(889, 0);
-            this.btn_Salir.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Salir.Name = "btn_Salir";
-            this.btn_Salir.Size = new System.Drawing.Size(51, 49);
-            this.btn_Salir.TabIndex = 1;
-            this.btn_Salir.Text = "Salir";
-            this.btn_Salir.UseVisualStyleBackColor = false;
-            this.btn_Salir.Click += new System.EventHandler(this.Btn_Salir_Click);
             // 
             // label6
             // 
@@ -758,20 +718,6 @@
             this.dgvOperarios.TabIndex = 108;
             this.dgvOperarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOperarios_CellClick);
             // 
-            // ges_v01DataSet18Operarios
-            // 
-            this.ges_v01DataSet18Operarios.DataSetName = "ges_v01DataSet18Operarios";
-            this.ges_v01DataSet18Operarios.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // operariosMaquinaBindingSource
-            // 
-            this.operariosMaquinaBindingSource.DataMember = "operariosMaquina";
-            this.operariosMaquinaBindingSource.DataSource = this.ges_v01DataSet18Operarios;
-            // 
-            // operariosMaquinaTableAdapter
-            // 
-            this.operariosMaquinaTableAdapter.ClearBeforeFill = true;
-            // 
             // codOperDataGridViewTextBoxColumn
             // 
             this.codOperDataGridViewTextBoxColumn.DataPropertyName = "codOper";
@@ -786,6 +732,20 @@
             this.nomOperDataGridViewTextBoxColumn.Name = "nomOperDataGridViewTextBoxColumn";
             this.nomOperDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // operariosMaquinaBindingSource
+            // 
+            this.operariosMaquinaBindingSource.DataMember = "operariosMaquina";
+            this.operariosMaquinaBindingSource.DataSource = this.ges_v01DataSet18Operarios;
+            // 
+            // ges_v01DataSet18Operarios
+            // 
+            this.ges_v01DataSet18Operarios.DataSetName = "ges_v01DataSet18Operarios";
+            this.ges_v01DataSet18Operarios.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // operariosMaquinaTableAdapter
+            // 
+            this.operariosMaquinaTableAdapter.ClearBeforeFill = true;
+            // 
             // cbEleccion
             // 
             this.cbEleccion.FormattingEnabled = true;
@@ -798,6 +758,48 @@
             this.cbEleccion.Size = new System.Drawing.Size(172, 21);
             this.cbEleccion.TabIndex = 118;
             this.cbEleccion.SelectedIndexChanged += new System.EventHandler(this.cbEleccion_SelectedIndexChanged);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(838, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(51, 49);
+            this.button1.TabIndex = 10;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btn_Salir
+            // 
+            this.btn_Salir.BackColor = System.Drawing.Color.Black;
+            this.btn_Salir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Salir.BackgroundImage")));
+            this.btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Salir.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btn_Salir.FlatAppearance.BorderSize = 0;
+            this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Salir.ForeColor = System.Drawing.Color.White;
+            this.btn_Salir.Location = new System.Drawing.Point(889, 0);
+            this.btn_Salir.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Salir.Name = "btn_Salir";
+            this.btn_Salir.Size = new System.Drawing.Size(51, 49);
+            this.btn_Salir.TabIndex = 9;
+            this.btn_Salir.UseVisualStyleBackColor = false;
+            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click_1);
             // 
             // AprobadoresCompiladores
             // 
@@ -834,8 +836,8 @@
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOperarios)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18Operarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.operariosMaquinaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18Operarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -846,7 +848,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btn_Salir;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel3;
@@ -882,7 +883,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nomAprobadorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codCompiladorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomCompiladorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button botonVerOperarios;
@@ -901,5 +901,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn codOperDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomOperDataGridViewTextBoxColumn;
         private System.Windows.Forms.ComboBox cbEleccion;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Salir;
     }
 }

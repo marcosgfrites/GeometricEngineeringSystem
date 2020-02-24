@@ -31,9 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Establecimientos));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnMinimizar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.btn_Salir = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -49,28 +47,29 @@
             this.dgvEstablecimiento = new System.Windows.Forms.DataGridView();
             this.codEstablecimientoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descEstablecimientoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.establecimientosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.ges_v01DataSet18_Establecimientos2 = new PrimerasHU_GES.ges_v01DataSet18_Establecimientos2();
             this.establecimientosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ges_v01DataSet19_Establecimientos = new PrimerasHU_GES.ges_v01DataSet19();
-            //this.establecimientosTableAdapter = new PrimerasHU_GES.ges_v01DataSet19TableAdapters.establecimientosTableAdapter();
-            this.ges_v01DataSet18_Establecimientos2 = new PrimerasHU_GES.ges_v01DataSet18_Establecimientos2();
-            this.establecimientosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.establecimientosTableAdapter1 = new PrimerasHU_GES.ges_v01DataSet18_Establecimientos2TableAdapters.establecimientosTableAdapter();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Salir = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstablecimiento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.establecimientosBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18_Establecimientos2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.establecimientosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet19_Establecimientos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18_Establecimientos2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.establecimientosBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.btnMinimizar);
-            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btn_Salir);
+            this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -78,26 +77,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(843, 49);
             this.panel1.TabIndex = 48;
-            // 
-            // btnMinimizar
-            // 
-            this.btnMinimizar.BackColor = System.Drawing.Color.Black;
-            this.btnMinimizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.BackgroundImage")));
-            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinimizar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMinimizar.FlatAppearance.BorderColor = System.Drawing.Color.DarkBlue;
-            this.btnMinimizar.FlatAppearance.BorderSize = 0;
-            this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
-            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnMinimizar.ForeColor = System.Drawing.Color.White;
-            this.btnMinimizar.Location = new System.Drawing.Point(715, 0);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(64, 49);
-            this.btnMinimizar.TabIndex = 8;
-            this.btnMinimizar.UseVisualStyleBackColor = false;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
             // label8
             // 
@@ -110,25 +89,6 @@
             this.label8.Size = new System.Drawing.Size(323, 22);
             this.label8.TabIndex = 4;
             this.label8.Text = "GESTOR DE ESTABLECIMIENTOS";
-            // 
-            // btn_Salir
-            // 
-            this.btn_Salir.BackColor = System.Drawing.Color.Black;
-            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Salir.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btn_Salir.FlatAppearance.BorderSize = 0;
-            this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btn_Salir.ForeColor = System.Drawing.Color.White;
-            this.btn_Salir.Location = new System.Drawing.Point(779, 0);
-            this.btn_Salir.Name = "btn_Salir";
-            this.btn_Salir.Size = new System.Drawing.Size(64, 49);
-            this.btn_Salir.TabIndex = 1;
-            this.btn_Salir.Text = "X";
-            this.btn_Salir.UseVisualStyleBackColor = false;
-            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
             // 
             // panel2
             // 
@@ -328,6 +288,16 @@
             this.descEstablecimientoDataGridViewTextBoxColumn.ReadOnly = true;
             this.descEstablecimientoDataGridViewTextBoxColumn.Width = 150;
             // 
+            // establecimientosBindingSource1
+            // 
+            this.establecimientosBindingSource1.DataMember = "establecimientos";
+            this.establecimientosBindingSource1.DataSource = this.ges_v01DataSet18_Establecimientos2;
+            // 
+            // ges_v01DataSet18_Establecimientos2
+            // 
+            this.ges_v01DataSet18_Establecimientos2.DataSetName = "ges_v01DataSet18_Establecimientos2";
+            this.ges_v01DataSet18_Establecimientos2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // establecimientosBindingSource
             // 
             this.establecimientosBindingSource.DataMember = "establecimientos";
@@ -338,23 +308,51 @@
             this.ges_v01DataSet19_Establecimientos.DataSetName = "ges_v01DataSet19_Establecimientos";
             this.ges_v01DataSet19_Establecimientos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // establecimientosTableAdapter
-            // 
-          //  this.establecimientosTableAdapter.ClearBeforeFill = true;
-            // 
-            // ges_v01DataSet18_Establecimientos2
-            // 
-            this.ges_v01DataSet18_Establecimientos2.DataSetName = "ges_v01DataSet18_Establecimientos2";
-            this.ges_v01DataSet18_Establecimientos2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // establecimientosBindingSource1
-            // 
-            this.establecimientosBindingSource1.DataMember = "establecimientos";
-            this.establecimientosBindingSource1.DataSource = this.ges_v01DataSet18_Establecimientos2;
-            // 
             // establecimientosTableAdapter1
             // 
             this.establecimientosTableAdapter1.ClearBeforeFill = true;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(741, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(51, 49);
+            this.button1.TabIndex = 14;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btn_Salir
+            // 
+            this.btn_Salir.BackColor = System.Drawing.Color.Black;
+            this.btn_Salir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Salir.BackgroundImage")));
+            this.btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Salir.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btn_Salir.FlatAppearance.BorderSize = 0;
+            this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Salir.ForeColor = System.Drawing.Color.White;
+            this.btn_Salir.Location = new System.Drawing.Point(792, 0);
+            this.btn_Salir.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Salir.Name = "btn_Salir";
+            this.btn_Salir.Size = new System.Drawing.Size(51, 49);
+            this.btn_Salir.TabIndex = 13;
+            this.btn_Salir.UseVisualStyleBackColor = false;
+            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click_1);
             // 
             // Establecimientos
             // 
@@ -373,10 +371,10 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstablecimiento)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.establecimientosBindingSource)).EndInit();
-           // ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet19_Establecimientos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18_Establecimientos2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.establecimientosBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18_Establecimientos2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.establecimientosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet19_Establecimientos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -384,9 +382,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btn_Salir;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
@@ -408,5 +404,7 @@
         private ges_v01DataSet18_Establecimientos2 ges_v01DataSet18_Establecimientos2;
         private System.Windows.Forms.BindingSource establecimientosBindingSource1;
         private ges_v01DataSet18_Establecimientos2TableAdapters.establecimientosTableAdapter establecimientosTableAdapter1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Salir;
     }
 }

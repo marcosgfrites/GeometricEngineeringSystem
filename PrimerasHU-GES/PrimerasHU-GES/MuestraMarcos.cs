@@ -677,5 +677,18 @@ namespace PrimerasHU_GES
                 ventana--;
             }
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+            this.WindowState = FormWindowState.Minimized;
+
+        }
+
+        private void btn_Salir_Click_1(object sender, EventArgs e)
+        {
+            this.Dispose();
+
+        }
     }
 }
