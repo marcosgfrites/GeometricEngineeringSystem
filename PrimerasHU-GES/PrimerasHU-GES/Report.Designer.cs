@@ -61,6 +61,7 @@
             this.rbGrafico = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
             this.btn_Salir = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -307,12 +308,14 @@
             // btnGroupBox
             // 
             this.btnGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGroupBox.BackColor = System.Drawing.Color.Black;
+            this.btnGroupBox.ForeColor = System.Drawing.Color.White;
             this.btnGroupBox.Location = new System.Drawing.Point(842, 255);
             this.btnGroupBox.Name = "btnGroupBox";
             this.btnGroupBox.Size = new System.Drawing.Size(132, 23);
             this.btnGroupBox.TabIndex = 16;
             this.btnGroupBox.Text = "GENERAR / IMPRIMIR";
-            this.btnGroupBox.UseVisualStyleBackColor = true;
+            this.btnGroupBox.UseVisualStyleBackColor = false;
             this.btnGroupBox.Click += new System.EventHandler(this.btnGroupBox_Click);
             // 
             // ppdForm
@@ -349,12 +352,14 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(7, 41);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(132, 48);
             this.button1.TabIndex = 20;
             this.button1.Text = "Cargar Imagen/Grafico";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // openFileDialog1
@@ -399,6 +404,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.label22);
             this.panel1.Controls.Add(this.btn_Salir);
             this.panel1.Controls.Add(this.panel2);
@@ -410,11 +416,32 @@
             this.panel1.TabIndex = 45;
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Black;
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(960, 0);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(51, 49);
+            this.button2.TabIndex = 15;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.BackColor = System.Drawing.Color.Transparent;
-            this.label22.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.White;
             this.label22.Location = new System.Drawing.Point(95, 12);
             this.label22.Name = "label22";
@@ -425,6 +452,8 @@
             // btn_Salir
             // 
             this.btn_Salir.BackColor = System.Drawing.Color.Black;
+            this.btn_Salir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Salir.BackgroundImage")));
+            this.btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Salir.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.btn_Salir.FlatAppearance.BorderSize = 0;
@@ -436,7 +465,6 @@
             this.btn_Salir.Name = "btn_Salir";
             this.btn_Salir.Size = new System.Drawing.Size(64, 49);
             this.btn_Salir.TabIndex = 1;
-            this.btn_Salir.Text = "Volver atrás";
             this.btn_Salir.UseVisualStyleBackColor = false;
             this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
             // 
@@ -454,22 +482,26 @@
             // btnRegistro
             // 
             this.btnRegistro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRegistro.BackColor = System.Drawing.Color.Black;
+            this.btnRegistro.ForeColor = System.Drawing.Color.White;
             this.btnRegistro.Location = new System.Drawing.Point(842, 313);
             this.btnRegistro.Name = "btnRegistro";
             this.btnRegistro.Size = new System.Drawing.Size(132, 23);
             this.btnRegistro.TabIndex = 46;
             this.btnRegistro.Text = "REGISTRAR";
-            this.btnRegistro.UseVisualStyleBackColor = true;
+            this.btnRegistro.UseVisualStyleBackColor = false;
             this.btnRegistro.Click += new System.EventHandler(this.btnRegistro_Click);
             // 
             // btnModificar
             // 
+            this.btnModificar.BackColor = System.Drawing.Color.Black;
+            this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.Location = new System.Drawing.Point(842, 342);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(132, 23);
             this.btnModificar.TabIndex = 47;
             this.btnModificar.Text = "MODIFICAR";
-            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // analisisBindingSource
@@ -485,12 +517,14 @@
             // btnLimpiar
             // 
             this.btnLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLimpiar.BackColor = System.Drawing.Color.Black;
+            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
             this.btnLimpiar.Location = new System.Drawing.Point(842, 400);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(132, 23);
             this.btnLimpiar.TabIndex = 49;
             this.btnLimpiar.Text = "LIMPIAR";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // analisisTableAdapter
@@ -510,23 +544,27 @@
             // btnClipboard
             // 
             this.btnClipboard.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClipboard.BackColor = System.Drawing.Color.Black;
+            this.btnClipboard.ForeColor = System.Drawing.Color.White;
             this.btnClipboard.Location = new System.Drawing.Point(842, 284);
             this.btnClipboard.Name = "btnClipboard";
             this.btnClipboard.Size = new System.Drawing.Size(132, 23);
             this.btnClipboard.TabIndex = 50;
             this.btnClipboard.Text = "COPIAR";
-            this.btnClipboard.UseVisualStyleBackColor = true;
+            this.btnClipboard.UseVisualStyleBackColor = false;
             this.btnClipboard.Click += new System.EventHandler(this.btnClipboard_Click);
             // 
             // btnBorrar
             // 
             this.btnBorrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBorrar.BackColor = System.Drawing.Color.Black;
+            this.btnBorrar.ForeColor = System.Drawing.Color.White;
             this.btnBorrar.Location = new System.Drawing.Point(842, 371);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(132, 23);
             this.btnBorrar.TabIndex = 51;
             this.btnBorrar.Text = "BORRAR";
-            this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.UseVisualStyleBackColor = false;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // analisisBindingSource1
@@ -743,5 +781,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn observacionDataGridViewTextBoxColumn;
         public System.Windows.Forms.Label lbCodUsu;
         public System.Windows.Forms.Label lbCodAna;
+        private System.Windows.Forms.Button button2;
     }
 }

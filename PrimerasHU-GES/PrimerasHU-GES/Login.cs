@@ -202,6 +202,7 @@ namespace PrimerasHU_GES
                                     }
                                 }
                                 f.lbl_TipoUsu.Text = tipo;
+                                f.lb_CodUsu.Text = txt_Usuario.Text;
 
                                 //Avisa si estado es DESHABILITADO para que se pongan en contacto con el Administrador
                                 aux = fila["codEstado"].ToString();

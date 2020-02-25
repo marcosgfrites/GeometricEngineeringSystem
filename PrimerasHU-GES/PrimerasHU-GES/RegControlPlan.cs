@@ -286,7 +286,8 @@ namespace PrimerasHU_GES
                 {
                     detallar.Parameters.Clear();
 
-                    detallar.Parameters.AddWithValue("@codCPlan", Convert.ToInt32(row.Cells["F5"].Value));
+                    detallar.Parameters.AddWithValue("@codCPlan", 1);
+                    //detallar.Parameters.AddWithValue("@codCPlan", Convert.ToInt32(row.Cells["F5"].Value));
                     detallar.Parameters.AddWithValue("@idPtoMed", Convert.ToString(row.Cells["F1"].Value));
                     detallar.Parameters.AddWithValue("@clasiTipoPto", row.Cells["F7"].Value == DBNull.Value ? "-" : Convert.ToString(row.Cells["F7"].Value));
                     detallar.Parameters.AddWithValue("@codUnidMed", Convert.ToString(row.Cells["F16"].Value));
@@ -339,7 +340,7 @@ namespace PrimerasHU_GES
                     detallar.Parameters.AddWithValue("@coordXPtoMed", row.Cells["F9"].Value == DBNull.Value ? 0 : Convert.ToDecimal(row.Cells["F9"].Value));
                     detallar.Parameters.AddWithValue("@coordYPtoMed", row.Cells["F10"].Value == DBNull.Value ? 0 : Convert.ToDecimal(row.Cells["F10"].Value));
                     detallar.Parameters.AddWithValue("@coordZPtoMed", row.Cells["F11"].Value == DBNull.Value ? 0 : Convert.ToDecimal(row.Cells["F11"].Value));
-                    detallar.Parameters.AddWithValue("@nominalPtoMed",row.Cells["F12"]);
+                    //detallar.Parameters.AddWithValue("@nominalPtoMed",row.Cells["F12"]);
 
                     if (row.Cells["F12"].Value == null)
                     {

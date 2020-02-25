@@ -58,6 +58,10 @@
             this.btn_DocumentoDmo = new System.Windows.Forms.Button();
             this.panelAnalisis = new System.Windows.Forms.Panel();
             this.btn_Informe = new System.Windows.Forms.Button();
+            this.btn_Graficos = new System.Windows.Forms.Button();
+            this.btn_Calculos = new System.Windows.Forms.Button();
+            this.btn_Indicadores = new System.Windows.Forms.Button();
+            this.btn_Muestras = new System.Windows.Forms.Button();
             this.p_Administrador = new System.Windows.Forms.Panel();
             this.btn_Usuarios = new System.Windows.Forms.Button();
             this.btn_TipoUsuario = new System.Windows.Forms.Button();
@@ -76,10 +80,6 @@
             this.btn_Aprobadores = new System.Windows.Forms.Button();
             this.btn_Programas = new System.Windows.Forms.Button();
             this.btn_Maquinas = new System.Windows.Forms.Button();
-            this.btn_Graficos = new System.Windows.Forms.Button();
-            this.btn_Calculos = new System.Windows.Forms.Button();
-            this.btn_Indicadores = new System.Windows.Forms.Button();
-            this.btn_Muestras = new System.Windows.Forms.Button();
             this.btn_Soporte = new System.Windows.Forms.Button();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.pb_menu = new System.Windows.Forms.PictureBox();
@@ -526,6 +526,74 @@
             this.btn_Informe.UseVisualStyleBackColor = false;
             this.btn_Informe.Click += new System.EventHandler(this.btn_Informe_Click);
             // 
+            // btn_Graficos
+            // 
+            this.btn_Graficos.BackColor = System.Drawing.Color.Black;
+            this.btn_Graficos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Graficos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
+            this.btn_Graficos.FlatAppearance.BorderSize = 0;
+            this.btn_Graficos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btn_Graficos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Graficos.Location = new System.Drawing.Point(0, 135);
+            this.btn_Graficos.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Graficos.Name = "btn_Graficos";
+            this.btn_Graficos.Size = new System.Drawing.Size(197, 45);
+            this.btn_Graficos.TabIndex = 23;
+            this.btn_Graficos.Text = "Gráficos";
+            this.btn_Graficos.UseVisualStyleBackColor = false;
+            this.btn_Graficos.Click += new System.EventHandler(this.Btn_Graficos_Click);
+            // 
+            // btn_Calculos
+            // 
+            this.btn_Calculos.BackColor = System.Drawing.Color.Black;
+            this.btn_Calculos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Calculos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
+            this.btn_Calculos.FlatAppearance.BorderSize = 0;
+            this.btn_Calculos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btn_Calculos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Calculos.Location = new System.Drawing.Point(0, 90);
+            this.btn_Calculos.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Calculos.Name = "btn_Calculos";
+            this.btn_Calculos.Size = new System.Drawing.Size(197, 45);
+            this.btn_Calculos.TabIndex = 22;
+            this.btn_Calculos.Text = "Cálculos";
+            this.btn_Calculos.UseVisualStyleBackColor = false;
+            this.btn_Calculos.Click += new System.EventHandler(this.btn_Calculos_Click);
+            // 
+            // btn_Indicadores
+            // 
+            this.btn_Indicadores.BackColor = System.Drawing.Color.Black;
+            this.btn_Indicadores.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Indicadores.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
+            this.btn_Indicadores.FlatAppearance.BorderSize = 0;
+            this.btn_Indicadores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btn_Indicadores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Indicadores.Location = new System.Drawing.Point(0, 45);
+            this.btn_Indicadores.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Indicadores.Name = "btn_Indicadores";
+            this.btn_Indicadores.Size = new System.Drawing.Size(197, 45);
+            this.btn_Indicadores.TabIndex = 21;
+            this.btn_Indicadores.Text = "Indicadores de Calidad";
+            this.btn_Indicadores.UseVisualStyleBackColor = false;
+            this.btn_Indicadores.Click += new System.EventHandler(this.btn_Indicadores_Click);
+            // 
+            // btn_Muestras
+            // 
+            this.btn_Muestras.BackColor = System.Drawing.Color.Black;
+            this.btn_Muestras.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Muestras.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
+            this.btn_Muestras.FlatAppearance.BorderSize = 0;
+            this.btn_Muestras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btn_Muestras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Muestras.Location = new System.Drawing.Point(0, 0);
+            this.btn_Muestras.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Muestras.Name = "btn_Muestras";
+            this.btn_Muestras.Size = new System.Drawing.Size(197, 45);
+            this.btn_Muestras.TabIndex = 20;
+            this.btn_Muestras.Text = "Muestras";
+            this.btn_Muestras.UseVisualStyleBackColor = false;
+            this.btn_Muestras.Click += new System.EventHandler(this.Btn_Muestras_Click);
+            // 
             // p_Administrador
             // 
             this.p_Administrador.BackColor = System.Drawing.Color.Transparent;
@@ -839,74 +907,6 @@
             this.btn_Maquinas.Text = "Máquinas de Medición";
             this.btn_Maquinas.UseVisualStyleBackColor = false;
             this.btn_Maquinas.Click += new System.EventHandler(this.btn_Maquinas_Click);
-            // 
-            // btn_Graficos
-            // 
-            this.btn_Graficos.BackColor = System.Drawing.Color.Black;
-            this.btn_Graficos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Graficos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_Graficos.FlatAppearance.BorderSize = 0;
-            this.btn_Graficos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
-            this.btn_Graficos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Graficos.Location = new System.Drawing.Point(0, 135);
-            this.btn_Graficos.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_Graficos.Name = "btn_Graficos";
-            this.btn_Graficos.Size = new System.Drawing.Size(197, 45);
-            this.btn_Graficos.TabIndex = 23;
-            this.btn_Graficos.Text = "Gráficos";
-            this.btn_Graficos.UseVisualStyleBackColor = false;
-            this.btn_Graficos.Click += new System.EventHandler(this.Btn_Graficos_Click);
-            // 
-            // btn_Calculos
-            // 
-            this.btn_Calculos.BackColor = System.Drawing.Color.Black;
-            this.btn_Calculos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Calculos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_Calculos.FlatAppearance.BorderSize = 0;
-            this.btn_Calculos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
-            this.btn_Calculos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Calculos.Location = new System.Drawing.Point(0, 90);
-            this.btn_Calculos.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_Calculos.Name = "btn_Calculos";
-            this.btn_Calculos.Size = new System.Drawing.Size(197, 45);
-            this.btn_Calculos.TabIndex = 22;
-            this.btn_Calculos.Text = "Cálculos";
-            this.btn_Calculos.UseVisualStyleBackColor = false;
-            this.btn_Calculos.Click += new System.EventHandler(this.btn_Calculos_Click);
-            // 
-            // btn_Indicadores
-            // 
-            this.btn_Indicadores.BackColor = System.Drawing.Color.Black;
-            this.btn_Indicadores.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Indicadores.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_Indicadores.FlatAppearance.BorderSize = 0;
-            this.btn_Indicadores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
-            this.btn_Indicadores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Indicadores.Location = new System.Drawing.Point(0, 45);
-            this.btn_Indicadores.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_Indicadores.Name = "btn_Indicadores";
-            this.btn_Indicadores.Size = new System.Drawing.Size(197, 45);
-            this.btn_Indicadores.TabIndex = 21;
-            this.btn_Indicadores.Text = "Indicadores de Calidad";
-            this.btn_Indicadores.UseVisualStyleBackColor = false;
-            this.btn_Indicadores.Click += new System.EventHandler(this.btn_Indicadores_Click);
-            // 
-            // btn_Muestras
-            // 
-            this.btn_Muestras.BackColor = System.Drawing.Color.Black;
-            this.btn_Muestras.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Muestras.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_Muestras.FlatAppearance.BorderSize = 0;
-            this.btn_Muestras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
-            this.btn_Muestras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Muestras.Location = new System.Drawing.Point(0, 0);
-            this.btn_Muestras.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_Muestras.Name = "btn_Muestras";
-            this.btn_Muestras.Size = new System.Drawing.Size(197, 45);
-            this.btn_Muestras.TabIndex = 20;
-            this.btn_Muestras.Text = "Muestras";
-            this.btn_Muestras.UseVisualStyleBackColor = false;
-            this.btn_Muestras.Click += new System.EventHandler(this.Btn_Muestras_Click);
             // 
             // btn_Soporte
             // 
