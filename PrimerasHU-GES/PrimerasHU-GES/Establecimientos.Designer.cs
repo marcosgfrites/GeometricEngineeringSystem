@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Establecimientos));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Salir = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -52,8 +54,6 @@
             this.establecimientosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ges_v01DataSet19_Establecimientos = new PrimerasHU_GES.ges_v01DataSet19();
             this.establecimientosTableAdapter1 = new PrimerasHU_GES.ges_v01DataSet18_Establecimientos2TableAdapters.establecimientosTableAdapter();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btn_Salir = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -77,6 +77,48 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(843, 49);
             this.panel1.TabIndex = 48;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(741, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(51, 49);
+            this.button1.TabIndex = 14;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btn_Salir
+            // 
+            this.btn_Salir.BackColor = System.Drawing.Color.Black;
+            this.btn_Salir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Salir.BackgroundImage")));
+            this.btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Salir.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btn_Salir.FlatAppearance.BorderSize = 0;
+            this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Salir.ForeColor = System.Drawing.Color.White;
+            this.btn_Salir.Location = new System.Drawing.Point(792, 0);
+            this.btn_Salir.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Salir.Name = "btn_Salir";
+            this.btn_Salir.Size = new System.Drawing.Size(51, 49);
+            this.btn_Salir.TabIndex = 13;
+            this.btn_Salir.UseVisualStyleBackColor = false;
+            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click_1);
             // 
             // label8
             // 
@@ -132,10 +174,10 @@
             // 
             this.botonVerEstablecimiento.BackColor = System.Drawing.Color.Black;
             this.botonVerEstablecimiento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botonVerEstablecimiento.FlatAppearance.BorderColor = System.Drawing.Color.MediumTurquoise;
-            this.botonVerEstablecimiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumTurquoise;
+            this.botonVerEstablecimiento.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.botonVerEstablecimiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.botonVerEstablecimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonVerEstablecimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.botonVerEstablecimiento.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.botonVerEstablecimiento.ForeColor = System.Drawing.Color.White;
             this.botonVerEstablecimiento.Location = new System.Drawing.Point(16, 378);
             this.botonVerEstablecimiento.Name = "botonVerEstablecimiento";
@@ -149,10 +191,10 @@
             // 
             this.btnEliminarEstablecimiento.BackColor = System.Drawing.Color.Black;
             this.btnEliminarEstablecimiento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminarEstablecimiento.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.btnEliminarEstablecimiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
+            this.btnEliminarEstablecimiento.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btnEliminarEstablecimiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btnEliminarEstablecimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarEstablecimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnEliminarEstablecimiento.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnEliminarEstablecimiento.ForeColor = System.Drawing.Color.White;
             this.btnEliminarEstablecimiento.Location = new System.Drawing.Point(16, 336);
             this.btnEliminarEstablecimiento.Name = "btnEliminarEstablecimiento";
@@ -166,10 +208,10 @@
             // 
             this.btnModEstablecimiento.BackColor = System.Drawing.Color.Black;
             this.btnModEstablecimiento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModEstablecimiento.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-            this.btnModEstablecimiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnModEstablecimiento.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btnModEstablecimiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btnModEstablecimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModEstablecimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnModEstablecimiento.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnModEstablecimiento.ForeColor = System.Drawing.Color.White;
             this.btnModEstablecimiento.Location = new System.Drawing.Point(16, 252);
             this.btnModEstablecimiento.Name = "btnModEstablecimiento";
@@ -183,10 +225,10 @@
             // 
             this.btnLimpiarEstablecimiento.BackColor = System.Drawing.Color.Black;
             this.btnLimpiarEstablecimiento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLimpiarEstablecimiento.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrange;
-            this.btnLimpiarEstablecimiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
+            this.btnLimpiarEstablecimiento.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btnLimpiarEstablecimiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btnLimpiarEstablecimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiarEstablecimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnLimpiarEstablecimiento.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnLimpiarEstablecimiento.ForeColor = System.Drawing.Color.White;
             this.btnLimpiarEstablecimiento.Location = new System.Drawing.Point(16, 294);
             this.btnLimpiarEstablecimiento.Name = "btnLimpiarEstablecimiento";
@@ -200,10 +242,10 @@
             // 
             this.btnRegEstablecimiento.BackColor = System.Drawing.Color.Black;
             this.btnRegEstablecimiento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegEstablecimiento.FlatAppearance.BorderColor = System.Drawing.Color.Green;
-            this.btnRegEstablecimiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btnRegEstablecimiento.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btnRegEstablecimiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btnRegEstablecimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegEstablecimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnRegEstablecimiento.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnRegEstablecimiento.ForeColor = System.Drawing.Color.White;
             this.btnRegEstablecimiento.Location = new System.Drawing.Point(16, 210);
             this.btnRegEstablecimiento.Name = "btnRegEstablecimiento";
@@ -259,6 +301,7 @@
             this.dgvEstablecimiento.AllowUserToAddRows = false;
             this.dgvEstablecimiento.AllowUserToDeleteRows = false;
             this.dgvEstablecimiento.AutoGenerateColumns = false;
+            this.dgvEstablecimiento.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvEstablecimiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEstablecimiento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codEstablecimientoDataGridViewTextBoxColumn,
@@ -312,52 +355,11 @@
             // 
             this.establecimientosTableAdapter1.ClearBeforeFill = true;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(741, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(51, 49);
-            this.button1.TabIndex = 14;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btn_Salir
-            // 
-            this.btn_Salir.BackColor = System.Drawing.Color.Black;
-            this.btn_Salir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Salir.BackgroundImage")));
-            this.btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Salir.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btn_Salir.FlatAppearance.BorderSize = 0;
-            this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Salir.ForeColor = System.Drawing.Color.White;
-            this.btn_Salir.Location = new System.Drawing.Point(792, 0);
-            this.btn_Salir.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Salir.Name = "btn_Salir";
-            this.btn_Salir.Size = new System.Drawing.Size(51, 49);
-            this.btn_Salir.TabIndex = 13;
-            this.btn_Salir.UseVisualStyleBackColor = false;
-            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click_1);
-            // 
             // Establecimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(843, 544);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -374,7 +376,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.establecimientosBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18_Establecimientos2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.establecimientosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet19_Establecimientos)).EndInit();
+           // ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet19_Establecimientos)).EndInit();
             this.ResumeLayout(false);
 
         }

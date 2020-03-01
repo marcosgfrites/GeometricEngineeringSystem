@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UnidadesMedicion));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Salir = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -45,21 +47,19 @@
             this.txtDescUdeMed = new System.Windows.Forms.TextBox();
             this.txtCodigoUdeMed = new System.Windows.Forms.TextBox();
             this.dgvUdeMed = new System.Windows.Forms.DataGridView();
+            this.unidadesMedicionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.codUnidMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descUnidMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.unidadesMedicionBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.ges_v01DataSet18_UdeMed2 = new PrimerasHU_GES.ges_v01DataSet18_UdeMed2();
-            this.unidadesMedicionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.unidadesMedicionTableAdapter1 = new PrimerasHU_GES.ges_v01DataSet18_UdeMed2TableAdapters.unidadesMedicionTableAdapter();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btn_Salir = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUdeMed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unidadesMedicionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unidadesMedicionBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18_UdeMed2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.unidadesMedicionBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -75,6 +75,49 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(836, 49);
             this.panel1.TabIndex = 48;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(734, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(51, 49);
+            this.button1.TabIndex = 14;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btn_Salir
+            // 
+            this.btn_Salir.BackColor = System.Drawing.Color.Black;
+            this.btn_Salir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Salir.BackgroundImage")));
+            this.btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Salir.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btn_Salir.FlatAppearance.BorderSize = 0;
+            this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Salir.ForeColor = System.Drawing.Color.White;
+            this.btn_Salir.Location = new System.Drawing.Point(785, 0);
+            this.btn_Salir.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Salir.Name = "btn_Salir";
+            this.btn_Salir.Size = new System.Drawing.Size(51, 49);
+            this.btn_Salir.TabIndex = 13;
+            this.btn_Salir.UseVisualStyleBackColor = false;
+            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click_1);
             // 
             // label8
             // 
@@ -130,10 +173,10 @@
             // 
             this.botonVerUdeMed.BackColor = System.Drawing.Color.Black;
             this.botonVerUdeMed.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botonVerUdeMed.FlatAppearance.BorderColor = System.Drawing.Color.MediumTurquoise;
-            this.botonVerUdeMed.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumTurquoise;
+            this.botonVerUdeMed.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.botonVerUdeMed.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.botonVerUdeMed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonVerUdeMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.botonVerUdeMed.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.botonVerUdeMed.ForeColor = System.Drawing.Color.White;
             this.botonVerUdeMed.Location = new System.Drawing.Point(16, 378);
             this.botonVerUdeMed.Name = "botonVerUdeMed";
@@ -147,10 +190,10 @@
             // 
             this.btnEliminarUdeMed.BackColor = System.Drawing.Color.Black;
             this.btnEliminarUdeMed.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminarUdeMed.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.btnEliminarUdeMed.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
+            this.btnEliminarUdeMed.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btnEliminarUdeMed.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btnEliminarUdeMed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarUdeMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnEliminarUdeMed.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnEliminarUdeMed.ForeColor = System.Drawing.Color.White;
             this.btnEliminarUdeMed.Location = new System.Drawing.Point(15, 336);
             this.btnEliminarUdeMed.Name = "btnEliminarUdeMed";
@@ -164,10 +207,10 @@
             // 
             this.btnModUdeMed.BackColor = System.Drawing.Color.Black;
             this.btnModUdeMed.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModUdeMed.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-            this.btnModUdeMed.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnModUdeMed.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btnModUdeMed.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btnModUdeMed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModUdeMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnModUdeMed.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnModUdeMed.ForeColor = System.Drawing.Color.White;
             this.btnModUdeMed.Location = new System.Drawing.Point(15, 252);
             this.btnModUdeMed.Name = "btnModUdeMed";
@@ -181,10 +224,10 @@
             // 
             this.btnLimpiarUdeMed.BackColor = System.Drawing.Color.Black;
             this.btnLimpiarUdeMed.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLimpiarUdeMed.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrange;
-            this.btnLimpiarUdeMed.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
+            this.btnLimpiarUdeMed.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btnLimpiarUdeMed.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btnLimpiarUdeMed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiarUdeMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnLimpiarUdeMed.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnLimpiarUdeMed.ForeColor = System.Drawing.Color.White;
             this.btnLimpiarUdeMed.Location = new System.Drawing.Point(15, 294);
             this.btnLimpiarUdeMed.Name = "btnLimpiarUdeMed";
@@ -198,10 +241,10 @@
             // 
             this.btnRegUdeMed.BackColor = System.Drawing.Color.Black;
             this.btnRegUdeMed.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegUdeMed.FlatAppearance.BorderColor = System.Drawing.Color.Green;
-            this.btnRegUdeMed.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btnRegUdeMed.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btnRegUdeMed.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btnRegUdeMed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegUdeMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnRegUdeMed.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnRegUdeMed.ForeColor = System.Drawing.Color.White;
             this.btnRegUdeMed.Location = new System.Drawing.Point(16, 210);
             this.btnRegUdeMed.Name = "btnRegUdeMed";
@@ -257,6 +300,7 @@
             this.dgvUdeMed.AllowUserToAddRows = false;
             this.dgvUdeMed.AllowUserToDeleteRows = false;
             this.dgvUdeMed.AutoGenerateColumns = false;
+            this.dgvUdeMed.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvUdeMed.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUdeMed.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codUnidMedDataGridViewTextBoxColumn,
@@ -269,6 +313,10 @@
             this.dgvUdeMed.Size = new System.Drawing.Size(346, 423);
             this.dgvUdeMed.TabIndex = 108;
             this.dgvUdeMed.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUdeMed_CellClick);
+            // 
+            // unidadesMedicionBindingSource
+            // 
+            this.unidadesMedicionBindingSource.DataMember = "unidadesMedicion";
             // 
             // codUnidMedDataGridViewTextBoxColumn
             // 
@@ -296,60 +344,15 @@
             this.ges_v01DataSet18_UdeMed2.DataSetName = "ges_v01DataSet18_UdeMed2";
             this.ges_v01DataSet18_UdeMed2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // unidadesMedicionBindingSource
-            // 
-            this.unidadesMedicionBindingSource.DataMember = "unidadesMedicion";
-            // 
             // unidadesMedicionTableAdapter1
             // 
             this.unidadesMedicionTableAdapter1.ClearBeforeFill = true;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(734, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(51, 49);
-            this.button1.TabIndex = 14;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btn_Salir
-            // 
-            this.btn_Salir.BackColor = System.Drawing.Color.Black;
-            this.btn_Salir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Salir.BackgroundImage")));
-            this.btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Salir.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btn_Salir.FlatAppearance.BorderSize = 0;
-            this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Salir.ForeColor = System.Drawing.Color.White;
-            this.btn_Salir.Location = new System.Drawing.Point(785, 0);
-            this.btn_Salir.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Salir.Name = "btn_Salir";
-            this.btn_Salir.Size = new System.Drawing.Size(51, 49);
-            this.btn_Salir.TabIndex = 13;
-            this.btn_Salir.UseVisualStyleBackColor = false;
-            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click_1);
             // 
             // UnidadesMedicion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(836, 551);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -357,15 +360,16 @@
             this.Name = "UnidadesMedicion";
             this.Text = "Unidades de Medicion";
             this.Load += new System.EventHandler(this.UnidadesMedicion_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UnidadesMedicion_MouseDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUdeMed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unidadesMedicionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.unidadesMedicionBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18_UdeMed2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.unidadesMedicionBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

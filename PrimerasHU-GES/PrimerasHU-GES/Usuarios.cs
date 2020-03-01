@@ -159,7 +159,7 @@ namespace PrimerasHU_GES
             if (string.IsNullOrEmpty(cbCodTipoUsu.Text) || string.IsNullOrEmpty(txtNombreUsuario.Text) || string.IsNullOrEmpty(txtClaveUsuario.Text))
 
             {
-                MessageBox.Show("Es obligatorio completar los campos: Nombre, Codigo de Tipo y Clave, para registrar el Usuario.", "Atención!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Es obligatorio completar los campos: Nombre, Tipo y Clave para registrar el Usuario.", "Atención!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
