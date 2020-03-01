@@ -52,7 +52,6 @@
             this.entidadesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.ges_v01DataSet18Entidades2 = new PrimerasHU_GES.ges_v01DataSet18Entidades2();
             this.entidadesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-           // this.ges_v01DataSet17_Entidades = new PrimerasHU_GES.ges_v01DataSet17();
             this.entidadesTableAdapter1 = new PrimerasHU_GES.ges_v01DataSet18Entidades2TableAdapters.entidadesTableAdapter();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -61,7 +60,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.entidadesBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18Entidades2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.entidadesBindingSource)).BeginInit();
-         //   ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet17_Entidades)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -77,6 +75,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(840, 49);
             this.panel1.TabIndex = 47;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // button1
             // 
@@ -345,12 +344,6 @@
             // entidadesBindingSource
             // 
             this.entidadesBindingSource.DataMember = "entidades";
-        //    this.entidadesBindingSource.DataSource = this.ges_v01DataSet17_Entidades;
-            // 
-            // ges_v01DataSet17_Entidades
-            // 
-           // this.ges_v01DataSet17_Entidades.DataSetName = "ges_v01DataSet17_Entidades";
-           // this.ges_v01DataSet17_Entidades.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // entidadesTableAdapter1
             // 
@@ -368,6 +361,7 @@
             this.Name = "Entidades";
             this.Text = "Entidades";
             this.Load += new System.EventHandler(this.Entidades_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Entidades_MouseDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -377,7 +371,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.entidadesBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18Entidades2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.entidadesBindingSource)).EndInit();
-           // ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet17_Entidades)).EndInit();
             this.ResumeLayout(false);
 
         }

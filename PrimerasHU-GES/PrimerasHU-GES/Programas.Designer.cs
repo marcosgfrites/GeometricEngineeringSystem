@@ -89,6 +89,7 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             // 
             // panel1
             // 
@@ -103,6 +104,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(770, 49);
             this.panel1.TabIndex = 137;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // button1
             // 
@@ -428,6 +430,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Programas";
             this.Load += new System.EventHandler(this.Programas_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Programas_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

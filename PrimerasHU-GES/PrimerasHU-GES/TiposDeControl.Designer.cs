@@ -75,6 +75,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(860, 49);
             this.panel1.TabIndex = 48;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // button1
             // 
@@ -140,6 +141,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(64, 49);
             this.panel2.TabIndex = 0;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
             // panel3
             // 
@@ -150,6 +152,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(788, 456);
             this.panel3.TabIndex = 117;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // panel4
             // 
@@ -359,6 +362,7 @@
             this.Name = "TiposDeControl";
             this.Text = "TiposDeControl";
             this.Load += new System.EventHandler(this.TiposDeControl_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TiposDeControl_MouseDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);

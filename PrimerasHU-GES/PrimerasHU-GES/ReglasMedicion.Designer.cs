@@ -90,6 +90,7 @@
             this.label3.Size = new System.Drawing.Size(278, 18);
             this.label3.TabIndex = 2;
             this.label3.Text = "GESTOR DE REGLAS DE MEDICIÓN";
+            this.label3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label3_MouseDown);
             // 
             // panel1
             // 
@@ -104,6 +105,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(489, 49);
             this.panel1.TabIndex = 138;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // button1
             // 
@@ -366,6 +368,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReglasMedicion";
             this.Load += new System.EventHandler(this.ReglasMedicion_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ReglasMedicion_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

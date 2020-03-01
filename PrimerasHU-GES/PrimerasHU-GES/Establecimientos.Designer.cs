@@ -77,6 +77,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(843, 49);
             this.panel1.TabIndex = 48;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // button1
             // 
@@ -367,6 +368,7 @@
             this.Name = "Establecimientos";
             this.Text = "Establecimientos";
             this.Load += new System.EventHandler(this.Establecimientos_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Establecimientos_MouseDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);

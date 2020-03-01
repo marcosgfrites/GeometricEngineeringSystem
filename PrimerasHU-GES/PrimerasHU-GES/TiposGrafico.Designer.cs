@@ -77,6 +77,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(489, 49);
             this.panel1.TabIndex = 124;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // button1
             // 
@@ -143,6 +144,7 @@
             this.label3.Size = new System.Drawing.Size(253, 18);
             this.label3.TabIndex = 2;
             this.label3.Text = "GESTOR DE TIPOS DE GRÁFICO";
+            this.label3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label3_MouseDown);
             // 
             // panel2
             // 
@@ -333,6 +335,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TiposGrafico";
             this.Load += new System.EventHandler(this.TiposGrafico_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TiposGrafico_MouseDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
