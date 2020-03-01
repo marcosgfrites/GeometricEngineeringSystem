@@ -38,6 +38,12 @@ namespace PrimerasHU_GES
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegControlPlan));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -48,12 +54,6 @@ namespace PrimerasHU_GES
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegControlPlan));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.regDetCPbtn = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -62,32 +62,22 @@ namespace PrimerasHU_GES
             this.cabeceraDtg = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.actualDTGV = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.idPtoMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codEntidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.denominacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codTipoControlDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clasiTipoPtoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coordXPtoMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coordYPtoMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coordZPtoMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nominalPtoMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codUnidMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tolinferior = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tolSuperior = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.detallesControlPlanBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.ges_v01DataSet17 = new PrimerasHU_GES.ges_v01DataSet17();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuMetroTextbox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.bunifuMetroTextbox2 = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.bunifuMetroTextbox4 = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.bunifuMetroTextbox5 = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.bunifuMetroTextbox6 = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.txt_numDisenio_Actual = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.txt_seccion_Actual = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.txt_fechaActual_Actual = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.txt_revision_Actual = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.txt_codPrograma_Actual = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Salir = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -111,15 +101,23 @@ namespace PrimerasHU_GES
             this.ges_v01DataSet = new PrimerasHU_GES.ges_v01DataSet();
             this.gesv01DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.detallesControlPlanTableAdapter = new PrimerasHU_GES.ges_v01DataSet12TableAdapters.detallesControlPlanTableAdapter();
+            this.idPtoMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codEntidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.denominacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codTipoControlDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clasiTipoPtoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coordXPtoMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coordYPtoMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coordZPtoMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nominalPtoMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codUnidMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.detallesControlPlanBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.ges_v01DataSet17 = new PrimerasHU_GES.ges_v01DataSet17();
             this.detallesControlPlanTableAdapter1 = new PrimerasHU_GES.ges_v01DataSet17TableAdapters.detallesControlPlanTableAdapter();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btn_Salir = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cabeceraDtg)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.actualDTGV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.detallesControlPlanBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet17)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -129,6 +127,8 @@ namespace PrimerasHU_GES
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gesv01DataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detallesControlPlanBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet17)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -159,8 +159,12 @@ namespace PrimerasHU_GES
             // btnLimpiar
             // 
             this.btnLimpiar.BackColor = System.Drawing.Color.Black;
+            this.btnLimpiar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));
+            this.btnLimpiar.FlatAppearance.BorderSize = 0;
+            this.btnLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.Font = new System.Drawing.Font("Arial", 10F);
+            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
             this.btnLimpiar.Location = new System.Drawing.Point(526, 525);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(117, 73);
@@ -172,7 +176,7 @@ namespace PrimerasHU_GES
             // regDetCPbtn
             // 
             this.regDetCPbtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.regDetCPbtn.BackColor = System.Drawing.Color.Blue;
+            this.regDetCPbtn.BackColor = System.Drawing.Color.Black;
             this.regDetCPbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.regDetCPbtn.BorderRadius = 0;
             this.regDetCPbtn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -180,7 +184,7 @@ namespace PrimerasHU_GES
             this.regDetCPbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.regDetCPbtn.DisabledColor = System.Drawing.Color.Gray;
             this.regDetCPbtn.Enabled = false;
-            this.regDetCPbtn.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.regDetCPbtn.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.regDetCPbtn.ForeColor = System.Drawing.Color.White;
             this.regDetCPbtn.Iconcolor = System.Drawing.Color.Transparent;
             this.regDetCPbtn.Iconimage = null;
@@ -197,8 +201,8 @@ namespace PrimerasHU_GES
             this.regDetCPbtn.Location = new System.Drawing.Point(526, 412);
             this.regDetCPbtn.Margin = new System.Windows.Forms.Padding(0);
             this.regDetCPbtn.Name = "regDetCPbtn";
-            this.regDetCPbtn.Normalcolor = System.Drawing.Color.Blue;
-            this.regDetCPbtn.OnHovercolor = System.Drawing.Color.Red;
+            this.regDetCPbtn.Normalcolor = System.Drawing.Color.Black;
+            this.regDetCPbtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));
             this.regDetCPbtn.OnHoverTextColor = System.Drawing.Color.Black;
             this.regDetCPbtn.selected = false;
             this.regDetCPbtn.Size = new System.Drawing.Size(117, 74);
@@ -212,14 +216,14 @@ namespace PrimerasHU_GES
             // bunifuFlatButton2
             // 
             this.bunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.bunifuFlatButton2.BackColor = System.Drawing.Color.Blue;
+            this.bunifuFlatButton2.BackColor = System.Drawing.Color.Black;
             this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.bunifuFlatButton2.BorderRadius = 0;
             this.bunifuFlatButton2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.bunifuFlatButton2.ButtonText = "1- Cargar Control Plan";
             this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton2.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuFlatButton2.ForeColor = System.Drawing.Color.White;
             this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton2.Iconimage = null;
@@ -236,8 +240,8 @@ namespace PrimerasHU_GES
             this.bunifuFlatButton2.Location = new System.Drawing.Point(526, 74);
             this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(0);
             this.bunifuFlatButton2.Name = "bunifuFlatButton2";
-            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.Blue;
-            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.Yellow;
+            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));
             this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.Black;
             this.bunifuFlatButton2.selected = false;
             this.bunifuFlatButton2.Size = new System.Drawing.Size(117, 77);
@@ -251,14 +255,14 @@ namespace PrimerasHU_GES
             // bunifuFlatButton1
             // 
             this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.Blue;
+            this.bunifuFlatButton1.BackColor = System.Drawing.Color.Black;
             this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton1.BorderRadius = 0;
             this.bunifuFlatButton1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.bunifuFlatButton1.ButtonText = "2- Comparar Nuevo / Actual";
             this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuFlatButton1.ForeColor = System.Drawing.Color.White;
             this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton1.Iconimage = null;
@@ -275,8 +279,8 @@ namespace PrimerasHU_GES
             this.bunifuFlatButton1.Location = new System.Drawing.Point(526, 182);
             this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(0);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Blue;
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.Yellow;
+            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));
             this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.Black;
             this.bunifuFlatButton1.selected = false;
             this.bunifuFlatButton1.Size = new System.Drawing.Size(117, 77);
@@ -398,106 +402,6 @@ namespace PrimerasHU_GES
             this.actualDTGV.Size = new System.Drawing.Size(603, 232);
             this.actualDTGV.TabIndex = 0;
             // 
-            // idPtoMedDataGridViewTextBoxColumn
-            // 
-            this.idPtoMedDataGridViewTextBoxColumn.DataPropertyName = "idPtoMed";
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            this.idPtoMedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
-            this.idPtoMedDataGridViewTextBoxColumn.HeaderText = "Cod. de punto";
-            this.idPtoMedDataGridViewTextBoxColumn.Name = "idPtoMedDataGridViewTextBoxColumn";
-            this.idPtoMedDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idPtoMedDataGridViewTextBoxColumn.Width = 129;
-            // 
-            // codEntidadDataGridViewTextBoxColumn
-            // 
-            this.codEntidadDataGridViewTextBoxColumn.DataPropertyName = "codEntidad";
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            this.codEntidadDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
-            this.codEntidadDataGridViewTextBoxColumn.HeaderText = "Entidad";
-            this.codEntidadDataGridViewTextBoxColumn.Name = "codEntidadDataGridViewTextBoxColumn";
-            this.codEntidadDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codEntidadDataGridViewTextBoxColumn.Width = 92;
-            // 
-            // denominacionDataGridViewTextBoxColumn
-            // 
-            this.denominacionDataGridViewTextBoxColumn.DataPropertyName = "denominacion";
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            this.denominacionDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
-            this.denominacionDataGridViewTextBoxColumn.HeaderText = "Denominación";
-            this.denominacionDataGridViewTextBoxColumn.Name = "denominacionDataGridViewTextBoxColumn";
-            this.denominacionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.denominacionDataGridViewTextBoxColumn.Width = 144;
-            // 
-            // codTipoControlDataGridViewTextBoxColumn
-            // 
-            this.codTipoControlDataGridViewTextBoxColumn.DataPropertyName = "codTipoControl";
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            this.codTipoControlDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
-            this.codTipoControlDataGridViewTextBoxColumn.HeaderText = "Tipologia";
-            this.codTipoControlDataGridViewTextBoxColumn.Name = "codTipoControlDataGridViewTextBoxColumn";
-            this.codTipoControlDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codTipoControlDataGridViewTextBoxColumn.Width = 104;
-            // 
-            // clasiTipoPtoDataGridViewTextBoxColumn
-            // 
-            this.clasiTipoPtoDataGridViewTextBoxColumn.DataPropertyName = "clasiTipoPto";
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            this.clasiTipoPtoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
-            this.clasiTipoPtoDataGridViewTextBoxColumn.HeaderText = "Tipo de Punto";
-            this.clasiTipoPtoDataGridViewTextBoxColumn.Name = "clasiTipoPtoDataGridViewTextBoxColumn";
-            this.clasiTipoPtoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.clasiTipoPtoDataGridViewTextBoxColumn.Width = 128;
-            // 
-            // coordXPtoMedDataGridViewTextBoxColumn
-            // 
-            this.coordXPtoMedDataGridViewTextBoxColumn.DataPropertyName = "coordXPtoMed";
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            this.coordXPtoMedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
-            this.coordXPtoMedDataGridViewTextBoxColumn.HeaderText = "X nominal";
-            this.coordXPtoMedDataGridViewTextBoxColumn.Name = "coordXPtoMedDataGridViewTextBoxColumn";
-            this.coordXPtoMedDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // coordYPtoMedDataGridViewTextBoxColumn
-            // 
-            this.coordYPtoMedDataGridViewTextBoxColumn.DataPropertyName = "coordYPtoMed";
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
-            this.coordYPtoMedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle11;
-            this.coordYPtoMedDataGridViewTextBoxColumn.HeaderText = "Y nominal";
-            this.coordYPtoMedDataGridViewTextBoxColumn.Name = "coordYPtoMedDataGridViewTextBoxColumn";
-            this.coordYPtoMedDataGridViewTextBoxColumn.ReadOnly = true;
-            this.coordYPtoMedDataGridViewTextBoxColumn.Width = 99;
-            // 
-            // coordZPtoMedDataGridViewTextBoxColumn
-            // 
-            this.coordZPtoMedDataGridViewTextBoxColumn.DataPropertyName = "coordZPtoMed";
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            this.coordZPtoMedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle12;
-            this.coordZPtoMedDataGridViewTextBoxColumn.HeaderText = "Z nominal";
-            this.coordZPtoMedDataGridViewTextBoxColumn.Name = "coordZPtoMedDataGridViewTextBoxColumn";
-            this.coordZPtoMedDataGridViewTextBoxColumn.ReadOnly = true;
-            this.coordZPtoMedDataGridViewTextBoxColumn.Width = 98;
-            // 
-            // nominalPtoMedDataGridViewTextBoxColumn
-            // 
-            this.nominalPtoMedDataGridViewTextBoxColumn.DataPropertyName = "nominalPtoMed";
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
-            this.nominalPtoMedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle13;
-            this.nominalPtoMedDataGridViewTextBoxColumn.HeaderText = "Nominal";
-            this.nominalPtoMedDataGridViewTextBoxColumn.Name = "nominalPtoMedDataGridViewTextBoxColumn";
-            this.nominalPtoMedDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nominalPtoMedDataGridViewTextBoxColumn.Width = 96;
-            // 
-            // codUnidMedDataGridViewTextBoxColumn
-            // 
-            this.codUnidMedDataGridViewTextBoxColumn.DataPropertyName = "codUnidMed";
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
-            this.codUnidMedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle14;
-            this.codUnidMedDataGridViewTextBoxColumn.HeaderText = "Unidad de Medición";
-            this.codUnidMedDataGridViewTextBoxColumn.Name = "codUnidMedDataGridViewTextBoxColumn";
-            this.codUnidMedDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codUnidMedDataGridViewTextBoxColumn.Width = 167;
-            // 
             // tolinferior
             // 
             this.tolinferior.DataPropertyName = "tolinferior";
@@ -518,27 +422,17 @@ namespace PrimerasHU_GES
             this.tolSuperior.ReadOnly = true;
             this.tolSuperior.Width = 153;
             // 
-            // detallesControlPlanBindingSource1
-            // 
-            this.detallesControlPlanBindingSource1.DataMember = "detallesControlPlan";
-            this.detallesControlPlanBindingSource1.DataSource = this.ges_v01DataSet17;
-            // 
-            // ges_v01DataSet17
-            // 
-            this.ges_v01DataSet17.DataSetName = "ges_v01DataSet17";
-            this.ges_v01DataSet17.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.groupBox2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.groupBox2.Controls.Add(this.bunifuCustomLabel4);
             this.groupBox2.Controls.Add(this.bunifuCustomLabel5);
-            this.groupBox2.Controls.Add(this.bunifuMetroTextbox1);
-            this.groupBox2.Controls.Add(this.bunifuMetroTextbox2);
-            this.groupBox2.Controls.Add(this.bunifuMetroTextbox4);
-            this.groupBox2.Controls.Add(this.bunifuMetroTextbox5);
-            this.groupBox2.Controls.Add(this.bunifuMetroTextbox6);
+            this.groupBox2.Controls.Add(this.txt_numDisenio_Actual);
+            this.groupBox2.Controls.Add(this.txt_seccion_Actual);
+            this.groupBox2.Controls.Add(this.txt_fechaActual_Actual);
+            this.groupBox2.Controls.Add(this.txt_revision_Actual);
+            this.groupBox2.Controls.Add(this.txt_codPrograma_Actual);
             this.groupBox2.Controls.Add(this.bunifuCustomLabel6);
             this.groupBox2.Controls.Add(this.bunifuCustomLabel7);
             this.groupBox2.Controls.Add(this.bunifuCustomLabel8);
@@ -574,100 +468,100 @@ namespace PrimerasHU_GES
             this.bunifuCustomLabel5.TabIndex = 12;
             this.bunifuCustomLabel5.Text = "Numero de Diseño";
             // 
-            // bunifuMetroTextbox1
+            // txt_numDisenio_Actual
             // 
-            this.bunifuMetroTextbox1.BorderColorFocused = System.Drawing.Color.Blue;
-            this.bunifuMetroTextbox1.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox1.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.bunifuMetroTextbox1.BorderThickness = 1;
-            this.bunifuMetroTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMetroTextbox1.Enabled = false;
-            this.bunifuMetroTextbox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuMetroTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox1.isPassword = false;
-            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(187, 91);
-            this.bunifuMetroTextbox1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.bunifuMetroTextbox1.Name = "bunifuMetroTextbox1";
-            this.bunifuMetroTextbox1.Size = new System.Drawing.Size(264, 29);
-            this.bunifuMetroTextbox1.TabIndex = 11;
-            this.bunifuMetroTextbox1.Text = "FA00ABA12511.006";
-            this.bunifuMetroTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_numDisenio_Actual.BorderColorFocused = System.Drawing.Color.Blue;
+            this.txt_numDisenio_Actual.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_numDisenio_Actual.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.txt_numDisenio_Actual.BorderThickness = 1;
+            this.txt_numDisenio_Actual.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_numDisenio_Actual.Enabled = false;
+            this.txt_numDisenio_Actual.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_numDisenio_Actual.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_numDisenio_Actual.isPassword = false;
+            this.txt_numDisenio_Actual.Location = new System.Drawing.Point(187, 91);
+            this.txt_numDisenio_Actual.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txt_numDisenio_Actual.Name = "txt_numDisenio_Actual";
+            this.txt_numDisenio_Actual.Size = new System.Drawing.Size(264, 29);
+            this.txt_numDisenio_Actual.TabIndex = 11;
+            this.txt_numDisenio_Actual.Text = "FA00ABA12511.006";
+            this.txt_numDisenio_Actual.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // bunifuMetroTextbox2
+            // txt_seccion_Actual
             // 
-            this.bunifuMetroTextbox2.BorderColorFocused = System.Drawing.Color.Blue;
-            this.bunifuMetroTextbox2.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox2.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.bunifuMetroTextbox2.BorderThickness = 1;
-            this.bunifuMetroTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMetroTextbox2.Enabled = false;
-            this.bunifuMetroTextbox2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuMetroTextbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox2.isPassword = false;
-            this.bunifuMetroTextbox2.Location = new System.Drawing.Point(187, 62);
-            this.bunifuMetroTextbox2.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.bunifuMetroTextbox2.Name = "bunifuMetroTextbox2";
-            this.bunifuMetroTextbox2.Size = new System.Drawing.Size(264, 29);
-            this.bunifuMetroTextbox2.TabIndex = 10;
-            this.bunifuMetroTextbox2.Text = "CS SCOCCA";
-            this.bunifuMetroTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_seccion_Actual.BorderColorFocused = System.Drawing.Color.Blue;
+            this.txt_seccion_Actual.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_seccion_Actual.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.txt_seccion_Actual.BorderThickness = 1;
+            this.txt_seccion_Actual.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_seccion_Actual.Enabled = false;
+            this.txt_seccion_Actual.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_seccion_Actual.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_seccion_Actual.isPassword = false;
+            this.txt_seccion_Actual.Location = new System.Drawing.Point(187, 62);
+            this.txt_seccion_Actual.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txt_seccion_Actual.Name = "txt_seccion_Actual";
+            this.txt_seccion_Actual.Size = new System.Drawing.Size(264, 29);
+            this.txt_seccion_Actual.TabIndex = 10;
+            this.txt_seccion_Actual.Text = "CS SCOCCA";
+            this.txt_seccion_Actual.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // bunifuMetroTextbox4
+            // txt_fechaActual_Actual
             // 
-            this.bunifuMetroTextbox4.BorderColorFocused = System.Drawing.Color.Blue;
-            this.bunifuMetroTextbox4.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox4.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.bunifuMetroTextbox4.BorderThickness = 1;
-            this.bunifuMetroTextbox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMetroTextbox4.Enabled = false;
-            this.bunifuMetroTextbox4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuMetroTextbox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox4.isPassword = false;
-            this.bunifuMetroTextbox4.Location = new System.Drawing.Point(187, 152);
-            this.bunifuMetroTextbox4.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.bunifuMetroTextbox4.Name = "bunifuMetroTextbox4";
-            this.bunifuMetroTextbox4.Size = new System.Drawing.Size(264, 29);
-            this.bunifuMetroTextbox4.TabIndex = 8;
-            this.bunifuMetroTextbox4.Text = "08/12/2016";
-            this.bunifuMetroTextbox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_fechaActual_Actual.BorderColorFocused = System.Drawing.Color.Blue;
+            this.txt_fechaActual_Actual.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_fechaActual_Actual.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.txt_fechaActual_Actual.BorderThickness = 1;
+            this.txt_fechaActual_Actual.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_fechaActual_Actual.Enabled = false;
+            this.txt_fechaActual_Actual.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_fechaActual_Actual.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_fechaActual_Actual.isPassword = false;
+            this.txt_fechaActual_Actual.Location = new System.Drawing.Point(187, 152);
+            this.txt_fechaActual_Actual.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txt_fechaActual_Actual.Name = "txt_fechaActual_Actual";
+            this.txt_fechaActual_Actual.Size = new System.Drawing.Size(264, 29);
+            this.txt_fechaActual_Actual.TabIndex = 8;
+            this.txt_fechaActual_Actual.Text = "08/12/2016";
+            this.txt_fechaActual_Actual.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // bunifuMetroTextbox5
+            // txt_revision_Actual
             // 
-            this.bunifuMetroTextbox5.BorderColorFocused = System.Drawing.Color.Blue;
-            this.bunifuMetroTextbox5.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox5.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.bunifuMetroTextbox5.BorderThickness = 1;
-            this.bunifuMetroTextbox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMetroTextbox5.Enabled = false;
-            this.bunifuMetroTextbox5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuMetroTextbox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox5.isPassword = false;
-            this.bunifuMetroTextbox5.Location = new System.Drawing.Point(187, 120);
-            this.bunifuMetroTextbox5.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.bunifuMetroTextbox5.Name = "bunifuMetroTextbox5";
-            this.bunifuMetroTextbox5.Size = new System.Drawing.Size(264, 29);
-            this.bunifuMetroTextbox5.TabIndex = 7;
-            this.bunifuMetroTextbox5.Text = "3590_CS_Scocca_Rev11";
-            this.bunifuMetroTextbox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_revision_Actual.BorderColorFocused = System.Drawing.Color.Blue;
+            this.txt_revision_Actual.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_revision_Actual.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.txt_revision_Actual.BorderThickness = 1;
+            this.txt_revision_Actual.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_revision_Actual.Enabled = false;
+            this.txt_revision_Actual.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_revision_Actual.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_revision_Actual.isPassword = false;
+            this.txt_revision_Actual.Location = new System.Drawing.Point(187, 120);
+            this.txt_revision_Actual.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txt_revision_Actual.Name = "txt_revision_Actual";
+            this.txt_revision_Actual.Size = new System.Drawing.Size(264, 29);
+            this.txt_revision_Actual.TabIndex = 7;
+            this.txt_revision_Actual.Text = "3590_CS_Scocca_Rev11";
+            this.txt_revision_Actual.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // bunifuMetroTextbox6
+            // txt_codPrograma_Actual
             // 
-            this.bunifuMetroTextbox6.BorderColorFocused = System.Drawing.Color.Blue;
-            this.bunifuMetroTextbox6.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox6.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.bunifuMetroTextbox6.BorderThickness = 1;
-            this.bunifuMetroTextbox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMetroTextbox6.Enabled = false;
-            this.bunifuMetroTextbox6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuMetroTextbox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox6.isPassword = false;
-            this.bunifuMetroTextbox6.Location = new System.Drawing.Point(187, 32);
-            this.bunifuMetroTextbox6.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.bunifuMetroTextbox6.Name = "bunifuMetroTextbox6";
-            this.bunifuMetroTextbox6.Size = new System.Drawing.Size(264, 29);
-            this.bunifuMetroTextbox6.TabIndex = 6;
-            this.bunifuMetroTextbox6.Text = "L359016215PS300MM";
-            this.bunifuMetroTextbox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_codPrograma_Actual.BorderColorFocused = System.Drawing.Color.Blue;
+            this.txt_codPrograma_Actual.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_codPrograma_Actual.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.txt_codPrograma_Actual.BorderThickness = 1;
+            this.txt_codPrograma_Actual.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_codPrograma_Actual.Enabled = false;
+            this.txt_codPrograma_Actual.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_codPrograma_Actual.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_codPrograma_Actual.isPassword = false;
+            this.txt_codPrograma_Actual.Location = new System.Drawing.Point(187, 32);
+            this.txt_codPrograma_Actual.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txt_codPrograma_Actual.Name = "txt_codPrograma_Actual";
+            this.txt_codPrograma_Actual.Size = new System.Drawing.Size(264, 29);
+            this.txt_codPrograma_Actual.TabIndex = 6;
+            this.txt_codPrograma_Actual.Text = "L359016215PS300MM";
+            this.txt_codPrograma_Actual.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel6
             // 
@@ -713,6 +607,48 @@ namespace PrimerasHU_GES
             this.panel2.Size = new System.Drawing.Size(1342, 49);
             this.panel2.TabIndex = 24;
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Panel2_MouseMove);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(1240, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(51, 49);
+            this.button1.TabIndex = 14;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btn_Salir
+            // 
+            this.btn_Salir.BackColor = System.Drawing.Color.Black;
+            this.btn_Salir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Salir.BackgroundImage")));
+            this.btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Salir.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btn_Salir.FlatAppearance.BorderSize = 0;
+            this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Salir.ForeColor = System.Drawing.Color.White;
+            this.btn_Salir.Location = new System.Drawing.Point(1291, 0);
+            this.btn_Salir.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Salir.Name = "btn_Salir";
+            this.btn_Salir.Size = new System.Drawing.Size(51, 49);
+            this.btn_Salir.TabIndex = 13;
+            this.btn_Salir.UseVisualStyleBackColor = false;
+            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click_1);
             // 
             // label8
             // 
@@ -764,7 +700,7 @@ namespace PrimerasHU_GES
             // registrarBtn
             // 
             this.registrarBtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.registrarBtn.BackColor = System.Drawing.Color.Blue;
+            this.registrarBtn.BackColor = System.Drawing.Color.Black;
             this.registrarBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.registrarBtn.BorderRadius = 0;
             this.registrarBtn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -772,7 +708,8 @@ namespace PrimerasHU_GES
             this.registrarBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.registrarBtn.DisabledColor = System.Drawing.Color.Gray;
             this.registrarBtn.Enabled = false;
-            this.registrarBtn.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.registrarBtn.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.registrarBtn.ForeColor = System.Drawing.Color.White;
             this.registrarBtn.Iconcolor = System.Drawing.Color.Transparent;
             this.registrarBtn.Iconimage = null;
             this.registrarBtn.Iconimage_right = null;
@@ -787,8 +724,8 @@ namespace PrimerasHU_GES
             this.registrarBtn.IsTab = false;
             this.registrarBtn.Location = new System.Drawing.Point(526, 295);
             this.registrarBtn.Name = "registrarBtn";
-            this.registrarBtn.Normalcolor = System.Drawing.Color.Blue;
-            this.registrarBtn.OnHovercolor = System.Drawing.Color.Yellow;
+            this.registrarBtn.Normalcolor = System.Drawing.Color.Black;
+            this.registrarBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));
             this.registrarBtn.OnHoverTextColor = System.Drawing.Color.Black;
             this.registrarBtn.selected = false;
             this.registrarBtn.Size = new System.Drawing.Size(117, 77);
@@ -1038,51 +975,119 @@ namespace PrimerasHU_GES
             // 
             this.detallesControlPlanTableAdapter.ClearBeforeFill = true;
             // 
+            // idPtoMedDataGridViewTextBoxColumn
+            // 
+            this.idPtoMedDataGridViewTextBoxColumn.DataPropertyName = "idPtoMed";
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            this.idPtoMedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            this.idPtoMedDataGridViewTextBoxColumn.HeaderText = "Cod. de punto";
+            this.idPtoMedDataGridViewTextBoxColumn.Name = "idPtoMedDataGridViewTextBoxColumn";
+            this.idPtoMedDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idPtoMedDataGridViewTextBoxColumn.Width = 129;
+            // 
+            // codEntidadDataGridViewTextBoxColumn
+            // 
+            this.codEntidadDataGridViewTextBoxColumn.DataPropertyName = "codEntidad";
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            this.codEntidadDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            this.codEntidadDataGridViewTextBoxColumn.HeaderText = "Entidad";
+            this.codEntidadDataGridViewTextBoxColumn.Name = "codEntidadDataGridViewTextBoxColumn";
+            this.codEntidadDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codEntidadDataGridViewTextBoxColumn.Width = 92;
+            // 
+            // denominacionDataGridViewTextBoxColumn
+            // 
+            this.denominacionDataGridViewTextBoxColumn.DataPropertyName = "denominacion";
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            this.denominacionDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
+            this.denominacionDataGridViewTextBoxColumn.HeaderText = "Denominación";
+            this.denominacionDataGridViewTextBoxColumn.Name = "denominacionDataGridViewTextBoxColumn";
+            this.denominacionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.denominacionDataGridViewTextBoxColumn.Width = 144;
+            // 
+            // codTipoControlDataGridViewTextBoxColumn
+            // 
+            this.codTipoControlDataGridViewTextBoxColumn.DataPropertyName = "codTipoControl";
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            this.codTipoControlDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
+            this.codTipoControlDataGridViewTextBoxColumn.HeaderText = "Tipologia";
+            this.codTipoControlDataGridViewTextBoxColumn.Name = "codTipoControlDataGridViewTextBoxColumn";
+            this.codTipoControlDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codTipoControlDataGridViewTextBoxColumn.Width = 104;
+            // 
+            // clasiTipoPtoDataGridViewTextBoxColumn
+            // 
+            this.clasiTipoPtoDataGridViewTextBoxColumn.DataPropertyName = "clasiTipoPto";
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            this.clasiTipoPtoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
+            this.clasiTipoPtoDataGridViewTextBoxColumn.HeaderText = "Tipo de Punto";
+            this.clasiTipoPtoDataGridViewTextBoxColumn.Name = "clasiTipoPtoDataGridViewTextBoxColumn";
+            this.clasiTipoPtoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.clasiTipoPtoDataGridViewTextBoxColumn.Width = 128;
+            // 
+            // coordXPtoMedDataGridViewTextBoxColumn
+            // 
+            this.coordXPtoMedDataGridViewTextBoxColumn.DataPropertyName = "coordXPtoMed";
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            this.coordXPtoMedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
+            this.coordXPtoMedDataGridViewTextBoxColumn.HeaderText = "X nominal";
+            this.coordXPtoMedDataGridViewTextBoxColumn.Name = "coordXPtoMedDataGridViewTextBoxColumn";
+            this.coordXPtoMedDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // coordYPtoMedDataGridViewTextBoxColumn
+            // 
+            this.coordYPtoMedDataGridViewTextBoxColumn.DataPropertyName = "coordYPtoMed";
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            this.coordYPtoMedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle11;
+            this.coordYPtoMedDataGridViewTextBoxColumn.HeaderText = "Y nominal";
+            this.coordYPtoMedDataGridViewTextBoxColumn.Name = "coordYPtoMedDataGridViewTextBoxColumn";
+            this.coordYPtoMedDataGridViewTextBoxColumn.ReadOnly = true;
+            this.coordYPtoMedDataGridViewTextBoxColumn.Width = 99;
+            // 
+            // coordZPtoMedDataGridViewTextBoxColumn
+            // 
+            this.coordZPtoMedDataGridViewTextBoxColumn.DataPropertyName = "coordZPtoMed";
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            this.coordZPtoMedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle12;
+            this.coordZPtoMedDataGridViewTextBoxColumn.HeaderText = "Z nominal";
+            this.coordZPtoMedDataGridViewTextBoxColumn.Name = "coordZPtoMedDataGridViewTextBoxColumn";
+            this.coordZPtoMedDataGridViewTextBoxColumn.ReadOnly = true;
+            this.coordZPtoMedDataGridViewTextBoxColumn.Width = 98;
+            // 
+            // nominalPtoMedDataGridViewTextBoxColumn
+            // 
+            this.nominalPtoMedDataGridViewTextBoxColumn.DataPropertyName = "nominalPtoMed";
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            this.nominalPtoMedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle13;
+            this.nominalPtoMedDataGridViewTextBoxColumn.HeaderText = "Nominal";
+            this.nominalPtoMedDataGridViewTextBoxColumn.Name = "nominalPtoMedDataGridViewTextBoxColumn";
+            this.nominalPtoMedDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nominalPtoMedDataGridViewTextBoxColumn.Width = 96;
+            // 
+            // codUnidMedDataGridViewTextBoxColumn
+            // 
+            this.codUnidMedDataGridViewTextBoxColumn.DataPropertyName = "codUnidMed";
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
+            this.codUnidMedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle14;
+            this.codUnidMedDataGridViewTextBoxColumn.HeaderText = "Unidad de Medición";
+            this.codUnidMedDataGridViewTextBoxColumn.Name = "codUnidMedDataGridViewTextBoxColumn";
+            this.codUnidMedDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codUnidMedDataGridViewTextBoxColumn.Width = 167;
+            // 
+            // detallesControlPlanBindingSource1
+            // 
+            this.detallesControlPlanBindingSource1.DataMember = "detallesControlPlan";
+            this.detallesControlPlanBindingSource1.DataSource = this.ges_v01DataSet17;
+            // 
+            // ges_v01DataSet17
+            // 
+            this.ges_v01DataSet17.DataSetName = "ges_v01DataSet17";
+            this.ges_v01DataSet17.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // detallesControlPlanTableAdapter1
             // 
             this.detallesControlPlanTableAdapter1.ClearBeforeFill = true;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1240, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(51, 49);
-            this.button1.TabIndex = 14;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btn_Salir
-            // 
-            this.btn_Salir.BackColor = System.Drawing.Color.Black;
-            this.btn_Salir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Salir.BackgroundImage")));
-            this.btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Salir.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btn_Salir.FlatAppearance.BorderSize = 0;
-            this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Salir.ForeColor = System.Drawing.Color.White;
-            this.btn_Salir.Location = new System.Drawing.Point(1291, 0);
-            this.btn_Salir.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Salir.Name = "btn_Salir";
-            this.btn_Salir.Size = new System.Drawing.Size(51, 49);
-            this.btn_Salir.TabIndex = 13;
-            this.btn_Salir.UseVisualStyleBackColor = false;
-            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click_1);
             // 
             // RegControlPlan
             // 
@@ -1104,8 +1109,6 @@ namespace PrimerasHU_GES
             ((System.ComponentModel.ISupportInitialize)(this.cabeceraDtg)).EndInit();
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.actualDTGV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.detallesControlPlanBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet17)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -1118,6 +1121,8 @@ namespace PrimerasHU_GES
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gesv01DataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detallesControlPlanBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet17)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1149,11 +1154,11 @@ namespace PrimerasHU_GES
         private System.Windows.Forms.GroupBox groupBox2;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
-        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox1;
-        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox2;
-        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox4;
-        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox5;
-        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox6;
+        private Bunifu.Framework.UI.BunifuMetroTextbox txt_numDisenio_Actual;
+        private Bunifu.Framework.UI.BunifuMetroTextbox txt_seccion_Actual;
+        private Bunifu.Framework.UI.BunifuMetroTextbox txt_fechaActual_Actual;
+        private Bunifu.Framework.UI.BunifuMetroTextbox txt_revision_Actual;
+        private Bunifu.Framework.UI.BunifuMetroTextbox txt_codPrograma_Actual;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel8;

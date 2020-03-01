@@ -26,6 +26,7 @@ namespace PrimerasHU_GES
 
         /// </summary>
         public int cantidad;
+        private SqlDataAdapter ad_actualCP;
 
         private void BunifuFlatButton2_Click(object sender, EventArgs e)
         {
@@ -144,6 +145,8 @@ namespace PrimerasHU_GES
             }
             registrarBtn.Enabled = true;
 
+            //reordeno el NuevoDTGV por Código de Punto, de manera ascendente para luego poder comparar sin problemas
+            nuevoDtgv.Sort(nuevoDtgv.Columns[0], ListSortDirection.Ascending);
         }
 
         //Colocar Numeros a las filas del DatagridView
@@ -180,10 +183,27 @@ namespace PrimerasHU_GES
 
 
 
-
-
-
-
+            SqlCommand conocerActual = new SqlCommand("SELECT cp.codCPlan,cp.codPrograma,s.descSeccion,cp.numDisenioCPlan,cp.revCPlan,cp.fechModifCPlan FROM controlPlan AS cp JOIN seccionesVehiculo AS s ON s.codSeccion = cp.codSeccion", conexion);
+            ad_actualCP = new SqlDataAdapter();
+            ad_actualCP.SelectCommand = conocerActual;
+            DataTable dt_actualCP = new DataTable();
+            ad_actualCP.Fill(dt_actualCP);
+            if (dt_actualCP.Rows.Count != 0)
+            {
+                txt_codPrograma_Actual.Text = dt_actualCP.Rows[0][1].ToString();
+                txt_seccion_Actual.Text = dt_actualCP.Rows[0][2].ToString();
+                txt_numDisenio_Actual.Text = dt_actualCP.Rows[0][3].ToString();
+                txt_revision_Actual.Text = dt_actualCP.Rows[0][4].ToString();
+                txt_fechaActual_Actual.Text = dt_actualCP.Rows[0][5].ToString();
+            }
+            else
+            {
+                txt_codPrograma_Actual.Text = "No hay datos registrados";
+                txt_seccion_Actual.Text = "No hay datos registrados";
+                txt_numDisenio_Actual.Text = "No hay datos registrados";
+                txt_revision_Actual.Text = "No hay datos registrados";
+                txt_fechaActual_Actual.Text = "No hay datos registrados";
+            }
         }
 
 
@@ -432,18 +452,61 @@ namespace PrimerasHU_GES
                     if (cell1 != cell2)
                     {
                         //  MOSTRAR EN PANTALLA LA DIFERENCIA, SI HAY, DE LOS DOS ARCHIVOS
-                        nuevoDtgv.Rows[f].Cells[c].Style.BackColor = Color.Red;
+                        nuevoDtgv.Rows[f].Cells[c].Style.BackColor = Color.OrangeRed;
                     }
                     else
                     {
-                       
+                        nuevoDtgv.Rows[f].Cells[c].Style.BackColor = Color.LightGreen;
                     }
-                   
-                }
 
-                
-                
+                }
             }
+
+            if (codigoProTxt.Text == txt_codPrograma_Actual.Text)
+            {
+                codigoProTxt.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                codigoProTxt.BackColor = Color.OrangeRed;
+            }
+
+            if (descSeccionTxt.Text == txt_seccion_Actual.Text)
+            {
+                descSeccionTxt.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                descSeccionTxt.BackColor = Color.OrangeRed;
+            }
+
+            if (numDisTxt.Text == txt_numDisenio_Actual.Text)
+            {
+                numDisTxt.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                numDisTxt.BackColor = Color.OrangeRed;
+            }
+
+            if (revisionText.Text == txt_revision_Actual.Text)
+            {
+                revisionText.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                revisionText.BackColor = Color.OrangeRed;
+            }
+
+            if (DtFecha.ToString() == txt_fechaActual_Actual.Text)
+            {
+                DtFecha.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                DtFecha.BackColor = Color.OrangeRed;
+            }
+
         }
 
         private void btnLimpiar_Click_1(object sender, EventArgs e)

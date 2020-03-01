@@ -58,8 +58,15 @@ namespace PrimerasHU_GES
             abrirConexion();
             CargarImagenes(cmbGrafico);
             CargarImagenes2(cmbImagen);
-            cmbGrafico.SelectedIndex = 0;
-            cmbImagen.SelectedIndex = 0;
+            if (cmbGrafico.Items.Count != 0)
+            {
+                cmbGrafico.SelectedIndex = 0;
+            }
+
+            if (cmbImagen.Items.Count != 0)
+            {
+                cmbImagen.SelectedIndex = 0;
+            }
             btnModificar.Enabled = false;
 
         }
