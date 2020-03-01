@@ -33,6 +33,8 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Salir = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.dgv_programas = new System.Windows.Forms.DataGridView();
             this.codProgramaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,8 +61,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.maquinasMedicionTableAdapter = new PrimerasHU_GES.ges_v01DataSetMaquinasTableAdapters.maquinasMedicionTableAdapter();
             this.programasTableAdapter = new PrimerasHU_GES.ges_v01DataSetProgramasTableAdapters.programasTableAdapter();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btn_Salir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_programas)).BeginInit();
@@ -104,6 +104,48 @@
             this.panel1.Size = new System.Drawing.Size(770, 49);
             this.panel1.TabIndex = 137;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(668, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(51, 49);
+            this.button1.TabIndex = 14;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btn_Salir
+            // 
+            this.btn_Salir.BackColor = System.Drawing.Color.Black;
+            this.btn_Salir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Salir.BackgroundImage")));
+            this.btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Salir.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btn_Salir.FlatAppearance.BorderSize = 0;
+            this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Salir.ForeColor = System.Drawing.Color.White;
+            this.btn_Salir.Location = new System.Drawing.Point(719, 0);
+            this.btn_Salir.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Salir.Name = "btn_Salir";
+            this.btn_Salir.Size = new System.Drawing.Size(51, 49);
+            this.btn_Salir.TabIndex = 13;
+            this.btn_Salir.UseVisualStyleBackColor = false;
+            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click_1);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -124,6 +166,7 @@
             this.dgv_programas.AllowUserToResizeRows = false;
             this.dgv_programas.AutoGenerateColumns = false;
             this.dgv_programas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgv_programas.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgv_programas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_programas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codProgramaDataGridViewTextBoxColumn,
@@ -198,6 +241,7 @@
             this.btn_limpiar.FlatAppearance.BorderSize = 0;
             this.btn_limpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_limpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_limpiar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.btn_limpiar.ForeColor = System.Drawing.Color.White;
             this.btn_limpiar.Location = new System.Drawing.Point(576, 264);
             this.btn_limpiar.Name = "btn_limpiar";
@@ -211,10 +255,11 @@
             // 
             this.btn_eliminar.BackColor = System.Drawing.Color.Black;
             this.btn_eliminar.Enabled = false;
-            this.btn_eliminar.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.btn_eliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_eliminar.FlatAppearance.BorderSize = 0;
-            this.btn_eliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
+            this.btn_eliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_eliminar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.btn_eliminar.ForeColor = System.Drawing.Color.White;
             this.btn_eliminar.Location = new System.Drawing.Point(387, 264);
             this.btn_eliminar.Name = "btn_eliminar";
@@ -228,10 +273,11 @@
             // 
             this.btn_modificar.BackColor = System.Drawing.Color.Black;
             this.btn_modificar.Enabled = false;
-            this.btn_modificar.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.btn_modificar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_modificar.FlatAppearance.BorderSize = 0;
-            this.btn_modificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btn_modificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_modificar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.btn_modificar.ForeColor = System.Drawing.Color.White;
             this.btn_modificar.Location = new System.Drawing.Point(201, 264);
             this.btn_modificar.Name = "btn_modificar";
@@ -244,10 +290,11 @@
             // btn_registrar
             // 
             this.btn_registrar.BackColor = System.Drawing.Color.Black;
-            this.btn_registrar.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.btn_registrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_registrar.FlatAppearance.BorderSize = 0;
-            this.btn_registrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btn_registrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_registrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_registrar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.btn_registrar.ForeColor = System.Drawing.Color.White;
             this.btn_registrar.Location = new System.Drawing.Point(12, 264);
             this.btn_registrar.Name = "btn_registrar";
@@ -363,53 +410,11 @@
             // 
             this.programasTableAdapter.ClearBeforeFill = true;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(668, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(51, 49);
-            this.button1.TabIndex = 14;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btn_Salir
-            // 
-            this.btn_Salir.BackColor = System.Drawing.Color.Black;
-            this.btn_Salir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Salir.BackgroundImage")));
-            this.btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Salir.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btn_Salir.FlatAppearance.BorderSize = 0;
-            this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Salir.ForeColor = System.Drawing.Color.White;
-            this.btn_Salir.Location = new System.Drawing.Point(719, 0);
-            this.btn_Salir.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Salir.Name = "btn_Salir";
-            this.btn_Salir.Size = new System.Drawing.Size(51, 49);
-            this.btn_Salir.TabIndex = 13;
-            this.btn_Salir.UseVisualStyleBackColor = false;
-            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click_1);
-            // 
             // Programas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(770, 300);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btn_limpiar);

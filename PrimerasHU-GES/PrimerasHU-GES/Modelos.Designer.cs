@@ -156,6 +156,7 @@
             this.dgv_tiposVehiculo.AllowUserToResizeColumns = false;
             this.dgv_tiposVehiculo.AllowUserToResizeRows = false;
             this.dgv_tiposVehiculo.AutoGenerateColumns = false;
+            this.dgv_tiposVehiculo.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgv_tiposVehiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_tiposVehiculo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codTipoVDataGridViewTextBoxColumn,
@@ -202,9 +203,9 @@
             // 
             this.btn_altaTipoV.BackColor = System.Drawing.Color.Black;
             this.btn_altaTipoV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_altaTipoV.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.btn_altaTipoV.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_altaTipoV.FlatAppearance.BorderSize = 0;
-            this.btn_altaTipoV.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btn_altaTipoV.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             resources.ApplyResources(this.btn_altaTipoV, "btn_altaTipoV");
             this.btn_altaTipoV.ForeColor = System.Drawing.Color.White;
             this.btn_altaTipoV.Name = "btn_altaTipoV";
@@ -228,9 +229,9 @@
             // 
             this.btn_modifTiposV.BackColor = System.Drawing.Color.Black;
             this.btn_modifTiposV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_modifTiposV.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.btn_modifTiposV.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_modifTiposV.FlatAppearance.BorderSize = 0;
-            this.btn_modifTiposV.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btn_modifTiposV.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             resources.ApplyResources(this.btn_modifTiposV, "btn_modifTiposV");
             this.btn_modifTiposV.ForeColor = System.Drawing.Color.White;
             this.btn_modifTiposV.Name = "btn_modifTiposV";
@@ -241,9 +242,9 @@
             // 
             this.btn_bajaTiposV.BackColor = System.Drawing.Color.Black;
             this.btn_bajaTiposV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_bajaTiposV.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.btn_bajaTiposV.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_bajaTiposV.FlatAppearance.BorderSize = 0;
-            this.btn_bajaTiposV.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
+            this.btn_bajaTiposV.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             resources.ApplyResources(this.btn_bajaTiposV, "btn_bajaTiposV");
             this.btn_bajaTiposV.ForeColor = System.Drawing.Color.White;
             this.btn_bajaTiposV.Name = "btn_bajaTiposV";
@@ -288,6 +289,7 @@
             this.dgv_versionesModelo.AllowUserToAddRows = false;
             this.dgv_versionesModelo.AllowUserToDeleteRows = false;
             this.dgv_versionesModelo.AutoGenerateColumns = false;
+            this.dgv_versionesModelo.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgv_versionesModelo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_versionesModelo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codVersionDataGridViewTextBoxColumn,
@@ -332,9 +334,9 @@
             // 
             this.btn_bajaVersion.BackColor = System.Drawing.Color.Black;
             this.btn_bajaVersion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_bajaVersion.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.btn_bajaVersion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_bajaVersion.FlatAppearance.BorderSize = 0;
-            this.btn_bajaVersion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
+            this.btn_bajaVersion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             resources.ApplyResources(this.btn_bajaVersion, "btn_bajaVersion");
             this.btn_bajaVersion.ForeColor = System.Drawing.Color.White;
             this.btn_bajaVersion.Name = "btn_bajaVersion";
@@ -350,9 +352,9 @@
             // 
             this.btn_modifVersion.BackColor = System.Drawing.Color.Black;
             this.btn_modifVersion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_modifVersion.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.btn_modifVersion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_modifVersion.FlatAppearance.BorderSize = 0;
-            this.btn_modifVersion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btn_modifVersion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             resources.ApplyResources(this.btn_modifVersion, "btn_modifVersion");
             this.btn_modifVersion.ForeColor = System.Drawing.Color.White;
             this.btn_modifVersion.Name = "btn_modifVersion";
@@ -386,9 +388,9 @@
             // 
             this.btn_altaVersion.BackColor = System.Drawing.Color.Black;
             this.btn_altaVersion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_altaVersion.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.btn_altaVersion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_altaVersion.FlatAppearance.BorderSize = 0;
-            this.btn_altaVersion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btn_altaVersion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             resources.ApplyResources(this.btn_altaVersion, "btn_altaVersion");
             this.btn_altaVersion.ForeColor = System.Drawing.Color.White;
             this.btn_altaVersion.Name = "btn_altaVersion";
@@ -512,6 +514,7 @@
             this.dgv_modelosVehiculo.AllowUserToAddRows = false;
             this.dgv_modelosVehiculo.AllowUserToDeleteRows = false;
             this.dgv_modelosVehiculo.AutoGenerateColumns = false;
+            this.dgv_modelosVehiculo.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgv_modelosVehiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_modelosVehiculo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codProyectoDataGridViewTextBoxColumn,
@@ -575,8 +578,8 @@
             // 
             this.btn_bajaModV.BackColor = System.Drawing.Color.Black;
             this.btn_bajaModV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_bajaModV.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.btn_bajaModV.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
+            this.btn_bajaModV.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btn_bajaModV.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             resources.ApplyResources(this.btn_bajaModV, "btn_bajaModV");
             this.btn_bajaModV.ForeColor = System.Drawing.Color.White;
             this.btn_bajaModV.Name = "btn_bajaModV";
@@ -597,8 +600,8 @@
             // 
             this.bnt_altaModV.BackColor = System.Drawing.Color.Black;
             this.bnt_altaModV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bnt_altaModV.FlatAppearance.BorderColor = System.Drawing.Color.Green;
-            this.bnt_altaModV.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.bnt_altaModV.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.bnt_altaModV.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             resources.ApplyResources(this.bnt_altaModV, "bnt_altaModV");
             this.bnt_altaModV.ForeColor = System.Drawing.Color.White;
             this.bnt_altaModV.Name = "bnt_altaModV";
@@ -609,8 +612,8 @@
             // 
             this.btn_modifModV.BackColor = System.Drawing.Color.Black;
             this.btn_modifModV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_modifModV.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-            this.btn_modifModV.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btn_modifModV.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btn_modifModV.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             resources.ApplyResources(this.btn_modifModV, "btn_modifModV");
             this.btn_modifModV.ForeColor = System.Drawing.Color.White;
             this.btn_modifModV.Name = "btn_modifModV";
@@ -714,6 +717,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelModelosV);
             this.Controls.Add(this.panelVersiones);

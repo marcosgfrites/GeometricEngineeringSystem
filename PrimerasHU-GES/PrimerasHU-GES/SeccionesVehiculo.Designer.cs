@@ -45,6 +45,8 @@
             this.secionesVehiulobindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ges_v01DataSet2 = new PrimerasHU_GES.ges_v01DataSet2();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Salir = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.seccionesVehiculoTableAdapter = new PrimerasHU_GES.ges_v01DataSet2TableAdapters.seccionesVehiculoTableAdapter();
@@ -59,8 +61,6 @@
             this.modelosVehiculoTableAdapter = new PrimerasHU_GES.ges_v01DataSet6TableAdapters.modelosVehiculoTableAdapter();
             this.errorProviderCodSeccion = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderVerSec = new System.Windows.Forms.ErrorProvider(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.btn_Salir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSeccionesVehiculo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.secionesVehiulobindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet2)).BeginInit();
@@ -143,6 +143,7 @@
             this.dgvSeccionesVehiculo.AllowUserToAddRows = false;
             this.dgvSeccionesVehiculo.AllowUserToDeleteRows = false;
             this.dgvSeccionesVehiculo.AutoGenerateColumns = false;
+            this.dgvSeccionesVehiculo.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvSeccionesVehiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSeccionesVehiculo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codSeccionDataGridViewTextBoxColumn,
@@ -212,156 +213,6 @@
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(89, 11);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(378, 22);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "GESTOR DE SECCIONES DE VEHÍCULO";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
-            this.panel2.BackgroundImage = global::PrimerasHU_GES.Properties.Resources.LOGOENCABEZADO_Mesa_de_trabajo_1;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(64, 49);
-            this.panel2.TabIndex = 0;
-            // 
-            // seccionesVehiculoTableAdapter
-            // 
-            this.seccionesVehiculoTableAdapter.ClearBeforeFill = true;
-            // 
-            // btnRegCodSec
-            // 
-            this.btnRegCodSec.BackColor = System.Drawing.Color.Black;
-            this.btnRegCodSec.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegCodSec.FlatAppearance.BorderColor = System.Drawing.Color.Green;
-            this.btnRegCodSec.FlatAppearance.BorderSize = 0;
-            this.btnRegCodSec.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.btnRegCodSec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegCodSec.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnRegCodSec.ForeColor = System.Drawing.Color.White;
-            this.btnRegCodSec.Location = new System.Drawing.Point(28, 260);
-            this.btnRegCodSec.Name = "btnRegCodSec";
-            this.btnRegCodSec.Size = new System.Drawing.Size(147, 51);
-            this.btnRegCodSec.TabIndex = 53;
-            this.btnRegCodSec.Text = "Registrar Seccion";
-            this.btnRegCodSec.UseVisualStyleBackColor = false;
-            this.btnRegCodSec.Click += new System.EventHandler(this.BtnRegCodSec_Click_1);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.Black;
-            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.btnEliminar.FlatAppearance.BorderSize = 0;
-            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(28, 328);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(147, 50);
-            this.btnEliminar.TabIndex = 59;
-            this.btnEliminar.Text = "Eliminar Seccion";
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click_1);
-            // 
-            // btnModSecVeh
-            // 
-            this.btnModSecVeh.BackColor = System.Drawing.Color.Black;
-            this.btnModSecVeh.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModSecVeh.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-            this.btnModSecVeh.FlatAppearance.BorderSize = 0;
-            this.btnModSecVeh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.btnModSecVeh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModSecVeh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnModSecVeh.ForeColor = System.Drawing.Color.White;
-            this.btnModSecVeh.Location = new System.Drawing.Point(205, 328);
-            this.btnModSecVeh.Name = "btnModSecVeh";
-            this.btnModSecVeh.Size = new System.Drawing.Size(139, 50);
-            this.btnModSecVeh.TabIndex = 58;
-            this.btnModSecVeh.Text = "Modificar Seccion";
-            this.btnModSecVeh.UseVisualStyleBackColor = false;
-            this.btnModSecVeh.Click += new System.EventHandler(this.BtnModSecVeh_Click_1);
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.BackColor = System.Drawing.Color.Black;
-            this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLimpiar.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.btnLimpiar.FlatAppearance.BorderSize = 0;
-            this.btnLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
-            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiar.Location = new System.Drawing.Point(205, 260);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(139, 51);
-            this.btnLimpiar.TabIndex = 57;
-            this.btnLimpiar.Text = "Limpíar Panel";
-            this.btnLimpiar.UseVisualStyleBackColor = false;
-            this.btnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click_1);
-            // 
-            // btnVerTod
-            // 
-            this.btnVerTod.BackColor = System.Drawing.Color.Black;
-            this.btnVerTod.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVerTod.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
-            this.btnVerTod.FlatAppearance.BorderSize = 0;
-            this.btnVerTod.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
-            this.btnVerTod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVerTod.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerTod.ForeColor = System.Drawing.Color.White;
-            this.btnVerTod.Location = new System.Drawing.Point(28, 407);
-            this.btnVerTod.Name = "btnVerTod";
-            this.btnVerTod.Size = new System.Drawing.Size(313, 70);
-            this.btnVerTod.TabIndex = 61;
-            this.btnVerTod.Text = "Ver todas las secciones";
-            this.btnVerTod.UseVisualStyleBackColor = false;
-            this.btnVerTod.Click += new System.EventHandler(this.BtnVerTod_Click);
-            // 
-            // cbCodProyecto
-            // 
-            this.cbCodProyecto.DataSource = this.modelosVehiculoBindingSource;
-            this.cbCodProyecto.DisplayMember = "codProyecto";
-            this.cbCodProyecto.FormattingEnabled = true;
-            this.cbCodProyecto.Location = new System.Drawing.Point(159, 111);
-            this.cbCodProyecto.Name = "cbCodProyecto";
-            this.cbCodProyecto.Size = new System.Drawing.Size(182, 21);
-            this.cbCodProyecto.TabIndex = 62;
-            this.cbCodProyecto.ValueMember = "codProyecto";
-            // 
-            // modelosVehiculoBindingSource
-            // 
-            this.modelosVehiculoBindingSource.DataMember = "modelosVehiculo";
-            this.modelosVehiculoBindingSource.DataSource = this.ges_v01DataSet6;
-            // 
-            // ges_v01DataSet6
-            // 
-            this.ges_v01DataSet6.DataSetName = "ges_v01DataSet6";
-            this.ges_v01DataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // modelosVehiculoTableAdapter
-            // 
-            this.modelosVehiculoTableAdapter.ClearBeforeFill = true;
-            // 
-            // errorProviderCodSeccion
-            // 
-            this.errorProviderCodSeccion.ContainerControl = this;
-            // 
-            // errorProviderVerSec
-            // 
-            this.errorProviderVerSec.ContainerControl = this;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Black;
@@ -404,11 +255,161 @@
             this.btn_Salir.UseVisualStyleBackColor = false;
             this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click_1);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(89, 11);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(378, 22);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "GESTOR DE SECCIONES DE VEHÍCULO";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.panel2.BackgroundImage = global::PrimerasHU_GES.Properties.Resources.LOGOENCABEZADO_Mesa_de_trabajo_1;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(64, 49);
+            this.panel2.TabIndex = 0;
+            // 
+            // seccionesVehiculoTableAdapter
+            // 
+            this.seccionesVehiculoTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnRegCodSec
+            // 
+            this.btnRegCodSec.BackColor = System.Drawing.Color.Black;
+            this.btnRegCodSec.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegCodSec.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btnRegCodSec.FlatAppearance.BorderSize = 0;
+            this.btnRegCodSec.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btnRegCodSec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegCodSec.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.btnRegCodSec.ForeColor = System.Drawing.Color.White;
+            this.btnRegCodSec.Location = new System.Drawing.Point(28, 260);
+            this.btnRegCodSec.Name = "btnRegCodSec";
+            this.btnRegCodSec.Size = new System.Drawing.Size(147, 51);
+            this.btnRegCodSec.TabIndex = 53;
+            this.btnRegCodSec.Text = "Registrar Seccion";
+            this.btnRegCodSec.UseVisualStyleBackColor = false;
+            this.btnRegCodSec.Click += new System.EventHandler(this.BtnRegCodSec_Click_1);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.Black;
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(28, 328);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(147, 50);
+            this.btnEliminar.TabIndex = 59;
+            this.btnEliminar.Text = "Eliminar Seccion";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click_1);
+            // 
+            // btnModSecVeh
+            // 
+            this.btnModSecVeh.BackColor = System.Drawing.Color.Black;
+            this.btnModSecVeh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModSecVeh.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btnModSecVeh.FlatAppearance.BorderSize = 0;
+            this.btnModSecVeh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btnModSecVeh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModSecVeh.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.btnModSecVeh.ForeColor = System.Drawing.Color.White;
+            this.btnModSecVeh.Location = new System.Drawing.Point(205, 328);
+            this.btnModSecVeh.Name = "btnModSecVeh";
+            this.btnModSecVeh.Size = new System.Drawing.Size(139, 50);
+            this.btnModSecVeh.TabIndex = 58;
+            this.btnModSecVeh.Text = "Modificar Seccion";
+            this.btnModSecVeh.UseVisualStyleBackColor = false;
+            this.btnModSecVeh.Click += new System.EventHandler(this.BtnModSecVeh_Click_1);
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.BackColor = System.Drawing.Color.Black;
+            this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimpiar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btnLimpiar.FlatAppearance.BorderSize = 0;
+            this.btnLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
+            this.btnLimpiar.Location = new System.Drawing.Point(205, 260);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(139, 51);
+            this.btnLimpiar.TabIndex = 57;
+            this.btnLimpiar.Text = "Limpíar Panel";
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click_1);
+            // 
+            // btnVerTod
+            // 
+            this.btnVerTod.BackColor = System.Drawing.Color.Black;
+            this.btnVerTod.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVerTod.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btnVerTod.FlatAppearance.BorderSize = 0;
+            this.btnVerTod.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btnVerTod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerTod.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.btnVerTod.ForeColor = System.Drawing.Color.White;
+            this.btnVerTod.Location = new System.Drawing.Point(28, 407);
+            this.btnVerTod.Name = "btnVerTod";
+            this.btnVerTod.Size = new System.Drawing.Size(313, 70);
+            this.btnVerTod.TabIndex = 61;
+            this.btnVerTod.Text = "Ver todas las secciones";
+            this.btnVerTod.UseVisualStyleBackColor = false;
+            this.btnVerTod.Click += new System.EventHandler(this.BtnVerTod_Click);
+            // 
+            // cbCodProyecto
+            // 
+            this.cbCodProyecto.DataSource = this.modelosVehiculoBindingSource;
+            this.cbCodProyecto.DisplayMember = "codProyecto";
+            this.cbCodProyecto.FormattingEnabled = true;
+            this.cbCodProyecto.Location = new System.Drawing.Point(159, 111);
+            this.cbCodProyecto.Name = "cbCodProyecto";
+            this.cbCodProyecto.Size = new System.Drawing.Size(182, 21);
+            this.cbCodProyecto.TabIndex = 62;
+            this.cbCodProyecto.ValueMember = "codProyecto";
+            // 
+            // modelosVehiculoBindingSource
+            // 
+            this.modelosVehiculoBindingSource.DataMember = "modelosVehiculo";
+            this.modelosVehiculoBindingSource.DataSource = this.ges_v01DataSet6;
+            // 
+            // ges_v01DataSet6
+            // 
+            this.ges_v01DataSet6.DataSetName = "ges_v01DataSet6";
+            this.ges_v01DataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // modelosVehiculoTableAdapter
+            // 
+            this.modelosVehiculoTableAdapter.ClearBeforeFill = true;
+            // 
+            // errorProviderCodSeccion
+            // 
+            this.errorProviderCodSeccion.ContainerControl = this;
+            // 
+            // errorProviderVerSec
+            // 
+            this.errorProviderVerSec.ContainerControl = this;
+            // 
             // SeccionesVehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(974, 495);
             this.Controls.Add(this.cbCodProyecto);
             this.Controls.Add(this.btnVerTod);

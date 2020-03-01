@@ -71,10 +71,10 @@
             this.clasificacionesPuntoTableAdapter1 = new PrimerasHU_GES.ges_v01DataSet4TableAdapters.clasificacionesPuntoTableAdapter();
             this.tiposPuntoTableAdapter = new PrimerasHU_GES.ges_v01DataSet5TableAdapters.tiposPuntoTableAdapter();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_Salir = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panelTiposV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClasiPunto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clasificacionesPuntoBindingSource1)).BeginInit();
@@ -115,6 +115,7 @@
             this.buscarClasiBtn.FlatAppearance.BorderSize = 0;
             this.buscarClasiBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.buscarClasiBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buscarClasiBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.buscarClasiBtn.ForeColor = System.Drawing.Color.White;
             this.buscarClasiBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.buscarClasiBtn.Location = new System.Drawing.Point(50, 413);
@@ -140,10 +141,11 @@
             // 
             this.elimiClasiBtn.BackColor = System.Drawing.Color.Black;
             this.elimiClasiBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.elimiClasiBtn.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.elimiClasiBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.elimiClasiBtn.FlatAppearance.BorderSize = 0;
-            this.elimiClasiBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
+            this.elimiClasiBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.elimiClasiBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.elimiClasiBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.elimiClasiBtn.ForeColor = System.Drawing.Color.White;
             this.elimiClasiBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.elimiClasiBtn.Location = new System.Drawing.Point(287, 450);
@@ -168,10 +170,11 @@
             // 
             this.modifiClasiBtn.BackColor = System.Drawing.Color.Black;
             this.modifiClasiBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.modifiClasiBtn.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.modifiClasiBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.modifiClasiBtn.FlatAppearance.BorderSize = 0;
-            this.modifiClasiBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.modifiClasiBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.modifiClasiBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.modifiClasiBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.modifiClasiBtn.ForeColor = System.Drawing.Color.White;
             this.modifiClasiBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.modifiClasiBtn.Location = new System.Drawing.Point(25, 450);
@@ -200,6 +203,7 @@
             this.limpClasiBtn.FlatAppearance.BorderSize = 0;
             this.limpClasiBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.limpClasiBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.limpClasiBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.limpClasiBtn.ForeColor = System.Drawing.Color.White;
             this.limpClasiBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.limpClasiBtn.Location = new System.Drawing.Point(229, 376);
@@ -222,10 +226,11 @@
             // 
             this.regClasiBtn.BackColor = System.Drawing.Color.Black;
             this.regClasiBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.regClasiBtn.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.regClasiBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.regClasiBtn.FlatAppearance.BorderSize = 0;
-            this.regClasiBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.regClasiBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.regClasiBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.regClasiBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.regClasiBtn.ForeColor = System.Drawing.Color.White;
             this.regClasiBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.regClasiBtn.Location = new System.Drawing.Point(25, 376);
@@ -238,9 +243,9 @@
             // 
             // txt_descClasifi
             // 
-            this.txt_descClasifi.Location = new System.Drawing.Point(137, 338);
+            this.txt_descClasifi.Location = new System.Drawing.Point(184, 338);
             this.txt_descClasifi.Name = "txt_descClasifi";
-            this.txt_descClasifi.Size = new System.Drawing.Size(262, 20);
+            this.txt_descClasifi.Size = new System.Drawing.Size(215, 20);
             this.txt_descClasifi.TabIndex = 50;
             this.txt_descClasifi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -249,6 +254,7 @@
             this.dgvClasiPunto.AllowUserToAddRows = false;
             this.dgvClasiPunto.AllowUserToDeleteRows = false;
             this.dgvClasiPunto.AutoGenerateColumns = false;
+            this.dgvClasiPunto.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvClasiPunto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClasiPunto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codClasifPtoDataGridViewTextBoxColumn,
@@ -314,9 +320,9 @@
             this.codClasiPtoCmb.DataSource = this.clasificacionesPuntoBindingSource;
             this.codClasiPtoCmb.DisplayMember = "codClasifPto";
             this.codClasiPtoCmb.FormattingEnabled = true;
-            this.codClasiPtoCmb.Location = new System.Drawing.Point(241, 306);
+            this.codClasiPtoCmb.Location = new System.Drawing.Point(214, 306);
             this.codClasiPtoCmb.Name = "codClasiPtoCmb";
-            this.codClasiPtoCmb.Size = new System.Drawing.Size(228, 21);
+            this.codClasiPtoCmb.Size = new System.Drawing.Size(255, 21);
             this.codClasiPtoCmb.TabIndex = 59;
             this.codClasiPtoCmb.ValueMember = "codClasifPto";
             // 
@@ -356,6 +362,7 @@
             this.buscarTipoPtoBtn.FlatAppearance.BorderSize = 0;
             this.buscarTipoPtoBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.buscarTipoPtoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buscarTipoPtoBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.buscarTipoPtoBtn.ForeColor = System.Drawing.Color.White;
             this.buscarTipoPtoBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.buscarTipoPtoBtn.Location = new System.Drawing.Point(59, 413);
@@ -381,10 +388,11 @@
             // 
             this.elimTipoPtoBtn.BackColor = System.Drawing.Color.Black;
             this.elimTipoPtoBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.elimTipoPtoBtn.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.elimTipoPtoBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.elimTipoPtoBtn.FlatAppearance.BorderSize = 0;
-            this.elimTipoPtoBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
+            this.elimTipoPtoBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.elimTipoPtoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.elimTipoPtoBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.elimTipoPtoBtn.ForeColor = System.Drawing.Color.White;
             this.elimTipoPtoBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.elimTipoPtoBtn.Location = new System.Drawing.Point(346, 450);
@@ -409,10 +417,11 @@
             // 
             this.modifiTipoPtoBtn.BackColor = System.Drawing.Color.Black;
             this.modifiTipoPtoBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.modifiTipoPtoBtn.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.modifiTipoPtoBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.modifiTipoPtoBtn.FlatAppearance.BorderSize = 0;
-            this.modifiTipoPtoBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.modifiTipoPtoBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.modifiTipoPtoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.modifiTipoPtoBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.modifiTipoPtoBtn.ForeColor = System.Drawing.Color.White;
             this.modifiTipoPtoBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.modifiTipoPtoBtn.Location = new System.Drawing.Point(27, 450);
@@ -441,6 +450,7 @@
             this.limpTipoPtoBtn.FlatAppearance.BorderSize = 0;
             this.limpTipoPtoBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.limpTipoPtoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.limpTipoPtoBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.limpTipoPtoBtn.ForeColor = System.Drawing.Color.White;
             this.limpTipoPtoBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.limpTipoPtoBtn.Location = new System.Drawing.Point(288, 376);
@@ -453,9 +463,9 @@
             // 
             // codTipoPtoTxt
             // 
-            this.codTipoPtoTxt.Location = new System.Drawing.Point(254, 275);
+            this.codTipoPtoTxt.Location = new System.Drawing.Point(214, 275);
             this.codTipoPtoTxt.Name = "codTipoPtoTxt";
-            this.codTipoPtoTxt.Size = new System.Drawing.Size(215, 20);
+            this.codTipoPtoTxt.Size = new System.Drawing.Size(255, 20);
             this.codTipoPtoTxt.TabIndex = 49;
             this.codTipoPtoTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -463,10 +473,11 @@
             // 
             this.regTipoPtoBtn.BackColor = System.Drawing.Color.Black;
             this.regTipoPtoBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.regTipoPtoBtn.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.regTipoPtoBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.regTipoPtoBtn.FlatAppearance.BorderSize = 0;
-            this.regTipoPtoBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.regTipoPtoBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.regTipoPtoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.regTipoPtoBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.regTipoPtoBtn.ForeColor = System.Drawing.Color.White;
             this.regTipoPtoBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.regTipoPtoBtn.Location = new System.Drawing.Point(27, 376);
@@ -482,6 +493,7 @@
             this.dgvTipoPunto.AllowUserToAddRows = false;
             this.dgvTipoPunto.AllowUserToDeleteRows = false;
             this.dgvTipoPunto.AutoGenerateColumns = false;
+            this.dgvTipoPunto.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvTipoPunto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTipoPunto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codTipoPtoDataGridViewTextBoxColumn,
@@ -556,29 +568,6 @@
             this.panel2.Size = new System.Drawing.Size(1000, 49);
             this.panel2.TabIndex = 73;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(92, 11);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(208, 22);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "GESTOR DE PUNTOS";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
-            this.panel3.BackgroundImage = global::PrimerasHU_GES.Properties.Resources.LOGOENCABEZADO_Mesa_de_trabajo_1;
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(64, 49);
-            this.panel3.TabIndex = 0;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Black;
@@ -621,11 +610,34 @@
             this.btn_Salir.UseVisualStyleBackColor = false;
             this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(92, 11);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(208, 22);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "GESTOR DE PUNTOS";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.panel3.BackgroundImage = global::PrimerasHU_GES.Properties.Resources.LOGOENCABEZADO_Mesa_de_trabajo_1;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(64, 49);
+            this.panel3.TabIndex = 0;
+            // 
             // tipoPuntoClasificacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1000, 690);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

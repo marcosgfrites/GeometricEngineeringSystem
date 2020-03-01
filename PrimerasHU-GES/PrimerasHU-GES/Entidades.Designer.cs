@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Entidades));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Salir = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -50,10 +52,8 @@
             this.entidadesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.ges_v01DataSet18Entidades2 = new PrimerasHU_GES.ges_v01DataSet18Entidades2();
             this.entidadesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ges_v01DataSet17_Entidades = new PrimerasHU_GES.ges_v01DataSet17();
+           // this.ges_v01DataSet17_Entidades = new PrimerasHU_GES.ges_v01DataSet17();
             this.entidadesTableAdapter1 = new PrimerasHU_GES.ges_v01DataSet18Entidades2TableAdapters.entidadesTableAdapter();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btn_Salir = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -61,7 +61,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.entidadesBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18Entidades2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.entidadesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet17_Entidades)).BeginInit();
+         //   ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet17_Entidades)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -77,6 +77,48 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(840, 49);
             this.panel1.TabIndex = 47;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(738, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(51, 49);
+            this.button1.TabIndex = 14;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btn_Salir
+            // 
+            this.btn_Salir.BackColor = System.Drawing.Color.Black;
+            this.btn_Salir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Salir.BackgroundImage")));
+            this.btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Salir.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btn_Salir.FlatAppearance.BorderSize = 0;
+            this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Salir.ForeColor = System.Drawing.Color.White;
+            this.btn_Salir.Location = new System.Drawing.Point(789, 0);
+            this.btn_Salir.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Salir.Name = "btn_Salir";
+            this.btn_Salir.Size = new System.Drawing.Size(51, 49);
+            this.btn_Salir.TabIndex = 13;
+            this.btn_Salir.UseVisualStyleBackColor = false;
+            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click_1);
             // 
             // label8
             // 
@@ -132,10 +174,10 @@
             // 
             this.botonVerEntidad.BackColor = System.Drawing.Color.Black;
             this.botonVerEntidad.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botonVerEntidad.FlatAppearance.BorderColor = System.Drawing.Color.MediumTurquoise;
-            this.botonVerEntidad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumTurquoise;
+            this.botonVerEntidad.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.botonVerEntidad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.botonVerEntidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonVerEntidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.botonVerEntidad.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.botonVerEntidad.ForeColor = System.Drawing.Color.White;
             this.botonVerEntidad.Location = new System.Drawing.Point(81, 378);
             this.botonVerEntidad.Name = "botonVerEntidad";
@@ -149,10 +191,10 @@
             // 
             this.btnEliminarEntidad.BackColor = System.Drawing.Color.Black;
             this.btnEliminarEntidad.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminarEntidad.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.btnEliminarEntidad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
+            this.btnEliminarEntidad.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btnEliminarEntidad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btnEliminarEntidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarEntidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnEliminarEntidad.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnEliminarEntidad.ForeColor = System.Drawing.Color.White;
             this.btnEliminarEntidad.Location = new System.Drawing.Point(81, 336);
             this.btnEliminarEntidad.Name = "btnEliminarEntidad";
@@ -166,10 +208,10 @@
             // 
             this.btnModEntidad.BackColor = System.Drawing.Color.Black;
             this.btnModEntidad.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModEntidad.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-            this.btnModEntidad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnModEntidad.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btnModEntidad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btnModEntidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModEntidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnModEntidad.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnModEntidad.ForeColor = System.Drawing.Color.White;
             this.btnModEntidad.Location = new System.Drawing.Point(81, 252);
             this.btnModEntidad.Name = "btnModEntidad";
@@ -183,10 +225,10 @@
             // 
             this.btnLimpiarEntidad.BackColor = System.Drawing.Color.Black;
             this.btnLimpiarEntidad.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLimpiarEntidad.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrange;
-            this.btnLimpiarEntidad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
+            this.btnLimpiarEntidad.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btnLimpiarEntidad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btnLimpiarEntidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiarEntidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnLimpiarEntidad.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnLimpiarEntidad.ForeColor = System.Drawing.Color.White;
             this.btnLimpiarEntidad.Location = new System.Drawing.Point(81, 294);
             this.btnLimpiarEntidad.Name = "btnLimpiarEntidad";
@@ -200,10 +242,10 @@
             // 
             this.btnRegEntidad.BackColor = System.Drawing.Color.Black;
             this.btnRegEntidad.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegEntidad.FlatAppearance.BorderColor = System.Drawing.Color.Green;
-            this.btnRegEntidad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btnRegEntidad.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.btnRegEntidad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btnRegEntidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegEntidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnRegEntidad.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnRegEntidad.ForeColor = System.Drawing.Color.White;
             this.btnRegEntidad.Location = new System.Drawing.Point(81, 210);
             this.btnRegEntidad.Name = "btnRegEntidad";
@@ -260,6 +302,7 @@
             this.dgvEntidad.AllowUserToAddRows = false;
             this.dgvEntidad.AllowUserToDeleteRows = false;
             this.dgvEntidad.AutoGenerateColumns = false;
+            this.dgvEntidad.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvEntidad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEntidad.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codEntidadDataGridViewTextBoxColumn,
@@ -302,63 +345,22 @@
             // entidadesBindingSource
             // 
             this.entidadesBindingSource.DataMember = "entidades";
-            this.entidadesBindingSource.DataSource = this.ges_v01DataSet17_Entidades;
+        //    this.entidadesBindingSource.DataSource = this.ges_v01DataSet17_Entidades;
             // 
             // ges_v01DataSet17_Entidades
             // 
-            this.ges_v01DataSet17_Entidades.DataSetName = "ges_v01DataSet17_Entidades";
-            this.ges_v01DataSet17_Entidades.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+           // this.ges_v01DataSet17_Entidades.DataSetName = "ges_v01DataSet17_Entidades";
+           // this.ges_v01DataSet17_Entidades.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // entidadesTableAdapter1
             // 
             this.entidadesTableAdapter1.ClearBeforeFill = true;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(738, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(51, 49);
-            this.button1.TabIndex = 14;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btn_Salir
-            // 
-            this.btn_Salir.BackColor = System.Drawing.Color.Black;
-            this.btn_Salir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Salir.BackgroundImage")));
-            this.btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Salir.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btn_Salir.FlatAppearance.BorderSize = 0;
-            this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Salir.ForeColor = System.Drawing.Color.White;
-            this.btn_Salir.Location = new System.Drawing.Point(789, 0);
-            this.btn_Salir.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Salir.Name = "btn_Salir";
-            this.btn_Salir.Size = new System.Drawing.Size(51, 49);
-            this.btn_Salir.TabIndex = 13;
-            this.btn_Salir.UseVisualStyleBackColor = false;
-            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click_1);
-            // 
             // Entidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(840, 552);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -375,7 +377,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.entidadesBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18Entidades2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.entidadesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet17_Entidades)).EndInit();
+           // ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet17_Entidades)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -397,7 +399,7 @@
         private System.Windows.Forms.TextBox txtDescEntidad;
         private System.Windows.Forms.TextBox txtCodigoEntidad;
         private System.Windows.Forms.DataGridView dgvEntidad;
-        private ges_v01DataSet17 ges_v01DataSet17_Entidades;
+       // private ges_v01DataSet17 ges_v01DataSet17_Entidades;
         private System.Windows.Forms.BindingSource entidadesBindingSource;
        // private ges_v01DataSet17TableAdapters.entidadesTableAdapter entidadesTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn codEntidadDataGridViewTextBoxColumn;

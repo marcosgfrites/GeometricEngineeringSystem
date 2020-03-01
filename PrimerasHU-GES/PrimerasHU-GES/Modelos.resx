@@ -676,6 +676,9 @@
   <data name="btn_buscarModV.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
+  <data name="btn_buscarModV.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
   <data name="btn_buscarModV.Location" type="System.Drawing.Point, System.Drawing">
     <value>315, 318</value>
   </data>
@@ -744,6 +747,9 @@
   </data>
   <data name="btn_bajaModV.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
+  </data>
+  <data name="btn_bajaModV.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
   </data>
   <data name="btn_bajaModV.Location" type="System.Drawing.Point, System.Drawing">
     <value>449, 318</value>
@@ -823,6 +829,9 @@
   <data name="bnt_altaModV.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
+  <data name="bnt_altaModV.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
   <data name="bnt_altaModV.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 318</value>
   </data>
@@ -849,6 +858,9 @@
   </data>
   <data name="btn_modifModV.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
+  </data>
+  <data name="btn_modifModV.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
   </data>
   <data name="btn_modifModV.Location" type="System.Drawing.Point, System.Drawing">
     <value>449, 281</value>
@@ -927,6 +939,9 @@
   </data>
   <data name="btn_limpiarModV.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
+  </data>
+  <data name="btn_limpiarModV.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
   </data>
   <data name="btn_limpiarModV.Location" type="System.Drawing.Point, System.Drawing">
     <value>171, 318</value>
@@ -1096,6 +1111,9 @@
   <data name="btn_bajaVersion.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
+  <data name="btn_bajaVersion.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
   <data name="btn_bajaVersion.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 365</value>
   </data>
@@ -1174,6 +1192,9 @@
   <data name="btn_altaVersion.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
+  <data name="btn_altaVersion.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
   <data name="btn_altaVersion.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 254</value>
   </data>
@@ -1200,6 +1221,9 @@
   </data>
   <data name="btn_modifVersion.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
+  </data>
+  <data name="btn_modifVersion.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
   </data>
   <data name="btn_modifVersion.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 328</value>
@@ -1281,6 +1305,9 @@
   </data>
   <data name="btn_limpiarVersion.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
+  </data>
+  <data name="btn_limpiarVersion.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
   </data>
   <data name="btn_limpiarVersion.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 291</value>
@@ -1450,6 +1477,9 @@
   <data name="btn_bajaTiposV.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
+  <data name="btn_bajaTiposV.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
   <data name="btn_bajaTiposV.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 365</value>
   </data>
@@ -1503,6 +1533,9 @@
   </data>
   <data name="btn_modifTiposV.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
+  </data>
+  <data name="btn_modifTiposV.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
   </data>
   <data name="btn_modifTiposV.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 328</value>
@@ -1558,6 +1591,9 @@
   <data name="btn_limpiarTiposV.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
+  <data name="btn_limpiarTiposV.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
   <data name="btn_limpiarTiposV.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 291</value>
   </data>
@@ -1611,6 +1647,9 @@
   </data>
   <data name="btn_altaTipoV.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
+  </data>
+  <data name="btn_altaTipoV.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
   </data>
   <data name="btn_altaTipoV.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 254</value>
