@@ -76,9 +76,10 @@
             // 
             // txt_Usuario
             // 
+            this.txt_Usuario.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txt_Usuario.BorderColor = System.Drawing.Color.SeaGreen;
             this.txt_Usuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Usuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(140)))), ((int)(((byte)(138)))));
+            this.txt_Usuario.ForeColor = System.Drawing.Color.Black;
             this.txt_Usuario.Location = new System.Drawing.Point(346, 34);
             this.txt_Usuario.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txt_Usuario.Name = "txt_Usuario";
@@ -90,9 +91,10 @@
             // 
             // txt_Clave
             // 
+            this.txt_Clave.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txt_Clave.BorderColor = System.Drawing.Color.SeaGreen;
             this.txt_Clave.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Clave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(140)))), ((int)(((byte)(138)))));
+            this.txt_Clave.ForeColor = System.Drawing.Color.Black;
             this.txt_Clave.Location = new System.Drawing.Point(346, 80);
             this.txt_Clave.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txt_Clave.Name = "txt_Clave";
@@ -112,7 +114,7 @@
             this.btn_Entrar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
             this.btn_Entrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.btn_Entrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Entrar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Entrar.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Entrar.ForeColor = System.Drawing.Color.White;
             this.btn_Entrar.Location = new System.Drawing.Point(232, 134);
             this.btn_Entrar.Name = "btn_Entrar";
@@ -126,12 +128,12 @@
             // 
             this.btn_Salir.BackColor = System.Drawing.Color.Black;
             this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
             this.btn_Salir.FlatAppearance.BorderSize = 0;
             this.btn_Salir.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
-            this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
             this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Salir.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Salir.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Salir.ForeColor = System.Drawing.Color.White;
             this.btn_Salir.Location = new System.Drawing.Point(346, 134);
             this.btn_Salir.Name = "btn_Salir";
@@ -173,7 +175,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(462, 201);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Controls.Add(this.btn_Salir);

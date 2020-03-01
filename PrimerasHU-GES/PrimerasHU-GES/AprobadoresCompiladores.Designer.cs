@@ -31,9 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AprobadoresCompiladores));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Salir = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.botonVerAprobadores = new System.Windows.Forms.Button();
@@ -86,8 +87,7 @@
             this.ges_v01DataSet18Operarios = new PrimerasHU_GES.ges_v01DataSet18Operarios();
             this.operariosMaquinaTableAdapter = new PrimerasHU_GES.ges_v01DataSet18OperariosTableAdapters.operariosMaquinaTableAdapter();
             this.cbEleccion = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btn_Salir = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
@@ -118,9 +118,51 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(940, 49);
+            this.panel1.Size = new System.Drawing.Size(739, 49);
             this.panel1.TabIndex = 108;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(637, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(51, 49);
+            this.button1.TabIndex = 10;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btn_Salir
+            // 
+            this.btn_Salir.BackColor = System.Drawing.Color.Black;
+            this.btn_Salir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Salir.BackgroundImage")));
+            this.btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Salir.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btn_Salir.FlatAppearance.BorderSize = 0;
+            this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Salir.ForeColor = System.Drawing.Color.White;
+            this.btn_Salir.Location = new System.Drawing.Point(688, 0);
+            this.btn_Salir.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Salir.Name = "btn_Salir";
+            this.btn_Salir.Size = new System.Drawing.Size(51, 49);
+            this.btn_Salir.TabIndex = 9;
+            this.btn_Salir.UseVisualStyleBackColor = false;
+            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click_1);
             // 
             // pictureBox1
             // 
@@ -138,32 +180,22 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(91, 11);
+            this.label3.Location = new System.Drawing.Point(55, 11);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(582, 22);
             this.label3.TabIndex = 2;
             this.label3.Text = "GESTOR DE OPERARIOS, APROBADORES Y COMPILADORES";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(133, 53);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(681, 42);
-            this.label6.TabIndex = 116;
-            this.label6.Text = "Compiladores Aprobadores Operarios";
             // 
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.panel3);
             this.panel5.Controls.Add(this.dgvAprobadores);
-            this.panel5.Location = new System.Drawing.Point(226, 204);
+            this.panel5.Location = new System.Drawing.Point(83, 83);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(498, 449);
+            this.panel5.Size = new System.Drawing.Size(498, 404);
             this.panel5.TabIndex = 115;
             // 
             // panel3
@@ -180,19 +212,20 @@
             this.panel3.Controls.Add(this.txtCodigoAprobador);
             this.panel3.Location = new System.Drawing.Point(12, 14);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(213, 418);
+            this.panel3.Size = new System.Drawing.Size(213, 369);
             this.panel3.TabIndex = 106;
             // 
             // botonVerAprobadores
             // 
             this.botonVerAprobadores.BackColor = System.Drawing.Color.Black;
             this.botonVerAprobadores.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botonVerAprobadores.FlatAppearance.BorderColor = System.Drawing.Color.MediumTurquoise;
-            this.botonVerAprobadores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumTurquoise;
+            this.botonVerAprobadores.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));
+            this.botonVerAprobadores.FlatAppearance.BorderSize = 0;
+            this.botonVerAprobadores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));
             this.botonVerAprobadores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonVerAprobadores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.botonVerAprobadores.Font = new System.Drawing.Font("Arial", 9.75F);
             this.botonVerAprobadores.ForeColor = System.Drawing.Color.White;
-            this.botonVerAprobadores.Location = new System.Drawing.Point(3, 348);
+            this.botonVerAprobadores.Location = new System.Drawing.Point(3, 310);
             this.botonVerAprobadores.Name = "botonVerAprobadores";
             this.botonVerAprobadores.Size = new System.Drawing.Size(203, 36);
             this.botonVerAprobadores.TabIndex = 85;
@@ -204,12 +237,13 @@
             // 
             this.btnEliminarAprobador.BackColor = System.Drawing.Color.Black;
             this.btnEliminarAprobador.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminarAprobador.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.btnEliminarAprobador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
+            this.btnEliminarAprobador.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));
+            this.btnEliminarAprobador.FlatAppearance.BorderSize = 0;
+            this.btnEliminarAprobador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));
             this.btnEliminarAprobador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarAprobador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnEliminarAprobador.Font = new System.Drawing.Font("Arial", 9.75F);
             this.btnEliminarAprobador.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarAprobador.Location = new System.Drawing.Point(3, 306);
+            this.btnEliminarAprobador.Location = new System.Drawing.Point(3, 268);
             this.btnEliminarAprobador.Name = "btnEliminarAprobador";
             this.btnEliminarAprobador.Size = new System.Drawing.Size(203, 36);
             this.btnEliminarAprobador.TabIndex = 83;
@@ -221,12 +255,13 @@
             // 
             this.btnModAprobador.BackColor = System.Drawing.Color.Black;
             this.btnModAprobador.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModAprobador.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-            this.btnModAprobador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnModAprobador.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));
+            this.btnModAprobador.FlatAppearance.BorderSize = 0;
+            this.btnModAprobador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));
             this.btnModAprobador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModAprobador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnModAprobador.Font = new System.Drawing.Font("Arial", 9.75F);
             this.btnModAprobador.ForeColor = System.Drawing.Color.White;
-            this.btnModAprobador.Location = new System.Drawing.Point(3, 222);
+            this.btnModAprobador.Location = new System.Drawing.Point(3, 184);
             this.btnModAprobador.Name = "btnModAprobador";
             this.btnModAprobador.Size = new System.Drawing.Size(203, 36);
             this.btnModAprobador.TabIndex = 82;
@@ -238,12 +273,13 @@
             // 
             this.btnLimpiarAprobador.BackColor = System.Drawing.Color.Black;
             this.btnLimpiarAprobador.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLimpiarAprobador.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrange;
-            this.btnLimpiarAprobador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
+            this.btnLimpiarAprobador.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));
+            this.btnLimpiarAprobador.FlatAppearance.BorderSize = 0;
+            this.btnLimpiarAprobador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));
             this.btnLimpiarAprobador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiarAprobador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnLimpiarAprobador.Font = new System.Drawing.Font("Arial", 9.75F);
             this.btnLimpiarAprobador.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiarAprobador.Location = new System.Drawing.Point(3, 264);
+            this.btnLimpiarAprobador.Location = new System.Drawing.Point(3, 226);
             this.btnLimpiarAprobador.Name = "btnLimpiarAprobador";
             this.btnLimpiarAprobador.Size = new System.Drawing.Size(203, 36);
             this.btnLimpiarAprobador.TabIndex = 81;
@@ -255,12 +291,13 @@
             // 
             this.btnRegAprobador.BackColor = System.Drawing.Color.Black;
             this.btnRegAprobador.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegAprobador.FlatAppearance.BorderColor = System.Drawing.Color.Green;
-            this.btnRegAprobador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btnRegAprobador.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));
+            this.btnRegAprobador.FlatAppearance.BorderSize = 0;
+            this.btnRegAprobador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));
             this.btnRegAprobador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegAprobador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegAprobador.Font = new System.Drawing.Font("Arial", 9.75F);
             this.btnRegAprobador.ForeColor = System.Drawing.Color.White;
-            this.btnRegAprobador.Location = new System.Drawing.Point(3, 180);
+            this.btnRegAprobador.Location = new System.Drawing.Point(3, 142);
             this.btnRegAprobador.Name = "btnRegAprobador";
             this.btnRegAprobador.Size = new System.Drawing.Size(203, 36);
             this.btnRegAprobador.TabIndex = 80;
@@ -272,7 +309,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(50, 94);
+            this.label1.Location = new System.Drawing.Point(49, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 13);
             this.label1.TabIndex = 79;
@@ -282,7 +319,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(52, 31);
+            this.label4.Location = new System.Drawing.Point(51, 14);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(110, 13);
             this.label4.TabIndex = 78;
@@ -290,7 +327,7 @@
             // 
             // txtNombreAprobador
             // 
-            this.txtNombreAprobador.Location = new System.Drawing.Point(34, 120);
+            this.txtNombreAprobador.Location = new System.Drawing.Point(33, 103);
             this.txtNombreAprobador.Name = "txtNombreAprobador";
             this.txtNombreAprobador.Size = new System.Drawing.Size(147, 20);
             this.txtNombreAprobador.TabIndex = 77;
@@ -301,7 +338,7 @@
             this.txtCodigoAprobador.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtCodigoAprobador.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtCodigoAprobador.Enabled = false;
-            this.txtCodigoAprobador.Location = new System.Drawing.Point(34, 57);
+            this.txtCodigoAprobador.Location = new System.Drawing.Point(33, 40);
             this.txtCodigoAprobador.Name = "txtCodigoAprobador";
             this.txtCodigoAprobador.Size = new System.Drawing.Size(147, 20);
             this.txtCodigoAprobador.TabIndex = 76;
@@ -312,6 +349,7 @@
             this.dgvAprobadores.AllowUserToAddRows = false;
             this.dgvAprobadores.AllowUserToDeleteRows = false;
             this.dgvAprobadores.AutoGenerateColumns = false;
+            this.dgvAprobadores.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvAprobadores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAprobadores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codAprobadorDataGridViewTextBoxColumn,
@@ -320,7 +358,7 @@
             this.dgvAprobadores.Location = new System.Drawing.Point(231, 14);
             this.dgvAprobadores.Name = "dgvAprobadores";
             this.dgvAprobadores.ReadOnly = true;
-            this.dgvAprobadores.Size = new System.Drawing.Size(252, 418);
+            this.dgvAprobadores.Size = new System.Drawing.Size(252, 369);
             this.dgvAprobadores.TabIndex = 109;
             this.dgvAprobadores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvAprobadores_CellClick);
             // 
@@ -353,9 +391,9 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.dgvCompiladores);
-            this.panel2.Location = new System.Drawing.Point(229, 208);
+            this.panel2.Location = new System.Drawing.Point(83, 83);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(488, 449);
+            this.panel2.Size = new System.Drawing.Size(498, 404);
             this.panel2.TabIndex = 114;
             // 
             // panel4
@@ -372,19 +410,20 @@
             this.panel4.Controls.Add(this.txtCodigoCompilador);
             this.panel4.Location = new System.Drawing.Point(12, 14);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(213, 418);
+            this.panel4.Size = new System.Drawing.Size(213, 373);
             this.panel4.TabIndex = 105;
             // 
             // BotonVerCompiladores
             // 
             this.BotonVerCompiladores.BackColor = System.Drawing.Color.Black;
             this.BotonVerCompiladores.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BotonVerCompiladores.FlatAppearance.BorderColor = System.Drawing.Color.MediumTurquoise;
-            this.BotonVerCompiladores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumTurquoise;
+            this.BotonVerCompiladores.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));
+            this.BotonVerCompiladores.FlatAppearance.BorderSize = 0;
+            this.BotonVerCompiladores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));
             this.BotonVerCompiladores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonVerCompiladores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.BotonVerCompiladores.Font = new System.Drawing.Font("Arial", 10F);
             this.BotonVerCompiladores.ForeColor = System.Drawing.Color.White;
-            this.BotonVerCompiladores.Location = new System.Drawing.Point(3, 348);
+            this.BotonVerCompiladores.Location = new System.Drawing.Point(3, 328);
             this.BotonVerCompiladores.Name = "BotonVerCompiladores";
             this.BotonVerCompiladores.Size = new System.Drawing.Size(203, 36);
             this.BotonVerCompiladores.TabIndex = 85;
@@ -396,12 +435,13 @@
             // 
             this.btnEliminarCompilador.BackColor = System.Drawing.Color.Black;
             this.btnEliminarCompilador.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminarCompilador.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.btnEliminarCompilador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
+            this.btnEliminarCompilador.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));
+            this.btnEliminarCompilador.FlatAppearance.BorderSize = 0;
+            this.btnEliminarCompilador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));
             this.btnEliminarCompilador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarCompilador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnEliminarCompilador.Font = new System.Drawing.Font("Arial", 10F);
             this.btnEliminarCompilador.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarCompilador.Location = new System.Drawing.Point(3, 306);
+            this.btnEliminarCompilador.Location = new System.Drawing.Point(3, 286);
             this.btnEliminarCompilador.Name = "btnEliminarCompilador";
             this.btnEliminarCompilador.Size = new System.Drawing.Size(203, 36);
             this.btnEliminarCompilador.TabIndex = 83;
@@ -413,12 +453,13 @@
             // 
             this.btnModCompilador.BackColor = System.Drawing.Color.Black;
             this.btnModCompilador.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModCompilador.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-            this.btnModCompilador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnModCompilador.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));
+            this.btnModCompilador.FlatAppearance.BorderSize = 0;
+            this.btnModCompilador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));
             this.btnModCompilador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModCompilador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnModCompilador.Font = new System.Drawing.Font("Arial", 10F);
             this.btnModCompilador.ForeColor = System.Drawing.Color.White;
-            this.btnModCompilador.Location = new System.Drawing.Point(3, 222);
+            this.btnModCompilador.Location = new System.Drawing.Point(3, 202);
             this.btnModCompilador.Name = "btnModCompilador";
             this.btnModCompilador.Size = new System.Drawing.Size(203, 36);
             this.btnModCompilador.TabIndex = 82;
@@ -430,12 +471,13 @@
             // 
             this.btnLimpiarCompilador.BackColor = System.Drawing.Color.Black;
             this.btnLimpiarCompilador.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLimpiarCompilador.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrange;
-            this.btnLimpiarCompilador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
+            this.btnLimpiarCompilador.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));
+            this.btnLimpiarCompilador.FlatAppearance.BorderSize = 0;
+            this.btnLimpiarCompilador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));
             this.btnLimpiarCompilador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiarCompilador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnLimpiarCompilador.Font = new System.Drawing.Font("Arial", 10F);
             this.btnLimpiarCompilador.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiarCompilador.Location = new System.Drawing.Point(3, 264);
+            this.btnLimpiarCompilador.Location = new System.Drawing.Point(3, 244);
             this.btnLimpiarCompilador.Name = "btnLimpiarCompilador";
             this.btnLimpiarCompilador.Size = new System.Drawing.Size(203, 36);
             this.btnLimpiarCompilador.TabIndex = 81;
@@ -447,12 +489,13 @@
             // 
             this.btnRegCompilador.BackColor = System.Drawing.Color.Black;
             this.btnRegCompilador.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegCompilador.FlatAppearance.BorderColor = System.Drawing.Color.Green;
-            this.btnRegCompilador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btnRegCompilador.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));
+            this.btnRegCompilador.FlatAppearance.BorderSize = 0;
+            this.btnRegCompilador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));
             this.btnRegCompilador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegCompilador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegCompilador.Font = new System.Drawing.Font("Arial", 10F);
             this.btnRegCompilador.ForeColor = System.Drawing.Color.White;
-            this.btnRegCompilador.Location = new System.Drawing.Point(3, 180);
+            this.btnRegCompilador.Location = new System.Drawing.Point(3, 160);
             this.btnRegCompilador.Name = "btnRegCompilador";
             this.btnRegCompilador.Size = new System.Drawing.Size(203, 36);
             this.btnRegCompilador.TabIndex = 80;
@@ -504,6 +547,7 @@
             this.dgvCompiladores.AllowUserToAddRows = false;
             this.dgvCompiladores.AllowUserToDeleteRows = false;
             this.dgvCompiladores.AutoGenerateColumns = false;
+            this.dgvCompiladores.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvCompiladores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCompiladores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codCompiladorDataGridViewTextBoxColumn,
@@ -512,7 +556,7 @@
             this.dgvCompiladores.Location = new System.Drawing.Point(231, 14);
             this.dgvCompiladores.Name = "dgvCompiladores";
             this.dgvCompiladores.ReadOnly = true;
-            this.dgvCompiladores.Size = new System.Drawing.Size(245, 418);
+            this.dgvCompiladores.Size = new System.Drawing.Size(245, 373);
             this.dgvCompiladores.TabIndex = 108;
             this.dgvCompiladores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvCompiladores_CellClick);
             // 
@@ -553,9 +597,9 @@
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.panel7);
             this.panel6.Controls.Add(this.dgvOperarios);
-            this.panel6.Location = new System.Drawing.Point(186, 194);
+            this.panel6.Location = new System.Drawing.Point(83, 83);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(597, 463);
+            this.panel6.Size = new System.Drawing.Size(573, 410);
             this.panel6.TabIndex = 117;
             this.panel6.Click += new System.EventHandler(this.panel6_Click);
             // 
@@ -571,21 +615,22 @@
             this.panel7.Controls.Add(this.label8);
             this.panel7.Controls.Add(this.txtNombreOperario);
             this.panel7.Controls.Add(this.txtCodigoOperario);
-            this.panel7.Location = new System.Drawing.Point(25, 14);
+            this.panel7.Location = new System.Drawing.Point(17, 13);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(267, 423);
+            this.panel7.Size = new System.Drawing.Size(267, 373);
             this.panel7.TabIndex = 105;
             // 
             // botonVerOperarios
             // 
             this.botonVerOperarios.BackColor = System.Drawing.Color.Black;
             this.botonVerOperarios.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botonVerOperarios.FlatAppearance.BorderColor = System.Drawing.Color.MediumTurquoise;
-            this.botonVerOperarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumTurquoise;
+            this.botonVerOperarios.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));
+            this.botonVerOperarios.FlatAppearance.BorderSize = 0;
+            this.botonVerOperarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));
             this.botonVerOperarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonVerOperarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.botonVerOperarios.Font = new System.Drawing.Font("Arial", 9.75F);
             this.botonVerOperarios.ForeColor = System.Drawing.Color.White;
-            this.botonVerOperarios.Location = new System.Drawing.Point(25, 354);
+            this.botonVerOperarios.Location = new System.Drawing.Point(25, 314);
             this.botonVerOperarios.Name = "botonVerOperarios";
             this.botonVerOperarios.Size = new System.Drawing.Size(215, 36);
             this.botonVerOperarios.TabIndex = 85;
@@ -597,12 +642,13 @@
             // 
             this.btnEliminarOperario.BackColor = System.Drawing.Color.Black;
             this.btnEliminarOperario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminarOperario.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.btnEliminarOperario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
+            this.btnEliminarOperario.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));
+            this.btnEliminarOperario.FlatAppearance.BorderSize = 0;
+            this.btnEliminarOperario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));
             this.btnEliminarOperario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarOperario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnEliminarOperario.Font = new System.Drawing.Font("Arial", 9.75F);
             this.btnEliminarOperario.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarOperario.Location = new System.Drawing.Point(25, 312);
+            this.btnEliminarOperario.Location = new System.Drawing.Point(25, 272);
             this.btnEliminarOperario.Name = "btnEliminarOperario";
             this.btnEliminarOperario.Size = new System.Drawing.Size(215, 36);
             this.btnEliminarOperario.TabIndex = 83;
@@ -614,12 +660,13 @@
             // 
             this.btnModOperario.BackColor = System.Drawing.Color.Black;
             this.btnModOperario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModOperario.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-            this.btnModOperario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnModOperario.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));
+            this.btnModOperario.FlatAppearance.BorderSize = 0;
+            this.btnModOperario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));
             this.btnModOperario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModOperario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnModOperario.Font = new System.Drawing.Font("Arial", 9.75F);
             this.btnModOperario.ForeColor = System.Drawing.Color.White;
-            this.btnModOperario.Location = new System.Drawing.Point(25, 228);
+            this.btnModOperario.Location = new System.Drawing.Point(25, 188);
             this.btnModOperario.Name = "btnModOperario";
             this.btnModOperario.Size = new System.Drawing.Size(215, 36);
             this.btnModOperario.TabIndex = 82;
@@ -631,12 +678,13 @@
             // 
             this.btnLimpiarOperario.BackColor = System.Drawing.Color.Black;
             this.btnLimpiarOperario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLimpiarOperario.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrange;
-            this.btnLimpiarOperario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
+            this.btnLimpiarOperario.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));
+            this.btnLimpiarOperario.FlatAppearance.BorderSize = 0;
+            this.btnLimpiarOperario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));
             this.btnLimpiarOperario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiarOperario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnLimpiarOperario.Font = new System.Drawing.Font("Arial", 9.75F);
             this.btnLimpiarOperario.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiarOperario.Location = new System.Drawing.Point(25, 270);
+            this.btnLimpiarOperario.Location = new System.Drawing.Point(25, 230);
             this.btnLimpiarOperario.Name = "btnLimpiarOperario";
             this.btnLimpiarOperario.Size = new System.Drawing.Size(215, 36);
             this.btnLimpiarOperario.TabIndex = 81;
@@ -648,12 +696,13 @@
             // 
             this.btnRegOperario.BackColor = System.Drawing.Color.Black;
             this.btnRegOperario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegOperario.FlatAppearance.BorderColor = System.Drawing.Color.Green;
-            this.btnRegOperario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btnRegOperario.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));
+            this.btnRegOperario.FlatAppearance.BorderSize = 0;
+            this.btnRegOperario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));
             this.btnRegOperario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegOperario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnRegOperario.Font = new System.Drawing.Font("Arial", 9.75F);
             this.btnRegOperario.ForeColor = System.Drawing.Color.White;
-            this.btnRegOperario.Location = new System.Drawing.Point(25, 186);
+            this.btnRegOperario.Location = new System.Drawing.Point(25, 146);
             this.btnRegOperario.Name = "btnRegOperario";
             this.btnRegOperario.Size = new System.Drawing.Size(215, 36);
             this.btnRegOperario.TabIndex = 80;
@@ -665,7 +714,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(74, 101);
+            this.label7.Location = new System.Drawing.Point(74, 78);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(105, 13);
             this.label7.TabIndex = 79;
@@ -675,7 +724,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(78, 36);
+            this.label8.Location = new System.Drawing.Point(78, 13);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(101, 13);
             this.label8.TabIndex = 78;
@@ -683,7 +732,7 @@
             // 
             // txtNombreOperario
             // 
-            this.txtNombreOperario.Location = new System.Drawing.Point(25, 127);
+            this.txtNombreOperario.Location = new System.Drawing.Point(25, 104);
             this.txtNombreOperario.Name = "txtNombreOperario";
             this.txtNombreOperario.Size = new System.Drawing.Size(215, 20);
             this.txtNombreOperario.TabIndex = 77;
@@ -694,7 +743,7 @@
             this.txtCodigoOperario.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtCodigoOperario.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtCodigoOperario.Enabled = false;
-            this.txtCodigoOperario.Location = new System.Drawing.Point(27, 62);
+            this.txtCodigoOperario.Location = new System.Drawing.Point(27, 39);
             this.txtCodigoOperario.Name = "txtCodigoOperario";
             this.txtCodigoOperario.Size = new System.Drawing.Size(215, 20);
             this.txtCodigoOperario.TabIndex = 76;
@@ -705,16 +754,17 @@
             this.dgvOperarios.AllowUserToAddRows = false;
             this.dgvOperarios.AllowUserToDeleteRows = false;
             this.dgvOperarios.AutoGenerateColumns = false;
+            this.dgvOperarios.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvOperarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOperarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codOperDataGridViewTextBoxColumn,
             this.nomOperDataGridViewTextBoxColumn});
             this.dgvOperarios.DataSource = this.operariosMaquinaBindingSource;
-            this.dgvOperarios.Location = new System.Drawing.Point(315, 14);
+            this.dgvOperarios.Location = new System.Drawing.Point(307, 13);
             this.dgvOperarios.Name = "dgvOperarios";
             this.dgvOperarios.ReadOnly = true;
             this.dgvOperarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOperarios.Size = new System.Drawing.Size(249, 423);
+            this.dgvOperarios.Size = new System.Drawing.Size(249, 373);
             this.dgvOperarios.TabIndex = 108;
             this.dgvOperarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOperarios_CellClick);
             // 
@@ -753,64 +803,32 @@
             "Compiladores",
             "Aprobadores",
             "Operarios"});
-            this.cbEleccion.Location = new System.Drawing.Point(387, 167);
+            this.cbEleccion.Location = new System.Drawing.Point(300, 56);
             this.cbEleccion.Name = "cbEleccion";
             this.cbEleccion.Size = new System.Drawing.Size(172, 21);
             this.cbEleccion.TabIndex = 118;
             this.cbEleccion.SelectedIndexChanged += new System.EventHandler(this.cbEleccion_SelectedIndexChanged);
             // 
-            // button1
+            // label6
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(838, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(51, 49);
-            this.button1.TabIndex = 10;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btn_Salir
-            // 
-            this.btn_Salir.BackColor = System.Drawing.Color.Black;
-            this.btn_Salir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Salir.BackgroundImage")));
-            this.btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Salir.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_Salir.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btn_Salir.FlatAppearance.BorderSize = 0;
-            this.btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Salir.ForeColor = System.Drawing.Color.White;
-            this.btn_Salir.Location = new System.Drawing.Point(889, 0);
-            this.btn_Salir.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Salir.Name = "btn_Salir";
-            this.btn_Salir.Size = new System.Drawing.Size(51, 49);
-            this.btn_Salir.TabIndex = 9;
-            this.btn_Salir.UseVisualStyleBackColor = false;
-            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click_1);
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(143, 59);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(145, 13);
+            this.label6.TabIndex = 119;
+            this.label6.Text = "Seleccione el tipo de agente:";
             // 
             // AprobadoresCompiladores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(940, 695);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(739, 513);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.cbEleccion);
             this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AprobadoresCompiladores";
@@ -848,7 +866,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button botonVerAprobadores;
@@ -903,5 +920,6 @@
         private System.Windows.Forms.ComboBox cbEleccion;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_Salir;
+        private System.Windows.Forms.Label label6;
     }
 }

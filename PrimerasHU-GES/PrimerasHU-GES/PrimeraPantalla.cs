@@ -242,16 +242,10 @@ namespace PrimerasHU_GES
             ac.Show();
         }
 
-        private void Btn_Compiladores_Click(object sender, EventArgs e)
+        private void Btn_Operarios_Click(object sender, EventArgs e)
         {
             AprobadoresCompiladores ac = new AprobadoresCompiladores();
             ac.Show();
-        }
-
-        private void Btn_Operarios_Click(object sender, EventArgs e)
-        {
-            OperariosMaquinaMedicion opmm = new OperariosMaquinaMedicion();
-            opmm.Show();
         }
 
         private void Btn_Graficos_Click(object sender, EventArgs e)
@@ -343,11 +337,6 @@ namespace PrimerasHU_GES
             tdc.Show();
         }
 
-        private void btn_Formulas_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_TipoGrafico_Click(object sender, EventArgs e)
         {
             TiposGrafico tdg = new TiposGrafico();
@@ -385,8 +374,22 @@ namespace PrimerasHU_GES
 
         private void btn_Salir_Click_1(object sender, EventArgs e)
         {
-            this.Dispose();
-
+            DialogResult fin = MessageBox.Show("¿Está seguro que desea salir?","Cierre del Programa",MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
+            if (fin == DialogResult.OK)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                return;
+            }
         }
+
+        private void btn_PtoX_Click(object sender, EventArgs e)
+        {
+            VisorDmo vdmo = new VisorDmo();
+            vdmo.Show();
+        }
+
     }
 }

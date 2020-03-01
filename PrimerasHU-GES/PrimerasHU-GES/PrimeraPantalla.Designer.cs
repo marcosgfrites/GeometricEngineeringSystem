@@ -51,9 +51,6 @@
             this.btn_Secciones = new System.Windows.Forms.Button();
             this.btn_TipoVehiculo = new System.Windows.Forms.Button();
             this.panelDmo = new System.Windows.Forms.Panel();
-            this.btn_PtoD = new System.Windows.Forms.Button();
-            this.btn_PtoZ = new System.Windows.Forms.Button();
-            this.btn_PtoY = new System.Windows.Forms.Button();
             this.btn_PtoX = new System.Windows.Forms.Button();
             this.btn_DocumentoDmo = new System.Windows.Forms.Button();
             this.panelAnalisis = new System.Windows.Forms.Panel();
@@ -67,16 +64,13 @@
             this.btn_TipoUsuario = new System.Windows.Forms.Button();
             this.btn_Estados = new System.Windows.Forms.Button();
             this.btn_TipoGrafico = new System.Windows.Forms.Button();
-            this.btn_Formulas = new System.Windows.Forms.Button();
             this.btn_TipoCalculo = new System.Windows.Forms.Button();
             this.btn_Establecimientos = new System.Windows.Forms.Button();
-            this.btn_Grupos = new System.Windows.Forms.Button();
             this.btn_Operarios = new System.Windows.Forms.Button();
             this.btn_Reglas = new System.Windows.Forms.Button();
             this.btn_Unidades = new System.Windows.Forms.Button();
             this.btn_TipoControl = new System.Windows.Forms.Button();
             this.btn_Entidades = new System.Windows.Forms.Button();
-            this.btn_Compiladores = new System.Windows.Forms.Button();
             this.btn_Aprobadores = new System.Windows.Forms.Button();
             this.btn_Programas = new System.Windows.Forms.Button();
             this.btn_Maquinas = new System.Windows.Forms.Button();
@@ -120,7 +114,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(809, 49);
+            this.panel1.Size = new System.Drawing.Size(791, 49);
             this.panel1.TabIndex = 0;
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
@@ -137,7 +131,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(707, 0);
+            this.button1.Location = new System.Drawing.Point(689, 0);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(51, 49);
@@ -158,7 +152,7 @@
             this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Salir.ForeColor = System.Drawing.Color.White;
-            this.btn_Salir.Location = new System.Drawing.Point(758, 0);
+            this.btn_Salir.Location = new System.Drawing.Point(740, 0);
             this.btn_Salir.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Salir.Name = "btn_Salir";
             this.btn_Salir.Size = new System.Drawing.Size(51, 49);
@@ -272,11 +266,10 @@
             // 
             this.btn_Img.BackColor = System.Drawing.Color.Black;
             this.btn_Img.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Img.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_Img.FlatAppearance.BorderSize = 0;
+            this.btn_Img.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
             this.btn_Img.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_Img.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Img.Location = new System.Drawing.Point(0, 270);
+            this.btn_Img.Location = new System.Drawing.Point(1, 271);
             this.btn_Img.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Img.Name = "btn_Img";
             this.btn_Img.Size = new System.Drawing.Size(197, 47);
@@ -311,21 +304,20 @@
             this.panelCplan.Controls.Add(this.btn_ControlPlan);
             this.panelCplan.Controls.Add(this.btn_Secciones);
             this.panelCplan.Controls.Add(this.btn_TipoVehiculo);
-            this.panelCplan.Location = new System.Drawing.Point(168, 100);
+            this.panelCplan.Location = new System.Drawing.Point(167, 99);
             this.panelCplan.Margin = new System.Windows.Forms.Padding(0);
             this.panelCplan.Name = "panelCplan";
-            this.panelCplan.Size = new System.Drawing.Size(211, 317);
+            this.panelCplan.Size = new System.Drawing.Size(215, 332);
             this.panelCplan.TabIndex = 8;
             // 
             // btn_TipoPto
             // 
             this.btn_TipoPto.BackColor = System.Drawing.Color.Black;
             this.btn_TipoPto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_TipoPto.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_TipoPto.FlatAppearance.BorderSize = 0;
+            this.btn_TipoPto.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
             this.btn_TipoPto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_TipoPto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_TipoPto.Location = new System.Drawing.Point(0, 225);
+            this.btn_TipoPto.Location = new System.Drawing.Point(1, 226);
             this.btn_TipoPto.Margin = new System.Windows.Forms.Padding(0);
             this.btn_TipoPto.Name = "btn_TipoPto";
             this.btn_TipoPto.Size = new System.Drawing.Size(197, 45);
@@ -338,11 +330,10 @@
             // 
             this.btn_ClasifPto.BackColor = System.Drawing.Color.Black;
             this.btn_ClasifPto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_ClasifPto.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_ClasifPto.FlatAppearance.BorderSize = 0;
+            this.btn_ClasifPto.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
             this.btn_ClasifPto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_ClasifPto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ClasifPto.Location = new System.Drawing.Point(0, 180);
+            this.btn_ClasifPto.Location = new System.Drawing.Point(1, 181);
             this.btn_ClasifPto.Margin = new System.Windows.Forms.Padding(0);
             this.btn_ClasifPto.Name = "btn_ClasifPto";
             this.btn_ClasifPto.Size = new System.Drawing.Size(197, 45);
@@ -355,11 +346,10 @@
             // 
             this.btn_ControlPlan.BackColor = System.Drawing.Color.Black;
             this.btn_ControlPlan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_ControlPlan.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_ControlPlan.FlatAppearance.BorderSize = 0;
+            this.btn_ControlPlan.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
             this.btn_ControlPlan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_ControlPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ControlPlan.Location = new System.Drawing.Point(0, 135);
+            this.btn_ControlPlan.Location = new System.Drawing.Point(1, 136);
             this.btn_ControlPlan.Margin = new System.Windows.Forms.Padding(0);
             this.btn_ControlPlan.Name = "btn_ControlPlan";
             this.btn_ControlPlan.Size = new System.Drawing.Size(197, 45);
@@ -372,11 +362,10 @@
             // 
             this.btn_Secciones.BackColor = System.Drawing.Color.Black;
             this.btn_Secciones.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Secciones.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_Secciones.FlatAppearance.BorderSize = 0;
+            this.btn_Secciones.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
             this.btn_Secciones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_Secciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Secciones.Location = new System.Drawing.Point(0, 90);
+            this.btn_Secciones.Location = new System.Drawing.Point(1, 91);
             this.btn_Secciones.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Secciones.Name = "btn_Secciones";
             this.btn_Secciones.Size = new System.Drawing.Size(197, 45);
@@ -389,11 +378,10 @@
             // 
             this.btn_TipoVehiculo.BackColor = System.Drawing.Color.Black;
             this.btn_TipoVehiculo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_TipoVehiculo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_TipoVehiculo.FlatAppearance.BorderSize = 0;
+            this.btn_TipoVehiculo.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
             this.btn_TipoVehiculo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_TipoVehiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_TipoVehiculo.Location = new System.Drawing.Point(0, 0);
+            this.btn_TipoVehiculo.Location = new System.Drawing.Point(1, 1);
             this.btn_TipoVehiculo.Margin = new System.Windows.Forms.Padding(0);
             this.btn_TipoVehiculo.Name = "btn_TipoVehiculo";
             this.btn_TipoVehiculo.Size = new System.Drawing.Size(197, 90);
@@ -405,70 +393,18 @@
             // panelDmo
             // 
             this.panelDmo.BackColor = System.Drawing.Color.Transparent;
-            this.panelDmo.Controls.Add(this.btn_PtoD);
-            this.panelDmo.Controls.Add(this.btn_PtoZ);
-            this.panelDmo.Controls.Add(this.btn_PtoY);
             this.panelDmo.Controls.Add(this.btn_PtoX);
             this.panelDmo.Controls.Add(this.btn_DocumentoDmo);
-            this.panelDmo.Location = new System.Drawing.Point(168, 99);
+            this.panelDmo.Location = new System.Drawing.Point(167, 144);
             this.panelDmo.Name = "panelDmo";
             this.panelDmo.Size = new System.Drawing.Size(210, 235);
             this.panelDmo.TabIndex = 9;
-            // 
-            // btn_PtoD
-            // 
-            this.btn_PtoD.BackColor = System.Drawing.Color.Black;
-            this.btn_PtoD.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_PtoD.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_PtoD.FlatAppearance.BorderSize = 0;
-            this.btn_PtoD.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
-            this.btn_PtoD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_PtoD.Location = new System.Drawing.Point(0, 180);
-            this.btn_PtoD.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_PtoD.Name = "btn_PtoD";
-            this.btn_PtoD.Size = new System.Drawing.Size(197, 45);
-            this.btn_PtoD.TabIndex = 20;
-            this.btn_PtoD.Text = "Distancia medida \"D\"";
-            this.btn_PtoD.UseVisualStyleBackColor = false;
-            // 
-            // btn_PtoZ
-            // 
-            this.btn_PtoZ.BackColor = System.Drawing.Color.Black;
-            this.btn_PtoZ.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_PtoZ.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_PtoZ.FlatAppearance.BorderSize = 0;
-            this.btn_PtoZ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
-            this.btn_PtoZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_PtoZ.Location = new System.Drawing.Point(0, 135);
-            this.btn_PtoZ.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_PtoZ.Name = "btn_PtoZ";
-            this.btn_PtoZ.Size = new System.Drawing.Size(197, 45);
-            this.btn_PtoZ.TabIndex = 19;
-            this.btn_PtoZ.Text = "Punto medido en \"Z\"";
-            this.btn_PtoZ.UseVisualStyleBackColor = false;
-            // 
-            // btn_PtoY
-            // 
-            this.btn_PtoY.BackColor = System.Drawing.Color.Black;
-            this.btn_PtoY.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_PtoY.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_PtoY.FlatAppearance.BorderSize = 0;
-            this.btn_PtoY.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
-            this.btn_PtoY.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_PtoY.Location = new System.Drawing.Point(0, 90);
-            this.btn_PtoY.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_PtoY.Name = "btn_PtoY";
-            this.btn_PtoY.Size = new System.Drawing.Size(197, 45);
-            this.btn_PtoY.TabIndex = 18;
-            this.btn_PtoY.Text = "Punto medido en \"Y\"";
-            this.btn_PtoY.UseVisualStyleBackColor = false;
             // 
             // btn_PtoX
             // 
             this.btn_PtoX.BackColor = System.Drawing.Color.Black;
             this.btn_PtoX.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_PtoX.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_PtoX.FlatAppearance.BorderSize = 0;
+            this.btn_PtoX.FlatAppearance.BorderColor = System.Drawing.Color.Orange;
             this.btn_PtoX.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_PtoX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_PtoX.Location = new System.Drawing.Point(0, 45);
@@ -476,15 +412,15 @@
             this.btn_PtoX.Name = "btn_PtoX";
             this.btn_PtoX.Size = new System.Drawing.Size(197, 45);
             this.btn_PtoX.TabIndex = 17;
-            this.btn_PtoX.Text = "Punto medido en \"X\"";
+            this.btn_PtoX.Text = "Punto medido en X / Y / Z + Distancias";
             this.btn_PtoX.UseVisualStyleBackColor = false;
+            this.btn_PtoX.Click += new System.EventHandler(this.btn_PtoX_Click);
             // 
             // btn_DocumentoDmo
             // 
             this.btn_DocumentoDmo.BackColor = System.Drawing.Color.Black;
             this.btn_DocumentoDmo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_DocumentoDmo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_DocumentoDmo.FlatAppearance.BorderSize = 0;
+            this.btn_DocumentoDmo.FlatAppearance.BorderColor = System.Drawing.Color.Orange;
             this.btn_DocumentoDmo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_DocumentoDmo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DocumentoDmo.Location = new System.Drawing.Point(0, 0);
@@ -504,7 +440,7 @@
             this.panelAnalisis.Controls.Add(this.btn_Calculos);
             this.panelAnalisis.Controls.Add(this.btn_Indicadores);
             this.panelAnalisis.Controls.Add(this.btn_Muestras);
-            this.panelAnalisis.Location = new System.Drawing.Point(168, 99);
+            this.panelAnalisis.Location = new System.Drawing.Point(169, 189);
             this.panelAnalisis.Name = "panelAnalisis";
             this.panelAnalisis.Size = new System.Drawing.Size(208, 244);
             this.panelAnalisis.TabIndex = 10;
@@ -513,8 +449,7 @@
             // 
             this.btn_Informe.BackColor = System.Drawing.Color.Black;
             this.btn_Informe.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Informe.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_Informe.FlatAppearance.BorderSize = 0;
+            this.btn_Informe.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
             this.btn_Informe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_Informe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Informe.Location = new System.Drawing.Point(0, 180);
@@ -530,8 +465,7 @@
             // 
             this.btn_Graficos.BackColor = System.Drawing.Color.Black;
             this.btn_Graficos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Graficos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_Graficos.FlatAppearance.BorderSize = 0;
+            this.btn_Graficos.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
             this.btn_Graficos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_Graficos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Graficos.Location = new System.Drawing.Point(0, 135);
@@ -547,8 +481,7 @@
             // 
             this.btn_Calculos.BackColor = System.Drawing.Color.Black;
             this.btn_Calculos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Calculos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_Calculos.FlatAppearance.BorderSize = 0;
+            this.btn_Calculos.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
             this.btn_Calculos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_Calculos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Calculos.Location = new System.Drawing.Point(0, 90);
@@ -564,8 +497,7 @@
             // 
             this.btn_Indicadores.BackColor = System.Drawing.Color.Black;
             this.btn_Indicadores.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Indicadores.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_Indicadores.FlatAppearance.BorderSize = 0;
+            this.btn_Indicadores.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
             this.btn_Indicadores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_Indicadores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Indicadores.Location = new System.Drawing.Point(0, 45);
@@ -581,8 +513,7 @@
             // 
             this.btn_Muestras.BackColor = System.Drawing.Color.Black;
             this.btn_Muestras.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Muestras.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_Muestras.FlatAppearance.BorderSize = 0;
+            this.btn_Muestras.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
             this.btn_Muestras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_Muestras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Muestras.Location = new System.Drawing.Point(0, 0);
@@ -601,34 +532,30 @@
             this.p_Administrador.Controls.Add(this.btn_TipoUsuario);
             this.p_Administrador.Controls.Add(this.btn_Estados);
             this.p_Administrador.Controls.Add(this.btn_TipoGrafico);
-            this.p_Administrador.Controls.Add(this.btn_Formulas);
             this.p_Administrador.Controls.Add(this.btn_TipoCalculo);
             this.p_Administrador.Controls.Add(this.btn_Establecimientos);
-            this.p_Administrador.Controls.Add(this.btn_Grupos);
             this.p_Administrador.Controls.Add(this.btn_Operarios);
             this.p_Administrador.Controls.Add(this.btn_Reglas);
             this.p_Administrador.Controls.Add(this.btn_Unidades);
             this.p_Administrador.Controls.Add(this.btn_TipoControl);
             this.p_Administrador.Controls.Add(this.btn_Entidades);
-            this.p_Administrador.Controls.Add(this.btn_Compiladores);
             this.p_Administrador.Controls.Add(this.btn_Aprobadores);
             this.p_Administrador.Controls.Add(this.btn_Programas);
             this.p_Administrador.Controls.Add(this.btn_Maquinas);
-            this.p_Administrador.Location = new System.Drawing.Point(168, 99);
+            this.p_Administrador.Location = new System.Drawing.Point(167, 229);
             this.p_Administrador.Margin = new System.Windows.Forms.Padding(0);
             this.p_Administrador.Name = "p_Administrador";
-            this.p_Administrador.Size = new System.Drawing.Size(397, 409);
+            this.p_Administrador.Size = new System.Drawing.Size(601, 239);
             this.p_Administrador.TabIndex = 12;
             // 
             // btn_Usuarios
             // 
             this.btn_Usuarios.BackColor = System.Drawing.Color.Black;
             this.btn_Usuarios.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Usuarios.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_Usuarios.FlatAppearance.BorderSize = 0;
+            this.btn_Usuarios.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
             this.btn_Usuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_Usuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Usuarios.Location = new System.Drawing.Point(197, 310);
+            this.btn_Usuarios.Location = new System.Drawing.Point(197, 181);
             this.btn_Usuarios.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Usuarios.Name = "btn_Usuarios";
             this.btn_Usuarios.Size = new System.Drawing.Size(197, 50);
@@ -641,11 +568,10 @@
             // 
             this.btn_TipoUsuario.BackColor = System.Drawing.Color.Black;
             this.btn_TipoUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_TipoUsuario.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_TipoUsuario.FlatAppearance.BorderSize = 0;
+            this.btn_TipoUsuario.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
             this.btn_TipoUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_TipoUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_TipoUsuario.Location = new System.Drawing.Point(197, 265);
+            this.btn_TipoUsuario.Location = new System.Drawing.Point(394, 136);
             this.btn_TipoUsuario.Margin = new System.Windows.Forms.Padding(0);
             this.btn_TipoUsuario.Name = "btn_TipoUsuario";
             this.btn_TipoUsuario.Size = new System.Drawing.Size(197, 45);
@@ -658,11 +584,10 @@
             // 
             this.btn_Estados.BackColor = System.Drawing.Color.Black;
             this.btn_Estados.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Estados.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_Estados.FlatAppearance.BorderSize = 0;
+            this.btn_Estados.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
             this.btn_Estados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_Estados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Estados.Location = new System.Drawing.Point(197, 220);
+            this.btn_Estados.Location = new System.Drawing.Point(0, 46);
             this.btn_Estados.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Estados.Name = "btn_Estados";
             this.btn_Estados.Size = new System.Drawing.Size(197, 45);
@@ -675,11 +600,10 @@
             // 
             this.btn_TipoGrafico.BackColor = System.Drawing.Color.Black;
             this.btn_TipoGrafico.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_TipoGrafico.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_TipoGrafico.FlatAppearance.BorderSize = 0;
+            this.btn_TipoGrafico.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
             this.btn_TipoGrafico.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_TipoGrafico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_TipoGrafico.Location = new System.Drawing.Point(197, 175);
+            this.btn_TipoGrafico.Location = new System.Drawing.Point(197, 136);
             this.btn_TipoGrafico.Margin = new System.Windows.Forms.Padding(0);
             this.btn_TipoGrafico.Name = "btn_TipoGrafico";
             this.btn_TipoGrafico.Size = new System.Drawing.Size(197, 45);
@@ -688,32 +612,14 @@
             this.btn_TipoGrafico.UseVisualStyleBackColor = false;
             this.btn_TipoGrafico.Click += new System.EventHandler(this.btn_TipoGrafico_Click);
             // 
-            // btn_Formulas
-            // 
-            this.btn_Formulas.BackColor = System.Drawing.Color.Black;
-            this.btn_Formulas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Formulas.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_Formulas.FlatAppearance.BorderSize = 0;
-            this.btn_Formulas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
-            this.btn_Formulas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Formulas.Location = new System.Drawing.Point(197, 130);
-            this.btn_Formulas.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_Formulas.Name = "btn_Formulas";
-            this.btn_Formulas.Size = new System.Drawing.Size(197, 45);
-            this.btn_Formulas.TabIndex = 28;
-            this.btn_Formulas.Text = "Fórmulas";
-            this.btn_Formulas.UseVisualStyleBackColor = false;
-            this.btn_Formulas.Click += new System.EventHandler(this.btn_Formulas_Click);
-            // 
             // btn_TipoCalculo
             // 
             this.btn_TipoCalculo.BackColor = System.Drawing.Color.Black;
             this.btn_TipoCalculo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_TipoCalculo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_TipoCalculo.FlatAppearance.BorderSize = 0;
+            this.btn_TipoCalculo.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
             this.btn_TipoCalculo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_TipoCalculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_TipoCalculo.Location = new System.Drawing.Point(197, 85);
+            this.btn_TipoCalculo.Location = new System.Drawing.Point(394, 91);
             this.btn_TipoCalculo.Margin = new System.Windows.Forms.Padding(0);
             this.btn_TipoCalculo.Name = "btn_TipoCalculo";
             this.btn_TipoCalculo.Size = new System.Drawing.Size(197, 45);
@@ -726,11 +632,10 @@
             // 
             this.btn_Establecimientos.BackColor = System.Drawing.Color.Black;
             this.btn_Establecimientos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Establecimientos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_Establecimientos.FlatAppearance.BorderSize = 0;
+            this.btn_Establecimientos.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
             this.btn_Establecimientos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_Establecimientos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Establecimientos.Location = new System.Drawing.Point(197, 45);
+            this.btn_Establecimientos.Location = new System.Drawing.Point(394, 1);
             this.btn_Establecimientos.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Establecimientos.Name = "btn_Establecimientos";
             this.btn_Establecimientos.Size = new System.Drawing.Size(197, 45);
@@ -739,31 +644,14 @@
             this.btn_Establecimientos.UseVisualStyleBackColor = false;
             this.btn_Establecimientos.Click += new System.EventHandler(this.btn_Establecimientos_Click);
             // 
-            // btn_Grupos
-            // 
-            this.btn_Grupos.BackColor = System.Drawing.Color.Black;
-            this.btn_Grupos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Grupos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_Grupos.FlatAppearance.BorderSize = 0;
-            this.btn_Grupos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
-            this.btn_Grupos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Grupos.Location = new System.Drawing.Point(197, 0);
-            this.btn_Grupos.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_Grupos.Name = "btn_Grupos";
-            this.btn_Grupos.Size = new System.Drawing.Size(197, 45);
-            this.btn_Grupos.TabIndex = 25;
-            this.btn_Grupos.Text = "Grupos";
-            this.btn_Grupos.UseVisualStyleBackColor = false;
-            // 
             // btn_Operarios
             // 
             this.btn_Operarios.BackColor = System.Drawing.Color.Black;
             this.btn_Operarios.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Operarios.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_Operarios.FlatAppearance.BorderSize = 0;
+            this.btn_Operarios.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
             this.btn_Operarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_Operarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Operarios.Location = new System.Drawing.Point(0, 360);
+            this.btn_Operarios.Location = new System.Drawing.Point(394, 46);
             this.btn_Operarios.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Operarios.Name = "btn_Operarios";
             this.btn_Operarios.Size = new System.Drawing.Size(197, 45);
@@ -776,11 +664,10 @@
             // 
             this.btn_Reglas.BackColor = System.Drawing.Color.Black;
             this.btn_Reglas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Reglas.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_Reglas.FlatAppearance.BorderSize = 0;
+            this.btn_Reglas.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
             this.btn_Reglas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_Reglas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Reglas.Location = new System.Drawing.Point(0, 315);
+            this.btn_Reglas.Location = new System.Drawing.Point(197, 91);
             this.btn_Reglas.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Reglas.Name = "btn_Reglas";
             this.btn_Reglas.Size = new System.Drawing.Size(197, 45);
@@ -793,14 +680,13 @@
             // 
             this.btn_Unidades.BackColor = System.Drawing.Color.Black;
             this.btn_Unidades.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Unidades.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_Unidades.FlatAppearance.BorderSize = 0;
+            this.btn_Unidades.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
             this.btn_Unidades.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_Unidades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Unidades.Location = new System.Drawing.Point(0, 270);
+            this.btn_Unidades.Location = new System.Drawing.Point(0, 181);
             this.btn_Unidades.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Unidades.Name = "btn_Unidades";
-            this.btn_Unidades.Size = new System.Drawing.Size(197, 45);
+            this.btn_Unidades.Size = new System.Drawing.Size(197, 50);
             this.btn_Unidades.TabIndex = 22;
             this.btn_Unidades.Text = "Unidades de Medición";
             this.btn_Unidades.UseVisualStyleBackColor = false;
@@ -810,11 +696,10 @@
             // 
             this.btn_TipoControl.BackColor = System.Drawing.Color.Black;
             this.btn_TipoControl.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_TipoControl.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_TipoControl.FlatAppearance.BorderSize = 0;
+            this.btn_TipoControl.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
             this.btn_TipoControl.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_TipoControl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_TipoControl.Location = new System.Drawing.Point(0, 225);
+            this.btn_TipoControl.Location = new System.Drawing.Point(0, 136);
             this.btn_TipoControl.Margin = new System.Windows.Forms.Padding(0);
             this.btn_TipoControl.Name = "btn_TipoControl";
             this.btn_TipoControl.Size = new System.Drawing.Size(197, 45);
@@ -827,11 +712,10 @@
             // 
             this.btn_Entidades.BackColor = System.Drawing.Color.Black;
             this.btn_Entidades.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Entidades.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_Entidades.FlatAppearance.BorderSize = 0;
+            this.btn_Entidades.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
             this.btn_Entidades.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_Entidades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Entidades.Location = new System.Drawing.Point(0, 180);
+            this.btn_Entidades.Location = new System.Drawing.Point(197, 1);
             this.btn_Entidades.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Entidades.Name = "btn_Entidades";
             this.btn_Entidades.Size = new System.Drawing.Size(197, 45);
@@ -840,37 +724,19 @@
             this.btn_Entidades.UseVisualStyleBackColor = false;
             this.btn_Entidades.Click += new System.EventHandler(this.btn_Entidades_Click);
             // 
-            // btn_Compiladores
-            // 
-            this.btn_Compiladores.BackColor = System.Drawing.Color.Black;
-            this.btn_Compiladores.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Compiladores.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_Compiladores.FlatAppearance.BorderSize = 0;
-            this.btn_Compiladores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
-            this.btn_Compiladores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Compiladores.Location = new System.Drawing.Point(0, 135);
-            this.btn_Compiladores.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_Compiladores.Name = "btn_Compiladores";
-            this.btn_Compiladores.Size = new System.Drawing.Size(197, 45);
-            this.btn_Compiladores.TabIndex = 19;
-            this.btn_Compiladores.Text = "Compiladores";
-            this.btn_Compiladores.UseVisualStyleBackColor = false;
-            this.btn_Compiladores.Click += new System.EventHandler(this.Btn_Compiladores_Click);
-            // 
             // btn_Aprobadores
             // 
             this.btn_Aprobadores.BackColor = System.Drawing.Color.Black;
             this.btn_Aprobadores.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Aprobadores.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_Aprobadores.FlatAppearance.BorderSize = 0;
+            this.btn_Aprobadores.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
             this.btn_Aprobadores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_Aprobadores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Aprobadores.Location = new System.Drawing.Point(0, 90);
+            this.btn_Aprobadores.Location = new System.Drawing.Point(0, 1);
             this.btn_Aprobadores.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Aprobadores.Name = "btn_Aprobadores";
             this.btn_Aprobadores.Size = new System.Drawing.Size(197, 45);
             this.btn_Aprobadores.TabIndex = 18;
-            this.btn_Aprobadores.Text = "Aprobadores";
+            this.btn_Aprobadores.Text = "Aprobadores/Compiladores";
             this.btn_Aprobadores.UseVisualStyleBackColor = false;
             this.btn_Aprobadores.Click += new System.EventHandler(this.Btn_Aprobadores_Click);
             // 
@@ -878,11 +744,10 @@
             // 
             this.btn_Programas.BackColor = System.Drawing.Color.Black;
             this.btn_Programas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Programas.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_Programas.FlatAppearance.BorderSize = 0;
+            this.btn_Programas.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
             this.btn_Programas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_Programas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Programas.Location = new System.Drawing.Point(0, 45);
+            this.btn_Programas.Location = new System.Drawing.Point(0, 91);
             this.btn_Programas.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Programas.Name = "btn_Programas";
             this.btn_Programas.Size = new System.Drawing.Size(197, 45);
@@ -895,11 +760,10 @@
             // 
             this.btn_Maquinas.BackColor = System.Drawing.Color.Black;
             this.btn_Maquinas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Maquinas.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
-            this.btn_Maquinas.FlatAppearance.BorderSize = 0;
+            this.btn_Maquinas.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
             this.btn_Maquinas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_Maquinas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Maquinas.Location = new System.Drawing.Point(0, 0);
+            this.btn_Maquinas.Location = new System.Drawing.Point(197, 46);
             this.btn_Maquinas.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Maquinas.Name = "btn_Maquinas";
             this.btn_Maquinas.Size = new System.Drawing.Size(197, 45);
@@ -945,6 +809,7 @@
             this.pb_menu.Location = new System.Drawing.Point(106, 0);
             this.pb_menu.Margin = new System.Windows.Forms.Padding(0);
             this.pb_menu.Name = "pb_menu";
+            this.pb_menu.Padding = new System.Windows.Forms.Padding(2);
             this.pb_menu.Size = new System.Drawing.Size(59, 41);
             this.pb_menu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_menu.TabIndex = 13;
@@ -972,7 +837,7 @@
             this.panel_menu1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_menu1.Location = new System.Drawing.Point(0, 49);
             this.panel_menu1.Name = "panel_menu1";
-            this.panel_menu1.Size = new System.Drawing.Size(165, 468);
+            this.panel_menu1.Size = new System.Drawing.Size(165, 439);
             this.panel_menu1.TabIndex = 15;
             // 
             // sidebar1
@@ -991,7 +856,7 @@
             this.sidebar1.Location = new System.Drawing.Point(0, 41);
             this.sidebar1.Name = "sidebar1";
             this.sidebar1.Quality = 10;
-            this.sidebar1.Size = new System.Drawing.Size(165, 427);
+            this.sidebar1.Size = new System.Drawing.Size(165, 398);
             this.sidebar1.TabIndex = 0;
             // 
             // panel2
@@ -1009,10 +874,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(809, 517);
+            this.ClientSize = new System.Drawing.Size(791, 488);
             this.Controls.Add(this.panel_menu1);
             this.Controls.Add(this.p_Administrador);
             this.Controls.Add(this.panelCplan);
@@ -1066,8 +931,6 @@
         private System.Windows.Forms.Button btn_TipoPto;
         private System.Windows.Forms.Button btn_ClasifPto;
         private System.Windows.Forms.Button btn_ControlPlan;
-        private System.Windows.Forms.Button btn_PtoZ;
-        private System.Windows.Forms.Button btn_PtoY;
         private System.Windows.Forms.Button btn_PtoX;
         private System.Windows.Forms.Button btn_DocumentoDmo;
         private System.Windows.Forms.Button btn_Calculos;
@@ -1078,7 +941,6 @@
         private System.Windows.Forms.Panel p_Administrador;
         private System.Windows.Forms.Button btn_TipoControl;
         private System.Windows.Forms.Button btn_Entidades;
-        private System.Windows.Forms.Button btn_Compiladores;
         private System.Windows.Forms.Button btn_Aprobadores;
         private System.Windows.Forms.Button btn_Programas;
         private System.Windows.Forms.Button btn_Maquinas;
@@ -1086,14 +948,11 @@
         private System.Windows.Forms.Button btn_TipoUsuario;
         private System.Windows.Forms.Button btn_Estados;
         private System.Windows.Forms.Button btn_TipoGrafico;
-        private System.Windows.Forms.Button btn_Formulas;
         private System.Windows.Forms.Button btn_TipoCalculo;
         private System.Windows.Forms.Button btn_Establecimientos;
-        private System.Windows.Forms.Button btn_Grupos;
         private System.Windows.Forms.Button btn_Operarios;
         private System.Windows.Forms.Button btn_Reglas;
         private System.Windows.Forms.Button btn_Unidades;
-        private System.Windows.Forms.Button btn_PtoD;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel_menu1;

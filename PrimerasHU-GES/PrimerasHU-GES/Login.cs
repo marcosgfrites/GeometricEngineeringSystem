@@ -88,7 +88,6 @@ namespace PrimerasHU_GES
                             }
                         }
                         f.lb_CodUsu.Text = txt_Usuario.Text;
-                        f.Show();
 
                         //registro Fecha y Hora de la Última Sesión del Usuario
                         SqlCommand cmd = new SqlCommand("UPDATE usuarios SET fechoraUltSesion=@fechoraUltSesion WHERE codUsu=@codUsu", Conexion);
@@ -107,7 +106,7 @@ namespace PrimerasHU_GES
                             MessageBox.Show(ex2.ToString());
                         }
 
-
+                        f.Show();
                         this.Hide();
                     }
                     else
