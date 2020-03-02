@@ -160,6 +160,7 @@
             // txt_descripcion
             // 
             this.txt_descripcion.Location = new System.Drawing.Point(11, 94);
+            this.txt_descripcion.MaxLength = 50;
             this.txt_descripcion.Name = "txt_descripcion";
             this.txt_descripcion.Size = new System.Drawing.Size(195, 20);
             this.txt_descripcion.TabIndex = 3;
@@ -248,7 +249,7 @@
             this.btn_limpiar.FlatAppearance.BorderSize = 0;
             this.btn_limpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btn_limpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_limpiar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_limpiar.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.btn_limpiar.ForeColor = System.Drawing.Color.White;
             this.btn_limpiar.Location = new System.Drawing.Point(378, 216);
             this.btn_limpiar.Name = "btn_limpiar";
@@ -266,7 +267,7 @@
             this.btn_eliminar.FlatAppearance.BorderSize = 0;
             this.btn_eliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
             this.btn_eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_eliminar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_eliminar.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.btn_eliminar.ForeColor = System.Drawing.Color.White;
             this.btn_eliminar.Location = new System.Drawing.Point(256, 216);
             this.btn_eliminar.Name = "btn_eliminar";
@@ -284,7 +285,7 @@
             this.btn_modificar.FlatAppearance.BorderSize = 0;
             this.btn_modificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
             this.btn_modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_modificar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_modificar.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.btn_modificar.ForeColor = System.Drawing.Color.White;
             this.btn_modificar.Location = new System.Drawing.Point(134, 216);
             this.btn_modificar.Name = "btn_modificar";
@@ -301,7 +302,7 @@
             this.btn_registrar.FlatAppearance.BorderSize = 0;
             this.btn_registrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.btn_registrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_registrar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_registrar.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.btn_registrar.ForeColor = System.Drawing.Color.White;
             this.btn_registrar.Location = new System.Drawing.Point(12, 216);
             this.btn_registrar.Name = "btn_registrar";

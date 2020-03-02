@@ -374,50 +374,55 @@ namespace PrimerasHU_GES
 
         private void btnRegistro_Click(object sender, EventArgs e)
         {
+            if (cmbGrafico.Items.Count == 0 && cmbImagen.Items.Count == 0)
+            {
+                MessageBox.Show("Está intentando registrar un análisis que no contiene imágenes. Ambas imágenes de gráfico y/o secciones son obligatorias. Debe seleccionarlas o cargarlas de modo manual (personalizado).", "Atención!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                SqlCommand alta = new SqlCommand("INSERT INTO analisis (grafica,imgImagen,codUsu,fechAnalisis,descripcion,observacion) VALUES (@grafica,@imgImagen,@codUsu,@fechAnalisis,@descripcion,@observacion)", cn);
+                adaptador = new SqlDataAdapter();
+                adaptador.InsertCommand = alta;
+                // adaptador.InsertCommand.Parameters.Add(new SqlParameter("@codAnalisis", SqlDbType.Int));
+                adaptador.InsertCommand.Parameters.Add(new SqlParameter("@grafica", SqlDbType.Image));
+                adaptador.InsertCommand.Parameters.Add(new SqlParameter("@imgImagen", SqlDbType.Image));
+                adaptador.InsertCommand.Parameters.Add(new SqlParameter("@codUsu", SqlDbType.Int));
+                adaptador.InsertCommand.Parameters.Add(new SqlParameter("@fechAnalisis", SqlDbType.DateTime));
+                adaptador.InsertCommand.Parameters.Add(new SqlParameter("@descripcion", SqlDbType.VarChar));
+                adaptador.InsertCommand.Parameters.Add(new SqlParameter("@observacion", SqlDbType.VarChar));
 
-            SqlCommand alta = new SqlCommand("INSERT INTO analisis (grafica,imgImagen,codUsu,fechAnalisis,descripcion,observacion) VALUES (@grafica,@imgImagen,@codUsu,@fechAnalisis,@descripcion,@observacion)", cn);
-            adaptador = new SqlDataAdapter();
-            adaptador.InsertCommand = alta;
-           // adaptador.InsertCommand.Parameters.Add(new SqlParameter("@codAnalisis", SqlDbType.Int));
-            adaptador.InsertCommand.Parameters.Add(new SqlParameter("@grafica", SqlDbType.Image));
-            adaptador.InsertCommand.Parameters.Add(new SqlParameter("@imgImagen", SqlDbType.Image));
-            adaptador.InsertCommand.Parameters.Add(new SqlParameter("@codUsu", SqlDbType.Int));
-            adaptador.InsertCommand.Parameters.Add(new SqlParameter("@fechAnalisis", SqlDbType.DateTime));
-            adaptador.InsertCommand.Parameters.Add(new SqlParameter("@descripcion", SqlDbType.VarChar));
-            adaptador.InsertCommand.Parameters.Add(new SqlParameter("@observacion", SqlDbType.VarChar));
 
 
-           
 
-           // adaptador.InsertCommand.Parameters["@codAnalisis"].Value = lbCodAna.Text;
-            // Asignando el valor del grafico
+                // adaptador.InsertCommand.Parameters["@codAnalisis"].Value = lbCodAna.Text;
+                // Asignando el valor del grafico
 
-            // Stream usado como buffer
-            System.IO.MemoryStream ms1 = new System.IO.MemoryStream();
-            // Se guarda la imagen en el buffer
-            pbGrafico.Image.Save(ms1, System.Drawing.Imaging.ImageFormat.Jpeg);
-            // Se extraen los bytes del buffer para asignarlos como valor para el 
-            // parámetro.
-            adaptador.InsertCommand.Parameters["@grafica"].Value = ms1.GetBuffer();
+                // Stream usado como buffer
+                System.IO.MemoryStream ms1 = new System.IO.MemoryStream();
+                // Se guarda la imagen en el buffer
+                pbGrafico.Image.Save(ms1, System.Drawing.Imaging.ImageFormat.Jpeg);
+                // Se extraen los bytes del buffer para asignarlos como valor para el 
+                // parámetro.
+                adaptador.InsertCommand.Parameters["@grafica"].Value = ms1.GetBuffer();
 
-            
-            // Asignando el valor de la imagen
 
-            // Stream usado como buffer
-            System.IO.MemoryStream ms = new System.IO.MemoryStream();
-            // Se guarda la imagen en el buffer
-            pbImagen.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-            // Se extraen los bytes del buffer para asignarlos como valor para el 
-            // parámetro.
-            adaptador.InsertCommand.Parameters["@imgImagen"].Value = ms.GetBuffer();
+                // Asignando el valor de la imagen
 
-            
-           
-            adaptador.InsertCommand.Parameters["@codUsu"].Value = lbCodUsu.Text;
-            adaptador.InsertCommand.Parameters["@fechAnalisis"].Value = dtCreaMod.Value;
-            adaptador.InsertCommand.Parameters["@descripcion"].Value = txtDesc.Text;
-            adaptador.InsertCommand.Parameters["@observacion"].Value = txtObser.Text;
-            
+                // Stream usado como buffer
+                System.IO.MemoryStream ms = new System.IO.MemoryStream();
+                // Se guarda la imagen en el buffer
+                pbImagen.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                // Se extraen los bytes del buffer para asignarlos como valor para el 
+                // parámetro.
+                adaptador.InsertCommand.Parameters["@imgImagen"].Value = ms.GetBuffer();
+
+
+
+                adaptador.InsertCommand.Parameters["@codUsu"].Value = lbCodUsu.Text;
+                adaptador.InsertCommand.Parameters["@fechAnalisis"].Value = dtCreaMod.Value;
+                adaptador.InsertCommand.Parameters["@descripcion"].Value = txtDesc.Text;
+                adaptador.InsertCommand.Parameters["@observacion"].Value = txtObser.Text;
+
 
                 try
                 {
@@ -426,8 +431,8 @@ namespace PrimerasHU_GES
                     MessageBox.Show("Se registró el informe de manera correcta!");
 
                     Limpiar();
-                    
-                 
+
+
                 }
                 catch (Exception ex)
                 {
@@ -437,7 +442,7 @@ namespace PrimerasHU_GES
                 {
                     cn.Close();
                 }
-  
+            }
         }
 
      
@@ -448,8 +453,15 @@ namespace PrimerasHU_GES
             this.analisisTableAdapter1.Fill(this.ges_v01DataSet21.analisis);
             btnRegistro.Enabled = true;
             btnModificar.Enabled = false;
-            cmbGrafico.SelectedIndex = 0;
-            cmbImagen.SelectedIndex = 0;
+            if (cmbGrafico.Items.Count != 0)
+            {
+                cmbGrafico.SelectedIndex = 0;
+            }
+
+            if (cmbImagen.Items.Count != 0)
+            {
+                cmbImagen.SelectedIndex = 0;
+            }
             verImagen2(pbImagen, cmbImagen.SelectedItem.ToString());
             verImagen(pbGrafico, cmbGrafico.SelectedItem.ToString());
 

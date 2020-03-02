@@ -55,6 +55,8 @@ namespace PrimerasHU_GES
 
         private void SeccionesVehiculo_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'ges_v01DataSet22NuevoProyecto.modelosVehiculo' Puede moverla o quitarla según sea necesario.
+            this.modelosVehiculoTableAdapter1.Fill(this.ges_v01DataSet22NuevoProyecto.modelosVehiculo);
             // TODO: esta línea de código carga datos en la tabla 'ges_v01DataSet6.modelosVehiculo' Puede moverla o quitarla según sea necesario.
             this.modelosVehiculoTableAdapter.Fill(this.ges_v01DataSet6.modelosVehiculo);
             // TODO: esta línea de código carga datos en la tabla 'ges_v01DataSet2.seccionesVehiculo' Puede moverla o quitarla según sea necesario.
@@ -78,20 +80,20 @@ namespace PrimerasHU_GES
             txtDescSec.AutoCompleteSource = AutoCompleteSource.CustomSource;
 
             // Cargo los datos que tendra el combobox
-            cbCodProyecto.DataSource = AutoCompletar.Datos();
+            /*cbCodProyecto.DataSource = AutoCompletar.Datos();
             cbCodProyecto.DisplayMember = "codProyecto";
             cbCodProyecto.ValueMember = "codProyecto";
 
             // cargo la lista de items para el autocomplete del combobox
             cbCodProyecto.AutoCompleteCustomSource = AutoCompletar.Autocomplete();
             cbCodProyecto.AutoCompleteMode = AutoCompleteMode.Suggest;
-            cbCodProyecto.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            cbCodProyecto.AutoCompleteSource = AutoCompleteSource.CustomSource;*/
         }
 
         private void LimpiarDG()
         {
             txtCodSec.Text = "";
-            cbCodProyecto.Text = "";
+            this.modelosVehiculoTableAdapter1.Fill(this.ges_v01DataSet22NuevoProyecto.modelosVehiculo);
             txtDescSec.Text = "";
             txtVerSec.Text = "";
             dgvSeccionesVehiculo.DataSource = "";
@@ -103,7 +105,7 @@ namespace PrimerasHU_GES
         private void Limpiar()
         {
             txtCodSec.Text = "";
-            cbCodProyecto.Text = "";
+            this.modelosVehiculoTableAdapter1.Fill(this.ges_v01DataSet22NuevoProyecto.modelosVehiculo);
             txtDescSec.Text = "";
             txtVerSec.Text = "";
             this.seccionesVehiculoTableAdapter.Fill(this.ges_v01DataSet2.seccionesVehiculo);

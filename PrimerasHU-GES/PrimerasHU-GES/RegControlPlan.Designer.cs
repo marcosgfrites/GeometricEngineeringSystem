@@ -159,6 +159,7 @@ namespace PrimerasHU_GES
             // btnLimpiar
             // 
             this.btnLimpiar.BackColor = System.Drawing.Color.Black;
+            this.btnLimpiar.Enabled = false;
             this.btnLimpiar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));
             this.btnLimpiar.FlatAppearance.BorderSize = 0;
             this.btnLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));
@@ -262,6 +263,7 @@ namespace PrimerasHU_GES
             this.bunifuFlatButton1.ButtonText = "2- Comparar Nuevo / Actual";
             this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton1.Enabled = false;
             this.bunifuFlatButton1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuFlatButton1.ForeColor = System.Drawing.Color.White;
             this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
@@ -723,6 +725,7 @@ namespace PrimerasHU_GES
             this.registrarBtn.IconZoom = 90D;
             this.registrarBtn.IsTab = false;
             this.registrarBtn.Location = new System.Drawing.Point(526, 295);
+            this.registrarBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.registrarBtn.Name = "registrarBtn";
             this.registrarBtn.Normalcolor = System.Drawing.Color.Black;
             this.registrarBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(138)))), ((int)(((byte)(218)))));

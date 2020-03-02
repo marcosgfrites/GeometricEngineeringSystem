@@ -778,6 +778,9 @@
   <data name="txt_nombreModV.Location" type="System.Drawing.Point, System.Drawing">
     <value>119, 250</value>
   </data>
+  <data name="txt_nombreModV.MaxLength" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
   <data name="txt_nombreModV.Size" type="System.Drawing.Size, System.Drawing">
     <value>205, 20</value>
   </data>
@@ -888,6 +891,9 @@
   </data>
   <data name="txt_codProyecto.Location" type="System.Drawing.Point, System.Drawing">
     <value>119, 157</value>
+  </data>
+  <data name="txt_codProyecto.MaxLength" type="System.Int32, mscorlib">
+    <value>10</value>
   </data>
   <data name="txt_codProyecto.Size" type="System.Drawing.Size, System.Drawing">
     <value>205, 20</value>
@@ -1024,6 +1030,9 @@
   <data name="txt_codVersionModif.Location" type="System.Drawing.Point, System.Drawing">
     <value>107, 184</value>
   </data>
+  <data name="txt_codVersionModif.MaxLength" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
   <data name="txt_codVersionModif.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 20</value>
   </data>
@@ -1141,6 +1150,9 @@
   <data name="txt_descVersion.Location" type="System.Drawing.Point, System.Drawing">
     <value>107, 214</value>
   </data>
+  <data name="txt_descVersion.MaxLength" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
   <data name="txt_descVersion.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 20</value>
   </data>
@@ -1254,6 +1266,9 @@
   </data>
   <data name="txt_codVersion.Location" type="System.Drawing.Point, System.Drawing">
     <value>107, 156</value>
+  </data>
+  <data name="txt_codVersion.MaxLength" type="System.Int32, mscorlib">
+    <value>10</value>
   </data>
   <data name="txt_codVersion.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 20</value>
@@ -1389,6 +1404,9 @@
   </data>
   <data name="txt_codTipoVModif.Location" type="System.Drawing.Point, System.Drawing">
     <value>102, 185</value>
+  </data>
+  <data name="txt_codTipoVModif.MaxLength" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
   <data name="txt_codTipoVModif.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 20</value>
@@ -1624,6 +1642,9 @@
   <data name="txt_codTipoV.Location" type="System.Drawing.Point, System.Drawing">
     <value>102, 156</value>
   </data>
+  <data name="txt_codTipoV.MaxLength" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
   <data name="txt_codTipoV.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 20</value>
   </data>
@@ -1677,6 +1698,9 @@
   </data>
   <data name="txt_descTipoV.Location" type="System.Drawing.Point, System.Drawing">
     <value>102, 215</value>
+  </data>
+  <data name="txt_descTipoV.MaxLength" type="System.Int32, mscorlib">
+    <value>50</value>
   </data>
   <data name="txt_descTipoV.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 20</value>

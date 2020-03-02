@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Imagenes));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.txt_NomImg = new System.Windows.Forms.TextBox();
@@ -48,12 +48,6 @@
             this.txt_fechoraModif = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dgv_Imagenes = new System.Windows.Forms.DataGridView();
-            this.codImagenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codCPlanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomImagenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechoraCreImagenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechoraModImagenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.imgImagenDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.imagenesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ges_v01Imagenes4 = new PrimerasHU_GES.ges_v01Imagenes4();
             this.pb_Imagen = new System.Windows.Forms.PictureBox();
@@ -81,10 +75,16 @@
             this.controlPlanTableAdapter = new PrimerasHU_GES.ges_v01Imagenes2TableAdapters.controlPlanTableAdapter();
             this.imagenesTableAdapter = new PrimerasHU_GES.ges_v01Imagenes4TableAdapters.imagenesTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_Salir = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.codImagenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codCPlanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomImagenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechoraCreImagenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechoraModImagenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imgImagenDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Imagenes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01Imagenes4)).BeginInit();
@@ -123,6 +123,7 @@
             // 
             this.txt_NomImg.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txt_NomImg.Location = new System.Drawing.Point(26, 164);
+            this.txt_NomImg.MaxLength = 50;
             this.txt_NomImg.Name = "txt_NomImg";
             this.txt_NomImg.Size = new System.Drawing.Size(280, 20);
             this.txt_NomImg.TabIndex = 8;
@@ -258,58 +259,6 @@
             this.dgv_Imagenes.TabIndex = 17;
             this.dgv_Imagenes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Imagenes_CellClick);
             this.dgv_Imagenes.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgv_Imagenes_CellFormatting);
-            // 
-            // codImagenDataGridViewTextBoxColumn
-            // 
-            this.codImagenDataGridViewTextBoxColumn.DataPropertyName = "codImagen";
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.codImagenDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
-            this.codImagenDataGridViewTextBoxColumn.HeaderText = "Código";
-            this.codImagenDataGridViewTextBoxColumn.Name = "codImagenDataGridViewTextBoxColumn";
-            this.codImagenDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codCPlanDataGridViewTextBoxColumn
-            // 
-            this.codCPlanDataGridViewTextBoxColumn.DataPropertyName = "codCPlan";
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.codCPlanDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
-            this.codCPlanDataGridViewTextBoxColumn.HeaderText = "Control Plan";
-            this.codCPlanDataGridViewTextBoxColumn.Name = "codCPlanDataGridViewTextBoxColumn";
-            this.codCPlanDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nomImagenDataGridViewTextBoxColumn
-            // 
-            this.nomImagenDataGridViewTextBoxColumn.DataPropertyName = "nomImagen";
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nomImagenDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
-            this.nomImagenDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nomImagenDataGridViewTextBoxColumn.Name = "nomImagenDataGridViewTextBoxColumn";
-            this.nomImagenDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fechoraCreImagenDataGridViewTextBoxColumn
-            // 
-            this.fechoraCreImagenDataGridViewTextBoxColumn.DataPropertyName = "fechoraCreImagen";
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fechoraCreImagenDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
-            this.fechoraCreImagenDataGridViewTextBoxColumn.HeaderText = "Fecha - Creación";
-            this.fechoraCreImagenDataGridViewTextBoxColumn.Name = "fechoraCreImagenDataGridViewTextBoxColumn";
-            this.fechoraCreImagenDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fechoraModImagenDataGridViewTextBoxColumn
-            // 
-            this.fechoraModImagenDataGridViewTextBoxColumn.DataPropertyName = "fechoraModImagen";
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fechoraModImagenDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
-            this.fechoraModImagenDataGridViewTextBoxColumn.HeaderText = "Fecha - Modificación";
-            this.fechoraModImagenDataGridViewTextBoxColumn.Name = "fechoraModImagenDataGridViewTextBoxColumn";
-            this.fechoraModImagenDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // imgImagenDataGridViewImageColumn
-            // 
-            this.imgImagenDataGridViewImageColumn.DataPropertyName = "imgImagen";
-            this.imgImagenDataGridViewImageColumn.HeaderText = "Imagen (Vista Previa)";
-            this.imgImagenDataGridViewImageColumn.Name = "imgImagenDataGridViewImageColumn";
-            this.imgImagenDataGridViewImageColumn.ReadOnly = true;
             // 
             // imagenesBindingSource
             // 
@@ -542,30 +491,6 @@
             this.panel1.Size = new System.Drawing.Size(1366, 49);
             this.panel1.TabIndex = 30;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = global::PrimerasHU_GES.Properties.Resources.LOGOENCABEZADO_Mesa_de_trabajo_1;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(49, 49);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(91, 11);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(230, 22);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "GESTOR DE IMAGENES";
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Black;
@@ -607,6 +532,83 @@
             this.btn_Salir.TabIndex = 13;
             this.btn_Salir.UseVisualStyleBackColor = false;
             this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click_2);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = global::PrimerasHU_GES.Properties.Resources.LOGOENCABEZADO_Mesa_de_trabajo_1;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(49, 49);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(91, 11);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(230, 22);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "GESTOR DE IMAGENES";
+            // 
+            // codImagenDataGridViewTextBoxColumn
+            // 
+            this.codImagenDataGridViewTextBoxColumn.DataPropertyName = "codImagen";
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.codImagenDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            this.codImagenDataGridViewTextBoxColumn.HeaderText = "Código";
+            this.codImagenDataGridViewTextBoxColumn.Name = "codImagenDataGridViewTextBoxColumn";
+            this.codImagenDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // codCPlanDataGridViewTextBoxColumn
+            // 
+            this.codCPlanDataGridViewTextBoxColumn.DataPropertyName = "codCPlan";
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.codCPlanDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            this.codCPlanDataGridViewTextBoxColumn.HeaderText = "Control Plan";
+            this.codCPlanDataGridViewTextBoxColumn.Name = "codCPlanDataGridViewTextBoxColumn";
+            this.codCPlanDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nomImagenDataGridViewTextBoxColumn
+            // 
+            this.nomImagenDataGridViewTextBoxColumn.DataPropertyName = "nomImagen";
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomImagenDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            this.nomImagenDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nomImagenDataGridViewTextBoxColumn.Name = "nomImagenDataGridViewTextBoxColumn";
+            this.nomImagenDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fechoraCreImagenDataGridViewTextBoxColumn
+            // 
+            this.fechoraCreImagenDataGridViewTextBoxColumn.DataPropertyName = "fechoraCreImagen";
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fechoraCreImagenDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            this.fechoraCreImagenDataGridViewTextBoxColumn.HeaderText = "Fecha - Creación";
+            this.fechoraCreImagenDataGridViewTextBoxColumn.Name = "fechoraCreImagenDataGridViewTextBoxColumn";
+            this.fechoraCreImagenDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fechoraModImagenDataGridViewTextBoxColumn
+            // 
+            this.fechoraModImagenDataGridViewTextBoxColumn.DataPropertyName = "fechoraModImagen";
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fechoraModImagenDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            this.fechoraModImagenDataGridViewTextBoxColumn.HeaderText = "Fecha - Modificación";
+            this.fechoraModImagenDataGridViewTextBoxColumn.Name = "fechoraModImagenDataGridViewTextBoxColumn";
+            this.fechoraModImagenDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // imgImagenDataGridViewImageColumn
+            // 
+            this.imgImagenDataGridViewImageColumn.DataPropertyName = "imgImagen";
+            this.imgImagenDataGridViewImageColumn.HeaderText = "Imagen (Vista Previa)";
+            this.imgImagenDataGridViewImageColumn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.imgImagenDataGridViewImageColumn.Name = "imgImagenDataGridViewImageColumn";
+            this.imgImagenDataGridViewImageColumn.ReadOnly = true;
             // 
             // Imagenes
             // 
@@ -713,13 +715,13 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Salir;
         private System.Windows.Forms.DataGridViewTextBoxColumn codImagenDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codCPlanDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomImagenDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechoraCreImagenDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechoraModImagenDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewImageColumn imgImagenDataGridViewImageColumn;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btn_Salir;
     }
 }

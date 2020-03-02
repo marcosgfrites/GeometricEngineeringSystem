@@ -82,6 +82,7 @@
             this.txt_Usuario.ForeColor = System.Drawing.Color.Black;
             this.txt_Usuario.Location = new System.Drawing.Point(346, 34);
             this.txt_Usuario.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txt_Usuario.MaxLength = 2;
             this.txt_Usuario.Name = "txt_Usuario";
             this.txt_Usuario.Size = new System.Drawing.Size(92, 26);
             this.txt_Usuario.TabIndex = 3;
@@ -97,6 +98,7 @@
             this.txt_Clave.ForeColor = System.Drawing.Color.Black;
             this.txt_Clave.Location = new System.Drawing.Point(346, 80);
             this.txt_Clave.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txt_Clave.MaxLength = 20;
             this.txt_Clave.Name = "txt_Clave";
             this.txt_Clave.PasswordChar = '*';
             this.txt_Clave.Size = new System.Drawing.Size(92, 26);

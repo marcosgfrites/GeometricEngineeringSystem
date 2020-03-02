@@ -61,6 +61,9 @@
             this.modelosVehiculoTableAdapter = new PrimerasHU_GES.ges_v01DataSet6TableAdapters.modelosVehiculoTableAdapter();
             this.errorProviderCodSeccion = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderVerSec = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ges_v01DataSet22NuevoProyecto = new PrimerasHU_GES.ges_v01DataSet22NuevoProyecto();
+            this.modelosVehiculoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.modelosVehiculoTableAdapter1 = new PrimerasHU_GES.ges_v01DataSet22NuevoProyectoTableAdapters.modelosVehiculoTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSeccionesVehiculo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.secionesVehiulobindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet2)).BeginInit();
@@ -69,6 +72,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderCodSeccion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderVerSec)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet22NuevoProyecto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modelosVehiculoBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -92,16 +97,16 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 114);
+            this.label2.Location = new System.Drawing.Point(25, 114);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 13);
+            this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 23;
-            this.label2.Text = "Codigo Proyecto:";
+            this.label2.Text = "Proyecto:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 71);
+            this.label1.Location = new System.Drawing.Point(25, 71);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 13);
             this.label1.TabIndex = 22;
@@ -109,7 +114,8 @@
             // 
             // txtVerSec
             // 
-            this.txtVerSec.Location = new System.Drawing.Point(159, 151);
+            this.txtVerSec.Location = new System.Drawing.Point(159, 196);
+            this.txtVerSec.MaxLength = 3;
             this.txtVerSec.Name = "txtVerSec";
             this.txtVerSec.Size = new System.Drawing.Size(182, 20);
             this.txtVerSec.TabIndex = 20;
@@ -118,7 +124,8 @@
             // 
             // txtDescSec
             // 
-            this.txtDescSec.Location = new System.Drawing.Point(159, 196);
+            this.txtDescSec.Location = new System.Drawing.Point(159, 155);
+            this.txtDescSec.MaxLength = 50;
             this.txtDescSec.Multiline = true;
             this.txtDescSec.Name = "txtDescSec";
             this.txtDescSec.Size = new System.Drawing.Size(182, 20);
@@ -151,7 +158,7 @@
             this.descSeccionDataGridViewTextBoxColumn,
             this.verSeccionDataGridViewTextBoxColumn});
             this.dgvSeccionesVehiculo.DataSource = this.secionesVehiulobindingSource;
-            this.dgvSeccionesVehiculo.Location = new System.Drawing.Point(432, 68);
+            this.dgvSeccionesVehiculo.Location = new System.Drawing.Point(368, 68);
             this.dgvSeccionesVehiculo.Name = "dgvSeccionesVehiculo";
             this.dgvSeccionesVehiculo.ReadOnly = true;
             this.dgvSeccionesVehiculo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -208,7 +215,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(974, 49);
+            this.panel1.Size = new System.Drawing.Size(837, 49);
             this.panel1.TabIndex = 46;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
@@ -226,7 +233,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(872, 0);
+            this.button1.Location = new System.Drawing.Point(735, 0);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(51, 49);
@@ -247,7 +254,7 @@
             this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Salir.ForeColor = System.Drawing.Color.White;
-            this.btn_Salir.Location = new System.Drawing.Point(923, 0);
+            this.btn_Salir.Location = new System.Drawing.Point(786, 0);
             this.btn_Salir.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Salir.Name = "btn_Salir";
             this.btn_Salir.Size = new System.Drawing.Size(51, 49);
@@ -290,7 +297,7 @@
             this.btnRegCodSec.FlatAppearance.BorderSize = 0;
             this.btnRegCodSec.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btnRegCodSec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegCodSec.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.btnRegCodSec.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.btnRegCodSec.ForeColor = System.Drawing.Color.White;
             this.btnRegCodSec.Location = new System.Drawing.Point(28, 260);
             this.btnRegCodSec.Name = "btnRegCodSec";
@@ -308,7 +315,7 @@
             this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.btnEliminar.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.Location = new System.Drawing.Point(28, 328);
             this.btnEliminar.Name = "btnEliminar";
@@ -326,7 +333,7 @@
             this.btnModSecVeh.FlatAppearance.BorderSize = 0;
             this.btnModSecVeh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btnModSecVeh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModSecVeh.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.btnModSecVeh.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.btnModSecVeh.ForeColor = System.Drawing.Color.White;
             this.btnModSecVeh.Location = new System.Drawing.Point(205, 328);
             this.btnModSecVeh.Name = "btnModSecVeh";
@@ -344,7 +351,7 @@
             this.btnLimpiar.FlatAppearance.BorderSize = 0;
             this.btnLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.btnLimpiar.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
             this.btnLimpiar.Location = new System.Drawing.Point(205, 260);
             this.btnLimpiar.Name = "btnLimpiar";
@@ -362,7 +369,7 @@
             this.btnVerTod.FlatAppearance.BorderSize = 0;
             this.btnVerTod.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btnVerTod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVerTod.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.btnVerTod.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.btnVerTod.ForeColor = System.Drawing.Color.White;
             this.btnVerTod.Location = new System.Drawing.Point(28, 407);
             this.btnVerTod.Name = "btnVerTod";
@@ -374,8 +381,8 @@
             // 
             // cbCodProyecto
             // 
-            this.cbCodProyecto.DataSource = this.modelosVehiculoBindingSource;
-            this.cbCodProyecto.DisplayMember = "codProyecto";
+            this.cbCodProyecto.DataSource = this.modelosVehiculoBindingSource1;
+            this.cbCodProyecto.DisplayMember = "nomModelo";
             this.cbCodProyecto.FormattingEnabled = true;
             this.cbCodProyecto.Location = new System.Drawing.Point(159, 111);
             this.cbCodProyecto.Name = "cbCodProyecto";
@@ -405,12 +412,26 @@
             // 
             this.errorProviderVerSec.ContainerControl = this;
             // 
+            // ges_v01DataSet22NuevoProyecto
+            // 
+            this.ges_v01DataSet22NuevoProyecto.DataSetName = "ges_v01DataSet22NuevoProyecto";
+            this.ges_v01DataSet22NuevoProyecto.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // modelosVehiculoBindingSource1
+            // 
+            this.modelosVehiculoBindingSource1.DataMember = "modelosVehiculo";
+            this.modelosVehiculoBindingSource1.DataSource = this.ges_v01DataSet22NuevoProyecto;
+            // 
+            // modelosVehiculoTableAdapter1
+            // 
+            this.modelosVehiculoTableAdapter1.ClearBeforeFill = true;
+            // 
             // SeccionesVehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(974, 495);
+            this.ClientSize = new System.Drawing.Size(837, 495);
             this.Controls.Add(this.cbCodProyecto);
             this.Controls.Add(this.btnVerTod);
             this.Controls.Add(this.btnEliminar);
@@ -442,6 +463,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderCodSeccion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderVerSec)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet22NuevoProyecto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modelosVehiculoBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -480,5 +503,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn verSeccionDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_Salir;
+        private ges_v01DataSet22NuevoProyecto ges_v01DataSet22NuevoProyecto;
+        private System.Windows.Forms.BindingSource modelosVehiculoBindingSource1;
+        private ges_v01DataSet22NuevoProyectoTableAdapters.modelosVehiculoTableAdapter modelosVehiculoTableAdapter1;
     }
 }

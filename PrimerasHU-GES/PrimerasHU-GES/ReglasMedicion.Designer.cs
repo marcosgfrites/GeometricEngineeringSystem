@@ -168,6 +168,7 @@
             // 
             this.txt_salida.Enabled = false;
             this.txt_salida.Location = new System.Drawing.Point(11, 112);
+            this.txt_salida.MaxLength = 30;
             this.txt_salida.Name = "txt_salida";
             this.txt_salida.Size = new System.Drawing.Size(195, 20);
             this.txt_salida.TabIndex = 5;
@@ -185,6 +186,7 @@
             // txt_descripcion
             // 
             this.txt_descripcion.Location = new System.Drawing.Point(11, 73);
+            this.txt_descripcion.MaxLength = 50;
             this.txt_descripcion.Name = "txt_descripcion";
             this.txt_descripcion.Size = new System.Drawing.Size(195, 20);
             this.txt_descripcion.TabIndex = 3;

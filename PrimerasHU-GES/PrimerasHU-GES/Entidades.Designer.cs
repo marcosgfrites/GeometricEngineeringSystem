@@ -278,6 +278,7 @@
             // txtDescEntidad
             // 
             this.txtDescEntidad.Location = new System.Drawing.Point(15, 111);
+            this.txtDescEntidad.MaxLength = 50;
             this.txtDescEntidad.Multiline = true;
             this.txtDescEntidad.Name = "txtDescEntidad";
             this.txtDescEntidad.Size = new System.Drawing.Size(347, 77);
@@ -291,6 +292,7 @@
             this.txtCodigoEntidad.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtCodigoEntidad.Enabled = false;
             this.txtCodigoEntidad.Location = new System.Drawing.Point(16, 45);
+            this.txtCodigoEntidad.MaxLength = 10;
             this.txtCodigoEntidad.Name = "txtCodigoEntidad";
             this.txtCodigoEntidad.Size = new System.Drawing.Size(345, 20);
             this.txtCodigoEntidad.TabIndex = 76;

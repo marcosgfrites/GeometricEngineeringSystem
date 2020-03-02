@@ -260,6 +260,7 @@
             // txtObser
             // 
             this.txtObser.Location = new System.Drawing.Point(584, 40);
+            this.txtObser.MaxLength = 50;
             this.txtObser.Multiline = true;
             this.txtObser.Name = "txtObser";
             this.txtObser.Size = new System.Drawing.Size(209, 112);
@@ -268,6 +269,7 @@
             // txtDesc
             // 
             this.txtDesc.Location = new System.Drawing.Point(10, 40);
+            this.txtDesc.MaxLength = 300;
             this.txtDesc.Multiline = true;
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.Size = new System.Drawing.Size(568, 112);

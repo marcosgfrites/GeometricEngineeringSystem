@@ -106,7 +106,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(994, 49);
+            this.panel1.Size = new System.Drawing.Size(998, 49);
             this.panel1.TabIndex = 110;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown_1);
@@ -124,7 +124,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(892, 0);
+            this.button1.Location = new System.Drawing.Point(896, 0);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(51, 49);
@@ -145,7 +145,7 @@
             this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Salir.ForeColor = System.Drawing.Color.White;
-            this.btn_Salir.Location = new System.Drawing.Point(943, 0);
+            this.btn_Salir.Location = new System.Drawing.Point(947, 0);
             this.btn_Salir.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Salir.Name = "btn_Salir";
             this.btn_Salir.Size = new System.Drawing.Size(51, 49);
@@ -182,7 +182,7 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.dgvUsuarios);
-            this.panel2.Location = new System.Drawing.Point(12, 96);
+            this.panel2.Location = new System.Drawing.Point(12, 66);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(974, 597);
             this.panel2.TabIndex = 116;
@@ -293,7 +293,7 @@
             // txtClaveUsuario
             // 
             this.txtClaveUsuario.Location = new System.Drawing.Point(155, 131);
-            this.txtClaveUsuario.MaxLength = 16;
+            this.txtClaveUsuario.MaxLength = 20;
             this.txtClaveUsuario.Name = "txtClaveUsuario";
             this.txtClaveUsuario.PasswordChar = '*';
             this.txtClaveUsuario.Size = new System.Drawing.Size(123, 20);
@@ -329,7 +329,7 @@
             this.botonVerUsuarios.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.botonVerUsuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.botonVerUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonVerUsuarios.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.botonVerUsuarios.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonVerUsuarios.ForeColor = System.Drawing.Color.White;
             this.botonVerUsuarios.Location = new System.Drawing.Point(20, 495);
             this.botonVerUsuarios.Name = "botonVerUsuarios";
@@ -346,7 +346,7 @@
             this.botonEliminarUsuario.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.botonEliminarUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.botonEliminarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonEliminarUsuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.botonEliminarUsuario.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonEliminarUsuario.ForeColor = System.Drawing.Color.White;
             this.botonEliminarUsuario.Location = new System.Drawing.Point(20, 437);
             this.botonEliminarUsuario.Name = "botonEliminarUsuario";
@@ -363,7 +363,7 @@
             this.botonModificarUsuario.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.botonModificarUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.botonModificarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonModificarUsuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.botonModificarUsuario.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonModificarUsuario.ForeColor = System.Drawing.Color.White;
             this.botonModificarUsuario.Location = new System.Drawing.Point(20, 321);
             this.botonModificarUsuario.Name = "botonModificarUsuario";
@@ -380,7 +380,7 @@
             this.botonLimpiarSeleccion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.botonLimpiarSeleccion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.botonLimpiarSeleccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonLimpiarSeleccion.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.botonLimpiarSeleccion.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonLimpiarSeleccion.ForeColor = System.Drawing.Color.White;
             this.botonLimpiarSeleccion.Location = new System.Drawing.Point(20, 379);
             this.botonLimpiarSeleccion.Name = "botonLimpiarSeleccion";
@@ -397,7 +397,7 @@
             this.botonRegistrarUsuario.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.botonRegistrarUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.botonRegistrarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonRegistrarUsuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonRegistrarUsuario.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonRegistrarUsuario.ForeColor = System.Drawing.Color.White;
             this.botonRegistrarUsuario.Location = new System.Drawing.Point(20, 263);
             this.botonRegistrarUsuario.Name = "botonRegistrarUsuario";
@@ -430,6 +430,7 @@
             // txtNombreUsuario
             // 
             this.txtNombreUsuario.Location = new System.Drawing.Point(155, 105);
+            this.txtNombreUsuario.MaxLength = 50;
             this.txtNombreUsuario.Name = "txtNombreUsuario";
             this.txtNombreUsuario.Size = new System.Drawing.Size(123, 20);
             this.txtNombreUsuario.TabIndex = 79;
@@ -568,7 +569,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(994, 746);
+            this.ClientSize = new System.Drawing.Size(998, 677);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

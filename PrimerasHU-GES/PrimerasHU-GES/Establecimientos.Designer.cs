@@ -279,6 +279,7 @@
             // txtDescEstablecimiento
             // 
             this.txtDescEstablecimiento.Location = new System.Drawing.Point(15, 111);
+            this.txtDescEstablecimiento.MaxLength = 50;
             this.txtDescEstablecimiento.Multiline = true;
             this.txtDescEstablecimiento.Name = "txtDescEstablecimiento";
             this.txtDescEstablecimiento.Size = new System.Drawing.Size(347, 77);
@@ -292,6 +293,7 @@
             this.txtCodigoEstablecimiento.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtCodigoEstablecimiento.Enabled = false;
             this.txtCodigoEstablecimiento.Location = new System.Drawing.Point(16, 45);
+            this.txtCodigoEstablecimiento.MaxLength = 10;
             this.txtCodigoEstablecimiento.Name = "txtCodigoEstablecimiento";
             this.txtCodigoEstablecimiento.Size = new System.Drawing.Size(345, 20);
             this.txtCodigoEstablecimiento.TabIndex = 76;
@@ -378,7 +380,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.establecimientosBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18_Establecimientos2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.establecimientosBindingSource)).EndInit();
-           // ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet19_Establecimientos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet19_Establecimientos)).EndInit();
             this.ResumeLayout(false);
 
         }

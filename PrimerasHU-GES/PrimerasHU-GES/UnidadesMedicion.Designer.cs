@@ -47,19 +47,19 @@
             this.txtDescUdeMed = new System.Windows.Forms.TextBox();
             this.txtCodigoUdeMed = new System.Windows.Forms.TextBox();
             this.dgvUdeMed = new System.Windows.Forms.DataGridView();
-            this.unidadesMedicionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.codUnidMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descUnidMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.unidadesMedicionBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.ges_v01DataSet18_UdeMed2 = new PrimerasHU_GES.ges_v01DataSet18_UdeMed2();
+            this.unidadesMedicionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.unidadesMedicionTableAdapter1 = new PrimerasHU_GES.ges_v01DataSet18_UdeMed2TableAdapters.unidadesMedicionTableAdapter();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUdeMed)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.unidadesMedicionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unidadesMedicionBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18_UdeMed2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unidadesMedicionBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -73,7 +73,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(836, 49);
+            this.panel1.Size = new System.Drawing.Size(821, 49);
             this.panel1.TabIndex = 48;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -90,7 +90,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(734, 0);
+            this.button1.Location = new System.Drawing.Point(719, 0);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(51, 49);
@@ -111,7 +111,7 @@
             this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Salir.ForeColor = System.Drawing.Color.White;
-            this.btn_Salir.Location = new System.Drawing.Point(785, 0);
+            this.btn_Salir.Location = new System.Drawing.Point(770, 0);
             this.btn_Salir.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Salir.Name = "btn_Salir";
             this.btn_Salir.Size = new System.Drawing.Size(51, 49);
@@ -147,7 +147,7 @@
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.dgvUdeMed);
-            this.panel3.Location = new System.Drawing.Point(25, 78);
+            this.panel3.Location = new System.Drawing.Point(15, 64);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(788, 456);
             this.panel3.TabIndex = 117;
@@ -176,7 +176,7 @@
             this.botonVerUdeMed.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.botonVerUdeMed.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.botonVerUdeMed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonVerUdeMed.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.botonVerUdeMed.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.botonVerUdeMed.ForeColor = System.Drawing.Color.White;
             this.botonVerUdeMed.Location = new System.Drawing.Point(16, 378);
             this.botonVerUdeMed.Name = "botonVerUdeMed";
@@ -193,7 +193,7 @@
             this.btnEliminarUdeMed.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btnEliminarUdeMed.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btnEliminarUdeMed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarUdeMed.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.btnEliminarUdeMed.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.btnEliminarUdeMed.ForeColor = System.Drawing.Color.White;
             this.btnEliminarUdeMed.Location = new System.Drawing.Point(15, 336);
             this.btnEliminarUdeMed.Name = "btnEliminarUdeMed";
@@ -210,7 +210,7 @@
             this.btnModUdeMed.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btnModUdeMed.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btnModUdeMed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModUdeMed.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.btnModUdeMed.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.btnModUdeMed.ForeColor = System.Drawing.Color.White;
             this.btnModUdeMed.Location = new System.Drawing.Point(15, 252);
             this.btnModUdeMed.Name = "btnModUdeMed";
@@ -227,7 +227,7 @@
             this.btnLimpiarUdeMed.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btnLimpiarUdeMed.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btnLimpiarUdeMed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiarUdeMed.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.btnLimpiarUdeMed.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.btnLimpiarUdeMed.ForeColor = System.Drawing.Color.White;
             this.btnLimpiarUdeMed.Location = new System.Drawing.Point(15, 294);
             this.btnLimpiarUdeMed.Name = "btnLimpiarUdeMed";
@@ -244,7 +244,7 @@
             this.btnRegUdeMed.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btnRegUdeMed.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btnRegUdeMed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegUdeMed.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.btnRegUdeMed.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.btnRegUdeMed.ForeColor = System.Drawing.Color.White;
             this.btnRegUdeMed.Location = new System.Drawing.Point(16, 210);
             this.btnRegUdeMed.Name = "btnRegUdeMed";
@@ -277,6 +277,7 @@
             // txtDescUdeMed
             // 
             this.txtDescUdeMed.Location = new System.Drawing.Point(15, 111);
+            this.txtDescUdeMed.MaxLength = 50;
             this.txtDescUdeMed.Multiline = true;
             this.txtDescUdeMed.Name = "txtDescUdeMed";
             this.txtDescUdeMed.Size = new System.Drawing.Size(347, 77);
@@ -290,6 +291,7 @@
             this.txtCodigoUdeMed.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtCodigoUdeMed.Enabled = false;
             this.txtCodigoUdeMed.Location = new System.Drawing.Point(16, 45);
+            this.txtCodigoUdeMed.MaxLength = 10;
             this.txtCodigoUdeMed.Name = "txtCodigoUdeMed";
             this.txtCodigoUdeMed.Size = new System.Drawing.Size(345, 20);
             this.txtCodigoUdeMed.TabIndex = 76;
@@ -313,10 +315,6 @@
             this.dgvUdeMed.Size = new System.Drawing.Size(346, 423);
             this.dgvUdeMed.TabIndex = 108;
             this.dgvUdeMed.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUdeMed_CellClick);
-            // 
-            // unidadesMedicionBindingSource
-            // 
-            this.unidadesMedicionBindingSource.DataMember = "unidadesMedicion";
             // 
             // codUnidMedDataGridViewTextBoxColumn
             // 
@@ -344,6 +342,10 @@
             this.ges_v01DataSet18_UdeMed2.DataSetName = "ges_v01DataSet18_UdeMed2";
             this.ges_v01DataSet18_UdeMed2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // unidadesMedicionBindingSource
+            // 
+            this.unidadesMedicionBindingSource.DataMember = "unidadesMedicion";
+            // 
             // unidadesMedicionTableAdapter1
             // 
             this.unidadesMedicionTableAdapter1.ClearBeforeFill = true;
@@ -353,7 +355,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(836, 551);
+            this.ClientSize = new System.Drawing.Size(821, 539);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -367,9 +369,9 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUdeMed)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.unidadesMedicionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.unidadesMedicionBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18_UdeMed2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unidadesMedicionBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

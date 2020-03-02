@@ -73,7 +73,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(860, 49);
+            this.panel1.Size = new System.Drawing.Size(822, 49);
             this.panel1.TabIndex = 48;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -90,7 +90,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(758, 0);
+            this.button1.Location = new System.Drawing.Point(720, 0);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(51, 49);
@@ -111,7 +111,7 @@
             this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Salir.ForeColor = System.Drawing.Color.White;
-            this.btn_Salir.Location = new System.Drawing.Point(809, 0);
+            this.btn_Salir.Location = new System.Drawing.Point(771, 0);
             this.btn_Salir.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Salir.Name = "btn_Salir";
             this.btn_Salir.Size = new System.Drawing.Size(51, 49);
@@ -148,7 +148,7 @@
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.dgvTiposControl);
-            this.panel3.Location = new System.Drawing.Point(34, 70);
+            this.panel3.Location = new System.Drawing.Point(16, 64);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(788, 456);
             this.panel3.TabIndex = 117;
@@ -178,7 +178,7 @@
             this.botonVerTiposControl.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.botonVerTiposControl.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.botonVerTiposControl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonVerTiposControl.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.botonVerTiposControl.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.botonVerTiposControl.ForeColor = System.Drawing.Color.White;
             this.botonVerTiposControl.Location = new System.Drawing.Point(15, 378);
             this.botonVerTiposControl.Name = "botonVerTiposControl";
@@ -195,7 +195,7 @@
             this.btnEliminarTiposControl.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btnEliminarTiposControl.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btnEliminarTiposControl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarTiposControl.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.btnEliminarTiposControl.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.btnEliminarTiposControl.ForeColor = System.Drawing.Color.White;
             this.btnEliminarTiposControl.Location = new System.Drawing.Point(16, 336);
             this.btnEliminarTiposControl.Name = "btnEliminarTiposControl";
@@ -212,7 +212,7 @@
             this.btnModTiposControl.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btnModTiposControl.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btnModTiposControl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModTiposControl.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.btnModTiposControl.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.btnModTiposControl.ForeColor = System.Drawing.Color.White;
             this.btnModTiposControl.Location = new System.Drawing.Point(16, 252);
             this.btnModTiposControl.Name = "btnModTiposControl";
@@ -229,7 +229,7 @@
             this.btnLimpiarTiposControl.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btnLimpiarTiposControl.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btnLimpiarTiposControl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiarTiposControl.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.btnLimpiarTiposControl.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.btnLimpiarTiposControl.ForeColor = System.Drawing.Color.White;
             this.btnLimpiarTiposControl.Location = new System.Drawing.Point(15, 294);
             this.btnLimpiarTiposControl.Name = "btnLimpiarTiposControl";
@@ -246,7 +246,7 @@
             this.btnRegTiposControl.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btnRegTiposControl.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.btnRegTiposControl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegTiposControl.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.btnRegTiposControl.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.btnRegTiposControl.ForeColor = System.Drawing.Color.White;
             this.btnRegTiposControl.Location = new System.Drawing.Point(15, 210);
             this.btnRegTiposControl.Name = "btnRegTiposControl";
@@ -279,6 +279,7 @@
             // txtDescTiposControl
             // 
             this.txtDescTiposControl.Location = new System.Drawing.Point(15, 111);
+            this.txtDescTiposControl.MaxLength = 50;
             this.txtDescTiposControl.Multiline = true;
             this.txtDescTiposControl.Name = "txtDescTiposControl";
             this.txtDescTiposControl.Size = new System.Drawing.Size(347, 77);
@@ -292,6 +293,7 @@
             this.txtCodigoTiposControl.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtCodigoTiposControl.Enabled = false;
             this.txtCodigoTiposControl.Location = new System.Drawing.Point(16, 45);
+            this.txtCodigoTiposControl.MaxLength = 10;
             this.txtCodigoTiposControl.Name = "txtCodigoTiposControl";
             this.txtCodigoTiposControl.Size = new System.Drawing.Size(345, 20);
             this.txtCodigoTiposControl.TabIndex = 76;
@@ -355,11 +357,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(860, 538);
+            this.ClientSize = new System.Drawing.Size(822, 538);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TiposDeControl";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TiposDeControl";
             this.Load += new System.EventHandler(this.TiposDeControl_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TiposDeControl_MouseDown);

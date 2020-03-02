@@ -144,6 +144,8 @@ namespace PrimerasHU_GES
                 // cancelo 
             }
             registrarBtn.Enabled = true;
+            bunifuFlatButton1.Enabled = true;
+            btnLimpiar.Enabled = true;
 
             //reordeno el NuevoDTGV por Código de Punto, de manera ascendente para luego poder comparar sin problemas
             nuevoDtgv.Sort(nuevoDtgv.Columns[0], ListSortDirection.Ascending);
@@ -183,7 +185,7 @@ namespace PrimerasHU_GES
 
 
 
-            SqlCommand conocerActual = new SqlCommand("SELECT cp.codCPlan,cp.codPrograma,s.descSeccion,cp.numDisenioCPlan,cp.revCPlan,cp.fechModifCPlan FROM controlPlan AS cp JOIN seccionesVehiculo AS s ON s.codSeccion = cp.codSeccion", conexion);
+            SqlCommand conocerActual = new SqlCommand("SELECT TOP 1 cp.codCPlan,cp.codPrograma,s.descSeccion,cp.numDisenioCPlan,cp.revCPlan,cp.fechModifCPlan FROM controlPlan AS cp JOIN seccionesVehiculo AS s ON s.codSeccion = cp.codSeccion ORDER BY cp.codCPlan DESC", conexion);
             ad_actualCP = new SqlDataAdapter();
             ad_actualCP.SelectCommand = conocerActual;
             DataTable dt_actualCP = new DataTable();
@@ -228,15 +230,28 @@ namespace PrimerasHU_GES
                 conexion.Open();
 
                 // en las proximas lineas realiza una consulta para ver si el código utilizado ya existe
-                SqlDataAdapter auxCPlan = new SqlDataAdapter("SELECT codPrograma FROM controlPlan WHERE codPrograma=@codPrograma", conexion);
+                SqlDataAdapter auxCPlan = new SqlDataAdapter("SELECT codPrograma FROM controlPlan WHERE codPrograma=@codPrograma AND revCPlan=@revCPlan AND numDisenioCPlan=@numDisenioCPlan", conexion);
                 DataTable verCPlan = new DataTable();
                 auxCPlan.SelectCommand.Parameters.Add(new SqlParameter("@codPrograma", SqlDbType.VarChar));
                 auxCPlan.SelectCommand.Parameters["@codPrograma"].Value = codigoProTxt.Text;
+                auxCPlan.SelectCommand.Parameters.Add(new SqlParameter("@revCPlan", SqlDbType.VarChar));
+                auxCPlan.SelectCommand.Parameters["@revCPlan"].Value = revisionText.Text;
+                auxCPlan.SelectCommand.Parameters.Add(new SqlParameter("@numDisenioCPlan", SqlDbType.VarChar));
+                auxCPlan.SelectCommand.Parameters["@numDisenioCPlan"].Value = numDisTxt.Text;
                 auxCPlan.Fill(verCPlan);
                 if (verCPlan.Rows.Count > 0) //si la condicion se cumple, el código ingresado ya se encuentra registrado
                 {
-                    MessageBox.Show("El 'código' ingresado ya existe.", "Atención!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    regDetCPbtn.Enabled = true;
+                    DialogResult duda = MessageBox.Show("El 'código' ingresado ya existe. Si necesita continuar con el registro presione ACEPTAR, sino CANCELAR.", "Atención!", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
+                    if (duda == DialogResult.OK)
+                    {
+                        regDetCPbtn.Enabled = true;
+                        registrarBtn.Enabled = false;
+                        bunifuFlatButton1.Enabled = false;
+                    }
+                    else
+                    {
+                        return;
+                    }
                 }
                 else
                 {
@@ -268,16 +283,27 @@ namespace PrimerasHU_GES
         private void limpiar()
         {
             codigoProTxt.Text = "";
+            codigoProTxt.BackColor = Color.WhiteSmoke;
             descSeccionTxt.Text = "";
+            descSeccionTxt.BackColor = Color.WhiteSmoke;
             numDisTxt.Text = "";
+            numDisTxt.BackColor = Color.WhiteSmoke;
             revisionText.Text = "";
+            revisionText.BackColor = Color.WhiteSmoke;
 
-            DataTable dt = (DataTable)nuevoDtgv.DataSource;
-            dt.Clear();
+            //DataTable dt = (DataTable)nuevoDtgv.DataSource;
+            //dt.Clear();
+            if (nuevoDtgv.Rows.Count != 0)
+            {
+                nuevoDtgv.DataSource = null;
+                nuevoDtgv.Rows.Clear();
+                nuevoDtgv.Refresh();
+            }
 
             registrarBtn.Enabled = false;
             regDetCPbtn.Enabled = false;
-
+            bunifuFlatButton1.Enabled = false;
+            btnLimpiar.Enabled = false;
         }
 
 
@@ -306,7 +332,18 @@ namespace PrimerasHU_GES
                 {
                     detallar.Parameters.Clear();
 
-                    detallar.Parameters.AddWithValue("@codCPlan", 1);
+                    SqlCommand ultCPlan = new SqlCommand("SELECT TOP 1 codCPlan FROM controlPlan ORDER BY codCPlan DESC", conexion);
+                    adaptador = new SqlDataAdapter();
+                    adaptador.SelectCommand = ultCPlan;
+                    DataTable dtUltCPlan = new DataTable();
+                    adaptador.Fill(dtUltCPlan);
+                    int codUltCPlan = 1;
+                    if (dtUltCPlan.Rows.Count != 0)
+                    {
+                        codUltCPlan = Convert.ToInt32(dtUltCPlan.Rows[0][0].ToString());
+                    }
+
+                    detallar.Parameters.AddWithValue("@codCPlan", codUltCPlan);
                     //detallar.Parameters.AddWithValue("@codCPlan", Convert.ToInt32(row.Cells["F5"].Value));
                     detallar.Parameters.AddWithValue("@idPtoMed", Convert.ToString(row.Cells["F1"].Value));
                     detallar.Parameters.AddWithValue("@clasiTipoPto", row.Cells["F7"].Value == DBNull.Value ? "-" : Convert.ToString(row.Cells["F7"].Value));
@@ -393,6 +430,12 @@ namespace PrimerasHU_GES
                 conexion.Close();
             }
 
+            registrarBtn.Enabled = false;
+            bunifuFlatButton1.Enabled = false;
+            regDetCPbtn.Enabled = false;
+            btnLimpiar.Enabled = false;
+            limpiar();
+
         }
 
         private void NuevoDtgv_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
@@ -441,72 +484,75 @@ namespace PrimerasHU_GES
         {
             int f = 0;
             int c = 0;
-            for(f=0; f < actualDTGV.RowCount; f ++ )
+            if (nuevoDtgv.Rows.Count != 0)
             {
-                for (c=0;c < actualDTGV.ColumnCount;c++ )
+
+                for (f = 0; f < actualDTGV.RowCount; f++)
                 {
-
-                    string cell1 = Convert.ToString(actualDTGV.Rows[f].Cells[c].Value);
-                    string cell2 = Convert.ToString(nuevoDtgv.Rows[f].Cells[c].Value);
-
-                    if (cell1 != cell2)
+                    for (c = 0; c < actualDTGV.ColumnCount; c++)
                     {
-                        //  MOSTRAR EN PANTALLA LA DIFERENCIA, SI HAY, DE LOS DOS ARCHIVOS
-                        nuevoDtgv.Rows[f].Cells[c].Style.BackColor = Color.OrangeRed;
-                    }
-                    else
-                    {
-                        nuevoDtgv.Rows[f].Cells[c].Style.BackColor = Color.LightGreen;
-                    }
 
+                        string cell1 = Convert.ToString(actualDTGV.Rows[f].Cells[c].Value);
+                        string cell2 = Convert.ToString(nuevoDtgv.Rows[f].Cells[c].Value);
+
+                        if (cell1 != cell2)
+                        {
+                            //  MOSTRAR EN PANTALLA LA DIFERENCIA, SI HAY, DE LOS DOS ARCHIVOS
+                            nuevoDtgv.Rows[f].Cells[c].Style.BackColor = Color.OrangeRed;
+                        }
+                        else
+                        {
+                            nuevoDtgv.Rows[f].Cells[c].Style.BackColor = Color.LightGreen;
+                        }
+
+                    }
+                }
+
+                if (codigoProTxt.Text == txt_codPrograma_Actual.Text)
+                {
+                    codigoProTxt.BackColor = Color.LightGreen;
+                }
+                else
+                {
+                    codigoProTxt.BackColor = Color.OrangeRed;
+                }
+
+                if (descSeccionTxt.Text == txt_seccion_Actual.Text)
+                {
+                    descSeccionTxt.BackColor = Color.LightGreen;
+                }
+                else
+                {
+                    descSeccionTxt.BackColor = Color.OrangeRed;
+                }
+
+                if (numDisTxt.Text == txt_numDisenio_Actual.Text)
+                {
+                    numDisTxt.BackColor = Color.LightGreen;
+                }
+                else
+                {
+                    numDisTxt.BackColor = Color.OrangeRed;
+                }
+
+                if (revisionText.Text == txt_revision_Actual.Text)
+                {
+                    revisionText.BackColor = Color.LightGreen;
+                }
+                else
+                {
+                    revisionText.BackColor = Color.OrangeRed;
+                }
+
+                if (DtFecha.ToString() == txt_fechaActual_Actual.Text)
+                {
+                    DtFecha.BackColor = Color.LightGreen;
+                }
+                else
+                {
+                    DtFecha.BackColor = Color.OrangeRed;
                 }
             }
-
-            if (codigoProTxt.Text == txt_codPrograma_Actual.Text)
-            {
-                codigoProTxt.BackColor = Color.LightGreen;
-            }
-            else
-            {
-                codigoProTxt.BackColor = Color.OrangeRed;
-            }
-
-            if (descSeccionTxt.Text == txt_seccion_Actual.Text)
-            {
-                descSeccionTxt.BackColor = Color.LightGreen;
-            }
-            else
-            {
-                descSeccionTxt.BackColor = Color.OrangeRed;
-            }
-
-            if (numDisTxt.Text == txt_numDisenio_Actual.Text)
-            {
-                numDisTxt.BackColor = Color.LightGreen;
-            }
-            else
-            {
-                numDisTxt.BackColor = Color.OrangeRed;
-            }
-
-            if (revisionText.Text == txt_revision_Actual.Text)
-            {
-                revisionText.BackColor = Color.LightGreen;
-            }
-            else
-            {
-                revisionText.BackColor = Color.OrangeRed;
-            }
-
-            if (DtFecha.ToString() == txt_fechaActual_Actual.Text)
-            {
-                DtFecha.BackColor = Color.LightGreen;
-            }
-            else
-            {
-                DtFecha.BackColor = Color.OrangeRed;
-            }
-
         }
 
         private void btnLimpiar_Click_1(object sender, EventArgs e)

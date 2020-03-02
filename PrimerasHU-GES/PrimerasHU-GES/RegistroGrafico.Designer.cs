@@ -107,6 +107,7 @@
             // txt_nombreGrafico
             // 
             this.txt_nombreGrafico.Location = new System.Drawing.Point(447, 142);
+            this.txt_nombreGrafico.MaxLength = 50;
             this.txt_nombreGrafico.Name = "txt_nombreGrafico";
             this.txt_nombreGrafico.Size = new System.Drawing.Size(121, 20);
             this.txt_nombreGrafico.TabIndex = 6;
@@ -125,6 +126,7 @@
             // 
             this.txt_descGrafico.Enabled = false;
             this.txt_descGrafico.Location = new System.Drawing.Point(447, 181);
+            this.txt_descGrafico.MaxLength = 300;
             this.txt_descGrafico.Multiline = true;
             this.txt_descGrafico.Name = "txt_descGrafico";
             this.txt_descGrafico.ScrollBars = System.Windows.Forms.ScrollBars.Both;

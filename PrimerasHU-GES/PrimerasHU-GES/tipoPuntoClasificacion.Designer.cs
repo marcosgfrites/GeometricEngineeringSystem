@@ -102,7 +102,7 @@
             this.panelTiposV.Controls.Add(this.regClasiBtn);
             this.panelTiposV.Controls.Add(this.txt_descClasifi);
             this.panelTiposV.Controls.Add(this.dgvClasiPunto);
-            this.panelTiposV.Location = new System.Drawing.Point(30, 93);
+            this.panelTiposV.Location = new System.Drawing.Point(12, 65);
             this.panelTiposV.Name = "panelTiposV";
             this.panelTiposV.Size = new System.Drawing.Size(418, 498);
             this.panelTiposV.TabIndex = 59;
@@ -115,7 +115,7 @@
             this.buscarClasiBtn.FlatAppearance.BorderSize = 0;
             this.buscarClasiBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.buscarClasiBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buscarClasiBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.buscarClasiBtn.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.buscarClasiBtn.ForeColor = System.Drawing.Color.White;
             this.buscarClasiBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.buscarClasiBtn.Location = new System.Drawing.Point(50, 413);
@@ -145,7 +145,7 @@
             this.elimiClasiBtn.FlatAppearance.BorderSize = 0;
             this.elimiClasiBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.elimiClasiBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.elimiClasiBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.elimiClasiBtn.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.elimiClasiBtn.ForeColor = System.Drawing.Color.White;
             this.elimiClasiBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.elimiClasiBtn.Location = new System.Drawing.Point(287, 450);
@@ -174,7 +174,7 @@
             this.modifiClasiBtn.FlatAppearance.BorderSize = 0;
             this.modifiClasiBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.modifiClasiBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.modifiClasiBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.modifiClasiBtn.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.modifiClasiBtn.ForeColor = System.Drawing.Color.White;
             this.modifiClasiBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.modifiClasiBtn.Location = new System.Drawing.Point(25, 450);
@@ -203,7 +203,7 @@
             this.limpClasiBtn.FlatAppearance.BorderSize = 0;
             this.limpClasiBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.limpClasiBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.limpClasiBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.limpClasiBtn.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.limpClasiBtn.ForeColor = System.Drawing.Color.White;
             this.limpClasiBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.limpClasiBtn.Location = new System.Drawing.Point(229, 376);
@@ -217,6 +217,7 @@
             // txt_codClasifi
             // 
             this.txt_codClasifi.Location = new System.Drawing.Point(184, 307);
+            this.txt_codClasifi.MaxLength = 10;
             this.txt_codClasifi.Name = "txt_codClasifi";
             this.txt_codClasifi.Size = new System.Drawing.Size(215, 20);
             this.txt_codClasifi.TabIndex = 49;
@@ -230,7 +231,7 @@
             this.regClasiBtn.FlatAppearance.BorderSize = 0;
             this.regClasiBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.regClasiBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.regClasiBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.regClasiBtn.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.regClasiBtn.ForeColor = System.Drawing.Color.White;
             this.regClasiBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.regClasiBtn.Location = new System.Drawing.Point(25, 376);
@@ -244,6 +245,7 @@
             // txt_descClasifi
             // 
             this.txt_descClasifi.Location = new System.Drawing.Point(184, 338);
+            this.txt_descClasifi.MaxLength = 50;
             this.txt_descClasifi.Name = "txt_descClasifi";
             this.txt_descClasifi.Size = new System.Drawing.Size(215, 20);
             this.txt_descClasifi.TabIndex = 50;
@@ -310,7 +312,7 @@
             this.panel1.Controls.Add(this.codTipoPtoTxt);
             this.panel1.Controls.Add(this.regTipoPtoBtn);
             this.panel1.Controls.Add(this.dgvTipoPunto);
-            this.panel1.Location = new System.Drawing.Point(497, 93);
+            this.panel1.Location = new System.Drawing.Point(446, 66);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(479, 498);
             this.panel1.TabIndex = 60;
@@ -349,6 +351,7 @@
             // descClasiPtoTxt
             // 
             this.descClasiPtoTxt.Location = new System.Drawing.Point(214, 340);
+            this.descClasiPtoTxt.MaxLength = 50;
             this.descClasiPtoTxt.Name = "descClasiPtoTxt";
             this.descClasiPtoTxt.Size = new System.Drawing.Size(255, 20);
             this.descClasiPtoTxt.TabIndex = 57;
@@ -362,7 +365,7 @@
             this.buscarTipoPtoBtn.FlatAppearance.BorderSize = 0;
             this.buscarTipoPtoBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.buscarTipoPtoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buscarTipoPtoBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.buscarTipoPtoBtn.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.buscarTipoPtoBtn.ForeColor = System.Drawing.Color.White;
             this.buscarTipoPtoBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.buscarTipoPtoBtn.Location = new System.Drawing.Point(59, 413);
@@ -392,7 +395,7 @@
             this.elimTipoPtoBtn.FlatAppearance.BorderSize = 0;
             this.elimTipoPtoBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.elimTipoPtoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.elimTipoPtoBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.elimTipoPtoBtn.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.elimTipoPtoBtn.ForeColor = System.Drawing.Color.White;
             this.elimTipoPtoBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.elimTipoPtoBtn.Location = new System.Drawing.Point(346, 450);
@@ -421,7 +424,7 @@
             this.modifiTipoPtoBtn.FlatAppearance.BorderSize = 0;
             this.modifiTipoPtoBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.modifiTipoPtoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.modifiTipoPtoBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.modifiTipoPtoBtn.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.modifiTipoPtoBtn.ForeColor = System.Drawing.Color.White;
             this.modifiTipoPtoBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.modifiTipoPtoBtn.Location = new System.Drawing.Point(27, 450);
@@ -450,7 +453,7 @@
             this.limpTipoPtoBtn.FlatAppearance.BorderSize = 0;
             this.limpTipoPtoBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.limpTipoPtoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.limpTipoPtoBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.limpTipoPtoBtn.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.limpTipoPtoBtn.ForeColor = System.Drawing.Color.White;
             this.limpTipoPtoBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.limpTipoPtoBtn.Location = new System.Drawing.Point(288, 376);
@@ -464,6 +467,7 @@
             // codTipoPtoTxt
             // 
             this.codTipoPtoTxt.Location = new System.Drawing.Point(214, 275);
+            this.codTipoPtoTxt.MaxLength = 10;
             this.codTipoPtoTxt.Name = "codTipoPtoTxt";
             this.codTipoPtoTxt.Size = new System.Drawing.Size(255, 20);
             this.codTipoPtoTxt.TabIndex = 49;
@@ -477,7 +481,7 @@
             this.regTipoPtoBtn.FlatAppearance.BorderSize = 0;
             this.regTipoPtoBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(136)))), ((int)(((byte)(218)))));
             this.regTipoPtoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.regTipoPtoBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.regTipoPtoBtn.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.regTipoPtoBtn.ForeColor = System.Drawing.Color.White;
             this.regTipoPtoBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.regTipoPtoBtn.Location = new System.Drawing.Point(27, 376);
@@ -565,7 +569,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1000, 49);
+            this.panel2.Size = new System.Drawing.Size(943, 49);
             this.panel2.TabIndex = 73;
             // 
             // button1
@@ -581,7 +585,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(898, 0);
+            this.button1.Location = new System.Drawing.Point(841, 0);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(51, 49);
@@ -602,7 +606,7 @@
             this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Salir.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Salir.ForeColor = System.Drawing.Color.White;
-            this.btn_Salir.Location = new System.Drawing.Point(949, 0);
+            this.btn_Salir.Location = new System.Drawing.Point(892, 0);
             this.btn_Salir.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Salir.Name = "btn_Salir";
             this.btn_Salir.Size = new System.Drawing.Size(51, 49);
@@ -638,7 +642,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1000, 690);
+            this.ClientSize = new System.Drawing.Size(943, 577);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelTiposV);

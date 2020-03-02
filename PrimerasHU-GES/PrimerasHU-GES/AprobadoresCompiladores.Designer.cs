@@ -328,6 +328,7 @@
             // txtNombreAprobador
             // 
             this.txtNombreAprobador.Location = new System.Drawing.Point(33, 103);
+            this.txtNombreAprobador.MaxLength = 50;
             this.txtNombreAprobador.Name = "txtNombreAprobador";
             this.txtNombreAprobador.Size = new System.Drawing.Size(147, 20);
             this.txtNombreAprobador.TabIndex = 77;
@@ -526,6 +527,7 @@
             // txtNombreCompilador
             // 
             this.txtNombreCompilador.Location = new System.Drawing.Point(31, 120);
+            this.txtNombreCompilador.MaxLength = 50;
             this.txtNombreCompilador.Name = "txtNombreCompilador";
             this.txtNombreCompilador.Size = new System.Drawing.Size(147, 20);
             this.txtNombreCompilador.TabIndex = 77;
@@ -733,6 +735,7 @@
             // txtNombreOperario
             // 
             this.txtNombreOperario.Location = new System.Drawing.Point(25, 104);
+            this.txtNombreOperario.MaxLength = 50;
             this.txtNombreOperario.Name = "txtNombreOperario";
             this.txtNombreOperario.Size = new System.Drawing.Size(215, 20);
             this.txtNombreOperario.TabIndex = 77;
