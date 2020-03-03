@@ -380,7 +380,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.establecimientosBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet18_Establecimientos2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.establecimientosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet19_Establecimientos)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.ges_v01DataSet19_Establecimientos)).EndInit();
             this.ResumeLayout(false);
 
         }
