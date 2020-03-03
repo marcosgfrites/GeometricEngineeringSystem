@@ -262,7 +262,66 @@ namespace PrimerasHU_GES
 
         private void Btn_Modificar_Click(object sender, EventArgs e)
         {
+            SqlCommand actualizar = new SqlCommand("UPDATE imagenes SET (nomImagen=@nomImagen,fechoraModImagen=@fechoraModImagen,imgImagen=@imgImagen,codCPlan=@codCPlan) WHERE codImagen=@codImagen ", Conexion);
+            adaptador.UpdateCommand = actualizar;
 
+            adaptador.UpdateCommand.Parameters.Add("@nomImagen",SqlDbType.VarChar);
+            adaptador.UpdateCommand.Parameters.Add("@fechoraModImagen", SqlDbType.DateTime);
+            adaptador.UpdateCommand.Parameters.Add("@imgImagen", SqlDbType.Image);
+            adaptador.UpdateCommand.Parameters.Add("@codCPlan", SqlDbType.Int);
+            adaptador.UpdateCommand.Parameters.Add("@codImagen", SqlDbType.Int);
+
+            if (String.IsNullOrEmpty(txt_Codigo.Text))
+            {
+                MessageBox.Show("No ha seleccionado ninguna imagen para modificar. Debe seleccionar una del listado.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                adaptador.UpdateCommand.Parameters["@nomImagen"].Value = txt_NomImg.Text;
+                DateTime fechoraModif = DateTime.Today;
+                adaptador.UpdateCommand.Parameters["@fechoraModImagen"].Value = fechoraModif;
+
+                //comienzo a preparar la info a guardar
+                byte[] file = null;
+                if (String.IsNullOrEmpty(txt_Archivo.Text))
+                {
+                    file = (byte[])dgv_Imagenes[5, posi].Value;
+                    //MemoryStream ms = new MemoryStream(file, 0, file.Length);
+                    //ms.Write(file, 0, file.Length);
+                    //Image pb = Image.FromStream(ms, true);
+                    //pb_Imagen.Image = pb;
+                }
+                else
+                {
+                    Stream myStream = openFileDialog1.OpenFile();
+                    using (MemoryStream ms = new MemoryStream())
+                    {
+                        myStream.CopyTo(ms);
+                        file = ms.ToArray();
+                    }
+                }
+
+                adaptador.UpdateCommand.Parameters["@imgImagen"].Value = file;
+                adaptador.UpdateCommand.Parameters["@codCPlan"].Value = cb_controlPlanImagenes.SelectedValue;
+                adaptador.UpdateCommand.Parameters["@codImagen"].Value = Convert.ToInt32(txt_Codigo.Text);
+
+                try
+                {
+                    Conexion.Open();
+                    adaptador.UpdateCommand.ExecuteNonQuery();
+                    MessageBox.Show("La imagen ha sido modificada con éxito.","Felicitaciones!",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    limpiar();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+                finally
+                {
+                    Conexion.Close();
+                }
+
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

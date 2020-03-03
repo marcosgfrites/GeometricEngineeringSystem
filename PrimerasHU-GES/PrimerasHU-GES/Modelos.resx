@@ -487,6 +487,9 @@
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="dtp_fechaModV.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="dtp_fechaModV.Location" type="System.Drawing.Point, System.Drawing">
     <value>119, 280</value>
   </data>
@@ -680,7 +683,7 @@
     <value>Arial, 9.75pt, style=Bold</value>
   </data>
   <data name="btn_buscarModV.Location" type="System.Drawing.Point, System.Drawing">
-    <value>315, 318</value>
+    <value>433, 277</value>
   </data>
   <data name="btn_buscarModV.Size" type="System.Drawing.Size, System.Drawing">
     <value>128, 31</value>
@@ -690,6 +693,9 @@
   </data>
   <data name="btn_buscarModV.Text" xml:space="preserve">
     <value>Buscar...</value>
+  </data>
+  <data name="btn_buscarModV.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;btn_buscarModV.Name" xml:space="preserve">
     <value>btn_buscarModV</value>
@@ -866,10 +872,10 @@
     <value>Arial, 9.75pt, style=Bold</value>
   </data>
   <data name="btn_modifModV.Location" type="System.Drawing.Point, System.Drawing">
-    <value>449, 281</value>
+    <value>315, 318</value>
   </data>
   <data name="btn_modifModV.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 31</value>
+    <value>128, 31</value>
   </data>
   <data name="btn_modifModV.TabIndex" type="System.Int32, mscorlib">
     <value>66</value>

@@ -141,15 +141,11 @@ namespace PrimerasHU_GES
             SqlCommand alta = new SqlCommand("INSERT INTO seccionesVehiculo (codProyecto,descSeccion,verSeccion) VALUES (@codProyecto,@descSeccion,@verSeccion)", conexion);
 
             adaptador.InsertCommand = alta;
-            adaptador.InsertCommand.Parameters.Add(new SqlParameter("@codSeccion", SqlDbType.VarChar));
-            adaptador.InsertCommand.Parameters.Add(new SqlParameter("@codProyecto", SqlDbType.VarChar));
+            //adaptador.InsertCommand.Parameters.Add(new SqlParameter("@codSeccion", SqlDbType.VarChar));
+            adaptador.InsertCommand.Parameters.Add(new SqlParameter("@codProyecto", SqlDbType.Int));
             adaptador.InsertCommand.Parameters.Add(new SqlParameter("@descSeccion", SqlDbType.VarChar));
-            adaptador.InsertCommand.Parameters.Add(new SqlParameter("@verSeccion", SqlDbType.VarChar));
+            adaptador.InsertCommand.Parameters.Add(new SqlParameter("@verSeccion", SqlDbType.Int));
 
-            adaptador.InsertCommand.Parameters["@codSeccion"].Value = txtCodSec.Text;
-            adaptador.InsertCommand.Parameters["@codProyecto"].Value = cbCodProyecto.Text;
-            adaptador.InsertCommand.Parameters["@descSeccion"].Value = txtDescSec.Text;
-            adaptador.InsertCommand.Parameters["@verSeccion"].Value = txtVerSec.Text;
 
             if /*(string.IsNullOrEmpty(txtCodSec.Text) || */ (string.IsNullOrEmpty(cbCodProyecto.Text) || string.IsNullOrEmpty(txtDescSec.Text) || string.IsNullOrEmpty(txtVerSec.Text))
             // if(txtVerSec.Text.Trim() == "")
@@ -158,20 +154,25 @@ namespace PrimerasHU_GES
             }
             else
             {
+                //adaptador.InsertCommand.Parameters["@codSeccion"].Value = txtCodSec.Text;
+                adaptador.InsertCommand.Parameters["@codProyecto"].Value = cbCodProyecto.SelectedValue;
+                adaptador.InsertCommand.Parameters["@descSeccion"].Value = txtDescSec.Text;
+                adaptador.InsertCommand.Parameters["@verSeccion"].Value = Convert.ToInt32(txtVerSec.Text);
+
                 try
                 {
                     conexion.Open();
 
-                    SqlDataAdapter compCodSec = new SqlDataAdapter("SELECT codSeccion FROM seccionesVehiculo WHERE codSeccion=@codSeccion", conexion);
+                    SqlDataAdapter compCodSec = new SqlDataAdapter("SELECT descSeccion FROM seccionesVehiculo WHERE descSeccion=@descSeccion", conexion);
                     DataTable codV = new DataTable();
-                    compCodSec.SelectCommand.Parameters.Add(new SqlParameter("@codSeccion", SqlDbType.VarChar));
-                    compCodSec.SelectCommand.Parameters["@codSeccion"].Value = cbCodProyecto.Text;
+                    compCodSec.SelectCommand.Parameters.Add(new SqlParameter("@descSeccion", SqlDbType.VarChar));
+                    compCodSec.SelectCommand.Parameters["@descSeccion"].Value = txtDescSec.Text;
                     compCodSec.Fill(codV);
 
 
                     if (codV.Rows.Count > 0)
                     {
-                        MessageBox.Show("El 'código' ingresado ya existe.", "Atención!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("La descripción de 'sección' ingresada ya existe.", "Atención!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                     else
                     if (MessageBox.Show("¿Está seguro que desea registrar esta nueva Seccion?", "Atención!", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -389,8 +390,8 @@ namespace PrimerasHU_GES
 
                 txtCodSec.Text = dgvSeccionesVehiculo[0, posicion].Value.ToString();
                 cbCodProyecto.Text = dgvSeccionesVehiculo[1, posicion].Value.ToString();
-                txtVerSec.Text = dgvSeccionesVehiculo[2, posicion].Value.ToString();
-                txtDescSec.Text = dgvSeccionesVehiculo[3, posicion].Value.ToString();
+                txtDescSec.Text = dgvSeccionesVehiculo[2, posicion].Value.ToString();
+                txtVerSec.Text = dgvSeccionesVehiculo[3, posicion].Value.ToString();
 
             }
             catch (Exception ex)

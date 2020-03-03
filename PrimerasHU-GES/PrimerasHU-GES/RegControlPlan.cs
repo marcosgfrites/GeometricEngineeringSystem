@@ -105,33 +105,35 @@ namespace PrimerasHU_GES
                     btnLimpiar.Enabled = true;
 
 
-                  /*  foreach (DataGridViewRow fila in nuevoDtgv.Rows)
-                    {
-                        if (string.IsNullOrEmpty(fila.Cells[5].Value.ToString()))
-                        {
-                            fila.Cells[5].Value = Convert.ToDouble("0.0000");
-                        }
-                        if (string.IsNullOrEmpty(fila.Cells[6].Value.ToString()))
-                        {
-                            fila.Cells[6].Value = Convert.ToDouble("0.0000");
-                        }
-                        if (string.IsNullOrEmpty(fila.Cells[7].Value.ToString()))
-                        {
-                            fila.Cells[7].Value = Convert.ToDouble("0.0000");
-                        }
-                        if (string.IsNullOrEmpty(fila.Cells[8].Value.ToString()))
-                        {
-                            fila.Cells[8].Value = Convert.ToDouble("0.0000");
-                        }
-                        if (string.IsNullOrEmpty(fila.Cells[10].Value.ToString()))
-                        {
-                            fila.Cells[10].Value = Convert.ToDouble("0.0000");
-                        }
-                        if (string.IsNullOrEmpty(fila.Cells[11].Value.ToString()))
-                        {
-                            fila.Cells[11].Value = Convert.ToDouble("0.0000");
-                        }
-                    }*/
+                    /*  foreach (DataGridViewRow fila in nuevoDtgv.Rows)
+                      {
+                          if (string.IsNullOrEmpty(fila.Cells[5].Value.ToString()))
+                          {
+                              fila.Cells[5].Value = Convert.ToDouble("0.0000");
+                          }
+                          if (string.IsNullOrEmpty(fila.Cells[6].Value.ToString()))
+                          {
+                              fila.Cells[6].Value = Convert.ToDouble("0.0000");
+                          }
+                          if (string.IsNullOrEmpty(fila.Cells[7].Value.ToString()))
+                          {
+                              fila.Cells[7].Value = Convert.ToDouble("0.0000");
+                          }
+                          if (string.IsNullOrEmpty(fila.Cells[8].Value.ToString()))
+                          {
+                              fila.Cells[8].Value = Convert.ToDouble("0.0000");
+                          }
+                          if (string.IsNullOrEmpty(fila.Cells[10].Value.ToString()))
+                          {
+                              fila.Cells[10].Value = Convert.ToDouble("0.0000");
+                          }
+                          if (string.IsNullOrEmpty(fila.Cells[11].Value.ToString()))
+                          {
+                              fila.Cells[11].Value = Convert.ToDouble("0.0000");
+                          }
+                      }*/
+                    //reordeno el NuevoDTGV por Código de Punto, de manera ascendente para luego poder comparar sin problemas
+                    nuevoDtgv.Sort(nuevoDtgv.Columns[0], ListSortDirection.Ascending);
                 }
                 catch (Exception ex)
                 {
@@ -146,9 +148,6 @@ namespace PrimerasHU_GES
             registrarBtn.Enabled = true;
             bunifuFlatButton1.Enabled = true;
             btnLimpiar.Enabled = true;
-
-            //reordeno el NuevoDTGV por Código de Punto, de manera ascendente para luego poder comparar sin problemas
-            nuevoDtgv.Sort(nuevoDtgv.Columns[0], ListSortDirection.Ascending);
         }
 
         //Colocar Numeros a las filas del DatagridView
@@ -213,65 +212,71 @@ namespace PrimerasHU_GES
 
         {
             //inicio de registrar control plan
-
-            adaptador.InsertCommand.Parameters["@codPrograma"].Value = (cabeceraDtg.Rows[3].Cells["F16"].Value.ToString());
-            adaptador.InsertCommand.Parameters["@codSeccion"].Value = int.Parse(cabeceraDtg.Rows[4].Cells["F12"].Value.ToString());
-            adaptador.InsertCommand.Parameters["@codCompilador"].Value = int.Parse(cabeceraDtg.Rows[4].Cells["F12"].Value.ToString());
-            adaptador.InsertCommand.Parameters["@codAprobador"].Value = int.Parse(cabeceraDtg.Rows[5].Cells["F12"].Value.ToString());
-            adaptador.InsertCommand.Parameters["@procesoCPlan"].Value = (cabeceraDtg.Rows[4].Cells["F2"].Value.ToString());
-            adaptador.InsertCommand.Parameters["@numDisenioCPlan"].Value = (cabeceraDtg.Rows[5].Cells["F2"].Value.ToString());
-            adaptador.InsertCommand.Parameters["@revCPlan"].Value = revisionText.Text;
-            adaptador.InsertCommand.Parameters["@normaRefCPlan"].Value = (cabeceraDtg.Rows[6].Cells["F2"].Value.ToString());
-            adaptador.InsertCommand.Parameters["@fechModifCPlan"].Value = DtFecha.Value;
-
-
-            try
+            if (String.IsNullOrEmpty(codigoProTxt.Text))
             {
-                conexion.Open();
+                MessageBox.Show("No ha seleccionado ningún archivo para  cargar", "Atención!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                limpiar();
+            }
+            else
+            {
 
-                // en las proximas lineas realiza una consulta para ver si el código utilizado ya existe
-                SqlDataAdapter auxCPlan = new SqlDataAdapter("SELECT codPrograma FROM controlPlan WHERE codPrograma=@codPrograma AND revCPlan=@revCPlan AND numDisenioCPlan=@numDisenioCPlan", conexion);
-                DataTable verCPlan = new DataTable();
-                auxCPlan.SelectCommand.Parameters.Add(new SqlParameter("@codPrograma", SqlDbType.VarChar));
-                auxCPlan.SelectCommand.Parameters["@codPrograma"].Value = codigoProTxt.Text;
-                auxCPlan.SelectCommand.Parameters.Add(new SqlParameter("@revCPlan", SqlDbType.VarChar));
-                auxCPlan.SelectCommand.Parameters["@revCPlan"].Value = revisionText.Text;
-                auxCPlan.SelectCommand.Parameters.Add(new SqlParameter("@numDisenioCPlan", SqlDbType.VarChar));
-                auxCPlan.SelectCommand.Parameters["@numDisenioCPlan"].Value = numDisTxt.Text;
-                auxCPlan.Fill(verCPlan);
-                if (verCPlan.Rows.Count > 0) //si la condicion se cumple, el código ingresado ya se encuentra registrado
+
+                adaptador.InsertCommand.Parameters["@codPrograma"].Value = (cabeceraDtg.Rows[3].Cells["F16"].Value.ToString());
+                adaptador.InsertCommand.Parameters["@codSeccion"].Value = int.Parse(cabeceraDtg.Rows[4].Cells["F12"].Value.ToString());
+                adaptador.InsertCommand.Parameters["@codCompilador"].Value = int.Parse(cabeceraDtg.Rows[4].Cells["F12"].Value.ToString());
+                adaptador.InsertCommand.Parameters["@codAprobador"].Value = int.Parse(cabeceraDtg.Rows[5].Cells["F12"].Value.ToString());
+                adaptador.InsertCommand.Parameters["@procesoCPlan"].Value = (cabeceraDtg.Rows[4].Cells["F2"].Value.ToString());
+                adaptador.InsertCommand.Parameters["@numDisenioCPlan"].Value = (cabeceraDtg.Rows[5].Cells["F2"].Value.ToString());
+                adaptador.InsertCommand.Parameters["@revCPlan"].Value = revisionText.Text;
+                adaptador.InsertCommand.Parameters["@normaRefCPlan"].Value = (cabeceraDtg.Rows[6].Cells["F2"].Value.ToString());
+                adaptador.InsertCommand.Parameters["@fechModifCPlan"].Value = DtFecha.Value;
+
+
+                try
                 {
-                    DialogResult duda = MessageBox.Show("El 'código' ingresado ya existe. Si necesita continuar con el registro presione ACEPTAR, sino CANCELAR.", "Atención!", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
-                    if (duda == DialogResult.OK)
+                    conexion.Open();
+
+                    // en las proximas lineas realiza una consulta para ver si el código utilizado ya existe
+                    SqlDataAdapter auxCPlan = new SqlDataAdapter("SELECT codPrograma FROM controlPlan WHERE codPrograma=@codPrograma AND revCPlan=@revCPlan AND numDisenioCPlan=@numDisenioCPlan", conexion);
+                    DataTable verCPlan = new DataTable();
+                    auxCPlan.SelectCommand.Parameters.Add(new SqlParameter("@codPrograma", SqlDbType.VarChar));
+                    auxCPlan.SelectCommand.Parameters["@codPrograma"].Value = codigoProTxt.Text;
+                    auxCPlan.SelectCommand.Parameters.Add(new SqlParameter("@revCPlan", SqlDbType.VarChar));
+                    auxCPlan.SelectCommand.Parameters["@revCPlan"].Value = revisionText.Text;
+                    auxCPlan.SelectCommand.Parameters.Add(new SqlParameter("@numDisenioCPlan", SqlDbType.VarChar));
+                    auxCPlan.SelectCommand.Parameters["@numDisenioCPlan"].Value = numDisTxt.Text;
+                    auxCPlan.Fill(verCPlan);
+                    if (verCPlan.Rows.Count > 0) //si la condicion se cumple, el código ingresado ya se encuentra registrado
                     {
-                        regDetCPbtn.Enabled = true;
-                        registrarBtn.Enabled = false;
-                        bunifuFlatButton1.Enabled = false;
+                        DialogResult duda = MessageBox.Show("El 'código' ingresado ya existe. Si necesita continuar con el registro presione ACEPTAR, sino CANCELAR.", "Atención!", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
+                        if (duda == DialogResult.OK)
+                        {
+                            regDetCPbtn.Enabled = true;
+                            registrarBtn.Enabled = false;
+                            bunifuFlatButton1.Enabled = false;
+                        }
+                        else
+                        {
+                            return;
+                        }
                     }
                     else
                     {
-                        return;
+                        adaptador.InsertCommand.ExecuteNonQuery();
+                        MessageBox.Show("Se ha registrado correctamente el 'Control Plan' ", "Operación Exitosa!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        regDetCPbtn.Enabled = true;
                     }
                 }
-                else
+                catch (Exception ex)
                 {
-                    adaptador.InsertCommand.ExecuteNonQuery();
-                    MessageBox.Show("Se ha registrado correctamente el 'Control Plan' ", "Operación Exitosa!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    regDetCPbtn.Enabled = true;
+                    MessageBox.Show("ERROR:" + ex.ToString());
+                }
+                finally
+                {
+                    conexion.Close();
+
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERROR:" + ex.ToString());
-            }
-            finally
-            {
-                conexion.Close();
-
-            }
-
-
-
         }
 
 

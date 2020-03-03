@@ -106,10 +106,14 @@ namespace PrimerasHU_GES
             txt_codClasifi.Text = "";
             txt_descClasifi.Text = "";
             busqueda = 0; //establezco busqueda a 0, para poder conocer previamente si antes de "Modificar" se realizo una búsqueda
+            this.clasificacionesPuntoTableAdapter.Fill(this.ges_v01DataSet3.clasificacionesPunto);
+
         }
 
         private void limpiarTipoPto()
         {
+            this.clasificacionesPuntoTableAdapter.Fill(this.ges_v01DataSet3.clasificacionesPunto);
+
             this.tiposPuntoTableAdapter.Fill(this.ges_v01DataSet5.tiposPunto);//recargo el DGV para actualizarlo a cada manejo de datos
             codTipoPtoTxt.Text = "";
             codClasiPtoCmb.Text = "";

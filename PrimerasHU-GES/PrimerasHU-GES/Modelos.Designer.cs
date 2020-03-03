@@ -528,6 +528,7 @@
             this.dgv_modelosVehiculo.Name = "dgv_modelosVehiculo";
             this.dgv_modelosVehiculo.ReadOnly = true;
             this.dgv_modelosVehiculo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_modelosVehiculo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_modelosVehiculo_CellClick);
             // 
             // codProyectoDataGridViewTextBoxColumn
             // 

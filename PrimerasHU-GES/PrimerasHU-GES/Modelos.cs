@@ -530,7 +530,6 @@ namespace PrimerasHU_GES
             adaptador.DeleteCommand = baja;
             adaptador.DeleteCommand.Parameters.Add(new SqlParameter("@codProyecto", SqlDbType.Int));
 
-            adaptador.DeleteCommand.Parameters["@codProyecto"].Value = int.Parse(txt_codProyecto.Text);
 
             if (string.IsNullOrEmpty(txt_codProyecto.Text))
             {
@@ -538,6 +537,8 @@ namespace PrimerasHU_GES
             }
             else
             {
+                adaptador.DeleteCommand.Parameters["@codProyecto"].Value = int.Parse(txt_codProyecto.Text);
+
                 try
                 {
                     Conexion.Open();
@@ -574,17 +575,18 @@ namespace PrimerasHU_GES
             adaptador.UpdateCommand.Parameters.Add(new SqlParameter("@nomModelo", SqlDbType.VarChar));
             adaptador.UpdateCommand.Parameters.Add(new SqlParameter("@fecModifModelo", SqlDbType.DateTime));
 
-            adaptador.UpdateCommand.Parameters["@codVersion"].Value = cb_versionesModelo.SelectedValue;
-            adaptador.UpdateCommand.Parameters["@codTipoV"].Value = cb_tiposVehiculo.SelectedValue;
-            adaptador.UpdateCommand.Parameters["@nomModelo"].Value = txt_descVersion.Text;
-            adaptador.UpdateCommand.Parameters["@fecModifModelo"].Value = dtp_fechaModV.Value;
-
             if ((string.IsNullOrEmpty(txt_codProyecto.Text) || string.IsNullOrEmpty(txt_nombreModV.Text)) && busqueda == 0)
             {
-                MessageBox.Show("Por seguridad de los datos, primero debe realizar la búsqueda de la 'Modelo de Vehícullo' a modificar", "Atención!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Por seguridad de los datos, primero debe realizar la búsqueda de la 'Modelo de Vehículo' a modificar", "Atención!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
+                adaptador.UpdateCommand.Parameters["@codProyecto"].Value = Convert.ToInt32(txt_codProyecto.Text);
+                adaptador.UpdateCommand.Parameters["@codVersion"].Value = cb_versionesModelo.SelectedValue;
+                adaptador.UpdateCommand.Parameters["@codTipoV"].Value = cb_tiposVehiculo.SelectedValue;
+                adaptador.UpdateCommand.Parameters["@nomModelo"].Value = txt_nombreModV.Text;
+                adaptador.UpdateCommand.Parameters["@fecModifModelo"].Value = dtp_fechaModV.Value;
+
                 try
                 {
                     Conexion.Open();
@@ -599,6 +601,7 @@ namespace PrimerasHU_GES
                 finally
                 {
                     Conexion.Close();
+                    limpiarModelosV();
                 }
             }
         }
@@ -764,6 +767,19 @@ namespace PrimerasHU_GES
         {
             this.Dispose();
 
+        }
+
+        private void dgv_modelosVehiculo_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            busqueda = 1;
+            txt_codVersion.Text = "";
+            int posi = dgv_modelosVehiculo.CurrentRow.Index;
+
+            txt_codProyecto.Text = dgv_modelosVehiculo[0, posi].Value.ToString();
+            cb_versionesModelo.SelectedValue = dgv_modelosVehiculo[1, posi].Value;
+            cb_tiposVehiculo.SelectedValue = dgv_modelosVehiculo[2, posi].Value;
+            txt_nombreModV.Text = dgv_modelosVehiculo[3, posi].Value.ToString();
+            //dtp_fechaModV.Value = Convert.ToDateTime(dgv_modelosVehiculo[4, posi].Value);
         }
     }
 }
