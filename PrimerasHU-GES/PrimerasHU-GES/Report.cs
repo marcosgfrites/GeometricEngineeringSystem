@@ -374,11 +374,11 @@ namespace PrimerasHU_GES
 
         private void btnRegistro_Click(object sender, EventArgs e)
         {
-            if (cmbGrafico.Items.Count == 0 && cmbImagen.Items.Count == 0)
+            if (pbGrafico.Image == null && pbImagen.Image == null)
             {
                 MessageBox.Show("Está intentando registrar un análisis que no contiene imágenes. Ambas imágenes de gráfico y/o secciones son obligatorias. Debe seleccionarlas o cargarlas de modo manual (personalizado).", "Atención!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else
+            else 
             {
                 SqlCommand alta = new SqlCommand("INSERT INTO analisis (grafica,imgImagen,codUsu,fechAnalisis,descripcion,observacion) VALUES (@grafica,@imgImagen,@codUsu,@fechAnalisis,@descripcion,@observacion)", cn);
                 adaptador = new SqlDataAdapter();
@@ -453,18 +453,22 @@ namespace PrimerasHU_GES
             this.analisisTableAdapter1.Fill(this.ges_v01DataSet21.analisis);
             btnRegistro.Enabled = true;
             btnModificar.Enabled = false;
-            if (cmbGrafico.Items.Count != 0)
-            {
-                cmbGrafico.SelectedIndex = 0;
-            }
 
-            if (cmbImagen.Items.Count != 0)
-            {
-                cmbImagen.SelectedIndex = 0;
-            }
-            verImagen2(pbImagen, cmbImagen.SelectedItem.ToString());
-            verImagen(pbGrafico, cmbGrafico.SelectedItem.ToString());
+            pbGrafico.Image = null;
+            pbImagen.Image = null;
 
+            /*  if (cmbGrafico.Items.Count != 0)
+              {
+                  cmbGrafico.SelectedIndex = 0;
+              }
+
+              if (cmbImagen.Items.Count != 0)
+              {
+                  cmbImagen.SelectedIndex = 0;
+              }*/
+            // verImagen2(pbImagen, cmbImagen.SelectedItem.ToString());
+            // verImagen(pbGrafico, cmbGrafico.SelectedItem.ToString());
+           cn.Close();
         }
    
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -525,28 +529,37 @@ namespace PrimerasHU_GES
                 {
                     try
                     {
+                       if (cn.State == ConnectionState.Open)
+                        {
+                            cn.Close();
+                        }
+
                         cn.Open();
                         adaptador1.UpdateCommand.ExecuteNonQuery();
                         MessageBox.Show("Se ha modificado correctamente el Análisis.", "Operación Exitosa!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        Limpiar();
+                     
                     }
+                                        
                     catch (Exception ex)
                     {
                         MessageBox.Show("ERROR:" + ex.ToString());
                     }
                     finally
                     {
+                        
                         cn.Close();
                        
                     }
+
+                    Limpiar();
                 }
                 else
                 {
                     return;
+                   
                 }
             }
-
+          
         }
 
 
